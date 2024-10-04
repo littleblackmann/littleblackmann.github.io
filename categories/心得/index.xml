@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>心得 on 小黑的家</title>
+    <link>https://littleblackmann.github.io/categories/%E5%BF%83%E5%BE%97/</link>
+    <description>Recent content in 心得 on 小黑的家</description>
+    <generator>Hugo</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Fri, 04 Oct 2024 12:37:00 +0800</lastBuildDate>
+    <atom:link href="https://littleblackmann.github.io/categories/%E5%BF%83%E5%BE%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>小黑的第一篇文章</title>
+      <link>https://littleblackmann.github.io/blog/black1/</link>
+      <pubDate>Fri, 04 Oct 2024 12:37:00 +0800</pubDate>
+      <guid>https://littleblackmann.github.io/blog/black1/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;大家好，這是我的第一篇文章，我是一名曾經在餐廳後廚奮鬥多年的廚師，現在準備轉職到科技業，朝著開發者的目標努力！&lt;/p&gt;&#xA;&lt;p&gt;在過去的工作經驗中，我每天面對各種餐飲挑戰，從菜單設計到後廚管理，無不追求效率與精確。這些經歷其實與程式開發很相似，無論是準備食材還是寫程式碼，都是對細節的把控和流程的最佳化。&lt;/p&gt;&#xA;&lt;p&gt;現在，我運用這些技能投入到科技領域，學習了 Python 和 Spring Boot 等技術，還完成了幾個專案，包括餐飲點餐系統和 AI 專案。我深知轉職並不容易，但我對技術的熱愛和對新挑戰的渴望，讓我相信這是值得的。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
