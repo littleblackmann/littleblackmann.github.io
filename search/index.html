@@ -49,7 +49,7 @@
   
 </div>
 <!-- preloader end -->
-<!-- navigation -->
+<div id="page-transition"><!-- navigation -->
 <header class="navigation">
   <div class="container">
     
@@ -258,5 +258,26 @@
   display: none;
 }
 </style>
-</body>
+</div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var pageTransition = document.getElementById('page-transition');
+                setTimeout(function() {
+                    pageTransition.classList.add('visible');
+                }, 100);
+            });
+
+            document.addEventListener('click', function(e) {
+                var link = e.target.closest('a');
+                if (link && link.getAttribute('href').startsWith('/') && !link.getAttribute('target')) {
+                    e.preventDefault();
+                    var pageTransition = document.getElementById('page-transition');
+                    pageTransition.classList.remove('visible');
+                    setTimeout(function() {
+                        window.location = link.getAttribute('href');
+                    }, 500); 
+                }
+            });
+        </script>
+    </body>
 </html>

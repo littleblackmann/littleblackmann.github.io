@@ -49,7 +49,7 @@
   
 </div>
 <!-- preloader end -->
-<!-- navigation -->
+<div id="page-transition"><!-- navigation -->
 <header class="navigation">
   <div class="container">
     
@@ -115,7 +115,7 @@
 <section class="section-sm">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 mx-auto">
+      <div class="col-lg-10 mx-auto">
         
         <a href="/categories/%e6%8a%80%e8%a1%93%e5%88%86%e4%ba%ab"
           class="text-primary">技術分享</a>
@@ -179,29 +179,29 @@
 <p><img src="https://hackmd.io/_uploads/BJj3-3qD6.png" alt="6"></p>
 <hr>
 <blockquote>
-<p>Done
-<img src="https://hackmd.io/_uploads/Hknkfn5Pa.png" alt="7"></p>
+<p>Done</p>
 </blockquote>
+<p><img src="https://hackmd.io/_uploads/Hknkfn5Pa.png" alt="7"></p>
 <hr>
 <blockquote>
-<p>Done
-<img src="https://hackmd.io/_uploads/rJX7Mn9wa.png" alt="8"></p>
+<p>Done</p>
 </blockquote>
+<p><img src="https://hackmd.io/_uploads/rJX7Mn9wa.png" alt="8"></p>
 <hr>
 <blockquote>
-<p>Done
-<img src="https://hackmd.io/_uploads/HJ58fn5va.png" alt="9"></p>
+<p>Done</p>
 </blockquote>
+<p><img src="https://hackmd.io/_uploads/HJ58fn5va.png" alt="9"></p>
 <hr>
 <blockquote>
-<p>Done
-<img src="https://hackmd.io/_uploads/r1NFfn5P6.png" alt="10"></p>
+<p>Done</p>
 </blockquote>
+<p><img src="https://hackmd.io/_uploads/r1NFfn5P6.png" alt="10"></p>
 <hr>
 <blockquote>
-<p>Continue
-<img src="https://hackmd.io/_uploads/ByXiG2qDT.png" alt="11"></p>
+<p>Continue</p>
 </blockquote>
+<p><img src="https://hackmd.io/_uploads/ByXiG2qDT.png" alt="11"></p>
 <hr>
 <h3 id="步驟-3設定使用者資訊">步驟 3：設定使用者資訊</h3>
 <blockquote>
@@ -408,5 +408,26 @@
   display: none;
 }
 </style>
-</body>
+</div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var pageTransition = document.getElementById('page-transition');
+                setTimeout(function() {
+                    pageTransition.classList.add('visible');
+                }, 100);
+            });
+
+            document.addEventListener('click', function(e) {
+                var link = e.target.closest('a');
+                if (link && link.getAttribute('href').startsWith('/') && !link.getAttribute('target')) {
+                    e.preventDefault();
+                    var pageTransition = document.getElementById('page-transition');
+                    pageTransition.classList.remove('visible');
+                    setTimeout(function() {
+                        window.location = link.getAttribute('href');
+                    }, 500); 
+                }
+            });
+        </script>
+    </body>
 </html>

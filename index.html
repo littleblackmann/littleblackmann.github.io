@@ -49,7 +49,7 @@
   
 </div>
 <!-- preloader end -->
-<!-- navigation -->
+<div id="page-transition"><!-- navigation -->
 <header class="navigation">
   <div class="container">
     
@@ -227,7 +227,7 @@
       <img src="https://littleblackmann.github.io/images/blackman.jpg" alt=""
         class="img-fluid author-thumb-sm d-block mx-auto rounded-circle mb-4">
       
-      <p><p>大家好！我是個熱愛科技與美食的全方位軟體開發者，從程式碼到餐點，都少不了我的身影。你可能沒想到，我其實一開始並不是在科技界打滾，而是從餐廳開始的！在餐廳工 …</p></p>
+      <p><p>大家好！我是個熱愛科技與美食的平凡人，從程式碼到餐點，都少不了我的身影。你可能沒想到，我其實一開始並不是在科技界打滾，而是從餐廳開始的！在餐廳工作的日子 …</p></p>
       <a href="https://littleblackmann.github.io/about/" class="btn btn-outline-primary">了解我</a>
       
     </div>
@@ -409,5 +409,26 @@
   display: none;
 }
 </style>
-</body>
+</div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var pageTransition = document.getElementById('page-transition');
+                setTimeout(function() {
+                    pageTransition.classList.add('visible');
+                }, 100);
+            });
+
+            document.addEventListener('click', function(e) {
+                var link = e.target.closest('a');
+                if (link && link.getAttribute('href').startsWith('/') && !link.getAttribute('target')) {
+                    e.preventDefault();
+                    var pageTransition = document.getElementById('page-transition');
+                    pageTransition.classList.remove('visible');
+                    setTimeout(function() {
+                        window.location = link.getAttribute('href');
+                    }, 500); 
+                }
+            });
+        </script>
+    </body>
 </html>
