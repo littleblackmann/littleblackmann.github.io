@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="介紹文章使用方法">
+  <meta name="description" content="如何下載 Ubuntu 並在 VirtualBox 中創建虛擬機器，適合初學者的詳細教學">
   <meta name="author" content="小黑">
     
   
@@ -117,10 +117,13 @@
     <div class="row">
       <div class="col-lg-8 mx-auto">
         
-        <a href="/categories/%e5%bf%83%e5%be%97"
-          class="text-primary">心得</a>
+        <a href="/categories/virtualbox"
+          class="text-primary">Virtualbox</a>
         
-        <h2>小黑的第一篇文章</h2>
+        <a href="/categories/%e6%8a%80%e8%a1%93%e5%88%86%e4%ba%ab"
+          class="text-primary">技術分享</a>
+        
+        <h2>下載與創建 Ubuntu 虛擬機器</h2>
         <div class="mb-3 post-meta">
           <span>By 小黑</span>
           
@@ -129,19 +132,100 @@
           
         </div>
         
-        <img src="https://littleblackmann.github.io/images/post-7.jpg" class="img-fluid w-100 mb-4" alt="小黑的第一篇文章">
+        <img src="https://littleblackmann.github.io/images/virtualbox.png" class="img-fluid w-100 mb-4" alt="下載與創建 Ubuntu 虛擬機器">
         
         <div class="content mb-5">
-          <!-- raw HTML omitted -->
+          <p>這篇文章將帶你一步步完成 Ubuntu 的下載與在 VirtualBox 上創建虛擬機器的過程。無論你是想要學習 Linux 還是需要一個隔離的環境來進行開發，這篇教學都非常實用！</p>
+<h3 id="步驟-1下載-ubuntu">步驟 1：下載 Ubuntu</h3>
 <blockquote>
-<p>大家好，這是我的第一篇文章，我是一名曾經在餐廳後廚奮鬥多年的廚師，現在準備轉職到科技業，朝著開發者的目標努力！</p>
-<p>在過去的工作經驗中，我每天面對各種餐飲挑戰，從菜單設計到後廚管理，無不追求效率與精確。這些經歷其實與程式開發很相似，無論是準備食材還是寫程式碼，都是對細節的把控和流程的最佳化。</p>
-<p>現在，我運用這些技能投入到科技領域，學習了 Python 和 Spring Boot 等技術，還完成了幾個專案，包括餐飲點餐系統和 AI 專案。我深知轉職並不容易，但我對技術的熱愛和對新挑戰的渴望，讓我相信這是值得的。</p>
-<p>希望有一天，我能夠將廚師的敏銳思維與開發者的創意結合，為使用者提供更好的技術解決方案。</p>
-<p>期待未來的合作或建議，也歡迎大家給我一些鼓勵！</p>
-<p>感謝大家的閱讀，更多專案分享將會在後續文章中繼續更新。</p>
+<h2 id="首先我們需要下載-ubuntu-安裝映像檔">首先，我們需要下載 Ubuntu 安裝映像檔:</h2>
+<ol>
+<li>打開 Google，輸入 Ubuntu 進行搜尋。</li>
+<li>點選第一個搜尋結果：Ubuntu: Enterprise Open Source and Linux。</li>
+</ol>
 </blockquote>
-<!-- raw HTML omitted -->
+<p><img src="https://hackmd.io/_uploads/rJ90AOcv6.png" alt="3"></p>
+<hr>
+<blockquote>
+<ol start="3">
+<li>點選頁面上的 Download，選擇 Ubuntu Server 版本。</li>
+</ol>
+</blockquote>
+<p><img src="https://hackmd.io/_uploads/Bk9J0_cvp.png" alt="1"></p>
+<blockquote>
+<p>Ubuntu Server 是無圖形介面的版本，適合用於伺服器運行，如果你想要桌面版本，也可以選擇 Ubuntu Desktop。</p>
+</blockquote>
+<hr>
+<h3 id="步驟-2在-virtualbox-創建-ubuntu-虛擬機器">步驟 2：在 VirtualBox 創建 Ubuntu 虛擬機器</h3>
+<blockquote>
+<h2 id="安裝-virtualbox-擴充包">安裝 VirtualBox 擴充包:</h2>
+<ol>
+<li>打開 VirtualBox，進入 檔案 &gt; 環境設定 &gt; 擴充功能。</li>
+<li>點選 Oracle_VM_VirtualBox_Extension_Pack-7.0.12，確保你已經安裝擴充功能。</li>
+</ol>
+</blockquote>
+<p><img src="https://hackmd.io/_uploads/S1k_lFqwp.png" alt="1"></p>
+<p><img src="https://hackmd.io/_uploads/Syx-WYcP6.png" alt="2"></p>
+<hr>
+<blockquote>
+<h2 id="創建新的虛擬機器">創建新的虛擬機器</h2>
+<ol>
+<li>在 VirtualBox 的主畫面，點選 新增，開始創建新的虛擬機器。</li>
+</ol>
+</blockquote>
+<p><img src="https://hackmd.io/_uploads/B1VpMY9va.png" alt="2.5"></p>
+<hr>
+<blockquote>
+<h2 id="設定虛擬機器的名稱儲存位置以及-iso-映像檔">設定虛擬機器的名稱、儲存位置以及 ISO 映像檔:</h2>
+<ol>
+<li>名稱：Ubuntu22.04.3_Server_2023.1228</li>
+<li>資料夾：D:</li>
+<li>ISO 映像：ubuntu-22.04.3-live-server-amd64</li>
+</ol>
+</blockquote>
+<p><img src="https://hackmd.io/_uploads/HJdffYqP6.png" alt="3"></p>
+<blockquote>
+<p>勾選 略過無人值守安裝，然後點選 下一步。</p>
+</blockquote>
+<p><img src="https://hackmd.io/_uploads/ByxumY5va.png" alt="4"></p>
+<hr>
+<blockquote>
+<h2 id="設定虛擬機器的資源分配">設定虛擬機器的資源分配：</h2>
+<ol>
+<li>基礎記憶體：2048MB</li>
+<li>處理器：2 CPU</li>
+</ol>
+</blockquote>
+<p><img src="https://hackmd.io/_uploads/BJ5mNt9Dp.png" alt="5"></p>
+<hr>
+<blockquote>
+<h2 id="設定虛擬磁碟大小">設定虛擬磁碟大小：</h2>
+<ol>
+<li>磁碟大小：25GB</li>
+</ol>
+</blockquote>
+<p><img src="https://hackmd.io/_uploads/HJtt4Kqva.png" alt="6"></p>
+<hr>
+<blockquote>
+<p>點選 完成，虛擬機器創建成功。</p>
+</blockquote>
+<p><img src="https://hackmd.io/_uploads/HkTAVKqva.png" alt="7">
+<img src="https://hackmd.io/_uploads/ryjWHF9D6.png" alt="8"></p>
+<hr>
+<h3 id="步驟-3虛擬機器網路設定">步驟 3：虛擬機器網路設定</h3>
+<blockquote>
+<ol>
+<li>進入虛擬機器設定，點選 網路 選項。</li>
+</ol>
+</blockquote>
+<p><img src="https://hackmd.io/_uploads/SJ5Srtqw6.png" alt="9"></p>
+<hr>
+<p><img src="https://hackmd.io/_uploads/HyN6HY9DT.png" alt="10"></p>
+<blockquote>
+<p>點擊 確定 完成設定。</p>
+</blockquote>
+<hr>
+<p>注意：不同版本的 VirtualBox 或 Ubuntu，界面和步驟可能會略有不同，但大體操作流程是相似的。建議大家下載最新版本的軟體進行操作，這樣可以確保獲得最新的功能和最佳的相容性。</p>
 <hr>
 <p><em>想要聯繫我，或者有合作機會？隨時歡迎寄信到：[littleblack830830@gmail.com]</em></p>
 

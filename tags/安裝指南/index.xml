@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>安裝指南 on 小黑的家</title>
+    <link>https://littleblackmann.github.io/tags/%E5%AE%89%E8%A3%9D%E6%8C%87%E5%8D%97/</link>
+    <description>Recent content in 安裝指南 on 小黑的家</description>
+    <generator>Hugo</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Fri, 04 Oct 2024 15:36:00 +0800</lastBuildDate>
+    <atom:link href="https://littleblackmann.github.io/tags/%E5%AE%89%E8%A3%9D%E6%8C%87%E5%8D%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安裝 VirtualBox 及擴充包教學</title>
+      <link>https://littleblackmann.github.io/blog/black2/</link>
+      <pubDate>Fri, 04 Oct 2024 15:36:00 +0800</pubDate>
+      <guid>https://littleblackmann.github.io/blog/black2/</guid>
+      <description>&lt;h3 id=&#34;步驟-1下載-virtualbox-和擴充包&#34;&gt;步驟 1：下載 VirtualBox 和擴充包&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;首先，我們需要從 VirtualBox 官網下載所需的軟體。&#xA;進入 VirtualBox 官網，選擇 VirtualBox 7.0.12 platform packages。&#xA;點選 Windows Host（如果你是使用 Windows 系統的話）。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://hackmd.io/_uploads/SkQLQI5DT.png&#34; alt=&#34;螢幕擷取畫面 2023-12-28 094349&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

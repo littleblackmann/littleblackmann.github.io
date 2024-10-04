@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>小黑的家</title>
-    <link>https://littleblackmann.github.io/</link>
-    <description>Recent content on 小黑的家</description>
+    <title>教學 on 小黑的家</title>
+    <link>https://littleblackmann.github.io/tags/%E6%95%99%E5%AD%B8/</link>
+    <description>Recent content in 教學 on 小黑的家</description>
     <generator>Hugo</generator>
     <language>zh-tw</language>
     <lastBuildDate>Fri, 04 Oct 2024 16:30:00 +0800</lastBuildDate>
-    <atom:link href="https://littleblackmann.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://littleblackmann.github.io/tags/%E6%95%99%E5%AD%B8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何安裝 Ubuntu 系統</title>
       <link>https://littleblackmann.github.io/blog/black4/</link>
@@ -28,20 +28,6 @@
       <pubDate>Fri, 04 Oct 2024 15:36:00 +0800</pubDate>
       <guid>https://littleblackmann.github.io/blog/black2/</guid>
       <description>&lt;h3 id=&#34;步驟-1下載-virtualbox-和擴充包&#34;&gt;步驟 1：下載 VirtualBox 和擴充包&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;首先，我們需要從 VirtualBox 官網下載所需的軟體。&#xA;進入 VirtualBox 官網，選擇 VirtualBox 7.0.12 platform packages。&#xA;點選 Windows Host（如果你是使用 Windows 系統的話）。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://hackmd.io/_uploads/SkQLQI5DT.png&#34; alt=&#34;螢幕擷取畫面 2023-12-28 094349&#34;&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>小黑的第一篇文章</title>
-      <link>https://littleblackmann.github.io/blog/black1/</link>
-      <pubDate>Fri, 04 Oct 2024 12:37:00 +0800</pubDate>
-      <guid>https://littleblackmann.github.io/blog/black1/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;大家好，這是我的第一篇文章，我是一名曾經在餐廳後廚奮鬥多年的廚師，現在準備轉職到科技業，朝著開發者的目標努力！&lt;/p&gt;&#xA;&lt;p&gt;在過去的工作經驗中，我每天面對各種餐飲挑戰，從菜單設計到後廚管理，無不追求效率與精確。這些經歷其實與程式開發很相似，無論是準備食材還是寫程式碼，都是對細節的把控和流程的最佳化。&lt;/p&gt;&#xA;&lt;p&gt;現在，我運用這些技能投入到科技領域，學習了 Python 和 Spring Boot 等技術，還完成了幾個專案，包括餐飲點餐系統和 AI 專案。我深知轉職並不容易，但我對技術的熱愛和對新挑戰的渴望，讓我相信這是值得的。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://littleblackmann.github.io/blog/post-13/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://littleblackmann.github.io/blog/post-13/</guid>
-      <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;</description>
     </item>
   </channel>
 </rss>
