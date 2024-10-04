@@ -1,32 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>教學 on 小黑的家</title>
-    <link>http://localhost:53769/tags/%E6%95%99%E5%AD%B8/</link>
-    <description>Recent content in 教學 on 小黑的家</description>
+    <title>Virtualbox on 小黑的家</title>
+    <link>https://littleblackmann.github.io/tags/virtualbox/</link>
+    <description>Recent content in Virtualbox on 小黑的家</description>
     <generator>Hugo</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 04 Oct 2024 16:30:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:53769/tags/%E6%95%99%E5%AD%B8/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>如何安裝 Ubuntu 系統</title>
-      <link>http://localhost:53769/blog/black4/</link>
-      <pubDate>Fri, 04 Oct 2024 16:30:00 +0800</pubDate>
-      <guid>http://localhost:53769/blog/black4/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;這篇文章將帶領你完成 Ubuntu 的安裝過程，適合初學者快速上手。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h1 id=&#34;安裝ubuntu系統&#34;&gt;安裝Ubuntu系統&lt;/h1&gt;&#xA;&lt;h3 id=&#34;步驟-1開始安裝&#34;&gt;步驟 1：開始安裝&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;下載 Ubuntu 並啟動虛擬機器後，安裝過程將自動開始，這時只需要按 Enter 開始。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://hackmd.io/_uploads/B1X9135PT.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate>Fri, 04 Oct 2024 15:58:00 +0800</lastBuildDate>
+    <atom:link href="https://littleblackmann.github.io/tags/virtualbox/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>下載與創建 Ubuntu 虛擬機器</title>
-      <link>http://localhost:53769/blog/black3/</link>
+      <link>https://littleblackmann.github.io/blog/black3/</link>
       <pubDate>Fri, 04 Oct 2024 15:58:00 +0800</pubDate>
-      <guid>http://localhost:53769/blog/black3/</guid>
+      <guid>https://littleblackmann.github.io/blog/black3/</guid>
       <description>&lt;p&gt;這篇文章將帶你一步步完成 Ubuntu 的下載與在 VirtualBox 上創建虛擬機器的過程。無論你是想要學習 Linux 還是需要一個隔離的環境來進行開發，這篇教學都非常實用！&lt;/p&gt;&#xA;&lt;h3 id=&#34;步驟-1下載-ubuntu&#34;&gt;步驟 1：下載 Ubuntu&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;h2 id=&#34;首先我們需要下載-ubuntu-安裝映像檔&#34;&gt;首先，我們需要下載 Ubuntu 安裝映像檔:&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;打開 Google，輸入 Ubuntu 進行搜尋。&lt;/li&gt;&#xA;&lt;li&gt;點選第一個搜尋結果：Ubuntu: Enterprise Open Source and Linux。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://hackmd.io/_uploads/rJ90AOcv6.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>安裝 VirtualBox 及擴充包教學</title>
-      <link>http://localhost:53769/blog/black2/</link>
+      <link>https://littleblackmann.github.io/blog/black2/</link>
       <pubDate>Fri, 04 Oct 2024 15:36:00 +0800</pubDate>
-      <guid>http://localhost:53769/blog/black2/</guid>
+      <guid>https://littleblackmann.github.io/blog/black2/</guid>
       <description>&lt;h3 id=&#34;步驟-1下載-virtualbox-和擴充包&#34;&gt;步驟 1：下載 VirtualBox 和擴充包&lt;/h3&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;首先，我們需要從 VirtualBox 官網下載所需的軟體。&#xA;進入 VirtualBox 官網，選擇 VirtualBox 7.0.12 platform packages。&#xA;點選 Windows Host（如果你是使用 Windows 系統的話）。&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://hackmd.io/_uploads/SkQLQI5DT.png&#34; alt=&#34;螢幕擷取畫面 2023-12-28 094349&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
