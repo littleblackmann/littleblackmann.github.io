@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-tw"><head>
+  <meta charset="utf-8">
+  <title>小黑&#39;s Article</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="簡易 Linux 主機之間的資料庫、網站設定及用戶家目錄的打包與傳輸教學">
+  <meta name="author" content="小黑">
+    
+  
+  <meta name="theme-name" content="liva-hugo" />
+  
+  <meta name="generator" content="Hugo 0.135.0">
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://littleblackmann.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://littleblackmann.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://littleblackmann.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://littleblackmann.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://littleblackmann.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://littleblackmann.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://littleblackmann.github.io/images/favicon.png " type="image/x-icon">
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PWS2H0K52Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PWS2H0K52Q');
+</script>
+
+</head>
+<body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<div id="page-transition"><!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://littleblackmann.github.io/"><img class="img-fluid"
+          src="https://littleblackmann.github.io/images/black.jpg" alt="小黑&#39;s Article"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.youtube.com/channel/UCFIwk5K008MMtRAofnNVOLw"><i class="ti-youtube"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.instagram.com/free__yi/"><i class="ti-instagram"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/littleblackmann"><i class="ti-github"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://littleblackmann.github.io/"><img class="img-fluid"
+            src="https://littleblackmann.github.io/images/black.jpg" alt="小黑&#39;s Article"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://littleblackmann.github.io/about/">About</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://littleblackmann.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        
+        <h2>Linux 簡易資料轉移</h2>
+        <div class="mb-3 post-meta">
+          <span>By 小黑</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>05 October 2024</span>
+          
+        </div>
+        
+        <img src="https://littleblackmann.github.io/images/linux.png" class="img-fluid w-100 mb-4" alt="Linux 簡易資料轉移">
+        
+        <div class="content mb-5">
+          <h2 id="linux簡易資料轉移">Linux簡易資料轉移</h2>
+<blockquote>
+<ul>
+<li>使用系統：Ubuntu22.04.4_Desktop</li>
+</ul>
+</blockquote>
+<hr>
+<h3 id="簡介">簡介</h3>
+<ul>
+<li>在伺服器遷移、備份或重新部署的情境下，能夠有效地在兩台 Linux 主機之間轉移資料是非常重要的。</li>
+</ul>
+<p>本文將介紹如何使用 Linux 指令來完成資料庫、網站設定、用戶家目錄的打包與轉移，並展示完整的操作流程。</p>
+<h3 id="參考資源">參考資源</h3>
+<h4 id="linux-檔案與目錄管理參考網站httpslinuxvbirdorglinux_basiccentos70220filemanagerphp"><a href="https://linux.vbird.org/linux_basic/centos7/0220filemanager.php">Linux 檔案與目錄管理參考網站</a></h4>
+<h4 id="檔案與檔案系統的壓縮參考網站httpoldlinuxvbirdorglinux_basic0240tarcompressphp"><a href="http://old.linux.vbird.org/linux_basic/0240tarcompress.php">檔案與檔案系統的壓縮參考網站</a></h4>
+<h4 id="linux-shell-scripts參考網站httpslinuxvbirdorglinux_basiccentos70340bashshell-scriptsphp"><a href="https://linux.vbird.org/linux_basic/centos7/0340bashshell-scripts.php">Linux Shell Scripts參考網站</a></h4>
+<hr>
+<h3 id="操作流程">操作流程</h3>
+<h4 id="1-在-a-和-b-主機上安裝必要的服務">1. 在 A 和 B 主機上安裝必要的服務</h4>
+<p>更新軟件包列表並安裝 Apache 和 MariaDB
+在 A 和 B 主機上進行相同的安裝操作：</p>
+<p><code>sudo apt update</code></p>
+<p><code>sudo apt install mariadb-server apache2</code></p>
+<h4 id="2-啟動-apache-服務並設定開機自啟">2. 啟動 Apache 服務並設定開機自啟</h4>
+<p><code>sudo systemctl start apache2</code></p>
+<p><code>sudo systemctl enable apache2</code></p>
+<h4 id="3-在-b-主機上安裝-openssh">3. 在 B 主機上安裝 OpenSSH</h4>
+<p>為了讓 A 主機可以通過 SSH 與 B 主機通信，需在 B 主機上安裝 OpenSSH：</p>
+<p><code>sudo apt update</code></p>
+<p><code>sudo apt install openssh-server</code></p>
+<h4 id="4-確認-ssh-服務是否成功啟動">4. 確認 SSH 服務是否成功啟動</h4>
+<p><code>sudo systemctl start ssh</code></p>
+<p><code>sudo ss -tuln | grep :22</code></p>
+<hr>
+<h3 id="在-a-主機上打包資料並傳輸至-b-主機">在 A 主機上打包資料並傳輸至 B 主機</h3>
+<h4 id="1-編寫打包與傳輸腳本">1. 編寫打包與傳輸腳本</h4>
+<p>建立並編輯 test1.sh 腳本</p>
+<p><code>nano test1.sh</code></p>
+<h4 id="2-為腳本添加執行權限">2. 為腳本添加執行權限</h4>
+<p><code>chmod +x test1.sh</code></p>
+<h4 id="test1sh腳本內容">test1.sh腳本內容</h4>
+<pre tabindex="0"><code>#!/bin/bash
+
+# 設定test1的使用者名稱和IP位址
+DEST_USER=test1            # 輸入B主機名稱
+DEST_IP=10.167.223.29      # 輸入B主機的IP
+DEST_PATH=/home/test1/     # 輸入B主機要傳送的位置
+
+# 導出所有資料庫
+echo &#34;導出所有MariaDB資料庫...&#34;
+mysqldump -u black -p[密碼] --all-databases &gt; all_databases.sql    # 輸入A主機的名稱跟密碼
+
+# 打包用戶家目錄
+echo &#34;打包用戶家目錄...&#34;
+tar -czvf user1_home.tar.gz /home/black    # 更改A主機的名子
+# tar -czvf user2_home.tar.gz /home/black2
+
+# 打包Apache配置
+echo &#34;打包Apache設定...&#34;
+tar -czvf apache_configs.tar.gz /etc/apache2
+
+# 打包網站數據
+echo &#34;打包網站資料...&#34;
+tar -czvf apache_www.tar.gz /var/www/html
+
+# 使用rsync傳輸
+echo &#34;傳輸資料到test1...&#34;
+
+echo &#34;傳輸完成。&#34;
+</code></pre><p><img src="https://hackmd.io/_uploads/HJdzZiDk0.png" alt="black"></p>
+<hr>
+<h3 id="在-b-主機上解壓並恢復資料">在 B 主機上解壓並恢復資料</h3>
+<h4 id="1-編寫解壓恢復腳本">1. 編寫解壓恢復腳本</h4>
+<p>建立並編輯 good.sh 腳本</p>
+<p><code>nano good.sh</code></p>
+<h4 id="2-為腳本添加執行權限-1">2. 為腳本添加執行權限</h4>
+<p><code>chmod +x good.sh</code></p>
+<h4 id="goodsh腳本內容">good.sh腳本內容</h4>
+<pre tabindex="0"><code>#!/bin/bash
+
+# 設定來源路徑
+SOURCE_PATH=/home/test1
+
+# 導入資料庫
+echo &#34;導入MariaDB資料庫...&#34;
+mysql -u root -p &lt; $SOURCE_PATH/all_databases.sql
+
+# 復原使用者家目錄
+echo &#34;恢復使用者家目錄...&#34;
+tar -xzvf $SOURCE_PATH/user1_home.tar.gz -C /
+
+# 恢復Apache配置
+echo &#34;恢復Apache設定...&#34;
+tar -xzvf $SOURCE_PATH/apache_configs.tar.gz -C /
+
+# 恢復網站數據
+echo &#34;恢復網站資料...&#34;
+tar -xzvf $SOURCE_PATH/apache_www.tar.gz -C /
+
+echo &#34;恢復完成。&#34;
+</code></pre><p><img src="https://hackmd.io/_uploads/H1hMbiv1A.png" alt="test1"></p>
+<hr>
+<h3 id="另一種選項使用臨時目錄解壓並同步資料">另一種選項：使用臨時目錄解壓並同步資料</h3>
+<p>如果想使用更安全的方式，可以在臨時目錄解壓縮並使用 rsync 同步資料：</p>
+<h4 id="1-編寫解壓恢復腳本-1">1. 編寫解壓恢復腳本</h4>
+<p>建立並編輯 good.sh 腳本</p>
+<p><code>nano good.sh</code></p>
+<h4 id="2-為腳本添加執行權限-2">2. 為腳本添加執行權限</h4>
+<p><code>chmod +x good.sh</code></p>
+<h4 id="goodsh腳本內容-1">good.sh腳本內容</h4>
+<pre tabindex="0"><code>#!/bin/bash
+
+# 設定來源路徑
+SOURCE_PATH=/home/test1/
+
+# 設定臨時解壓縮路徑
+TEMP_PATH=/tmp/recovery
+
+# 建立暫存解壓縮目錄
+mkdir -p $TEMP_PATH
+
+# 導入資料庫
+echo &#34;導入MariaDB資料庫...&#34;
+mysql -u root -p &lt; $SOURCE_PATH/all_databases.sql
+
+# 解壓縮用戶家目錄到暫存目錄
+echo &#34;解壓縮用戶家目錄...&#34;
+tar -xzvf $SOURCE_PATH/user1_home.tar.gz -C $TEMP_PATH
+
+# 解壓縮Apache配置到暫存目錄
+echo &#34;解壓縮Apache配置...&#34;
+tar -xzvf $SOURCE_PATH/apache_configs.tar.gz -C $TEMP_PATH
+
+# 解壓縮網站資料到暫存目錄
+echo &#34;解壓縮網站資料...&#34;
+tar -xzvf $SOURCE_PATH/apache_www.tar.gz -C $TEMP_PATH
+
+# 使用rsync同步用戶家目錄
+echo &#34;同步使用者家目錄...&#34;
+rsync -av $TEMP_PATH/home/black/ /home/test1/
+
+# 同步Apache配置
+echo &#34;同步Apache設定...&#34;
+rsync -av $TEMP_PATH/etc/apache2/ /etc/apache2/
+
+# 同步網站數據
+echo &#34;同步網站資料...&#34;
+rsync -av $TEMP_PATH/var/www/html/ /var/www/html/
+
+# 清理暫存目錄
+echo &#34;清理暫存目錄...&#34;
+rm -rf $TEMP_PATH
+
+echo &#34;恢復完成。&#34;
+</code></pre><p><img src="https://hackmd.io/_uploads/SkNGjoDJR.png" alt="test2"></p>
+<h1 id="結論">結論</h1>
+<blockquote>
+<p>本文大概說明了如何在兩台 Linux 主機之間進行資料庫、網站數據和用戶家目錄的轉移。這些步驟適合伺服器遷移、備份以及其他需要大規模資料轉移的情境。如果在操作中遇到問題，建議檢查 SSH 連線、磁碟空間及相關權限設置。</p>
+</blockquote>
+<hr>
+<p><em>想要聯繫我，或者有合作機會？隨時歡迎寄信到：[littleblack830830@gmail.com]</em></p>
+
+        </div>
+
+        
+        <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "littleblackmann" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<script>
+  var indexURL = "https://littleblackmann.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://littleblackmann.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://littleblackmann.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://littleblackmann.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://littleblackmann.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://littleblackmann.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://littleblackmann.github.io/plugins/search/mark.js"></script>
+
+<script src="https://littleblackmann.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://littleblackmann.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var pageTransition = document.getElementById('page-transition');
+                setTimeout(function() {
+                    pageTransition.classList.add('visible');
+                }, 100);
+            });
+
+            document.addEventListener('click', function(e) {
+                var link = e.target.closest('a');
+                if (link && link.getAttribute('href').startsWith('/') && !link.getAttribute('target')) {
+                    e.preventDefault();
+                    var pageTransition = document.getElementById('page-transition');
+                    pageTransition.classList.remove('visible');
+                    setTimeout(function() {
+                        window.location = link.getAttribute('href');
+                    }, 500); 
+                }
+            });
+        </script>
+    </body>
+</html>

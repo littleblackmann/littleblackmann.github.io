@@ -6,8 +6,15 @@
     <description>Recent content in Blogs on 小黑&#39;s Article</description>
     <generator>Hugo</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 04 Oct 2024 16:30:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 05 Oct 2024 15:36:00 +0800</lastBuildDate>
     <atom:link href="https://littleblackmann.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux 簡易資料轉移</title>
+      <link>https://littleblackmann.github.io/blog/black5/</link>
+      <pubDate>Sat, 05 Oct 2024 15:36:00 +0800</pubDate>
+      <guid>https://littleblackmann.github.io/blog/black5/</guid>
+      <description>&lt;h2 id=&#34;linux簡易資料轉移&#34;&gt;Linux簡易資料轉移&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;使用系統：Ubuntu22.04.4_Desktop&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;簡介&#34;&gt;簡介&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;在伺服器遷移、備份或重新部署的情境下，能夠有效地在兩台 Linux 主機之間轉移資料是非常重要的。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;本文將介紹如何使用 Linux 指令來完成資料庫、網站設定、用戶家目錄的打包與轉移，並展示完整的操作流程。&lt;/p&gt;&#xA;&lt;h3 id=&#34;參考資源&#34;&gt;參考資源&lt;/h3&gt;&#xA;&lt;h4 id=&#34;linux-檔案與目錄管理參考網站httpslinuxvbirdorglinux_basiccentos70220filemanagerphp&#34;&gt;&lt;a href=&#34;https://linux.vbird.org/linux_basic/centos7/0220filemanager.php&#34;&gt;Linux 檔案與目錄管理參考網站&lt;/a&gt;&lt;/h4&gt;&#xA;&lt;h4 id=&#34;檔案與檔案系統的壓縮參考網站httpoldlinuxvbirdorglinux_basic0240tarcompressphp&#34;&gt;&lt;a href=&#34;http://old.linux.vbird.org/linux_basic/0240tarcompress.php&#34;&gt;檔案與檔案系統的壓縮參考網站&lt;/a&gt;&lt;/h4&gt;&#xA;&lt;h4 id=&#34;linux-shell-scripts參考網站httpslinuxvbirdorglinux_basiccentos70340bashshell-scriptsphp&#34;&gt;&lt;a href=&#34;https://linux.vbird.org/linux_basic/centos7/0340bashshell-scripts.php&#34;&gt;Linux Shell Scripts參考網站&lt;/a&gt;&lt;/h4&gt;&#xA;&lt;hr&gt;&#xA;&lt;h3 id=&#34;操作流程&#34;&gt;操作流程&lt;/h3&gt;&#xA;&lt;h4 id=&#34;1-在-a-和-b-主機上安裝必要的服務&#34;&gt;1. 在 A 和 B 主機上安裝必要的服務&lt;/h4&gt;&#xA;&lt;p&gt;更新軟件包列表並安裝 Apache 和 MariaDB&#xA;在 A 和 B 主機上進行相同的安裝操作：&lt;/p&gt;</description>
+    </item>
     <item>
       <title>如何安裝 Ubuntu 系統</title>
       <link>https://littleblackmann.github.io/blog/black4/</link>
