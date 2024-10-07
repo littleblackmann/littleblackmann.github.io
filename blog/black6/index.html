@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-tw"><head>
+  <meta charset="utf-8">
+  <title>小黑&#39;s Article</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="基於 Flask 和 OpenAI API 的簡易 AI 聊天應用，包含基本聊天功能、文件分析與第三方登入">
+  <meta name="author" content="小黑">
+    
+  
+  <meta name="theme-name" content="liva-hugo" />
+  
+  <meta name="generator" content="Hugo 0.135.0">
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://littleblackmann.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://littleblackmann.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://littleblackmann.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://littleblackmann.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://littleblackmann.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://littleblackmann.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://littleblackmann.github.io/images/favicon.png " type="image/x-icon">
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PWS2H0K52Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PWS2H0K52Q');
+</script>
+
+</head>
+<body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<div id="page-transition"><!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://littleblackmann.github.io/"><img class="img-fluid"
+          src="https://littleblackmann.github.io/images/black.jpg" alt="小黑&#39;s Article"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.youtube.com/channel/UCFIwk5K008MMtRAofnNVOLw"><i class="ti-youtube"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.instagram.com/free__yi/"><i class="ti-instagram"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/littleblackmann"><i class="ti-github"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://littleblackmann.github.io/"><img class="img-fluid"
+            src="https://littleblackmann.github.io/images/black.jpg" alt="小黑&#39;s Article"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://littleblackmann.github.io/about/">About</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://littleblackmann.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        
+        <h2>小黑簡易ＡＩ聊天</h2>
+        <div class="mb-3 post-meta">
+          <span>By 小黑</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>07 October 2024</span>
+          
+        </div>
+        
+        <img src="https://littleblackmann.github.io/images/gpt.png" class="img-fluid w-100 mb-4" alt="小黑簡易ＡＩ聊天">
+        
+        <div class="content mb-5">
+          <hr>
+<p>在這個小專案中，我使用了 Python 並結合 ChatGPT API，開發出幾項功能的 AI 聊天系統，旨在模擬 AI 助手與使用者之間的對話。以下是專案的主要功能：</p>
+<ul>
+<li>
+<p>聊天功能：透過 ChatGPT API，讓用戶能進行自然語言對話，模擬 AI 助手角色。</p>
+</li>
+<li>
+<p>檔案分析：用戶可以上傳圖檔及 txt 文件，系統會對這些檔案進行內容分析，提供回應。</p>
+</li>
+<li>
+<p>Google 第三方登入：實現了 Google 帳號的第三方登入功能，讓用戶能夠輕鬆登入系統，提升使用體驗。</p>
+</li>
+<li>
+<p>資料庫管理：使用 MongoDB 存儲使用者資料與對話紀錄，確保資料的可靠性與擴展性。</p>
+</li>
+<li>
+<p>臨時網址：透過 Ngrok 生成暫時的公開網址，方便系統測試與演示。</p>
+</li>
+</ul>
+<p>這項小專案是我哥哥提出的挑戰，因為剛從養成班畢業時我對這類的東西完全不熟悉，幾乎毫無頭緒。幸運的是，現代 AI 工具提供了極大的幫助，讓我大概知道了這個技術並成功完成了這些功能。這次經驗讓我對技術的學習和應用有了更深刻的體會。</p>
+<p>有興趣的朋友可以參考我的 GitHub 專案：<a href="https://github.com/littleblackmann/My-GPT-Project2">My-GPT-Project2</a>，歡迎進行功能修改與擴展。</p>
+<h3 id="功能總覽">功能總覽</h3>
+<hr>
+<ul>
+<li>基本 AI 聊天</li>
+<li>Google 第三方登入</li>
+<li>圖片、文件上傳與分析</li>
+<li>MongoDB 紀錄資料</li>
+</ul>
+<p>此專案可能需要進一步調整部分功能，但已經可以提供基本的 AI 聊天體驗。</p>
+<h3 id="設置與執行步驟">設置與執行步驟</h3>
+<hr>
+<h4 id="1-修改-env-文件">1. 修改 .env 文件</h4>
+<blockquote>
+<p>請在 .env 文件中修改成自己的 OpenAI API 金鑰及其他所需的金鑰。</p>
+</blockquote>
+<h4 id="2-執行-web-伺服器">2. 執行 Web 伺服器</h4>
+<blockquote>
+<p><code>pip3 install -r requirements.txt</code></p>
+<p><code>python3 app.py</code></p>
+</blockquote>
+<h2 id="支援的作業系統">支援的作業系統</h2>
+<ul>
+<li>Windows</li>
+<li>Linux</li>
+<li>MacOS</li>
+</ul>
+<h2 id="簡易示範影片">簡易示範影片：</h2>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/LNbq2zkGN68?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<hr>
+<p><em>想要聯繫我，或者有合作機會？隨時歡迎寄信到：[littleblack830830@gmail.com]</em></p>
+
+        </div>
+
+        
+        <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "littleblackmann" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<script>
+  var indexURL = "https://littleblackmann.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://littleblackmann.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://littleblackmann.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://littleblackmann.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://littleblackmann.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://littleblackmann.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://littleblackmann.github.io/plugins/search/mark.js"></script>
+
+<script src="https://littleblackmann.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://littleblackmann.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var pageTransition = document.getElementById('page-transition');
+                setTimeout(function() {
+                    pageTransition.classList.add('visible');
+                }, 100);
+            });
+
+            document.addEventListener('click', function(e) {
+                var link = e.target.closest('a');
+                if (link && link.getAttribute('href').startsWith('/') && !link.getAttribute('target')) {
+                    e.preventDefault();
+                    var pageTransition = document.getElementById('page-transition');
+                    pageTransition.classList.remove('visible');
+                    setTimeout(function() {
+                        window.location = link.getAttribute('href');
+                    }, 500); 
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-tw"><head>
+  <meta charset="utf-8">
+  <title>小黑&#39;s Article</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ZeroSupper 漢堡店網站，從用戶註冊到訂單管理，使用 Vue.js、Spring Boot 與 MySQL 完成的前後端分離系統">
+  <meta name="author" content="小黑">
+    
+  
+  <meta name="theme-name" content="liva-hugo" />
+  
+  <meta name="generator" content="Hugo 0.135.0">
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://littleblackmann.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://littleblackmann.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://littleblackmann.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://littleblackmann.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://littleblackmann.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://littleblackmann.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://littleblackmann.github.io/images/favicon.png " type="image/x-icon">
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PWS2H0K52Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PWS2H0K52Q');
+</script>
+
+</head>
+<body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<div id="page-transition"><!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+      <a class="navbar-brand mobile-view" href="https://littleblackmann.github.io/"><img class="img-fluid"
+          src="https://littleblackmann.github.io/images/black.jpg" alt="小黑&#39;s Article"></a>
+      <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation">
+        <i class="ti-menu"></i>
+      </button>
+
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <div class="desktop-view">
+          <ul class="navbar-nav mr-auto">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.youtube.com/channel/UCFIwk5K008MMtRAofnNVOLw"><i class="ti-youtube"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.instagram.com/free__yi/"><i class="ti-instagram"></i></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/littleblackmann"><i class="ti-github"></i></a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <a class="navbar-brand mx-auto desktop-view" href="https://littleblackmann.github.io/"><img class="img-fluid"
+            src="https://littleblackmann.github.io/images/black.jpg" alt="小黑&#39;s Article"></a>
+
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://littleblackmann.github.io/about/">About</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://littleblackmann.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+
+        
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        
+        <h2>ZeroSupper 網頁專案</h2>
+        <div class="mb-3 post-meta">
+          <span>By 小黑</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>07 October 2024</span>
+          
+        </div>
+        
+        <img src="https://littleblackmann.github.io/images/zerosupper.jpg" class="img-fluid w-100 mb-4" alt="ZeroSupper 網頁專案">
+        
+        <div class="content mb-5">
+          <h3 id="zerosupper-專案介紹">ZeroSupper 專案介紹</h3>
+<hr>
+<p>當初，我跟三個朋友都是漢堡控，腦袋裡全是漢堡，於是我們決定一起創業，開了一間小型漢堡店，名叫 ZeroSupper。我們四個就像剛拿到超能力的小孩，熱血沸騰地覺得這是一個完美的機會！不僅能賺點小錢，還能天天享受美食，甚至想著要創造出獨特的用餐體驗，讓客人都成為我們的忠實粉絲，簡直就是夢想中的「漢堡帝國」。</p>
+<p>最初，我們從設計菜單、選擇店面，選擇廠商，每天半夜到市場拿食材，到手把手製作每一個漢堡，忙得像狗一樣！每天都累得像是打了300場傳說，卻還是充滿了幹勁，因為我們相信，終有一天，會有人為了我們的漢堡每天來吃！不過，說實話，那時候我們根本不知道該怎麼開店，只知道漢堡好吃就對了。搞得好像所有人都會因為吃了我們的漢堡而感動流淚，真是有夠囂張的🤣🤣🤣！</p>
+<p>那時候的我們每天都過得很開心，但後來遇到疫情還有一些變數所以就收掉了。所以我後來決定把它做成網頁當作我們四個人的回憶</p>
+<hr>
+<blockquote>
+<p><strong>特別感謝</strong>：我的後端 Spring Boot 技術是從這裡學習的，真的非常感謝古古老師的幫忙，透過這門課程我才可以將後端系統順利應用到這個專案中。</p>
+</blockquote>
+<blockquote>
+<p>以下是通往課程的地方有興趣的朋友也可以去支持古古老師:</p>
+</blockquote>
+<h2 id="spring-boot-課程連結httpshahowincourses5fe22e7fe810e10fc483dd78discussions"><a href="https://hahow.in/courses/5fe22e7fe810e10fc483dd78/discussions">Spring Boot 課程連結</a></h2>
+<hr>
+<h3 id="前端專案">前端專案</h3>
+<blockquote>
+<p>🔗 <a href="https://github.com/littleblackmann/my-zerosupper-project">my-zerosupper-project</a>
+這是我為 ZeroSupper 漢堡店的前端GitHub專案，負責現代網頁技術提供流暢的用戶體驗。</p>
+</blockquote>
+<h3 id="後端專案">後端專案</h3>
+<blockquote>
+<p>🔗 <a href="https://github.com/littleblackmann/My-SpringBoot-Project">My-SpringBoot-Project</a>
+這是我使用 Spring Boot 技術打造的GitHub專案，負責管理訂單和用戶資料，確保系統穩定運行。</p>
+</blockquote>
+<p>在這個專案中，我獨立設計開發了一個前後端分離的網頁系統，為我當初跟朋友創業的小型漢堡店實現了以下功能：</p>
+<ul>
+<li><strong>用戶註冊與登入系統</strong>：實現了用戶註冊、登入、登出功能，並保護用戶資料安全。</li>
+<li><strong>線上訂購與購物車</strong>：用戶可以在線選擇餐點，加至購物車並進行結算，極大提升了用戶的點餐體驗。</li>
+<li><strong>訂單通知系統</strong>：系統會自動發送訂單確認郵件給用戶與商家，確保訂單處理的透明性與即時性。</li>
+<li><strong>多頁面設計</strong>：網站設有首頁、菜單、餐廳位置等多個功能頁面，並透過使用 Vue.js、CSS 和 HTML 提供流暢的用戶介面。</li>
+<li><strong>後端服務與數據管理</strong>：使用 Spring Boot 和 MySQL 整合資料庫進行訂單與用戶數據的管理，確保數據的持久化和系統的穩定性。</li>
+<li><strong>後台管理功能</strong>：後台功能僅限特定帳號使用，提升系統的安全性。</li>
+</ul>
+<hr>
+<p>雖然目前沒有實現金流功能，但透過此專案，我不僅提升了開發的能力，也深刻理解了開發過程中的許多挑戰。未來，我希望能繼續進步，解決尚未完成的部分。</p>
+<h3 id="zerosupper-功能示範影片">ZeroSupper 功能示範影片：</h3>
+<blockquote>
+<p>注意：影片中的部分內容是我自己亂加的，純屬搞笑，請不要當真！😂</p>
+</blockquote>
+<h2 id="註冊會員">註冊會員</h2>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/X_Mn4Zov0S8?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<h2 id="登入會員">登入會員</h2>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/bhezqebiPjs?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<h2 id="線上點餐">線上點餐</h2>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/hxo7XniTBsg?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<h2 id="後台管理">後台管理</h2>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/YmS95vv9DHM?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<hr>
+<p><em>想要聯繫我，或者有合作機會？隨時歡迎寄信到：[littleblack830830@gmail.com]</em></p>
+
+        </div>
+
+        
+        <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "littleblackmann" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<script>
+  var indexURL = "https://littleblackmann.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://littleblackmann.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://littleblackmann.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://littleblackmann.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://littleblackmann.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://littleblackmann.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://littleblackmann.github.io/plugins/search/mark.js"></script>
+
+<script src="https://littleblackmann.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://littleblackmann.github.io/js/script.min.js"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide">
+	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-sm btn-primary ml-2">I Accept</span>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires:  2 
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+
+
+<style>
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: rgb(71, 71, 71);
+  transition: all .75s cubic-bezier(.19, 1, .22, 1);
+  color: #fdfdfd;
+}
+
+.cookie-box-hide {
+  display: none;
+}
+</style>
+</div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var pageTransition = document.getElementById('page-transition');
+                setTimeout(function() {
+                    pageTransition.classList.add('visible');
+                }, 100);
+            });
+
+            document.addEventListener('click', function(e) {
+                var link = e.target.closest('a');
+                if (link && link.getAttribute('href').startsWith('/') && !link.getAttribute('target')) {
+                    e.preventDefault();
+                    var pageTransition = document.getElementById('page-transition');
+                    pageTransition.classList.remove('visible');
+                    setTimeout(function() {
+                        window.location = link.getAttribute('href');
+                    }, 500); 
+                }
+            });
+        </script>
+    </body>
+</html>

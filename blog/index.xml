@@ -6,8 +6,22 @@
     <description>Recent content in Blogs on 小黑&#39;s Article</description>
     <generator>Hugo</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 05 Oct 2024 15:36:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 07 Oct 2024 15:03:00 +0800</lastBuildDate>
     <atom:link href="https://littleblackmann.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ZeroSupper 網頁專案</title>
+      <link>https://littleblackmann.github.io/blog/black7/</link>
+      <pubDate>Mon, 07 Oct 2024 15:03:00 +0800</pubDate>
+      <guid>https://littleblackmann.github.io/blog/black7/</guid>
+      <description>&lt;h3 id=&#34;zerosupper-專案介紹&#34;&gt;ZeroSupper 專案介紹&lt;/h3&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;當初，我跟三個朋友都是漢堡控，腦袋裡全是漢堡，於是我們決定一起創業，開了一間小型漢堡店，名叫 ZeroSupper。我們四個就像剛拿到超能力的小孩，熱血沸騰地覺得這是一個完美的機會！不僅能賺點小錢，還能天天享受美食，甚至想著要創造出獨特的用餐體驗，讓客人都成為我們的忠實粉絲，簡直就是夢想中的「漢堡帝國」。&lt;/p&gt;&#xA;&lt;p&gt;最初，我們從設計菜單、選擇店面，選擇廠商，每天半夜到市場拿食材，到手把手製作每一個漢堡，忙得像狗一樣！每天都累得像是打了300場傳說，卻還是充滿了幹勁，因為我們相信，終有一天，會有人為了我們的漢堡每天來吃！不過，說實話，那時候我們根本不知道該怎麼開店，只知道漢堡好吃就對了。搞得好像所有人都會因為吃了我們的漢堡而感動流淚，真是有夠囂張的🤣🤣🤣！&lt;/p&gt;&#xA;&lt;p&gt;那時候的我們每天都過得很開心，但後來遇到疫情還有一些變數所以就收掉了。所以我後來決定把它做成網頁當作我們四個人的回憶&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;特別感謝&lt;/strong&gt;：我的後端 Spring Boot 技術是從這裡學習的，真的非常感謝古古老師的幫忙，透過這門課程我才可以將後端系統順利應用到這個專案中。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>小黑簡易ＡＩ聊天</title>
+      <link>https://littleblackmann.github.io/blog/black6/</link>
+      <pubDate>Mon, 07 Oct 2024 13:32:00 +0800</pubDate>
+      <guid>https://littleblackmann.github.io/blog/black6/</guid>
+      <description>&lt;hr&gt;&#xA;&lt;p&gt;在這個小專案中，我使用了 Python 並結合 ChatGPT API，開發出幾項功能的 AI 聊天系統，旨在模擬 AI 助手與使用者之間的對話。以下是專案的主要功能：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;聊天功能：透過 ChatGPT API，讓用戶能進行自然語言對話，模擬 AI 助手角色。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Linux 簡易資料轉移</title>
       <link>https://littleblackmann.github.io/blog/black5/</link>
