@@ -1,0 +1,16 @@
+[
+  {
+    "name": "台股預測分析系統",
+    "description": "結合 Transformer 深度學習、LightGBM 與 GPT 新聞情緒分析的桌面端台股漲跌預測工具，支援 K 線圖、SHAP 可解釋分析與自動進化學習。",
+    "image": "images/projects/stock-cover.png",
+    "link": "projects/stock-predictor.html",
+    "tags": ["Python", "Transformer", "LightGBM", "PySide6"]
+  },
+  {
+    "name": "小黑工具箱",
+    "description": "5 合 1 離線實用工具集：AI 智慧去背、OCR 文字辨識、文字轉檔、QR Code 生成、PNG 轉 ICO，解壓即用，完全離線運作。",
+    "image": "images/projects/toolbox-cover.png",
+    "link": "projects/toolbox.html",
+    "tags": ["Python", "Flask", "BiRefNet", "EasyOCR"]
+  }
+]
