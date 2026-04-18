@@ -1,5 +1,12 @@
 [
   {
+    "name": "人生步數",
+    "description": "一款 Android 計步養成小遊戲 — 你走的每一步，都是角色的一段人生。從嬰兒出生、成長、職業、變老、死亡，最後輪迴重來。",
+    "image": "images/projects/人生步數-首頁.jpg",
+    "link": "projects/life-steps.html",
+    "tags": ["Kotlin", "Jetpack Compose", "Room", "Android"]
+  },
+  {
     "name": "台股預測分析系統",
     "description": "結合 Transformer 深度學習、LightGBM 與 GPT 新聞情緒分析的桌面端台股漲跌預測工具，支援 K 線圖、SHAP 可解釋分析與自動進化學習。",
     "image": "images/projects/stock-cover.png",

@@ -85,10 +85,105 @@ littleblackmann.github.io-main/
 ```
 
 ### 待辦 / 下次可以做的事
-- [ ] 把網站 push 到 GitHub，確認 `littleblackmann.github.io` 正常顯示
-- [ ] 替換範例假資料，放入真正的專案內容
+- [x] 把網站 push 到 GitHub，確認 `littleblackmann.github.io` 正常顯示 ✔ 已在第二次工作完成
+- [x] 替換範例假資料，放入真正的專案內容 ✔ 已在第二次工作完成
 - [ ] 如果需要可以更換 `favicon.png`（目前沿用舊的）
 - [ ] 考慮是否要加更多社群連結（例如 GitHub）
+
+---
+
+## 2026-04-08（第二次工作）
+
+### 做了什麼
+
+#### 1. 版面精簡化 — Hero 合併關於我
+- 討論了 4 種流行版面方案（A: 合併 Hero / B: 專案優先 / C: Bento Grid / D: 加技能區塊）
+- 小黑選了方案 A：把大頭照 + 自我介紹融進 Hero 區塊，移除獨立的「關於我」section
+- 大頭照改為圓形（`border-radius: 50%`），放在標題上方
+- 自我介紹文字直接放在 slogan 下方
+
+#### 2. 移除導航列
+- 小黑覺得頁面很短、滾一下就到底，不需要 navbar
+- 完整移除：HTML nav 元素、CSS 導航列樣式、JS 滾動效果和漢堡選單邏輯
+- Hero 上方 padding 從 `6rem` 調為 `4rem`，移除 `scroll-padding-top`
+
+#### 3. 新增專案 — 台股預測分析系統
+- 替換 `projects.json` 中的假資料為真實專案
+- 建立獨立詳細頁 `projects/stock-predictor.html`
+- 內容涵蓋：功能介紹（6 卡片）、預測原理（3 步驟）、系統截圖（3 張）、系統需求表格、風險聲明
+- 頂部和底部各放一個下載按鈕（Google Drive 連結）
+- 下載連結：`https://drive.google.com/file/d/1ELeGMH7CEh_4z9ZsP2CzmZ8GvHe0Cx3a/view?usp=sharing`
+- 截圖檔案：`stock-cover.png`（封面/結果畫面）、`stock-main.png`（空白主畫面）、`stock-progress.png`（預測進度）
+
+#### 4. 新增專案 — 小黑工具箱
+- 加入 `projects.json` 第二個專案
+- 建立獨立詳細頁 `projects/toolbox.html`
+- 內容涵蓋：使用流程（4 步驟）、重點數據卡片（5 工具/0 安裝/100% 離線/0 上傳）、5 個工具介紹卡片、系統截圖（3 張）、技術原理、系統需求表格、隱私聲明
+- 下載連結：`https://drive.google.com/file/d/1kKQVuEBL2riLv84Y0hBY02glUGrAhdNL/view?usp=sharing`
+- 截圖檔案：`toolbox-cover.png`（工具首頁）、`toolbox-rembg.png`（AI 去背）、`toolbox-ocr.png`（OCR 辨識）
+
+#### 5. 專案卡片改為整張可點擊
+- `script.js` 中把卡片從 `<div>` 改為 `<a>` 標籤，整張卡片可點擊
+- 內部連結（詳細頁）在同一視窗開啟，外部連結則新分頁開啟
+
+#### 6. 部署上線
+- 在資料夾初始化 git，commit 所有檔案
+- Force push 到 `littleblackmann/littleblackmann.github.io` repo（覆蓋舊的 Hugo 內容）
+- 開啟 GitHub Pages（source: main branch, root）
+- 網站已上線：`https://littleblackmann.github.io`
+
+### 目前網站結構（更新後）
+```
+Hero（大頭照 + 名字 + slogan + 自介）
+    ↓
+專案作品（台股預測分析系統 / 小黑工具箱）
+    ↓
+社群連結（YouTube / Instagram）
+    ↓
+頁尾
+```
+
+### 目前檔案結構（更新後）
+```
+littleblackmann.github.io-main/
+├── index.html
+├── style.css
+├── script.js
+├── projects.json
+├── DEVLOG.md
+├── images/
+│   ├── avatar.png
+│   ├── favicon.png
+│   └── projects/
+│       ├── stock-cover.png
+│       ├── stock-main.png
+│       ├── stock-progress.png
+│       ├── toolbox-cover.png
+│       ├── toolbox-ocr.png
+│       └── toolbox-rembg.png
+└── projects/
+    ├── stock-predictor.html
+    └── toolbox.html
+```
+
+### 新增專案的方式（更新版）
+1. 編輯 `projects.json` 加入新專案
+2. 在 `projects/` 建立對應的詳細頁 HTML（可參考 `stock-predictor.html` 或 `toolbox.html` 的格式）
+3. 把截圖丟進 `images/projects/`
+4. `git add . && git commit && git push`
+
+### 新增專案時需要準備的東西
+1. **簡報版報告**（`PROJECT_REPORT_簡報版.md`）— 我會根據這個整理詳細頁的內容
+2. **封面截圖 1 張** — 放首頁卡片用，選最能代表整個系統的畫面（檔名：`xxx-cover.png`）
+3. **功能截圖 2~4 張** — 放詳細頁，挑最有亮點的功能畫面
+4. **雲端下載連結** — Google Drive 分享連結
+5. 所有圖片丟進 `images/projects/`
+
+### 待辦 / 下次可以做的事
+- [ ] 如果需要可以更換 `favicon.png`（目前沿用舊的）
+- [ ] 考慮是否要加更多社群連結（例如 GitHub）
+- [ ] 考慮加入「小黑小工具」專案（小黑有提到但還沒做）
+- [ ] 詳細頁的樣式目前是各自獨立寫在 `<style>` 裡，如果專案變多可以考慮抽成共用 CSS
 
 ---
 
