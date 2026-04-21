@@ -349,6 +349,69 @@
       color: var(--gold);
     }
 
+    /* --- 請小黑吃便當 --- */
+    .donation-section {
+      position: relative;
+      z-index: 1;
+      padding: 1rem 2rem 4rem;
+    }
+    .donation-card {
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: border-color 0.4s;
+    }
+    .donation-card:hover { border-color: var(--border-gold); }
+    .donation-banner {
+      width: 100%;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+    .donation-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.6s;
+    }
+    .donation-card:hover .donation-banner img { transform: scale(1.03); }
+    .donation-content {
+      padding: 2rem 1.5rem 2.2rem;
+      text-align: center;
+    }
+    .donation-title {
+      font-family: var(--font-body);
+      font-size: 1.15rem;
+      color: var(--gold);
+      letter-spacing: 2px;
+      margin-bottom: 0.8rem;
+      font-weight: 500;
+    }
+    .donation-text {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.9;
+      margin-bottom: 1.5rem;
+    }
+    .donation-btn {
+      display: inline-block;
+      padding: 0.6rem 2rem;
+      background: transparent;
+      color: var(--gold);
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      border: 1px solid var(--gold);
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+    .donation-btn:hover {
+      background: var(--gold);
+      color: var(--bg-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px var(--gold-glow);
+    }
+
     /* --- Footer --- */
     .page-footer {
       text-align: center;
@@ -364,6 +427,10 @@
       .highlight-grid { grid-template-columns: repeat(2, 1fr); }
       .back-link { top: 0.8rem; left: 0.8rem; font-size: 0.8rem; padding: 0.3rem 0.8rem; }
       .tool-card { flex-direction: column; }
+      .donation-section { padding: 0 1rem; }
+      .donation-content { padding: 1.5rem 1.2rem 1.8rem; }
+      .donation-title { font-size: 1rem; }
+      .donation-text { font-size: 0.8rem; }
     }
   </style>
 </head>
@@ -548,6 +615,25 @@
       <p class="download-note">v1.0.0 ｜ Windows 10 / 11 ｜ 約 500 MB ｜ 解壓即用</p>
     </div>
 
+  </div>
+
+  <!-- 請小黑吃便當 -->
+  <div class="donation-section">
+    <div class="donation-card">
+      <div class="donation-banner">
+        <img src="../images/donation-banner.jpg" alt="深夜裡的一份雞腿便當">
+      </div>
+      <div class="donation-content">
+        <h2 class="donation-title">請小黑吃雞腿便當 🍱</h2>
+        <p class="donation-text">
+          作品都是免費的。如果你喜歡、想回饋，<br>
+          歡迎請我吃個雞腿便當，讓我更有動力繼續做下去。
+        </p>
+        <a href="https://payment.opay.tw/Broadcaster/Donate/7341A28F6CDE05A1A6646A7B26DF4CD8" target="_blank" rel="noopener" class="donation-btn">
+          我要請客 →
+        </a>
+      </div>
+    </div>
   </div>
 
   <footer class="page-footer">
