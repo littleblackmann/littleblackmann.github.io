@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>廚師 AI 工具箱 — 小黑的小角落</title>
+  <meta name="description" content="一款 Android AI 料理助理 — 冰箱有什麼就煮什麼，AI 廚師出食譜連眉角都教你。">
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0d0d1a;
+      --bg-panel: #16162a;
+      --gold: #c9aa71;
+      --gold-light: #e8d5a3;
+      --gold-glow: rgba(201, 170, 113, 0.3);
+      --text: #d4d0c8;
+      --text-muted: #8a8678;
+      --border: #2a2a3e;
+      --font-title: 'Cinzel', serif;
+      --font-body: 'Noto Sans TC', sans-serif;
+    }
+
+    *, *::before, *::after {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-dark);
+      color: var(--text);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    a { color: var(--gold); text-decoration: none; transition: color 0.3s; }
+    a:hover { color: var(--gold-light); }
+    img { max-width: 100%; display: block; }
+
+    .back-link {
+      position: fixed;
+      top: 1.2rem;
+      left: 1.5rem;
+      z-index: 100;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 1rem;
+      background: rgba(10, 10, 20, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+
+    .back-link:hover {
+      color: var(--gold);
+      border-color: var(--gold);
+    }
+
+    .back-link svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 2rem 3rem;
+    }
+
+    .project-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .project-title {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      color: var(--gold);
+      letter-spacing: 3px;
+      margin-bottom: 0.4rem;
+      text-shadow: 0 0 30px var(--gold-glow);
+    }
+
+    .project-chinese {
+      font-size: 1.1rem;
+      color: var(--gold-light);
+      letter-spacing: 4px;
+      margin-bottom: 0.8rem;
+    }
+
+    .project-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.9;
+    }
+
+    .project-tags {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-tag {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.8rem;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 2rem;
+      background: var(--gold);
+      color: var(--bg-dark);
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+      border: none;
+      transition: all 0.3s;
+    }
+
+    .download-btn:hover {
+      background: var(--gold-light);
+      color: var(--bg-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px var(--gold-glow);
+    }
+
+    .download-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    .download-note {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.6rem;
+    }
+
+    .download-note strong {
+      color: var(--gold-light);
+    }
+
+    .cover-image {
+      border: 1px solid var(--border);
+      margin-bottom: 3rem;
+      overflow: hidden;
+      background: var(--bg-panel);
+      display: flex;
+      justify-content: center;
+    }
+
+    .cover-image img {
+      max-height: 600px;
+      width: auto;
+      transition: transform 0.5s;
+    }
+
+    .cover-image:hover img {
+      transform: scale(1.02);
+    }
+
+    .section-title {
+      font-family: var(--font-title);
+      font-size: 1.2rem;
+      color: var(--gold);
+      letter-spacing: 2px;
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .content-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .content-section p {
+      font-size: 0.9rem;
+      margin-bottom: 0.8rem;
+      color: var(--text);
+    }
+
+    /* --- How to use steps --- */
+    .how-to-use {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+      padding: 1.2rem;
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+    }
+
+    .step {
+      font-size: 0.85rem;
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .step-arrow {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    /* --- Feature cards --- */
+    .tool-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tool-card {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      transition: border-color 0.3s;
+    }
+
+    .tool-card:hover {
+      border-color: var(--text-muted);
+    }
+
+    .tool-icon {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    .tool-info {
+      flex: 1;
+    }
+
+    .tool-name {
+      font-size: 0.95rem;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .tool-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* --- Gallery --- */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .gallery-item {
+      border: 1px solid var(--border);
+      overflow: hidden;
+      background: var(--bg-panel);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      transition: transform 0.5s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.03);
+    }
+
+    .gallery-caption {
+      padding: 0.7rem 1rem;
+      background: var(--bg-panel);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    /* --- Highlights --- */
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .highlight-card {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      padding: 1rem 1.2rem;
+      text-align: center;
+      transition: border-color 0.3s;
+    }
+
+    .highlight-card:hover {
+      border-color: var(--text-muted);
+    }
+
+    .highlight-value {
+      font-size: 1.3rem;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+
+    .highlight-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* --- Info table --- */
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-table td {
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .info-table td:first-child {
+      color: var(--gold);
+      font-weight: 500;
+      white-space: nowrap;
+      width: 120px;
+    }
+
+    /* --- Install note --- */
+    .install-note {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      padding: 1rem 1.3rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .install-note strong {
+      color: var(--gold);
+    }
+
+    /* --- Privacy --- */
+    .privacy-box {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      padding: 1.2rem 1.5rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .privacy-box strong {
+      color: var(--gold);
+    }
+
+    /* --- Donation --- */
+    .donation-section {
+      max-width: 720px;
+      margin: 0 auto 3rem;
+      padding: 0 2rem;
+    }
+
+    .donation-card {
+      background: var(--bg-panel);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: border-color 0.4s;
+    }
+
+    .donation-card:hover {
+      border-color: var(--gold);
+    }
+
+    .donation-banner {
+      width: 100%;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .donation-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.6s;
+    }
+
+    .donation-card:hover .donation-banner img {
+      transform: scale(1.03);
+    }
+
+    .donation-content {
+      padding: 1.8rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .donation-title {
+      font-size: 1.1rem;
+      color: var(--gold);
+      letter-spacing: 2px;
+      margin-bottom: 0.7rem;
+      font-weight: 500;
+    }
+
+    .donation-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.9;
+      margin-bottom: 1.4rem;
+    }
+
+    .donation-btn {
+      display: inline-block;
+      padding: 0.55rem 1.8rem;
+      background: transparent;
+      color: var(--gold);
+      font-size: 0.88rem;
+      letter-spacing: 2px;
+      border: 1px solid var(--gold);
+      transition: all 0.3s;
+    }
+
+    .donation-btn:hover {
+      background: var(--gold);
+      color: var(--bg-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px var(--gold-glow);
+    }
+
+    /* --- Footer --- */
+    .page-footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 3.5rem 1.2rem 2rem; }
+      .project-title { font-size: 1.5rem; }
+      .highlight-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery { grid-template-columns: repeat(2, 1fr); }
+      .back-link { top: 0.8rem; left: 0.8rem; font-size: 0.8rem; padding: 0.3rem 0.8rem; }
+      .tool-card { flex-direction: column; }
+      .cover-image img { max-height: 500px; }
+      .donation-section { padding: 0 1rem; }
+      .donation-content { padding: 1.5rem 1.2rem 1.8rem; }
+      .donation-title { font-size: 1rem; }
+      .donation-text { font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="../index.html" class="back-link">
+    <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+    返回首頁
+  </a>
+
+  <div class="container">
+
+    <!-- Header -->
+    <div class="project-header">
+      <h1 class="project-title">Chef AI Toolbox</h1>
+      <div class="project-chinese">廚師 AI 工具箱</div>
+      <p class="project-subtitle">冰箱有什麼、就煮什麼 — 由 20 年廚師調教過的 AI，<br>每道食譜都有只有廚房老手才知道的眉角。</p>
+      <div class="project-tags">
+        <span class="project-tag">Kotlin</span>
+        <span class="project-tag">OpenAI API</span>
+        <span class="project-tag">Android</span>
+        <span class="project-tag">AI 食譜</span>
+      </div>
+      <a href="https://drive.google.com/file/d/10HYPLadG7iBR5fSXlc0SOmQnvA_RsxeH/view?usp=sharing" target="_blank" rel="noopener" class="download-btn">
+        <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+        下載 APK
+      </a>
+      <p class="download-note"><strong>僅支援 Android 8.0 以上</strong>｜約 17.1 MB｜iPhone / iPad 無法安裝</p>
+    </div>
+
+    <!-- Cover -->
+    <div class="cover-image">
+      <img src="../images/projects/廚房AI-首頁圖片.jpg" alt="廚師 AI 工具箱 — App 首頁">
+    </div>
+
+    <!-- 這是什麼 -->
+    <div class="content-section">
+      <h2 class="section-title">這是什麼？</h2>
+      <p>廚師 AI 工具箱是一款 Android 料理助理 App，有三個核心功能：<strong style="color:var(--gold)">冰箱食譜生成器</strong>、<strong style="color:var(--gold)">熱量雷達</strong>、<strong style="color:var(--gold)">我的紀錄</strong>。</p>
+      <p>跟一般 AI 食譜 App 最不一樣的地方 — 食譜不是機器直接丟給你，而是經過真廚師反覆調教的 AI 出的，每個步驟都會告訴你「為什麼這樣做」：醃肉順序、翻鍋時機、醬油沿鍋邊淋的原因。像一個真的會做菜的朋友站在旁邊講給你聽。</p>
+      <p>App 本身完全免費。沒有訂閱、沒有廣告、沒有後端伺服器。你用自己的 OpenAI API Key，AI 費用直接進你的帳戶，開發者一分錢都不碰。</p>
+    </div>
+
+    <!-- 怎麼用 -->
+    <div class="content-section">
+      <h2 class="section-title">怎麼用？</h2>
+      <div class="how-to-use">
+        <span class="step">選食材</span>
+        <span class="step-arrow">→</span>
+        <span class="step">設定風格 & 人數</span>
+        <span class="step-arrow">→</span>
+        <span class="step">點生成</span>
+        <span class="step-arrow">→</span>
+        <span class="step">串流食譜</span>
+        <span class="step-arrow">→</span>
+        <span class="step">自動存紀錄</span>
+      </div>
+    </div>
+
+    <!-- 重點數據 -->
+    <div class="content-section">
+      <div class="highlight-grid">
+        <div class="highlight-card">
+          <div class="highlight-value">3</div>
+          <div class="highlight-label">核心功能</div>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-value">6</div>
+          <div class="highlight-label">大食材分類</div>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-value">5</div>
+          <div class="highlight-label">種料理風格</div>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-value">50</div>
+          <div class="highlight-label">筆本地紀錄</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 三大功能 -->
+    <div class="content-section">
+      <h2 class="section-title">三大功能</h2>
+      <div class="tool-list">
+        <div class="tool-card">
+          <div class="tool-icon">🥬</div>
+          <div class="tool-info">
+            <div class="tool-name">冰箱食譜生成器</div>
+            <div class="tool-desc">從六大分類（蔬菜、肉類、海鮮、蛋奶豆、五穀、調味料）選出冰箱現有食材，搭配料理風格（家常／日式／西式／低卡／快手）和幾人份，AI 立刻出 1–3 道食譜。每道菜附精確克數、5 步驟、廚師眉角，出來的菜名也有記憶點。</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">🔥</div>
+          <div class="tool-info">
+            <div class="tool-name">熱量雷達</div>
+            <div class="tool-desc">拍一張料理照片（或從相簿選），AI 辨識菜色後估算熱量、蛋白質、碳水、脂肪，並給 2–3 句具體可執行的降熱量建議。誤差約 ±15%，供參考用，不是醫療建議。</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon">📚</div>
+          <div class="tool-info">
+            <div class="tool-name">我的紀錄</div>
+            <div class="tool-desc">每次生成的食譜和熱量分析都自動存進手機本機，下次想看直接翻，不用重複扣 API 費用。最多 50 筆，超過會自動淘汰最舊的，不佔空間。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 畫面截圖 -->
+    <div class="content-section">
+      <h2 class="section-title">App 畫面</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="../images/projects/廚房AI-冰箱廚房生成圖片1.jpg" alt="食材選擇畫面" loading="lazy">
+          <div class="gallery-caption">食材選擇</div>
+        </div>
+        <div class="gallery-item">
+          <img src="../images/projects/廚房AI-冰箱廚房生成圖片2.jpg" alt="食材選擇更多選項" loading="lazy">
+          <div class="gallery-caption">食材選擇（更多分類）</div>
+        </div>
+        <div class="gallery-item">
+          <img src="../images/projects/廚房AI-冰箱廚房生成食譜圖片.jpg" alt="AI 生成食譜" loading="lazy">
+          <div class="gallery-caption">AI 即時串流食譜</div>
+        </div>
+        <div class="gallery-item">
+          <img src="../images/projects/廚房AI-紀錄圖片.jpg" alt="我的紀錄" loading="lazy">
+          <div class="gallery-caption">我的紀錄</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 怎麼做到的 -->
+    <div class="content-section">
+      <h2 class="section-title">怎麼做到的？</h2>
+      <div class="tool-list">
+        <div class="tool-card">
+          <div class="tool-info">
+            <div class="tool-name">AI 串流食譜生成</div>
+            <div class="tool-desc">呼叫 OpenAI Chat API，搭配由真廚師反覆調教的 system prompt，串流輸出每一個字。食譜的「廚師眉角」段落是 prompt 設計的核心，不是通用的食譜模板。</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-info">
+            <div class="tool-name">視覺辨識熱量分析</div>
+            <div class="tool-desc">使用 GPT-4o Vision 分析料理照片，辨識菜色後估算熱量與營養成分，並給出具體可執行的降熱量建議。</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-info">
+            <div class="tool-name">本地優先架構</div>
+            <div class="tool-desc">Room 資料庫儲存食譜與熱量紀錄，DataStore 存 API Key，Coil 處理熱量分析的縮圖。App 完全沒有後端伺服器，所有資料都在你的手機裡。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 系統需求 -->
+    <div class="content-section">
+      <h2 class="section-title">系統需求</h2>
+      <table class="info-table">
+        <tr><td>作業系統</td><td>Android 8.0（API 26）以上</td></tr>
+        <tr><td>iOS 支援</td><td>不支援（iPhone / iPad 無法安裝）</td></tr>
+        <tr><td>檔案大小</td><td>約 17.1 MB</td></tr>
+        <tr><td>網路</td><td>需要網路（Wi-Fi 或行動數據）</td></tr>
+        <tr><td>權限</td><td>相機（熱量雷達拍照）、照片（從相簿選圖）</td></tr>
+        <tr><td>費用</td><td>App 免費，需自備 OpenAI API Key（用多少扣多少）</td></tr>
+      </table>
+    </div>
+
+    <!-- 安裝提醒 -->
+    <div class="install-note">
+      <strong>安裝提醒：</strong>因為是個人作品、沒有上架 Google Play，第一次安裝時 Android 會跳出「未知來源」警告，這是系統的正常行為，不是 bug。在設定中允許「安裝未知應用程式」即可。<br><br>
+      <strong>第一次開啟：</strong>需要輸入你自己的 OpenAI API Key（格式：sk-開頭的一串字）。沒有 Key 的話，到 platform.openai.com 申請一把，先儲值 5 美金試水溫，一般家庭用一個月大概 NT$ 30–80 左右。
+    </div>
+
+    <!-- 隱私 -->
+    <div class="privacy-box">
+      <strong>隱私保證：</strong>App 沒有後端伺服器。你輸入的食材、拍的照片，直接送到 OpenAI，不經過開發者。你的 API Key 只存在你手機的本地儲存，永遠不會上傳到任何地方。食譜紀錄、熱量紀錄都只在你的手機裡，App 開發者完全看不到。
+    </div>
+
+    <!-- 底部下載 -->
+    <div style="text-align:center; margin-bottom: 2rem;">
+      <a href="https://drive.google.com/file/d/10HYPLadG7iBR5fSXlc0SOmQnvA_RsxeH/view?usp=sharing" target="_blank" rel="noopener" class="download-btn">
+        <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+        下載 APK
+      </a>
+      <p class="download-note">Android 8.0+ ｜ 約 17.1 MB</p>
+    </div>
+
+  </div>
+
+  <!-- 請小黑吃便當 -->
+  <div class="donation-section">
+    <div class="donation-card">
+      <div class="donation-banner">
+        <img src="../images/donation-banner.jpg" alt="深夜裡的一份雞腿便當">
+      </div>
+      <div class="donation-content">
+        <h2 class="donation-title">請小黑吃雞腿便當 🍱</h2>
+        <p class="donation-text">
+          作品都是免費的。如果你喜歡、想回饋，<br>
+          歡迎請我吃個雞腿便當，讓我更有動力繼續做下去。
+        </p>
+        <a href="https://payment.opay.tw/Broadcaster/Donate/7341A28F6CDE05A1A6646A7B26DF4CD8" target="_blank" rel="noopener" class="donation-btn">
+          我要請客 →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    <p>&copy; 2025 — 小黑. All rights reserved.</p>
+  </footer>
+
+  <script data-goatcounter="https://littleblack.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

@@ -1,5 +1,12 @@
 [
   {
+    "name": "廚師 AI 工具箱",
+    "description": "一款 Android AI 料理助理 — 冰箱有什麼就煮什麼，AI 廚師出食譜連眉角都教你。由 20 年廚師調教的 prompt，每步驟都有只有廚房老手才知道的細節。",
+    "image": "images/projects/廚房AI-首頁圖片.jpg",
+    "link": "projects/chef-ai-toolbox.html",
+    "tags": ["Kotlin", "OpenAI API", "Android", "AI 食譜"]
+  },
+  {
     "name": "人生步數",
     "description": "一款 Android 計步養成小遊戲 — 你走的每一步，都是角色的一段人生。從嬰兒出生、成長、職業、變老、死亡，最後輪迴重來。",
     "image": "images/projects/人生步數-首頁.jpg",
