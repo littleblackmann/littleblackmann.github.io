@@ -267,15 +267,10 @@ littleblackmann.github.io-main/
 
 ### 做了什麼
 
-#### 1. 新增 Google Analytics 4（GA4）
-- 在 Google Analytics 建立資料串流，取得追蹤碼（Measurement ID：`G-XD68MC8KDT`）
-- 將 gtag.js 加入全站所有頁面的 `<head>` 最前面：`index.html`、`projects/life-steps.html`、`projects/stock-predictor.html`、`projects/toolbox.html`
-
-#### 2. 改用 GoatCounter（更簡單的流量追蹤）
-- GA4 介面太複雜，決定另外加 GoatCounter 作為主要流量觀測工具
+#### 1. 新增 GoatCounter 流量追蹤
+- GA4 介面太複雜放棄使用，改用 GoatCounter（簡單、免費、無 Cookie）
 - 在 [goatcounter.com](https://www.goatcounter.com) 註冊帳號，帳號名稱 `littleblack`，儀表板網址：`https://littleblack.goatcounter.com`
-- 將 GoatCounter script 加入全站所有頁面的 `</body>` 前：`index.html`、`projects/life-steps.html`、`projects/stock-predictor.html`、`projects/toolbox.html`
-- 目前 GA4 + GoatCounter 並存，GoatCounter 拿來日常看，GA4 備用
+- 將 GoatCounter script 加入全站所有頁面的 `</body>` 前，GA4 代碼全部移除
 
 #### 3. GoatCounter 使用方式
 - 登入：`https://littleblack.goatcounter.com`
