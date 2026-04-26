@@ -170,7 +170,11 @@ littleblackmann.github.io-main/
 1. 編輯 `projects.json` 加入新專案
 2. 在 `projects/` 建立對應的詳細頁 HTML（可參考 `stock-predictor.html` 或 `toolbox.html` 的格式）
 3. 把截圖丟進 `images/projects/`
-4. `git add . && git commit && git push`
+4. **新詳情頁的 `</body>` 前加上 GoatCounter 追蹤碼**（不加這頁就不會被追蹤到）：
+   ```html
+   <script data-goatcounter="https://littleblack.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+   ```
+5. `git add . && git commit && git push`
 
 ### 新增專案時需要準備的東西
 1. **簡報版報告**（`PROJECT_REPORT_簡報版.md`）— 我會根據這個整理詳細頁的內容
