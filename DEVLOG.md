@@ -263,4 +263,33 @@ littleblackmann.github.io-main/
 
 ---
 
+## 2026-04-27（第五次工作）
+
+### 做了什麼
+
+#### 1. 新增 Google Analytics 4（GA4）
+- 在 Google Analytics 建立資料串流，取得追蹤碼（Measurement ID：`G-XD68MC8KDT`）
+- 將 gtag.js 加入全站所有頁面的 `<head>` 最前面：`index.html`、`projects/life-steps.html`、`projects/stock-predictor.html`、`projects/toolbox.html`
+
+#### 2. 改用 GoatCounter（更簡單的流量追蹤）
+- GA4 介面太複雜，決定另外加 GoatCounter 作為主要流量觀測工具
+- 在 [goatcounter.com](https://www.goatcounter.com) 註冊帳號，帳號名稱 `littleblack`，儀表板網址：`https://littleblack.goatcounter.com`
+- 將 GoatCounter script 加入全站所有頁面的 `</body>` 前：`index.html`、`projects/life-steps.html`、`projects/stock-predictor.html`、`projects/toolbox.html`
+- 目前 GA4 + GoatCounter 並存，GoatCounter 拿來日常看，GA4 備用
+
+#### 3. GoatCounter 使用方式
+- 登入：`https://littleblack.goatcounter.com`
+- 可以看到：哪天幾人來、訪問最多的頁面、從哪個國家來、用什麼瀏覽器 / 作業系統
+- 不需要複雜設定，有資料就會自動顯示
+
+### 待辦 / 下次可以做的事
+- [ ] 確認 GoatCounter 有正確收到資料（登入後看有無訪問數字）
+- [ ] 測試其他信用卡（中信、國泰、台新）是否也刷不過，判斷是不是歐付寶 3D 驗證問題
+- [ ] 如果多數信用卡都刷不過，考慮去歐付寶後台加開 3D 驗證
+- [ ] 測試 LINE Pay、街口支付流程
+- [ ] 作品累積到 6+ 個時回頭評估 grid 是否改 3 張一排
+- [ ] 之後有新作品時照 SOP 收集（封面圖、截圖、下載連結、大小、版號、平台、標籤）
+
+---
+
 > 下次工作前，請先讀完以上內容再開始。
