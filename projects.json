@@ -1,5 +1,12 @@
 [
   {
+    "name": "今日紫微",
+    "description": "結合紫微斗數與 AI 智慧解讀的個人化運勢 App — 每天用幾分鐘，了解今日的流日運勢，整體、財運、事業、感情八大主題任選。",
+    "image": "images/projects/今日紫微-起始畫面1.jpg",
+    "link": "projects/ziwei-today.html",
+    "tags": ["Kotlin", "Jetpack Compose", "OpenAI API", "Android"]
+  },
+  {
     "name": "廚師 AI 工具箱",
     "description": "一款 Android AI 料理助理 — 冰箱有什麼就煮什麼，AI 廚師出食譜連眉角都教你。由 20 年廚師調教的 prompt，每步驟都有只有廚房老手才知道的細節。",
     "image": "images/projects/廚房AI-首頁圖片.jpg",
