@@ -1,5 +1,12 @@
 [
   {
+    "name": "小白",
+    "description": "為家人打造的語音 AI 助手 — 說話就能查天氣、問新聞、設提醒，還能記住你的偏好與習慣。家庭內部使用。",
+    "image": "images/projects/小黑的AI-agent-初始畫面.PNG",
+    "link": "projects/xiaobai-agent.html",
+    "tags": ["Python", "FastAPI", "OpenAI API", "語音 AI"]
+  },
+  {
     "name": "今日紫微",
     "description": "結合紫微斗數與 AI 智慧解讀的個人化運勢 App — 每天用幾分鐘，了解今日的流日運勢，整體、財運、事業、感情八大主題任選。",
     "image": "images/projects/今日紫微-起始畫面1.jpg",

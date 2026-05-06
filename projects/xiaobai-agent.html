@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G4N8JT4VXM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-G4N8JT4VXM');
+</script>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小白 — 小黑的小角落</title>
+  <meta name="description" content="為家人打造的語音 AI 助手 — 說話就能查天氣、問新聞、設提醒，還能記住你的偏好與習慣。">
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+TC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#0f0e0c; --bg-soft:#15130f; --bg-card:#181613;
+      --line:#2a2620; --line-soft:#1f1c17;
+      --ink:#f3ede2; --ink-mute:#a39c8e; --ink-dim:#6b6557;
+      --accent:#b8956a; --accent-hi:#d4b486;
+      --serif:'Cormorant Garamond','Noto Serif TC',serif;
+      --serif-cjk:'Noto Serif TC',serif;
+      --sans:'Inter','Noto Sans TC',sans-serif;
+      --mono:'JetBrains Mono',ui-monospace,monospace;
+    }
+
+    *, *::before, *::after {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; transition: color 0.3s; }
+    a:hover { color: var(--accent); }
+    img { max-width: 100%; display: block; }
+
+    .grain {
+      position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: .04;
+      mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.6'/></svg>");
+    }
+
+    .back-link {
+      position: fixed;
+      top: 1.2rem;
+      left: 1.5rem;
+      z-index: 100;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 1rem;
+      background: rgba(15,14,12,0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--line);
+      transition: all 0.3s;
+    }
+
+    .back-link:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .back-link svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 2rem 3rem;
+    }
+
+    .project-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .project-title {
+      font-family: var(--serif-cjk);
+      font-size: clamp(36px, 5vw, 48px);
+      font-weight: 300;
+      color: var(--ink);
+      letter-spacing: .02em;
+      margin-bottom: 0.4rem;
+    }
+
+    .project-chinese {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--accent);
+      letter-spacing: 4px;
+      margin-bottom: 0.8rem;
+    }
+
+    .project-subtitle {
+      font-size: 15px;
+      color: var(--ink-mute);
+      max-width: 560px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.85;
+    }
+
+    .project-tags {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--ink-dim);
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
+
+    .family-note {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: .12em;
+      color: var(--ink-dim);
+      border: 1px solid var(--line);
+      padding: 8px 18px;
+      margin-bottom: 0.4rem;
+    }
+
+    .cover-image {
+      border: 1px solid var(--line);
+      margin-bottom: 3rem;
+      overflow: hidden;
+      background: var(--bg-card);
+      display: flex;
+      justify-content: center;
+    }
+
+    .cover-image img {
+      max-height: 600px;
+      width: auto;
+      filter: grayscale(.2) brightness(.9);
+      transition: filter 0.6s, transform 1.2s;
+    }
+
+    .cover-image:hover img {
+      filter: grayscale(0) brightness(1);
+      transform: scale(1.03);
+    }
+
+    .section-title {
+      font-family: var(--serif-cjk);
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--ink);
+      letter-spacing: .02em;
+      margin-bottom: 1.2rem;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .content-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .content-section p {
+      font-size: 0.9rem;
+      margin-bottom: 0.8rem;
+      color: var(--ink);
+    }
+
+    .content-section p strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .how-to-use {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+      padding: 1.2rem;
+      background: linear-gradient(180deg, var(--bg-soft), var(--bg));
+      border: 1px solid var(--line);
+    }
+
+    .step {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .step-arrow {
+      color: var(--ink-dim);
+      font-size: 0.8rem;
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .highlight-card {
+      background: linear-gradient(180deg, var(--bg-soft), var(--bg));
+      border: 1px solid var(--line);
+      padding: 1rem 1.2rem;
+      text-align: center;
+      transition: border-color 0.3s;
+    }
+
+    .highlight-value {
+      font-size: 1.3rem;
+      color: var(--accent);
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+
+    .highlight-label {
+      font-size: 0.78rem;
+      color: var(--ink-mute);
+    }
+
+    .tool-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tool-card {
+      background: linear-gradient(180deg, var(--bg-soft), var(--bg));
+      border: 1px solid var(--line);
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      transition: border-color 0.3s;
+    }
+
+    .tool-info { flex: 1; }
+
+    .tool-name {
+      font-size: 0.95rem;
+      color: var(--accent);
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .tool-desc {
+      font-size: 0.82rem;
+      color: var(--ink-mute);
+      line-height: 1.7;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .gallery-item {
+      border: 1px solid var(--line);
+      overflow: hidden;
+      background: var(--bg-card);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      filter: grayscale(.2) brightness(.9);
+      transition: filter 0.6s, transform 1.2s;
+    }
+
+    .gallery-item:hover img {
+      filter: grayscale(0) brightness(1);
+      transform: scale(1.03);
+    }
+
+    .gallery-caption {
+      padding: 0.7rem 1rem;
+      background: var(--bg-card);
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--ink-dim);
+      border-top: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-table td {
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    .info-table td:first-child {
+      color: var(--accent);
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 500;
+      white-space: nowrap;
+      width: 120px;
+    }
+
+    .privacy-box {
+      background: var(--bg-soft);
+      border: 1px solid var(--line);
+      border-left: 2px solid var(--accent);
+      padding: 1.2rem 1.5rem;
+      font-size: 0.82rem;
+      color: var(--ink-mute);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .privacy-box strong { color: var(--accent); }
+
+    .donation-section {
+      max-width: 720px;
+      margin: 0 auto 3rem;
+      padding: 0 2rem;
+    }
+
+    .donation-card {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, var(--bg-soft), var(--bg));
+      overflow: hidden;
+      transition: border-color 0.4s;
+    }
+
+    .donation-card:hover { border-color: var(--accent); }
+
+    .donation-banner {
+      width: 100%;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .donation-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: grayscale(.2) brightness(.9);
+      transition: filter 0.6s, transform 0.6s;
+    }
+
+    .donation-card:hover .donation-banner img {
+      filter: grayscale(0) brightness(1);
+      transform: scale(1.03);
+    }
+
+    .donation-content {
+      padding: 1.8rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .donation-title {
+      font-family: var(--serif-cjk);
+      font-size: 1.1rem;
+      color: var(--ink);
+      letter-spacing: 2px;
+      margin-bottom: 0.7rem;
+      font-weight: 400;
+    }
+
+    .donation-text {
+      font-size: 0.85rem;
+      color: var(--ink-mute);
+      line-height: 1.9;
+      margin-bottom: 1.4rem;
+    }
+
+    .donation-btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border: 1px solid var(--accent);
+      background: transparent;
+      color: var(--accent-hi);
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 17px;
+      letter-spacing: 2px;
+      transition: all 0.3s;
+    }
+
+    .donation-btn:hover {
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    .page-footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--ink-dim);
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 880px) {
+      .container { padding: 3.5rem 1.2rem 2rem; }
+      .project-title { font-size: clamp(28px, 5vw, 36px); }
+      .highlight-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery { grid-template-columns: repeat(2, 1fr); }
+      .back-link { top: 0.8rem; left: 0.8rem; font-size: 10px; padding: 0.3rem 0.8rem; }
+      .cover-image img { max-height: 500px; }
+      .donation-section { padding: 0 1rem; }
+      .donation-content { padding: 1.5rem 1.2rem 1.8rem; }
+      .donation-title { font-size: 1rem; }
+      .donation-text { font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <a href="../index.html" class="back-link">
+    <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+    返回首頁
+  </a>
+
+  <div class="container">
+
+    <!-- Header -->
+    <div class="project-header">
+      <h1 class="project-title">小白</h1>
+      <div class="project-chinese">Xiao Bai · Home Voice AI</div>
+      <p class="project-subtitle">為家人打造的語音 AI 助手。<br>說話就能查天氣、問新聞、設提醒，還能記住你的偏好與習慣。</p>
+      <div class="project-tags">
+        <span class="project-tag">Python</span>
+        <span class="project-tag">FastAPI</span>
+        <span class="project-tag">OpenAI API</span>
+        <span class="project-tag">語音 AI</span>
+      </div>
+      <div class="family-note">家庭內部使用 · 不對外開放</div>
+    </div>
+
+    <!-- Cover -->
+    <div class="cover-image">
+      <img src="../images/projects/小黑的AI-agent-初始畫面.PNG" alt="小白 — 初始畫面">
+    </div>
+
+    <!-- 這是什麼 -->
+    <div class="content-section">
+      <h2 class="section-title">這是什麼？</h2>
+      <p>小白是一個專為家人打造的<strong>家用語音 AI 助手</strong>，可以用手機、平板或電腦瀏覽器打開，直接用說話的方式互動，不需要打字。它會認識家裡每個人，記住各自的稱呼、偏好與習慣，每次跟你說話都有自己的個性，不是冷冰冰的語音機器人。</p>
+      <p>小白支援查天氣、問新聞、設提醒、查農民曆、查國定假日和連假、計算與網路搜尋，每天第一次喚醒時也可以主動整理當日資訊，像個貼心的家庭助手。</p>
+    </div>
+
+    <!-- 怎麼用 -->
+    <div class="content-section">
+      <h2 class="section-title">怎麼用？</h2>
+      <div class="how-to-use">
+        <span class="step">選擇使用者</span>
+        <span class="step-arrow">→</span>
+        <span class="step">允許麥克風</span>
+        <span class="step-arrow">→</span>
+        <span class="step">喚醒小白</span>
+        <span class="step-arrow">→</span>
+        <span class="step">直接說話</span>
+        <span class="step-arrow">→</span>
+        <span class="step">聆聽回答</span>
+      </div>
+    </div>
+
+    <!-- 重點數據 -->
+    <div class="content-section">
+      <div class="highlight-grid">
+        <div class="highlight-card">
+          <div class="highlight-value">語音</div>
+          <div class="highlight-label">不需要打字</div>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-value">多人</div>
+          <div class="highlight-label">家人各自帳號</div>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-value">記憶</div>
+          <div class="highlight-label">記住你的偏好</div>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-value">7+</div>
+          <div class="highlight-label">整合工具數量</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 核心特色 -->
+    <div class="content-section">
+      <h2 class="section-title">核心特色</h2>
+      <div class="tool-list">
+        <div class="tool-card">
+          <div class="tool-info">
+            <div class="tool-name">語音即時對話</div>
+            <div class="tool-desc">透過 OpenAI Realtime API，說話不需要按按鈕，語音直接送到 AI，對話流暢自然，就像在跟人說話。</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-info">
+            <div class="tool-name">家人共用帳號</div>
+            <div class="tool-desc">支援多位家人各自建立 Profile，進入時選擇自己的頭像，小白會用你設定的稱呼、語氣與偏好回應，每個人有自己的記憶空間。</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-info">
+            <div class="tool-name">長期記憶系統</div>
+            <div class="tool-desc">對話後保守萃取值得長期記住的內容，例如飲食偏好、生日、睡眠習慣。也可以直接說「小白，記住我不喜歡太甜的飲料」，小白會記下來。</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-info">
+            <div class="tool-name">工具整合</div>
+            <div class="tool-desc">整合中央氣象署天氣、RSS 新聞摘要、農民曆節氣宜忌、台灣國定假日與連假、瀏覽器提醒通知、數學計算、Brave 網路搜尋，小白會自己決定要用哪個工具。</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-info">
+            <div class="tool-name">每日簡報</div>
+            <div class="tool-desc">每天第一次喚醒時，小白可以主動整理今日日期、天氣、假日資訊，讓你不需要開口問就能掌握當天概況。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 畫面截圖 -->
+    <div class="content-section">
+      <h2 class="section-title">畫面</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="../images/projects/小黑的AI-agent-初始畫面.PNG" alt="初始設定" loading="lazy">
+          <div class="gallery-caption">初始設定畫面</div>
+        </div>
+        <div class="gallery-item">
+          <img src="../images/projects/小黑的AI-agent-設定基本資料1.PNG" alt="填寫基本資料" loading="lazy">
+          <div class="gallery-caption">填寫基本資料</div>
+        </div>
+        <div class="gallery-item">
+          <img src="../images/projects/小黑的AI-agent-設定基本資料2.PNG" alt="填寫基本資料續" loading="lazy">
+          <div class="gallery-caption">填寫基本資料（續）</div>
+        </div>
+        <div class="gallery-item">
+          <img src="../images/projects/小黑的AI-agent-設定基本資料3.PNG" alt="填寫基本資料續" loading="lazy">
+          <div class="gallery-caption">填寫基本資料（續）</div>
+        </div>
+        <div class="gallery-item">
+          <img src="../images/projects/小黑的AI-agent-設定基本資料4.PNG" alt="填寫基本資料完成" loading="lazy">
+          <div class="gallery-caption">填寫基本資料（完）</div>
+        </div>
+        <div class="gallery-item">
+          <img src="../images/projects/小黑的AI-agent-設定選項1.PNG" alt="互動偏好設定" loading="lazy">
+          <div class="gallery-caption">互動偏好設定</div>
+        </div>
+        <div class="gallery-item">
+          <img src="../images/projects/小黑的AI-agent-設定選項2.PNG" alt="互動偏好設定續" loading="lazy">
+          <div class="gallery-caption">互動偏好設定（續）</div>
+        </div>
+        <div class="gallery-item">
+          <img src="../images/projects/小黑的AI-agent-切換使用者畫面.PNG" alt="切換使用者" loading="lazy">
+          <div class="gallery-caption">切換使用者</div>
+        </div>
+        <div class="gallery-item">
+          <img src="../images/projects/小黑的AI-agent-設定完畫面.PNG" alt="設定完成" loading="lazy">
+          <div class="gallery-caption">設定完成</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 技術原理 -->
+    <div class="content-section">
+      <h2 class="section-title">怎麼做到的？</h2>
+      <div class="tool-list">
+        <div class="tool-card">
+          <div class="tool-info">
+            <div class="tool-name">後端架構</div>
+            <div class="tool-desc">Python + FastAPI，以 uvicorn 啟動，支援本機直連或透過 ngrok 讓手機、平板從外部存取，不需要額外安裝 App。</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-info">
+            <div class="tool-name">OpenAI Realtime API</div>
+            <div class="tool-desc">語音直接送到 OpenAI 處理，不需先轉文字再送 AI，延遲更低、對話更自然，支援打斷與連續說話。</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-info">
+            <div class="tool-name">工具鏈與記憶資料庫</div>
+            <div class="tool-desc">AI 根據問題自動決定呼叫哪個工具（天氣、新聞、農民曆等），記憶與 Profile 儲存在本機 SQLite，每個家人的資料完全隔離。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 系統需求 -->
+    <div class="content-section">
+      <h2 class="section-title">使用環境</h2>
+      <table class="info-table">
+        <tr><td>裝置</td><td>手機、平板、電腦，任何可開瀏覽器的裝置</td></tr>
+        <tr><td>瀏覽器</td><td>Chrome、Safari、Edge（需支援 WebAudio API）</td></tr>
+        <tr><td>連線方式</td><td>本機 HTTP 或 ngrok HTTPS（供手機遠端使用）</td></tr>
+        <tr><td>麥克風</td><td>需授權瀏覽器使用麥克風</td></tr>
+        <tr><td>網路</td><td>需要（語音對話與工具查詢會呼叫外部 API）</td></tr>
+        <tr><td>開放對象</td><td>家庭內部使用，不對外開放</td></tr>
+      </table>
+    </div>
+
+    <!-- 隱私 -->
+    <div class="privacy-box">
+      <strong>關於你的資料：</strong>語音對話透過 OpenAI Realtime API 傳送，使用者 Profile、偏好與長期記憶儲存在本機 SQLite，不上傳到任何第三方伺服器，開發者完全看不到家庭資料。
+    </div>
+
+  </div>
+
+  <!-- 請小黑吃便當 -->
+  <div class="donation-section">
+    <div class="donation-card">
+      <div class="donation-banner">
+        <img src="../images/donation-banner.jpg" alt="深夜裡的一份雞腿便當">
+      </div>
+      <div class="donation-content">
+        <h2 class="donation-title">請小黑吃雞腿便當</h2>
+        <p class="donation-text">
+          作品都是免費的。如果你喜歡、想回饋，<br>
+          歡迎請我吃個雞腿便當，讓我更有動力繼續做下去。
+        </p>
+        <a href="https://payment.opay.tw/Broadcaster/Donate/7341A28F6CDE05A1A6646A7B26DF4CD8" target="_blank" rel="noopener" class="donation-btn">
+          我要請客 →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    <p>&copy; MMXXVI · Little Black · All rights reserved</p>
+  </footer>
+
+  <script data-goatcounter="https://littleblack.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
