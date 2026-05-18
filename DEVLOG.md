@@ -413,6 +413,12 @@ littleblackmann.github.io-main/
 - 將首頁 `projects.json` 的小白作品縮圖從 `小黑的AI-agent-初始畫面.PNG` 改成 `小黑的AI-agent-設定完畫面.PNG`
 - 將 `projects/xiaobai-agent.html` 最上方 cover 圖同步改成 A·REACTOR 主畫面，讓第一眼更接近目前完成後的小白狀態
 
+#### 5. 全作品頁新增圖片放大檢視
+- 新增共用 `image-lightbox.css` 與 `image-lightbox.js`
+- 6 個作品詳情頁都已接入 lightbox，點擊 cover 或 gallery 截圖可放大檢視
+- 支援點背景 / 點圖片 / X 關閉、左右切換、鍵盤 `Esc` 關閉與方向鍵切換
+- 首頁作品卡片維持原本點擊進入詳情頁，不做放大，避免破壞首頁導覽
+
 ### 待辦 / 下次可以做的事
 - [ ] 等 GitHub Pages 部署完成後，線上確認小白作品頁與首頁預覽圖是否都載入新版截圖
 - [ ] 之後如果補 30 秒 demo 影片，可以再加到小白作品頁

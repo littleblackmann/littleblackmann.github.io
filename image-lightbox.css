@@ -1,0 +1,142 @@
+.cover-image img,
+.gallery-item img {
+  cursor: zoom-in;
+}
+
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(16px, 3vw, 42px);
+  background: rgba(5, 5, 4, 0.92);
+  backdrop-filter: blur(14px);
+}
+
+.image-lightbox.is-open {
+  display: flex;
+}
+
+.image-lightbox__frame {
+  position: relative;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  width: min(100%, 1180px);
+  height: min(100%, 92vh);
+  border: 1px solid var(--line, #2a2620);
+  background: var(--bg, #0f0e0c);
+  overflow: hidden;
+}
+
+.image-lightbox__image-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding: clamp(14px, 2vw, 28px);
+}
+
+.image-lightbox__image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  cursor: zoom-out;
+  filter: none;
+}
+
+.image-lightbox__caption {
+  min-height: 48px;
+  padding: 14px 58px;
+  border-top: 1px solid var(--line, #2a2620);
+  color: var(--ink-mute, #a39c8e);
+  font-family: var(--mono, ui-monospace, monospace);
+  font-size: 11px;
+  letter-spacing: .12em;
+  line-height: 1.7;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.image-lightbox__button {
+  position: absolute;
+  border: 1px solid var(--line, #2a2620);
+  background: rgba(15, 14, 12, 0.72);
+  color: var(--ink, #f3ede2);
+  font-family: var(--mono, ui-monospace, monospace);
+  cursor: pointer;
+  transition: border-color .2s, color .2s, background .2s;
+}
+
+.image-lightbox__button:hover,
+.image-lightbox__button:focus-visible {
+  border-color: var(--accent, #b8956a);
+  color: var(--accent-hi, #d4b486);
+  outline: none;
+}
+
+.image-lightbox__close {
+  top: 14px;
+  right: 14px;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+}
+
+.image-lightbox__nav {
+  top: 50%;
+  width: 44px;
+  height: 64px;
+  font-size: 22px;
+  transform: translateY(-50%);
+}
+
+.image-lightbox__prev {
+  left: 14px;
+}
+
+.image-lightbox__next {
+  right: 14px;
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .image-lightbox {
+    padding: 10px;
+  }
+
+  .image-lightbox__frame {
+    height: 94vh;
+  }
+
+  .image-lightbox__image-wrap {
+    padding: 12px;
+  }
+
+  .image-lightbox__caption {
+    padding: 12px 46px;
+    font-size: 10px;
+  }
+
+  .image-lightbox__close {
+    top: 10px;
+    right: 10px;
+  }
+
+  .image-lightbox__nav {
+    width: 38px;
+    height: 54px;
+  }
+
+  .image-lightbox__prev {
+    left: 10px;
+  }
+
+  .image-lightbox__next {
+    right: 10px;
+  }
+}
