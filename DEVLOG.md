@@ -406,7 +406,7 @@ littleblackmann.github.io-main/
 
 #### 3. 更新小白截圖引用
 - 保留並使用本次更新過的小白截圖檔案
-- 將新增的 `小黑的AI-agent-設定基本資料5.png` 接進作品頁 gallery
+- 將聲紋設定截圖 `小黑的AI-agent-設定聲紋1.PNG`、`小黑的AI-agent-設定聲紋2.png` 接進作品頁 gallery
 - 調整截圖 caption，讓畫面說明更貼近新版 onboarding、Profile 與 A·REACTOR 主畫面
 
 #### 4. 調整小白主圖
