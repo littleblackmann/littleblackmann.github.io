@@ -2,7 +2,7 @@
   {
     "name": "小白",
     "description": "會記得家人的家庭語音 AI — 從 Profile、聲紋、提醒、家庭事項到 Life Log 生活回顧，把家裡的瑣事整理成可以接續的生活脈絡。",
-    "image": "images/projects/小黑的AI-agent-初始畫面.PNG",
+    "image": "images/projects/小黑的AI-agent-設定完畫面.PNG",
     "link": "projects/xiaobai-agent.html",
     "tags": ["Python", "FastAPI", "OpenAI Realtime", "家庭 AI"]
   },

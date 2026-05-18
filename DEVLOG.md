@@ -409,6 +409,10 @@ littleblackmann.github.io-main/
 - 將新增的 `小黑的AI-agent-設定基本資料5.png` 接進作品頁 gallery
 - 調整截圖 caption，讓畫面說明更貼近新版 onboarding、Profile 與 A·REACTOR 主畫面
 
+#### 4. 調整小白主圖
+- 將首頁 `projects.json` 的小白作品縮圖從 `小黑的AI-agent-初始畫面.PNG` 改成 `小黑的AI-agent-設定完畫面.PNG`
+- 將 `projects/xiaobai-agent.html` 最上方 cover 圖同步改成 A·REACTOR 主畫面，讓第一眼更接近目前完成後的小白狀態
+
 ### 待辦 / 下次可以做的事
 - [ ] 等 GitHub Pages 部署完成後，線上確認小白作品頁與首頁預覽圖是否都載入新版截圖
 - [ ] 之後如果補 30 秒 demo 影片，可以再加到小白作品頁
