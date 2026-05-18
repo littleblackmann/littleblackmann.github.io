@@ -1,10 +1,10 @@
 [
   {
     "name": "小白",
-    "description": "為家人打造的語音 AI 助手 — 說話就能查天氣、問新聞、設提醒，還能記住你的偏好與習慣。家庭內部使用。",
+    "description": "會記得家人的家庭語音 AI — 從 Profile、聲紋、提醒、家庭事項到 Life Log 生活回顧，把家裡的瑣事整理成可以接續的生活脈絡。",
     "image": "images/projects/小黑的AI-agent-初始畫面.PNG",
     "link": "projects/xiaobai-agent.html",
-    "tags": ["Python", "FastAPI", "OpenAI API", "語音 AI"]
+    "tags": ["Python", "FastAPI", "OpenAI Realtime", "家庭 AI"]
   },
   {
     "name": "今日紫微",

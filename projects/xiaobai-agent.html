@@ -11,8 +11,8 @@
 </script>
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>小白 — 小黑的小角落</title>
-  <meta name="description" content="為家人打造的語音 AI 助手 — 說話就能查天氣、問新聞、設提醒，還能記住你的偏好與習慣。">
+  <title>小白 XiaoBai — 小黑的小角落</title>
+  <meta name="description" content="小白是會記得家人的家庭語音 AI，能管理 Profile、聲紋、提醒、家庭事項、Life Log 生活回顧與主動事件。">
   <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -469,14 +469,14 @@
 
     <!-- Header -->
     <div class="project-header">
-      <h1 class="project-title">小白</h1>
+      <h1 class="project-title">小白 XiaoBai</h1>
       <div class="project-chinese">Xiao Bai · Home Voice AI</div>
-      <p class="project-subtitle">為家人打造的語音 AI 助手。<br>說話就能查天氣、問新聞、設提醒，還能記住你的偏好與習慣。</p>
+      <p class="project-subtitle">會記得家人的家庭語音 AI。<br>從提醒、記憶、待辦到每日生活回顧，小白把家裡的瑣事整理成可以被理解、被追蹤、被接續的生活脈絡。</p>
       <div class="project-tags">
         <span class="project-tag">Python</span>
         <span class="project-tag">FastAPI</span>
-        <span class="project-tag">OpenAI API</span>
-        <span class="project-tag">語音 AI</span>
+        <span class="project-tag">OpenAI Realtime</span>
+        <span class="project-tag">家庭 AI</span>
       </div>
       <div class="family-note">家庭內部使用 · 不對外開放</div>
     </div>
@@ -489,23 +489,23 @@
     <!-- 這是什麼 -->
     <div class="content-section">
       <h2 class="section-title">這是什麼？</h2>
-      <p>小白是一個專為家人打造的<strong>家用語音 AI 助手</strong>，可以用手機、平板或電腦瀏覽器打開，直接用說話的方式互動，不需要打字。它會認識家裡每個人，記住各自的稱呼、偏好與習慣，每次跟你說話都有自己的個性，不是冷冰冰的語音機器人。</p>
-      <p>小白支援查天氣、問新聞、設提醒、查農民曆、查國定假日和連假、計算與網路搜尋，每天第一次喚醒時也可以主動整理當日資訊，像個貼心的家庭助手。</p>
+      <p>小白是一個專為家庭打造的<strong>語音 AI 生活中樞</strong>，可以在手機、平板或電腦瀏覽器開啟，直接用說話的方式互動。它不是客服系統，也不是一般聊天機器人，而是把家人的 Profile、提醒、任務、記憶與生活回顧接在一起的家庭助手。</p>
+      <p>它能認得不同家人，記住穩定偏好，幫你建立提醒與家庭事項，也會把任務、提醒、記憶、主動推播整理成 Life Log。你可以問「我今天做了什麼？」或「還有什麼沒收尾？」小白會用比較像家人助理的方式，把生活裡散掉的小事收回來。</p>
     </div>
 
     <!-- 怎麼用 -->
     <div class="content-section">
       <h2 class="section-title">怎麼用？</h2>
       <div class="how-to-use">
-        <span class="step">選擇使用者</span>
+        <span class="step">建立家人</span>
         <span class="step-arrow">→</span>
-        <span class="step">允許麥克風</span>
+        <span class="step">設定偏好</span>
         <span class="step-arrow">→</span>
-        <span class="step">喚醒小白</span>
+        <span class="step">設定或跳過聲紋</span>
         <span class="step-arrow">→</span>
-        <span class="step">直接說話</span>
+        <span class="step">說「小白」喚醒</span>
         <span class="step-arrow">→</span>
-        <span class="step">聆聽回答</span>
+        <span class="step">開始記錄與提醒</span>
       </div>
     </div>
 
@@ -513,20 +513,20 @@
     <div class="content-section">
       <div class="highlight-grid">
         <div class="highlight-card">
-          <div class="highlight-value">語音</div>
-          <div class="highlight-label">不需要打字</div>
+          <div class="highlight-value">Profile</div>
+          <div class="highlight-label">家人各自偏好</div>
         </div>
         <div class="highlight-card">
-          <div class="highlight-value">多人</div>
-          <div class="highlight-label">家人各自帳號</div>
+          <div class="highlight-value">Voice</div>
+          <div class="highlight-label">聲紋保存在本機</div>
         </div>
         <div class="highlight-card">
-          <div class="highlight-value">記憶</div>
-          <div class="highlight-label">記住你的偏好</div>
+          <div class="highlight-value">Life Log</div>
+          <div class="highlight-label">生活事件時間線</div>
         </div>
         <div class="highlight-card">
-          <div class="highlight-value">7+</div>
-          <div class="highlight-label">整合工具數量</div>
+          <div class="highlight-value">Radar</div>
+          <div class="highlight-label">找出還沒收尾的事</div>
         </div>
       </div>
     </div>
@@ -537,32 +537,38 @@
       <div class="tool-list">
         <div class="tool-card">
           <div class="tool-info">
-            <div class="tool-name">語音即時對話</div>
-            <div class="tool-desc">透過 OpenAI Realtime API，說話不需要按按鈕，語音直接送到 AI，對話流暢自然，就像在跟人說話。</div>
+            <div class="tool-name">家人 Profile</div>
+            <div class="tool-desc">每位家人都能建立自己的稱呼、頭像、家庭角色、Email、生日與互動偏好，小白會用對應的語氣與記憶空間回應。</div>
           </div>
         </div>
         <div class="tool-card">
           <div class="tool-info">
-            <div class="tool-name">家人共用帳號</div>
-            <div class="tool-desc">支援多位家人各自建立 Profile，進入時選擇自己的頭像，小白會用你設定的稱呼、語氣與偏好回應，每個人有自己的記憶空間。</div>
+            <div class="tool-name">Wake Word + 聲紋</div>
+            <div class="tool-desc">說「小白」喚醒後開始對話，聲紋用來判斷現在是哪位家人。聲紋資料保存在本機，可以先跳過，之後再補設定。</div>
           </div>
         </div>
         <div class="tool-card">
           <div class="tool-info">
-            <div class="tool-name">長期記憶系統</div>
-            <div class="tool-desc">對話後保守萃取值得長期記住的內容，例如飲食偏好、生日、睡眠習慣。也可以直接說「小白，記住我不喜歡太甜的飲料」，小白會記下來。</div>
+            <div class="tool-name">Reminder Hub / Task Hub</div>
+            <div class="tool-desc">提醒、採買、家務、待確認事項集中管理。可以用語音建立提醒，也能在首頁看到目前有哪些家庭事項需要處理。</div>
           </div>
         </div>
         <div class="tool-card">
           <div class="tool-info">
-            <div class="tool-name">工具整合</div>
-            <div class="tool-desc">整合中央氣象署天氣、RSS 新聞摘要、農民曆節氣宜忌、台灣國定假日與連假、瀏覽器提醒通知、數學計算、Brave 網路搜尋，小白會自己決定要用哪個工具。</div>
+            <div class="tool-name">Life Log 生活回顧</div>
+            <div class="tool-desc">把任務、提醒、記憶與主動推送整理成生活時間線，再產生每日摘要，讓使用者可以回頭問「我今天做了什麼」。</div>
           </div>
         </div>
         <div class="tool-card">
           <div class="tool-info">
-            <div class="tool-name">每日簡報</div>
-            <div class="tool-desc">每天第一次喚醒時，小白可以主動整理今日日期、天氣、假日資訊，讓你不需要開口問就能掌握當天概況。</div>
+            <div class="tool-name">Follow-up Radar</div>
+            <div class="tool-desc">找出過期提醒、待確認動作、很久沒更新的任務，讓小白不只是回答問題，也能幫家裡把未完成的事接起來。</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-info">
+            <div class="tool-name">主動事件中心</div>
+            <div class="tool-desc">管理背景推播、主動提醒與補講紀錄，讓小白慢慢從被動問答變成會在適合時機提醒你的家庭 AI。</div>
           </div>
         </div>
       </div>
@@ -574,7 +580,7 @@
       <div class="gallery">
         <div class="gallery-item">
           <img src="../images/projects/小黑的AI-agent-初始畫面.PNG" alt="初始設定" loading="lazy">
-          <div class="gallery-caption">初始設定畫面</div>
+          <div class="gallery-caption">初始歡迎畫面</div>
         </div>
         <div class="gallery-item">
           <img src="../images/projects/小黑的AI-agent-設定基本資料1.PNG" alt="填寫基本資料" loading="lazy">
@@ -590,7 +596,11 @@
         </div>
         <div class="gallery-item">
           <img src="../images/projects/小黑的AI-agent-設定基本資料4.PNG" alt="填寫基本資料完成" loading="lazy">
-          <div class="gallery-caption">填寫基本資料（完）</div>
+          <div class="gallery-caption">生日與角色設定</div>
+        </div>
+        <div class="gallery-item">
+          <img src="../images/projects/小黑的AI-agent-設定基本資料5.png" alt="進階出生資料" loading="lazy">
+          <div class="gallery-caption">進階出生資料</div>
         </div>
         <div class="gallery-item">
           <img src="../images/projects/小黑的AI-agent-設定選項1.PNG" alt="互動偏好設定" loading="lazy">
@@ -602,11 +612,11 @@
         </div>
         <div class="gallery-item">
           <img src="../images/projects/小黑的AI-agent-切換使用者畫面.PNG" alt="切換使用者" loading="lazy">
-          <div class="gallery-caption">切換使用者</div>
+          <div class="gallery-caption">家人 Profile 切換</div>
         </div>
         <div class="gallery-item">
           <img src="../images/projects/小黑的AI-agent-設定完畫面.PNG" alt="設定完成" loading="lazy">
-          <div class="gallery-caption">設定完成</div>
+          <div class="gallery-caption">A·REACTOR 主畫面</div>
         </div>
       </div>
     </div>
@@ -617,20 +627,20 @@
       <div class="tool-list">
         <div class="tool-card">
           <div class="tool-info">
-            <div class="tool-name">後端架構</div>
-            <div class="tool-desc">Python + FastAPI，以 uvicorn 啟動，支援本機直連或透過 ngrok 讓手機、平板從外部存取，不需要額外安裝 App。</div>
+            <div class="tool-name">OpenAI Realtime API + WebRTC</div>
+            <div class="tool-desc">瀏覽器直接建立低延遲語音對話，搭配 Web Audio、Wake Word 與 VAD，讓小白能在家庭情境中更自然地被喚醒與回應。</div>
           </div>
         </div>
         <div class="tool-card">
           <div class="tool-info">
-            <div class="tool-name">OpenAI Realtime API</div>
-            <div class="tool-desc">語音直接送到 OpenAI 處理，不需先轉文字再送 AI，延遲更低、對話更自然，支援打斷與連續說話。</div>
+            <div class="tool-name">FastAPI + SQLite</div>
+            <div class="tool-desc">後端以 FastAPI 管理 Profile session、提醒、任務、記憶、Life Log 與推播；SQLite 保存本機家庭資料，適合個人與家庭內部部署。</div>
           </div>
         </div>
         <div class="tool-card">
           <div class="tool-info">
-            <div class="tool-name">工具鏈與記憶資料庫</div>
-            <div class="tool-desc">AI 根據問題自動決定呼叫哪個工具（天氣、新聞、農民曆等），記憶與 Profile 儲存在本機 SQLite，每個家人的資料完全隔離。</div>
+            <div class="tool-name">PWA / Web Push / 本機聲紋</div>
+            <div class="tool-desc">支援瀏覽器通知、手機加入主畫面、背景事件串流與本機聲紋資料，讓小白更像常駐在家裡的生活助理。</div>
           </div>
         </div>
       </div>
@@ -640,18 +650,18 @@
     <div class="content-section">
       <h2 class="section-title">使用環境</h2>
       <table class="info-table">
-        <tr><td>裝置</td><td>手機、平板、電腦，任何可開瀏覽器的裝置</td></tr>
-        <tr><td>瀏覽器</td><td>Chrome、Safari、Edge（需支援 WebAudio API）</td></tr>
-        <tr><td>連線方式</td><td>本機 HTTP 或 ngrok HTTPS（供手機遠端使用）</td></tr>
+        <tr><td>裝置</td><td>手機、平板、電腦，任何可開現代瀏覽器的裝置</td></tr>
+        <tr><td>瀏覽器</td><td>Chrome、Safari、Edge（需支援 WebRTC / Web Audio / Notification API）</td></tr>
+        <tr><td>連線方式</td><td>本機 HTTP 或 ngrok HTTPS；手機加入主畫面時建議使用 HTTPS</td></tr>
         <tr><td>麥克風</td><td>需授權瀏覽器使用麥克風</td></tr>
-        <tr><td>網路</td><td>需要（語音對話與工具查詢會呼叫外部 API）</td></tr>
+        <tr><td>網路</td><td>需要（語音對話與天氣、搜尋等工具會呼叫外部 API）</td></tr>
         <tr><td>開放對象</td><td>家庭內部使用，不對外開放</td></tr>
       </table>
     </div>
 
     <!-- 隱私 -->
     <div class="privacy-box">
-      <strong>關於你的資料：</strong>語音對話透過 OpenAI Realtime API 傳送，使用者 Profile、偏好與長期記憶儲存在本機 SQLite，不上傳到任何第三方伺服器，開發者完全看不到家庭資料。
+      <strong>關於資料與隱私：</strong>API key 不暴露在前端；聲紋、Profile、偏好、提醒與長期記憶保存在本機資料庫。刪除使用者時，會同步清理對話、記憶、提醒、任務、Life Log 與每日摘要，避免舊資料殘留。
     </div>
 
   </div>
