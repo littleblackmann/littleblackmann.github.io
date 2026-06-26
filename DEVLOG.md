@@ -425,4 +425,87 @@ littleblackmann.github.io-main/
 
 ---
 
+## 2026-06-26（第十次工作）
+
+### 做了什麼
+
+#### 1. 低調 SEO 基礎整理
+- 目標是讓 Google 可以正常收錄網站，但不把網站改成履歷或高曝光行銷頁
+- 首頁 `index.html` 更新：
+  - title：`小黑 Little Black｜個人作品集與開發筆記`
+  - description：整理程式作品、AI 工具實驗、生活工具與開發筆記
+  - canonical：`https://littleblackmann.github.io/`
+  - robots meta：`index, follow`
+- 保留 Google Analytics `gtag.js`，沒有移除既有追蹤碼
+- JSON-LD 只使用 `WebSite` schema，刻意不使用 `Person` schema
+
+#### 2. 新增搜尋引擎檔案
+- 新增 `robots.txt`
+  - `User-agent: *`
+  - `Allow: /`
+  - `Sitemap: https://littleblackmann.github.io/sitemap.xml`
+- 新增 `sitemap.xml`
+  - 只放正式首頁：`https://littleblackmann.github.io/`
+  - 不使用 `#` 路由
+
+#### 3. Open Graph / Twitter Card 補強
+- 加入低調版 Open Graph 欄位：
+  - `og:title`
+  - `og:description`
+  - `og:url`
+  - `og:type`
+  - `og:image`
+- 新增 `images/og-image.png`
+  - 尺寸 1200x630
+  - 深色簡潔文字圖，不放照片、不放真名、不放所在地、不放生日、不放公司或工作經歷
+  - 部署後公開路徑：`https://littleblackmann.github.io/images/og-image.png`
+
+#### 4. 首頁內容保持匿名低調
+- 首頁介紹文字補上一段：
+  - 「這裡整理一些我做過的小工具、AI 實驗、程式作品與日常開發筆記。慢慢做，慢慢放。」
+- 頁首原本帶有地點感的文字改成中性字樣：
+  - 顯示為 `Quiet · Corner`
+  - 時鐘前綴顯示為 `NOW`
+- 圖片 alt 改成中性描述：
+  - `個人網站視覺圖片`
+  - `專案展示圖片`
+
+#### 5. Projects 載入修正與降調
+- 首頁 Projects 使用 `projects.json?v=20260626`，避免瀏覽器吃到舊快取
+- 如果 `projects.json` 載入失敗或沒有資料，會顯示低調 fallback：
+  - AI 語音助手實驗
+  - 生活工具開發
+  - 資料分析小工具
+- `projects.json` 的首頁專案描述改成概念型文字，拿掉過度像履歷或個人背景的語氣
+
+#### 6. 檢查結果
+- 本機與公開站都已驗證：
+  - `https://littleblackmann.github.io/robots.txt`：200
+  - `https://littleblackmann.github.io/sitemap.xml`：200
+  - `https://littleblackmann.github.io/images/og-image.png`：200
+  - 首頁 canonical、OG image、GA `gtag.js` 都存在
+  - Projects 顯示 `06 · Works`，沒有卡在 Loading
+  - 首頁 H1 只有 1 個，其他主要區塊使用 H2/H3
+- 關鍵字檢查沒有在正式首頁與專案資料中發現真名、所在地、生日、公司、工作經歷、`Person` schema 或 keywords meta
+
+#### 7. 部署狀態
+- Commit：`56d2550 Add low-key SEO metadata`
+- 已 push 到 GitHub：`littleblackmann/littleblackmann.github.io`
+- GitHub Pages source：`main` branch / root
+- GitHub Pages 狀態已確認為 `built`
+
+### Google Search Console 下一步
+1. 打開或新增資源：`https://littleblackmann.github.io/`
+2. 到「Sitemaps」提交：`https://littleblackmann.github.io/sitemap.xml`
+3. 到「網址檢查」輸入：`https://littleblackmann.github.io/`
+4. 如果顯示尚未收錄，按「要求建立索引」
+5. 提交後不用一直重複操作，等 Google 慢慢爬即可
+
+### 待辦 / 下次可以做的事
+- [ ] 到 Google Search Console 提交 sitemap，並要求首頁建立索引
+- [ ] 幾天後搜尋 `site:littleblackmann.github.io` 看是否已被收錄
+- [ ] 之後若新增作品，記得確認 `projects.json` 描述仍保持低調、不要寫成履歷
+
+---
+
 > 下次工作前，請先讀完以上內容再開始。
