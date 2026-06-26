@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://littleblackmann.github.io/sitemap.xml

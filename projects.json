@@ -1,42 +1,42 @@
 [
   {
     "name": "小白",
-    "description": "會記得家人的家庭語音 AI — 從 Profile、聲紋、提醒、家庭事項到 Life Log 生活回顧，把家裡的瑣事整理成可以接續的生活脈絡。",
+    "description": "語音互動、提醒、記錄與回顧等功能的小型 AI 助手實驗，嘗試把日常資訊整理成可以接續的脈絡。",
     "image": "images/projects/小黑的AI-agent-設定完畫面.PNG",
     "link": "projects/xiaobai-agent.html",
     "tags": ["Python", "FastAPI", "OpenAI Realtime", "家庭 AI"]
   },
   {
     "name": "今日紫微",
-    "description": "結合紫微斗數與 AI 智慧解讀的個人化運勢 App — 每天用幾分鐘，了解今日的流日運勢，整體、財運、事業、感情八大主題任選。",
+    "description": "把傳統命理資料、每日提醒與 AI 文字整理結合成簡單易讀的個人 App 實驗。",
     "image": "images/projects/今日紫微-起始畫面1.jpg",
     "link": "projects/ziwei-today.html",
     "tags": ["Kotlin", "Jetpack Compose", "OpenAI API", "Android"]
   },
   {
     "name": "廚師 AI 工具箱",
-    "description": "一款 Android AI 料理助理 — 冰箱有什麼就煮什麼，AI 廚師出食譜連眉角都教你。由 20 年廚師調教的 prompt，每步驟都有只有廚房老手才知道的細節。",
+    "description": "根據現有食材整理食譜方向與步驟提示的 AI 料理工具，偏向日常使用與流程整理。",
     "image": "images/projects/廚房AI-首頁圖片.jpg",
     "link": "projects/chef-ai-toolbox.html",
     "tags": ["Kotlin", "OpenAI API", "Android", "AI 食譜"]
   },
   {
     "name": "人生步數",
-    "description": "一款 Android 計步養成小遊戲 — 你走的每一步，都是角色的一段人生。從嬰兒出生、成長、職業、變老、死亡，最後輪迴重來。",
+    "description": "把計步資料做成角色養成小遊戲，讓每天走路多一點紀錄感與小小的回饋。",
     "image": "images/projects/人生步數-首頁.jpg",
     "link": "projects/life-steps.html",
     "tags": ["Kotlin", "Jetpack Compose", "Room", "Android"]
   },
   {
     "name": "台股預測分析系統",
-    "description": "結合 Transformer 深度學習、LightGBM 與 GPT 新聞情緒分析的桌面端台股漲跌預測工具，支援 K 線圖、SHAP 可解釋分析與自動進化學習。",
+    "description": "整理市場資料、模型預測、圖表與觀察紀錄的桌面小工具，偏研究與資料分析用途。",
     "image": "images/projects/stock-cover.png",
     "link": "projects/stock-predictor.html",
     "tags": ["Python", "Transformer", "LightGBM", "PySide6"]
   },
   {
     "name": "小黑工具箱",
-    "description": "5 合 1 離線實用工具集：AI 智慧去背、OCR 文字辨識、文字轉檔、QR Code 生成、PNG 轉 ICO，解壓即用，完全離線運作。",
+    "description": "把常用的小功能整理成離線工具集，包含圖片、文字、轉檔與 QR Code 等日常用途。",
     "image": "images/projects/toolbox-cover.png",
     "link": "projects/toolbox.html",
     "tags": ["Python", "Flask", "BiRefNet", "EasyOCR"]

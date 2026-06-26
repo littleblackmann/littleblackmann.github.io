@@ -11,9 +11,36 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>小黑的小角落</title>
-<meta name="description" content="小黑的小角落，還在路上，慢慢往前走，樂在其中。">
-<meta name="author" content="小黑">
+<title>小黑 Little Black｜個人作品集與開發筆記</title>
+<meta name="description" content="小黑 Little Black 的個人網站，整理一些程式作品、AI 工具實驗、生活工具與開發筆記。">
+<meta name="author" content="小黑 Little Black">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://littleblackmann.github.io/" />
+<meta property="og:title" content="小黑 Little Black｜個人作品集與開發筆記">
+<meta property="og:description" content="一些程式作品、AI 工具實驗、生活工具與開發筆記。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://littleblackmann.github.io/">
+<meta property="og:image" content="https://littleblackmann.github.io/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="個人網站視覺圖片">
+<meta property="og:site_name" content="小黑 Little Black">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="小黑 Little Black｜個人作品集與開發筆記">
+<meta name="twitter:description" content="一些程式作品、AI 工具實驗、生活工具與開發筆記。">
+<meta name="twitter:url" content="https://littleblackmann.github.io/">
+<meta name="twitter:image" content="https://littleblackmann.github.io/images/og-image.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "小黑 Little Black",
+  "url": "https://littleblackmann.github.io/",
+  "description": "小黑 Little Black 的個人網站，整理一些程式作品、AI 工具實驗、生活工具與開發筆記。",
+  "inLanguage": "zh-TW"
+}
+</script>
 <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -614,7 +641,7 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
     </a>
     <div class="top-meta">
       <span class="dot-live"></span>
-      <span class="top-meta-text">Studio · Taipei</span>
+      <span class="top-meta-text">Quiet · Corner</span>
       <span id="topClock">—</span>
     </div>
   </div>
@@ -635,6 +662,8 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
         寫程式讓我心很靜，雖然還有很多進步空間，
         但我<strong>樂在其中</strong>。這裡放的是我做過的東西，
         每一個都代表我往前走了一步。
+        <br><br>
+        這裡整理一些我做過的小工具、AI 實驗、程式作品與日常開發筆記。慢慢做，慢慢放。
       </p>
       <div class="hero-meta">
         <span>Projects<b id="metaCount">—</b></span>
@@ -648,7 +677,7 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
         <div class="portrait-num">No.&nbsp;01</div>
         <div class="portrait-frame"></div>
         <div class="portrait-img">
-          <img src="images/avatar.png" alt="小黑"
+          <img src="images/avatar.png" alt="個人網站視覺圖片"
                onerror="this.parentElement.innerHTML='<div style=\'width:100%;height:100%;display:grid;place-items:center;font-family:Noto Serif TC;font-size:96px;color:var(--accent)\'>黑</div>'">
         </div>
         <div class="portrait-caption">Self&nbsp;<b>·</b>&nbsp;Portrait</div>
@@ -717,7 +746,7 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
       <a class="donate-block" href="https://payment.opay.tw/Broadcaster/Donate/7341A28F6CDE05A1A6646A7B26DF4CD8" target="_blank" rel="noopener" style="text-decoration:none">
         <div class="donate-img">
           <span class="donate-img-meta">— A Late-night Bento</span>
-          <img src="images/donation-banner.jpg" alt="深夜裡的一份雞腿便當">
+          <img src="images/donation-banner.jpg" alt="個人網站視覺圖片">
         </div>
         <div class="donate-text">
           <div class="micro">— Buy me a meal</div>
@@ -750,7 +779,7 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
     const d=new Date();
     const hh=String(d.getHours()).padStart(2,'0');
     const mm=String(d.getMinutes()).padStart(2,'0');
-    el.textContent=`TPE ${hh}:${mm}`;
+    el.textContent=`NOW ${hh}:${mm}`;
   }
   tick();setInterval(tick,30000);
 })();
@@ -778,16 +807,33 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
   const heroWorks=document.getElementById('heroWorks');
   const count=document.getElementById('projCount');
   const meta =document.getElementById('metaCount');
-  fetch('projects.json').then(r=>r.json()).then(data=>{
-    if(!data||!data.length){
-      list.innerHTML='<p style="color:var(--ink-mute);padding:40px 0">尚未有專案，敬請期待。</p>';
-      count.textContent='00 · Empty';
-      meta.textContent='0';
-      return;
+  const fallbackProjects=[
+    {
+      name:'AI 語音助手實驗',
+      description:'整理語音互動、記憶與提醒等概念，作為個人 AI 工具的小型實驗。',
+      tags:['AI','Voice','Prototype']
+    },
+    {
+      name:'生活工具開發',
+      description:'把日常會重複遇到的小麻煩，慢慢做成可重用、可維護的小工具。',
+      tags:['Tools','Everyday','Utility']
+    },
+    {
+      name:'資料分析小工具',
+      description:'嘗試用簡單清楚的方式整理資料、觀察趨勢，讓資訊更容易被理解。',
+      tags:['Data','Analysis','Notes']
     }
-    count.textContent=String(data.length).padStart(2,'0')+' · Works';
-    meta.textContent=String(data.length).padStart(2,'0');
-    data.forEach((p,i)=>{
+  ];
+
+  function renderProjects(data,isFallback){
+    const projects=Array.isArray(data)&&data.length?data:fallbackProjects;
+    const fallback=isFallback||projects===fallbackProjects;
+    list.innerHTML='';
+    heroWorks.innerHTML='';
+    count.textContent=String(projects.length).padStart(2,'0')+(fallback?' · Notes':' · Works');
+    meta.textContent=String(projects.length).padStart(2,'0');
+
+    projects.forEach((p,i)=>{
       const ext=p.link&&/^https?:/.test(p.link);
 
       /* hero works strip */
@@ -798,7 +844,7 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
       tile.innerHTML=`
         <div class="work-tile-inner">
           <span class="work-num">${String(i+1).padStart(2,'0')}</span>
-          <div class="work-thumb">${p.image?`<img src="${p.image}" alt="${p.name}" loading="lazy">`:''}</div>
+          <div class="work-thumb">${p.image?`<img src="${p.image}" alt="專案展示圖片" loading="lazy">`:''}</div>
           <div class="work-name">${p.name}</div>
           <span class="work-tag">${(p.tags||[]).slice(0,2).join(' · ')}</span>
         </div>
@@ -812,22 +858,27 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
       if(ext){a.target='_blank';a.rel='noopener'}
       const tags=(p.tags||[]).map(t=>`<span class="project-tag">${t}</span>`).join('');
       a.innerHTML=`
-        <div class="project-num">${String(i+1).padStart(2,'0')} / ${String(data.length).padStart(2,'0')}</div>
+        <div class="project-num">${String(i+1).padStart(2,'0')} / ${String(projects.length).padStart(2,'0')}</div>
         <div class="project-info">
           <h3 class="project-title">${p.name}</h3>
           <p class="project-desc">${p.description||''}</p>
           <div class="project-tags">${tags}</div>
         </div>
         <div class="project-thumb">
-          ${p.image?`<img src="${p.image}" alt="${p.name}" loading="lazy">`:''}
+          ${p.image?`<img src="${p.image}" alt="專案展示圖片" loading="lazy">`:''}
           <div class="project-arrow"><span>查看詳情</span><b>→</b></div>
         </div>`;
       list.appendChild(a);
     });
-  }).catch(()=>{
-    list.innerHTML='<p style="color:var(--ink-mute);padding:40px 0">無法載入專案資料。</p>';
-    count.textContent='— Error';
-  });
+  }
+
+  fetch('projects.json?v=20260626')
+    .then(r=>{
+      if(!r.ok) throw new Error('Unable to load projects');
+      return r.json();
+    })
+    .then(data=>renderProjects(data,false))
+    .catch(()=>renderProjects(fallbackProjects,true));
 })();
 </script>
 <script data-goatcounter="https://littleblack.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
