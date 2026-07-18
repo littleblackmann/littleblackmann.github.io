@@ -2,7 +2,7 @@
   {
     "name": "小白",
     "description": "語音互動、提醒、記錄與回顧等功能的小型 AI 助手實驗，嘗試把日常資訊整理成可以接續的脈絡。",
-    "image": "images/projects/小黑的AI-agent-設定完畫面.PNG",
+    "image": "images/projects/小黑的AI-agent-設定完畫面.jpg",
     "link": "projects/xiaobai-agent.html",
     "tags": ["Python", "FastAPI", "OpenAI Realtime", "家庭 AI"]
   },
@@ -37,7 +37,7 @@
   {
     "name": "小黑工具箱",
     "description": "把常用的小功能整理成離線工具集，包含圖片、文字、轉檔與 QR Code 等日常用途。",
-    "image": "images/projects/toolbox-cover.png",
+    "image": "images/projects/toolbox-cover.jpg",
     "link": "projects/toolbox.html",
     "tags": ["Python", "Flask", "BiRefNet", "EasyOCR"]
   }

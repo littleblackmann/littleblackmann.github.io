@@ -2,6 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://littleblackmann.github.io/</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-07-19</lastmod>
+  </url>
+  <url>
+    <loc>https://littleblackmann.github.io/projects/xiaobai-agent.html</loc>
+    <lastmod>2026-07-19</lastmod>
+  </url>
+  <url>
+    <loc>https://littleblackmann.github.io/projects/ziwei-today.html</loc>
+    <lastmod>2026-07-19</lastmod>
+  </url>
+  <url>
+    <loc>https://littleblackmann.github.io/projects/chef-ai-toolbox.html</loc>
+    <lastmod>2026-07-19</lastmod>
+  </url>
+  <url>
+    <loc>https://littleblackmann.github.io/projects/life-steps.html</loc>
+    <lastmod>2026-07-19</lastmod>
+  </url>
+  <url>
+    <loc>https://littleblackmann.github.io/projects/stock-predictor.html</loc>
+    <lastmod>2026-07-19</lastmod>
+  </url>
+  <url>
+    <loc>https://littleblackmann.github.io/projects/toolbox.html</loc>
+    <lastmod>2026-07-19</lastmod>
   </url>
 </urlset>
