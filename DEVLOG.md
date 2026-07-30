@@ -13,6 +13,7 @@
 - 新增公開預覽圖 `images/projects/signal-field-cover.jpg` 與可直接下載的 `downloads/SIGNAL-FIELD-v1.0.0.zip`。
 - 將使用者提供的新封面轉為 348 KB JPEG，更新網站封面與下載包；原始 PNG 保留在來源資料夾但不放入公開下載包。
 - Steam Workshop 已發布：新增 Workshop 訂閱按鈕，讓訪客可選擇 Steam 訂閱或直接下載完整安裝包。
+- 補齊 SIGNAL FIELD 作品頁底部的社群聯絡、贊助區塊與完整 footer，維持網站原有的支持入口。
 - 發布前檢查分享版設定檔，確認只含範例 ICS 位址，沒有私人行事曆連結或使用者設定。
 - 更新 `sitemap.xml`，讓新作品頁可被搜尋引擎收錄。
 
