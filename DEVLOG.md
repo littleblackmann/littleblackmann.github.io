@@ -15,6 +15,7 @@
 - Steam Workshop 已發布：新增 Workshop 訂閱按鈕，讓訪客可選擇 Steam 訂閱或直接下載完整安裝包。
 - 補齊 SIGNAL FIELD 作品頁底部的社群聯絡、贊助區塊與完整 footer，維持網站原有的支持入口。
 - 新增 Steam 使用者專用的本機遙測 agent 安裝包；安裝一次後，Steam 訂閱版與完整下載版共用同一個本機 agent 並可自動連線。
+- 將 Steam 使用者的本機遙測 Agent 下載按鈕移到 SIGNAL FIELD 頁首，避免使用者未往下捲動而錯過。
 - 發布前檢查分享版設定檔，確認只含範例 ICS 位址，沒有私人行事曆連結或使用者設定。
 - 更新 `sitemap.xml`，讓新作品頁可被搜尋引擎收錄。
 
