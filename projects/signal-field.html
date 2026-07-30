@@ -53,6 +53,8 @@
     .download:hover { background:var(--accent); color:var(--bg); transform:translateY(-2px); }
     .steam { border-color:#87b640; color:#c7ed8a; }
     .steam:hover { background:#87b640; color:var(--bg); }
+    .agent { border-color:#b99cff; color:#d9cbff; }
+    .agent:hover { background:#b99cff; color:var(--bg); }
     .download-note { margin:.55rem 0 0; color:var(--mute); font-size:.76rem; }
     .cover { margin-bottom:3rem; overflow:hidden; border:1px solid var(--line); background:var(--card); box-shadow:0 22px 60px rgba(0,0,0,.35); }
     .cover img { width:100%; transition:transform .45s; }
@@ -151,6 +153,13 @@
         <tr><td>資料安全</td><td>遙測 agent 只監聽本機 <code>127.0.0.1</code>，只讀取這台電腦的資料，不會將硬體或程序資料上傳。</td></tr>
       </table>
       <div class="notice"><strong>小提醒：</strong>壓縮檔不含私人行事曆設定。若要在桌布顯示行程，可在安裝後的設定檔填入自己的 ICS 日曆網址；不要將私人 ICS 網址分享給他人。</div>
+    </section>
+
+    <section>
+      <h2>Steam 訂閱版：啟用完整遙測</h2>
+      <p>Steam Workshop 能直接安裝桌布，但基於 Windows 安全機制，不能自行啟動本機程式。第一次想顯示 CPU、GPU、硬碟、網路與程序資料時，下載一次本機 agent 即可；它會在登入時自動啟動，之後 Steam 訂閱版與完整下載版都會自動連線。</p>
+      <div class="download-row"><a class="download agent" href="../downloads/SIGNAL-FIELD-agent-setup.zip" download>↓ 下載本機遙測 Agent</a></div>
+      <p class="download-note">解壓後雙擊 <strong>INSTALL-AGENT.cmd</strong> · 僅監聽本機 127.0.0.1 · 不會覆蓋 Steam 桌布</p>
     </section>
 
     <div class="bottom"><div class="download-row"><a class="download" href="../downloads/SIGNAL-FIELD-v1.0.0.zip" download>↓ 直接下載完整包</a><a class="download steam" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3774348215" target="_blank" rel="noopener">Steam Workshop 訂閱</a></div></div>
