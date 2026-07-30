@@ -48,8 +48,11 @@
     .subtitle { max-width:680px; margin:0 auto 1.35rem; color:var(--mute); }
     .tags { display:flex; justify-content:center; flex-wrap:wrap; gap:.5rem; margin-bottom:1.55rem; }
     .tag { padding:3px 10px; border:1px solid var(--line); border-radius:999px; color:var(--mute); font:10px var(--mono); letter-spacing:.1em; }
-    .download { display:inline-flex; align-items:center; gap:.6rem; padding:.72rem 1.7rem; border:1px solid var(--accent); color:var(--accent-hi); font:italic 18px var(--serif); letter-spacing:1px; transition:.25s; }
+    .download-row { display:flex; justify-content:center; flex-wrap:wrap; gap:.75rem; }
+    .download { display:inline-flex; align-items:center; justify-content:center; gap:.6rem; padding:.72rem 1.7rem; border:1px solid var(--accent); color:var(--accent-hi); font:italic 18px var(--serif); letter-spacing:1px; transition:.25s; }
     .download:hover { background:var(--accent); color:var(--bg); transform:translateY(-2px); }
+    .steam { border-color:#87b640; color:#c7ed8a; }
+    .steam:hover { background:#87b640; color:var(--bg); }
     .download-note { margin:.55rem 0 0; color:var(--mute); font-size:.76rem; }
     .cover { margin-bottom:3rem; overflow:hidden; border:1px solid var(--line); background:var(--card); box-shadow:0 22px 60px rgba(0,0,0,.35); }
     .cover img { width:100%; transition:transform .45s; }
@@ -82,8 +85,11 @@
       <h1>SIGNAL FIELD · 全息工作台</h1>
       <p class="subtitle">一張會讀懂你電腦狀態的全息 HUD 動態桌布。中央線框渦輪、硬體遙測、環境監測與音訊頻譜，都在眼前即時運算。</p>
       <div class="tags"><span class="tag">WALLPAPER ENGINE</span><span class="tag">WEBGL2</span><span class="tag">POWERSHELL</span><span class="tag">WINDOWS</span></div>
-      <a class="download" href="../downloads/SIGNAL-FIELD-v1.0.0.zip" download>↓ 下載 SIGNAL FIELD</a>
-      <p class="download-note">v1.0.0 · 約 370 KB · Windows 10 / 11</p>
+      <div class="download-row">
+        <a class="download" href="../downloads/SIGNAL-FIELD-v1.0.0.zip" download>↓ 直接下載完整包</a>
+        <a class="download steam" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3774348215" target="_blank" rel="noopener">Steam Workshop 訂閱</a>
+      </div>
+      <p class="download-note">直接下載：完整遙測 agent 與安裝器 · Steam：Wallpaper Engine 一鍵訂閱</p>
     </header>
 
     <div class="cover"><img src="../images/projects/signal-field-cover.jpg" alt="SIGNAL FIELD 全息工作台預覽畫面"></div>
@@ -123,7 +129,7 @@
       <div class="notice"><strong>小提醒：</strong>壓縮檔不含私人行事曆設定。若要在桌布顯示行程，可在安裝後的設定檔填入自己的 ICS 日曆網址；不要將私人 ICS 網址分享給他人。</div>
     </section>
 
-    <div class="bottom"><a class="download" href="../downloads/SIGNAL-FIELD-v1.0.0.zip" download>↓ 下載 SIGNAL FIELD</a></div>
+    <div class="bottom"><div class="download-row"><a class="download" href="../downloads/SIGNAL-FIELD-v1.0.0.zip" download>↓ 直接下載完整包</a><a class="download steam" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3774348215" target="_blank" rel="noopener">Steam Workshop 訂閱</a></div></div>
   </main>
   <footer>© MMXXVI · LITTLE BLACK</footer>
   <script src="../image-lightbox.js"></script>
