@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4N8JT4VXM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G4N8JT4VXM');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGNAL FIELD · 全息工作台 — 小黑 Little Black</title>
+  <meta name="description" content="即時硬體遙測、環境資料與音訊頻譜整合成全息 HUD 的 Wallpaper Engine 動態桌布。">
+  <link rel="canonical" href="https://littleblackmann.github.io/projects/signal-field.html">
+  <meta property="og:title" content="SIGNAL FIELD · 全息工作台 — 小黑 Little Black">
+  <meta property="og:description" content="每個數字都來自這台電腦的全息 HUD 動態桌布。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://littleblackmann.github.io/projects/signal-field.html">
+  <meta property="og:image" content="https://littleblackmann.github.io/images/projects/signal-field-cover.jpg">
+  <meta property="og:image:alt" content="SIGNAL FIELD 全息工作台預覽畫面">
+  <meta property="og:site_name" content="小黑 Little Black">
+  <meta property="og:locale" content="zh_TW">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SIGNAL FIELD · 全息工作台 — 小黑 Little Black">
+  <meta name="twitter:description" content="即時硬體遙測與音訊頻譜的全息 HUD 動態桌布。">
+  <meta name="twitter:image" content="https://littleblackmann.github.io/images/projects/signal-field-cover.jpg">
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+TC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../image-lightbox.css">
+  <style>
+    :root { --bg:#0a0e10; --bg-soft:#10191d; --card:#0d1519; --line:#26414a; --line-soft:#172d35; --ink:#e0f5fa; --mute:#8ba7b0; --dim:#54737d; --accent:#56d9f5; --accent-hi:#a9efff; --serif:'Cormorant Garamond','Noto Serif TC',serif; --sans:'Inter','Noto Sans TC',sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:radial-gradient(ellipse at 50% 20%,#123543 0%,var(--bg) 45%); color:var(--ink); font-family:var(--sans); font-weight:300; line-height:1.75; font-size:15px; }
+    body::before { content:''; position:fixed; inset:0; z-index:-1; pointer-events:none; opacity:.36; background-image:linear-gradient(rgba(86,217,245,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(86,217,245,.045) 1px,transparent 1px); background-size:32px 32px; mask-image:linear-gradient(to bottom,black,transparent 78%); }
+    a { color:inherit; text-decoration:none; }
+    img { display:block; max-width:100%; }
+    .back { position:fixed; top:1.2rem; left:1.5rem; z-index:5; padding:.38rem .9rem; border:1px solid var(--line); background:rgba(10,14,16,.86); backdrop-filter:blur(12px); color:var(--mute); font:11px var(--mono); letter-spacing:.13em; }
+    .back:hover { color:var(--accent-hi); border-color:var(--accent); }
+    .container { max-width:920px; margin:auto; padding:5.2rem 2rem 3.5rem; }
+    .hero { text-align:center; margin-bottom:2.8rem; }
+    .eyebrow { color:var(--accent); font:11px var(--mono); letter-spacing:.26em; text-transform:uppercase; }
+    h1 { margin:.6rem 0 .8rem; font:300 clamp(33px,5vw,52px) var(--serif); letter-spacing:2px; }
+    .subtitle { max-width:680px; margin:0 auto 1.35rem; color:var(--mute); }
+    .tags { display:flex; justify-content:center; flex-wrap:wrap; gap:.5rem; margin-bottom:1.55rem; }
+    .tag { padding:3px 10px; border:1px solid var(--line); border-radius:999px; color:var(--mute); font:10px var(--mono); letter-spacing:.1em; }
+    .download { display:inline-flex; align-items:center; gap:.6rem; padding:.72rem 1.7rem; border:1px solid var(--accent); color:var(--accent-hi); font:italic 18px var(--serif); letter-spacing:1px; transition:.25s; }
+    .download:hover { background:var(--accent); color:var(--bg); transform:translateY(-2px); }
+    .download-note { margin:.55rem 0 0; color:var(--mute); font-size:.76rem; }
+    .cover { margin-bottom:3rem; overflow:hidden; border:1px solid var(--line); background:var(--card); box-shadow:0 22px 60px rgba(0,0,0,.35); }
+    .cover img { width:100%; transition:transform .45s; }
+    .cover:hover img { transform:scale(1.015); }
+    section { margin:0 0 2.8rem; }
+    h2 { margin:0 0 1.15rem; padding-bottom:.55rem; border-bottom:1px solid var(--line); color:var(--accent-hi); font:400 25px var(--serif); letter-spacing:1px; }
+    p { margin:.75rem 0; }
+    strong { color:var(--accent-hi); font-weight:500; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:1rem; margin-top:1.2rem; }
+    .card { min-height:145px; padding:1.15rem; border:1px solid var(--line-soft); background:linear-gradient(145deg,rgba(20,52,62,.56),rgba(9,15,18,.64)); }
+    .card:hover { border-color:var(--accent); }
+    .card h3 { margin:0 0 .4rem; color:var(--accent); font:500 17px var(--serif); }
+    .card p { margin:0; color:var(--mute); font-size:.84rem; line-height:1.65; }
+    .requirements { width:100%; border-collapse:collapse; }
+    .requirements td { padding:.66rem .9rem; border-bottom:1px solid var(--line-soft); vertical-align:top; font-size:.87rem; }
+    .requirements td:first-child { width:128px; color:var(--accent); font-family:var(--serif); white-space:nowrap; }
+    .notice { padding:1.2rem 1.35rem; border:1px solid var(--line); border-left:3px solid var(--accent); background:rgba(14,35,42,.5); color:var(--mute); font-size:.84rem; }
+    .steps { padding-left:1.25rem; color:var(--mute); }
+    .steps li { padding-left:.2rem; margin:.45rem 0; }
+    .bottom { text-align:center; margin:2.7rem 0 .5rem; }
+    footer { padding:2rem; border-top:1px solid var(--line); color:var(--dim); text-align:center; font:10px var(--mono); letter-spacing:.16em; }
+    @media (max-width:640px) { .container { padding:4.6rem 1.15rem 2.5rem; } .back { top:.8rem; left:.8rem; } .requirements td:first-child { width:105px; } }
+  </style>
+</head>
+<body>
+  <a class="back" href="../index.html">← 返回首頁</a>
+  <main class="container">
+    <header class="hero">
+      <div class="eyebrow">Wallpaper Engine · WebGL2</div>
+      <h1>SIGNAL FIELD · 全息工作台</h1>
+      <p class="subtitle">一張會讀懂你電腦狀態的全息 HUD 動態桌布。中央線框渦輪、硬體遙測、環境監測與音訊頻譜，都在眼前即時運算。</p>
+      <div class="tags"><span class="tag">WALLPAPER ENGINE</span><span class="tag">WEBGL2</span><span class="tag">POWERSHELL</span><span class="tag">WINDOWS</span></div>
+      <a class="download" href="../downloads/SIGNAL-FIELD-v1.0.0.zip" download>↓ 下載 SIGNAL FIELD</a>
+      <p class="download-note">v1.0.0 · 約 215 KB · Windows 10 / 11</p>
+    </header>
+
+    <div class="cover"><img src="../images/projects/signal-field-cover.jpg" alt="SIGNAL FIELD 全息工作台預覽畫面"></div>
+
+    <section>
+      <h2>這是什麼？</h2>
+      <p>很多科幻 HUD 桌布的數字只是裝飾；<strong>SIGNAL FIELD 的每一格都有實際來源。</strong>它用程序化生成的 WebGL2 線框引擎當核心，將電腦的即時狀態整合成安靜、細緻的桌面監測介面。</p>
+      <div class="grid">
+        <article class="card"><h3>核心遙測</h3><p>CPU、記憶體、GPU、VRAM、溫度、功耗、時脈、風扇與各邏輯核心的獨立負載。</p></article>
+        <article class="card"><h3>系統與網路</h3><p>硬碟用量與即時讀寫、網路上下行和延遲、前六名 CPU 程序、60 秒負載走勢。</p></article>
+        <article class="card"><h3>環境監測</h3><p>天氣、體感、風、濕度、空品、PM2.5、紫外線、日出日落與行事曆。</p></article>
+        <article class="card"><h3>音訊反應</h3><p>原生音訊 API 驅動的左右聲道電平、48 格頻譜、三頻能量與全息體呼吸效果。</p></article>
+        <article class="card"><h3>全息引擎</h3><p>8000+ 條即時繪製線段、掃描平面、滑鼠視差與五組配色，不用影片或 3D 模型檔。</p></article>
+        <article class="card"><h3>實際警戒</h3><p>GPU 過熱、硬碟不足、記憶體過高或延遲異常時才會亮起警戒，不做無意義的假警報。</p></article>
+      </div>
+    </section>
+
+    <section>
+      <h2>30 秒安裝</h2>
+      <ol class="steps">
+        <li>下載並解壓縮壓縮檔。</li>
+        <li>開啟資料夾後雙擊 <strong>INSTALL.cmd</strong>。</li>
+        <li>依畫面指示安裝；沒有 PowerShell 7 時，安裝程式會先詢問是否使用 winget 安裝。</li>
+        <li>打開 Wallpaper Engine，重新整理「我的專案」，選擇 <strong>SIGNAL FIELD</strong>。</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>系統需求與隱私</h2>
+      <table class="requirements">
+        <tr><td>系統</td><td>Windows 10 / 11、Wallpaper Engine，以及支援 WebGL2 的顯示卡。</td></tr>
+        <tr><td>遙測 agent</td><td>完整即時硬體 HUD 需要 PowerShell 7；安裝器會先詢問才安裝。</td></tr>
+        <tr><td>顯示卡</td><td>NVIDIA 可顯示最完整的 GPU 溫度、功耗、時脈、風扇與 VRAM；AMD／Intel 仍可使用，但部分欄位可能無數據。</td></tr>
+        <tr><td>網路</td><td>天氣與空氣品質使用 Open-Meteo；自動定位使用 ipapi.co，也可在桌布設定自行填入座標。</td></tr>
+        <tr><td>資料安全</td><td>遙測 agent 只監聽本機 <code>127.0.0.1</code>，只讀取這台電腦的資料，不會將硬體或程序資料上傳。</td></tr>
+      </table>
+      <div class="notice"><strong>小提醒：</strong>壓縮檔不含私人行事曆設定。若要在桌布顯示行程，可在安裝後的設定檔填入自己的 ICS 日曆網址；不要將私人 ICS 網址分享給他人。</div>
+    </section>
+
+    <div class="bottom"><a class="download" href="../downloads/SIGNAL-FIELD-v1.0.0.zip" download>↓ 下載 SIGNAL FIELD</a></div>
+  </main>
+  <footer>© MMXXVI · LITTLE BLACK</footer>
+  <script src="../image-lightbox.js"></script>
+  <script data-goatcounter="https://littleblack.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

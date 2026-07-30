@@ -1,5 +1,12 @@
 [
   {
+    "name": "SIGNAL FIELD · 全息工作台",
+    "description": "把即時硬體遙測、天氣與音訊頻譜做成可互動的全息 HUD 動態桌布；中央引擎與每一格數據都是即時運算。",
+    "image": "images/projects/signal-field-cover.jpg",
+    "link": "projects/signal-field.html",
+    "tags": ["Wallpaper Engine", "WebGL2", "PowerShell", "Windows"]
+  },
+  {
     "name": "小白",
     "description": "語音互動、提醒、記錄與回顧等功能的小型 AI 助手實驗，嘗試把日常資訊整理成可以接續的脈絡。",
     "image": "images/projects/小黑的AI-agent-設定完畫面.jpg",
