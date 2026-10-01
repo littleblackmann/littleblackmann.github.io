@@ -12,20 +12,20 @@
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>小黑工具箱 — 小黑 Little Black</title>
-  <meta name="description" content="5 合 1 離線實用工具集：AI 去背、OCR 辨識、文字轉檔、QR Code、PNG 轉 ICO">
+  <meta name="description" content="小黑工具箱 v1.2.0：9 項本機工具，支援圖片批次處理、圖片標註、PDF、批次改名、AI 去背、OCR、文字轉檔、QR 辨識及 ICO。Windows 解壓即用，支援線上更新。">
   <link rel="canonical" href="https://littleblackmann.github.io/projects/toolbox.html">
   <meta property="og:title" content="小黑工具箱 — 小黑 Little Black">
-  <meta property="og:description" content="5 合 1 離線實用工具集：AI 去背、OCR 辨識、文字轉檔、QR Code、PNG 轉 ICO">
+  <meta property="og:description" content="9 項離線實用工具：圖片處理與標註、PDF、批次改名、AI 去背、OCR、文字轉檔、QR 與 ICO。Windows 解壓即用，支援線上更新。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://littleblackmann.github.io/projects/toolbox.html">
-  <meta property="og:image" content="https://littleblackmann.github.io/images/projects/toolbox-cover.jpg">
+  <meta property="og:image" content="https://littleblackmann.github.io/images/projects/toolbox-v1.2-home.jpg">
   <meta property="og:image:alt" content="小黑工具箱 專案封面">
   <meta property="og:site_name" content="小黑 Little Black">
   <meta property="og:locale" content="zh_TW">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="小黑工具箱 — 小黑 Little Black">
-  <meta name="twitter:description" content="5 合 1 離線實用工具集：AI 去背、OCR 辨識、文字轉檔、QR Code、PNG 轉 ICO">
-  <meta name="twitter:image" content="https://littleblackmann.github.io/images/projects/toolbox-cover.jpg">
+  <meta name="twitter:description" content="9 項離線實用工具，包含圖片標註、PDF、批次改名與 AI 去背。Windows 解壓即用，支援線上更新。">
+  <meta name="twitter:image" content="https://littleblackmann.github.io/images/projects/toolbox-v1.2-home.jpg">
   <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -182,6 +182,14 @@
       color: var(--accent);
     }
 
+    .release-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.5rem 1.3rem; margin-top: 0.9rem; font-size: 0.8rem; color: var(--ink-mute); }
+    .release-links a { text-decoration: underline; text-underline-offset: 4px; }
+    .release-summary { padding: 1.2rem 1.5rem; border: 1px solid var(--line); background: var(--bg-soft); }
+    .release-summary ul, .update-steps { padding-left: 1.2rem; font-size: 0.85rem; color: var(--ink-mute); }
+    .release-summary li, .update-steps li { margin: 0.5rem 0; }
+    #online-update { scroll-margin-top: 4.5rem; }
+    a:focus-visible { outline: 2px solid var(--accent-hi); outline-offset: 5px; }
+
     .cover-image {
       border: 1px solid var(--line);
       background: var(--bg-card);
@@ -191,6 +199,7 @@
 
     .cover-image img {
       width: 100%;
+      height: auto;
       filter: grayscale(.2) brightness(.9);
       transition: all 0.5s;
     }
@@ -278,11 +287,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      color: var(--ink-mute);
     }
 
     .tool-info {
       flex: 1;
+      min-width: 0;
     }
 
     .tool-name {
@@ -298,6 +310,7 @@
       font-size: 0.82rem;
       color: var(--ink-mute);
       line-height: 1.7;
+      overflow-wrap: anywhere;
     }
 
     /* --- Gallery --- */
@@ -316,6 +329,7 @@
 
     .gallery-item img {
       width: 100%;
+      height: auto;
       filter: grayscale(.2) brightness(.9);
       transition: all 0.5s;
     }
@@ -332,7 +346,7 @@
       font-size: 10px;
       letter-spacing: .1em;
       text-transform: uppercase;
-      color: var(--ink-dim);
+      color: var(--ink-mute);
       border-top: 1px solid var(--line);
     }
 
@@ -493,11 +507,14 @@
       .highlight-grid { grid-template-columns: repeat(2, 1fr); }
       .back-link { top: 0.8rem; left: 0.8rem; font-size: 10px; padding: 0.3rem 0.8rem; }
       .tool-card { flex-direction: column; }
+      .info-table td { padding: 0.6rem 0.5rem; overflow-wrap: anywhere; }
+      .info-table td:first-child { width: 88px; }
       .donation-section { padding: 0 1rem; }
       .donation-content { padding: 1.5rem 1.2rem 1.8rem; }
       .donation-title { font-size: 1rem; }
       .donation-text { font-size: 0.8rem; }
     }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; } }
   </style>
   <link rel="stylesheet" href="../image-lightbox.css">
 </head>
@@ -515,24 +532,39 @@
     <!-- Header -->
     <div class="project-header">
       <h1 class="project-title">小黑工具箱</h1>
-      <p class="project-subtitle">5 合 1 離線實用工具集，雙擊就能開，用瀏覽器操作，所有檔案都不會離開你的電腦。</p>
+      <p class="project-subtitle">9 項日常小工具，把圖片、文件、文字與檔案一次整理好。解壓後雙擊就能開，檔案都在你的電腦上處理。</p>
       <div class="project-tags">
+        <span class="project-tag" data-release-version>v1.2.0</span>
         <span class="project-tag">Python</span>
         <span class="project-tag">Flask</span>
         <span class="project-tag">BiRefNet</span>
         <span class="project-tag">EasyOCR</span>
         <span class="project-tag">JavaScript</span>
       </div>
-      <a href="https://drive.google.com/file/d/1kKQVuEBL2riLv84Y0hBY02glUGrAhdNL/view?usp=sharing" target="_blank" rel="noopener" class="download-btn">
+      <a href="https://github.com/littleblackmann/littleblacktoolbox/releases/latest" target="_blank" rel="noopener" class="download-btn" data-toolbox-download>
         <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-        下載工具箱
+        下載 Windows 完整版
       </a>
-      <p class="download-note">Windows 10 / 11，解壓即用，約 500 MB</p>
+      <p class="download-note">Windows 10 / 11（64 位元）· <span data-release-version>v1.2.0</span> · 完整 ZIP 約 <span data-release-size>1.48 GB</span></p>
+      <p class="download-note">已包含 AI 模型，解壓即用。工具可離線使用，檢查及下載更新需要網路。</p>
+      <div class="release-links"><a href="https://github.com/littleblackmann/littleblacktoolbox/releases/latest" target="_blank" rel="noopener">更新紀錄與校驗碼</a><a href="#online-update">已經有舊版？看更新方式</a></div>
     </div>
 
     <!-- Cover -->
     <div class="cover-image">
-      <img src="../images/projects/toolbox-cover.jpg" alt="小黑工具箱 — 工具首頁">
+      <img src="../images/projects/toolbox-v1.2-home.jpg" alt="小黑工具箱 v1.2.0 — 9 項工具、用途搜尋、分類與收藏" width="1274" height="1128">
+    </div>
+
+    <div class="content-section">
+      <h2 class="section-title">這次多了什麼？</h2>
+      <div class="release-summary">
+        <ul>
+          <li><strong>圖片標註：</strong>貼上截圖，加箭頭、文字、遮蔽與裁切，再複製或下載。</li>
+          <li><strong>批次檔案改名：</strong>先核對新舊名稱再執行，支援流水號、取代、日期與復原。</li>
+          <li><strong>更順手的入口：</strong>用途搜尋、分類、收藏、最近使用，以及 Ctrl+K 快速切換工具。</li>
+          <li><strong>少做重複設定：</strong>記住常用選項，儲存圖片流程，去背後接著縮圖、轉 WebP，失敗圖片可單獨重試。</li>
+        </ul>
+      </div>
     </div>
 
     <!-- 怎麼用 -->
@@ -553,7 +585,7 @@
     <div class="content-section">
       <div class="highlight-grid">
         <div class="highlight-card">
-          <div class="highlight-value">5</div>
+          <div class="highlight-value">9</div>
           <div class="highlight-label">實用工具</div>
         </div>
         <div class="highlight-card">
@@ -562,7 +594,7 @@
         </div>
         <div class="highlight-card">
           <div class="highlight-value">100%</div>
-          <div class="highlight-label">離線運作</div>
+          <div class="highlight-label">工具在本機運作</div>
         </div>
         <div class="highlight-card">
           <div class="highlight-value">0</div>
@@ -571,40 +603,68 @@
       </div>
     </div>
 
-    <!-- 5 個工具 -->
+    <!-- 9 個工具 -->
     <div class="content-section">
       <h2 class="section-title">包含哪些工具？</h2>
       <div class="tool-list">
         <div class="tool-card">
-          <div class="tool-icon">✂️</div>
+          <div class="tool-icon" aria-hidden="true">01</div>
           <div class="tool-info">
-            <div class="tool-name">AI 智慧去背</div>
-            <div class="tool-desc">拖入圖片，幾秒完成去背。使用 BiRefNet 深度學習模型，頭髮邊緣也能精準切割。支援前後對比滑桿，下載帶透明度的 PNG。</div>
+            <div class="tool-name">圖片批次處理</div>
+            <div class="tool-desc">一次縮圖、壓縮或轉成 PNG／JPG／WebP，保持比例、不放大小圖。比較前後大小，單張下載或打包 ZIP；也可先去背，再縮圖與轉檔。</div>
           </div>
         </div>
         <div class="tool-card">
-          <div class="tool-icon">🔍</div>
+          <div class="tool-icon" aria-hidden="true">02</div>
+          <div class="tool-info">
+            <div class="tool-name">圖片標註</div>
+            <div class="tool-desc">Ctrl+V 貼上截圖，加箭頭、框線、畫筆、文字、馬賽克或實色遮蔽。支援裁切、復原／重做，匯出原解析度圖片或直接複製 PNG。</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon" aria-hidden="true">03</div>
+          <div class="tool-info">
+            <div class="tool-name">PDF 工具</div>
+            <div class="tool-desc">看縮圖選頁、拖曳排序、旋轉、合併或逐頁拆分。支援輸入密碼開啟受保護文件，也可用 3,1-2 這樣的頁碼指定輸出順序。</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon" aria-hidden="true">04</div>
+          <div class="tool-info">
+            <div class="tool-name">批次檔案改名</div>
+            <div class="tool-desc">選資料夾、勾檔案，用流水號、文字取代、前後綴或日期整理名稱。先預覽再執行，保留副檔名、檢查重名，重新開啟程式後仍可復原。</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon" aria-hidden="true">05</div>
+          <div class="tool-info">
+            <div class="tool-name">AI 智慧去背</div>
+            <div class="tool-desc">拖入圖片，用 BiRefNet AI 模型移除背景。用前後對比滑桿檢查結果，下載帶透明度的 PNG；處理時間依圖片和電腦效能而定。</div>
+          </div>
+        </div>
+        <div class="tool-card">
+          <div class="tool-icon" aria-hidden="true">06</div>
           <div class="tool-info">
             <div class="tool-name">OCR 文字辨識</div>
             <div class="tool-desc">把圖片裡的文字抓出來。支援繁中、簡中、英、日、韓，可直接 Ctrl+V 貼上螢幕截圖。辨識結果可即時編輯、複製。</div>
           </div>
         </div>
         <div class="tool-card">
-          <div class="tool-icon">🔄</div>
+          <div class="tool-icon" aria-hidden="true">07</div>
           <div class="tool-info">
             <div class="tool-name">文字轉檔工坊</div>
             <div class="tool-desc">Markdown、HTML、CSV、JSON、YAML、XML 各種格式互轉，還能匯出 PDF。自動偵測輸入格式，推薦目標格式。</div>
           </div>
         </div>
         <div class="tool-card">
-          <div class="tool-icon">📱</div>
+          <div class="tool-icon" aria-hidden="true">08</div>
           <div class="tool-info">
-            <div class="tool-name">QR Code 生成器</div>
-            <div class="tool-desc">輸入網址、電話、信箱或純文字，即時產生 QR Code。可自訂顏色、尺寸（200～1024px），下載 PNG 或複製到剪貼簿。</div>
+            <div class="tool-name">QR Code 產生與辨識</div>
+            <div class="tool-desc">輸入網址、電話、信箱或文字產生 QR，自訂顏色與尺寸，下載或複製 PNG。也能貼上截圖讀取同圖多個 QR，複製內容或自行開啟網址。</div>
           </div>
         </div>
         <div class="tool-card">
-          <div class="tool-icon">🎨</div>
+          <div class="tool-icon" aria-hidden="true">09</div>
           <div class="tool-info">
             <div class="tool-name">PNG 轉 ICO</div>
             <div class="tool-desc">上傳圖片自動生成 6 種尺寸（16～256px）的 Windows 圖示檔，預覽各尺寸效果，一鍵下載標準 .ico 檔。</div>
@@ -618,15 +678,23 @@
       <h2 class="section-title">系統畫面</h2>
       <div class="gallery">
         <div class="gallery-item">
-          <img src="../images/projects/toolbox-cover.jpg" alt="工具首頁" loading="lazy">
-          <div class="gallery-caption">工具首頁 — 所有工具一覽，點卡片即可進入</div>
+          <img src="../images/projects/toolbox-v1.2-home.jpg" alt="v1.2.0 工具首頁" loading="lazy" width="1274" height="1128">
+          <div class="gallery-caption">工具首頁 — 用途搜尋、分類、收藏與最近使用，9 項工具一次找到</div>
         </div>
         <div class="gallery-item">
-          <img src="../images/projects/toolbox-rembg.jpg" alt="AI 智慧去背" loading="lazy">
+          <img src="../images/projects/toolbox-v1.2-editor.jpg" alt="圖片標註的箭頭、文字、實色遮蔽與裁切示範" loading="lazy" width="2560" height="1271">
+          <div class="gallery-caption">圖片標註 — 加上重點與遮蔽，裁切後可直接複製圖片</div>
+        </div>
+        <div class="gallery-item">
+          <img src="../images/projects/toolbox-v1.2-rename.jpg" alt="批次檔案改名的新舊名稱預覽" loading="lazy" width="1274" height="1282">
+          <div class="gallery-caption">批次檔案改名 — 先核對新舊名稱，確認後再執行</div>
+        </div>
+        <div class="gallery-item">
+          <img src="../images/projects/toolbox-rembg.jpg" alt="AI 智慧去背" loading="lazy" width="1561" height="1262">
           <div class="gallery-caption">AI 智慧去背 — 拖入圖片即可去背，支援前後對比滑桿</div>
         </div>
         <div class="gallery-item">
-          <img src="../images/projects/toolbox-ocr.jpg" alt="OCR 文字辨識" loading="lazy">
+          <img src="../images/projects/toolbox-ocr.jpg" alt="OCR 文字辨識" loading="lazy" width="1136" height="719">
           <div class="gallery-caption">OCR 文字辨識 — 支援多語言辨識，可直接貼上螢幕截圖</div>
         </div>
       </div>
@@ -646,16 +714,27 @@
         <div class="tool-card">
           <div class="tool-info">
             <div class="tool-name">OCR 辨識</div>
-            <div class="tool-desc">使用 EasyOCR，先偵測文字位置，再辨識內容。支援 80+ 種語言模型，首次使用時自動下載。</div>
+            <div class="tool-desc">使用 EasyOCR，先偵測文字位置，再辨識內容。本工具支援繁中、簡中、英、日、韓；完整發行包已包含所需模型，不必首次上網下載。</div>
           </div>
         </div>
         <div class="tool-card">
           <div class="tool-info">
             <div class="tool-name">其他工具</div>
-            <div class="tool-desc">QR Code（qrcode.js 純前端即時產生）、文字轉檔（7 個本機 JS 函式庫）、PNG 轉 ICO（Pillow 圖像處理），全部離線運作。</div>
+            <div class="tool-desc">圖片轉檔與 ICO 使用 Pillow，標註使用瀏覽器 Canvas，PDF 使用 pypdf 與 PDF.js，QR 辨識使用 OpenCV。JavaScript 函式庫及 AI 模型都放在完整包內，九項工具可離線使用。</div>
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="content-section" id="online-update">
+      <h2 class="section-title">有舊版，怎麼更新？</h2>
+      <ol class="update-steps">
+        <li>開啟工具箱並保持網路連線，等候幾秒，程式會檢查 GitHub 新版本。</li>
+        <li>頁面上方出現新版提示時，按「立即更新」。</li>
+        <li>程式會下載、更新並自動重啟，完成後重新整理瀏覽器。</li>
+      </ol>
+      <p class="download-note">v1.1.0 升級 v1.2.0 的差量包約 57 MB。更舊或不符合基準的版本會使用完整包；差量 ZIP 供內建更新使用，新使用者請下載完整版。</p>
+      <p class="download-note">線上更新已實測完成下載與自動重啟。程式會自動檢查，按下「立即更新」才會安裝。</p>
     </div>
 
     <!-- 系統需求 -->
@@ -663,10 +742,12 @@
       <h2 class="section-title">系統需求</h2>
       <table class="info-table">
         <tr><td>作業系統</td><td>Windows 10 / 11（64 位元）</td></tr>
-        <tr><td>硬碟空間</td><td>約 500 MB</td></tr>
-        <tr><td>網路</td><td>不需要（首次使用 AI 功能時需下載模型）</td></tr>
+        <tr><td>版本</td><td><span data-release-version>v1.2.0</span> · <span data-release-date>2026/10/01</span></td></tr>
+        <tr><td>下載大小</td><td>完整 ZIP 約 <span data-release-size>1.48 GB</span>，包含 AI 去背與 OCR 模型</td></tr>
+        <tr><td>硬碟空間</td><td>v1.2.0 解壓後約 2.2 GB；下載、解壓及更新建議預留至少 5 GB</td></tr>
+        <tr><td>網路</td><td>九項工具可離線使用；版本檢查及下載更新需要網路</td></tr>
         <tr><td>安裝方式</td><td>解壓即用，不需安裝 Python 或任何額外套件</td></tr>
-        <tr><td>自動更新</td><td>內建差分更新，只下載變動的檔案</td></tr>
+        <tr><td>線上更新</td><td>從 GitHub Releases 下載，相符版本使用差量包，必要時使用完整包</td></tr>
       </table>
     </div>
 
@@ -677,11 +758,11 @@
 
     <!-- 底部下載 -->
     <div style="text-align:center; margin-bottom: 2rem;">
-      <a href="https://drive.google.com/file/d/1kKQVuEBL2riLv84Y0hBY02glUGrAhdNL/view?usp=sharing" target="_blank" rel="noopener" class="download-btn">
+      <a href="https://github.com/littleblackmann/littleblacktoolbox/releases/latest" target="_blank" rel="noopener" class="download-btn" data-toolbox-download>
         <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-        下載工具箱
+        下載 Windows 完整版
       </a>
-      <p class="download-note">v1.0.0 ｜ Windows 10 / 11 ｜ 約 500 MB ｜ 解壓即用</p>
+      <p class="download-note"><span data-release-version>v1.2.0</span> · Windows 10 / 11 · 完整 ZIP 約 <span data-release-size>1.48 GB</span> · 解壓即用</p>
     </div>
 
   </div>
@@ -690,7 +771,7 @@
   <div class="donation-section">
     <div class="donation-card">
       <div class="donation-banner">
-        <img src="../images/donation-banner.jpg" alt="深夜裡的一份雞腿便當">
+        <img src="../images/donation-banner.jpg" alt="深夜裡的一份雞腿便當" width="1920" height="341">
       </div>
       <div class="donation-content">
         <h2 class="donation-title">請小黑吃雞腿便當</h2>
@@ -710,6 +791,7 @@
   </footer>
 
   <script src="../image-lightbox.js"></script>
+  <script src="toolbox-release.js"></script>
   <script data-goatcounter="https://littleblack.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
