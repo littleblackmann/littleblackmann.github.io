@@ -36,10 +36,10 @@
   },
   {
     "name": "台股預測分析系統",
-    "description": "整理市場資料、模型預測、圖表與觀察紀錄的桌面小工具，偏研究與資料分析用途。",
-    "image": "images/projects/stock-cover.png",
+    "description": "查看台股 1、3、5 個交易日的機率、日期與歷史驗證，搭配 K 線、自選清單及選用 AI 新聞分析。",
+    "image": "images/projects/stock-v170-main.png",
     "link": "projects/stock-predictor.html",
-    "tags": ["Python", "Transformer", "LightGBM", "PySide6"]
+    "tags": ["Python", "LightGBM", "OpenRouter", "PySide6"]
   },
   {
     "name": "小黑工具箱",

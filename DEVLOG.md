@@ -4,6 +4,26 @@
 
 ---
 
+## 2026-10-04（台股預測介紹頁與 GitHub 下載更新）
+
+- 更新 `projects/stock-predictor.html` 為 v1.7.0 的實際功能：1／3／5 個交易日獨立分析、完整收盤日期、歷史驗證與基準比較、方向不明、大字模式、自選總覽及預測追蹤。
+- 移除舊版 Transformer 投票、SHAP 前五因素、新聞改動量化機率與「越用越準」等不符合正式版本的說明。AI 新聞分析獨立呈現；OpenRouter Key 選填，基本量化分析不用 Key，AI 模型費用另由 OpenRouter 計收。
+- 頁首與頁尾下載改為 GitHub Release 的完整 ZIP，免 GitHub 帳號。新增 `projects/stock-release.js`，自動同步最新正式版的連結、版號、大小與台北發行日期；只接受指定 repository 的 HTTPS 完整包，排除 patch、草稿、預發行及不相符的網址。
+- API 失敗或受限時保留已驗證的 v1.7.0 直接 ZIP 連結，另提供永久 latest Release 頁面入口；未啟用 JavaScript 也可以下載。
+- 加入首次使用與舊版更新步驟、個人資料備份位置。下載大小更正為約 679 MB；實際 ZIP 展開為 2,058,520,804 bytes（約 2.1 GB），建議預留 5 GB。
+- 用 v1.7.0 原始程式的實際 0050 行情重新擷取主畫面、分析面板及空白 Key 的模型設定，共三張圖片；資料截至 2026/10/02，擷取於 2026/10/04。未使用合成預測或付費 AI 推論，舊圖片資產保留。
+- 同步首頁作品卡片、標籤、分享封面、projects.json 快取版本與 sitemap 日期。保留既有深色暖金風格、Analytics、返回首頁、圖片放大與贊助入口。
+
+### 驗證
+
+- 實際瀏覽器於 375／768／1280px 檢查介紹頁：沒有水平溢出；三張圖片均載入、比例與原始尺寸一致。手機可放大與切換圖片，Escape 可關閉；首頁手機／電腦版卡片使用新版圖片及文案，沒有 console error。
+- GitHub latest 確認為 v1.7.0；匿名完整 ZIP HEAD 回應 200，Content-Length 678,980,217 bytes。沒有重複下載大型發行包。
+- 15 項下載腳本案例通過，包含正式完整包與版號／大小／日期更新、API 離線／403 備援、patch／預發行／異常來源拒絕。
+- 9 筆本機引用路徑、3 張圖片尺寸、JSON、sitemap XML、內嵌／外部 JavaScript 語法與 `git diff --check` 通過。
+- 驗證腳本及實際結果資料保存在股票專案的 `build/verification/`，未公開個人設定或 API Key。
+
+---
+
 ## 2026-10-02（小黑工具箱介紹頁更新）
 
 - 使用原本的 `E:\小黑的網頁\littleblackmann.github.io-main`，GitHub remote 與正式網站一致。

@@ -12,20 +12,20 @@
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>台股預測分析系統 — 小黑 Little Black</title>
-  <meta name="description" content="結合 Transformer、LightGBM 與 AI 大型語言模型的台股漲跌預測桌面工具">
+  <meta name="description" content="查看台股未來 1、3、5 個交易日的漲跌機率、歷史驗證與 K 線走勢；選用 OpenRouter AI 整理新聞。Windows 免費桌面工具，GitHub 直接下載。">
   <link rel="canonical" href="https://littleblackmann.github.io/projects/stock-predictor.html">
   <meta property="og:title" content="台股預測分析系統 — 小黑 Little Black">
-  <meta property="og:description" content="結合 Transformer、LightGBM 與 AI 大型語言模型的台股漲跌預測桌面工具">
+  <meta property="og:description" content="查看台股未來 1、3、5 個交易日的漲跌機率、歷史驗證與 K 線走勢；選用 OpenRouter AI 整理新聞。Windows 免費桌面工具，GitHub 直接下載。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://littleblackmann.github.io/projects/stock-predictor.html">
-  <meta property="og:image" content="https://littleblackmann.github.io/images/projects/stock-cover.png">
-  <meta property="og:image:alt" content="台股預測分析系統 專案封面">
+  <meta property="og:image" content="https://littleblackmann.github.io/images/projects/stock-v170-main.png">
+  <meta property="og:image:alt" content="台股預測分析系統 v1.7.0 實際分析畫面">
   <meta property="og:site_name" content="小黑 Little Black">
   <meta property="og:locale" content="zh_TW">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="台股預測分析系統 — 小黑 Little Black">
-  <meta name="twitter:description" content="結合 Transformer、LightGBM 與 AI 大型語言模型的台股漲跌預測桌面工具">
-  <meta name="twitter:image" content="https://littleblackmann.github.io/images/projects/stock-cover.png">
+  <meta name="twitter:description" content="查看台股未來 1、3、5 個交易日的漲跌機率、歷史驗證與 K 線走勢；選用 OpenRouter AI 整理新聞。Windows 免費桌面工具，GitHub 直接下載。">
+  <meta name="twitter:image" content="https://littleblackmann.github.io/images/projects/stock-v170-main.png">
   <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -438,6 +438,21 @@
       .donation-title { font-size: 1rem; }
       .donation-text { font-size: 0.8rem; }
     }
+
+    /* Release information and readable narrow-screen content */
+    a:focus-visible { outline: 2px solid var(--accent-hi); outline-offset: 5px; }
+    .release-line { color: var(--accent); font-family: var(--mono); font-size: 11px; letter-spacing: .08em; margin-bottom: 1rem; }
+    .release-link { color: var(--accent-hi); text-decoration: underline; text-underline-offset: 4px; }
+    .download-note { line-height: 1.9; }
+    .info-table td { overflow-wrap: anywhere; }
+    .info-table td:first-child { width: 110px; white-space: normal; }
+    .cover-image img, .gallery-item img { height: auto; display: block; }
+    .gallery-item.detail-image { max-width: 560px; width: 100%; align-self: center; }
+    .gallery-caption { text-transform: none; letter-spacing: .03em; line-height: 1.8; }
+    .section-note { color: var(--ink-mute); font-size: .82rem; }
+    .usage-steps { padding-left: 1.3rem; margin-bottom: 1.5rem; }
+    .usage-steps li { padding-left: .3rem; margin-bottom: .9rem; }
+    code { overflow-wrap: anywhere; font-size: .85em; }
   </style>
   <link rel="stylesheet" href="../image-lightbox.css">
 </head>
@@ -454,125 +469,135 @@
 
     <!-- Header -->
     <div class="project-header">
+      <p class="release-line">SHORT-TERM RESEARCH · WINDOWS</p>
       <h1 class="project-title">台股預測分析系統</h1>
-      <p class="project-subtitle">結合三大 AI 技術的桌面端台股漲跌預測工具，輸入股票代碼就能看到明天的漲跌機率預測。</p>
+      <p class="project-subtitle">把隔天到幾天內的台股走勢，整理成看得懂的機率、日期與歷史驗證。給每天想多看一眼行情的人。</p>
       <div class="project-tags">
         <span class="project-tag">Python</span>
-        <span class="project-tag">Transformer</span>
         <span class="project-tag">LightGBM</span>
         <span class="project-tag">OpenRouter</span>
         <span class="project-tag">PySide6</span>
       </div>
-      <a href="https://drive.google.com/file/d/1ELeGMH7CEh_4z9ZsP2CzmZ8GvHe0Cx3a/view?usp=sharing" target="_blank" rel="noopener" class="download-btn">
-        <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-        下載系統
+      <a href="https://github.com/littleblackmann/stock-predictor/releases/download/v1.7.0/StockPredictor-v1.7.0.zip" class="download-btn" data-stock-download>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+        免費下載 Windows 版
       </a>
-      <p class="download-note">Windows 10 / 11，解壓即用，約 650 MB</p>
+      <p class="download-note"><span data-stock-version>v1.7.0</span> · 完整 ZIP 約 <span data-stock-size>679 MB</span> · 發行 <span data-stock-date>2026/10/04</span><br>
+        GitHub 直接下載，免註冊帳號。<a class="release-link" href="https://github.com/littleblackmann/stock-predictor/releases/latest" target="_blank" rel="noopener">版本紀錄與備用下載 →</a></p>
     </div>
 
     <!-- Cover -->
     <div class="cover-image">
-      <img src="../images/projects/stock-cover.png" alt="台股預測分析系統 — 預測結果畫面">
+      <img src="../images/projects/stock-v170-main.png" width="1440" height="1200" alt="v1.7.0 主畫面：0050 K 線、歷史驗證與 1／3／5 個交易日分析">
     </div>
 
-    <!-- 這是什麼 -->
     <div class="content-section">
       <h2 class="section-title">這是什麼？</h2>
-      <p>一套安裝在電腦上的<strong>台股漲跌預測工具</strong>。輸入任何一支台灣股票代碼（例如 0050、2330），系統就會告訴你：</p>
+      <p>一套免費的 Windows 台股研究工具。輸入股票代碼或名稱，例如 0050、2330，就能查看最近完整收盤行情，以及<strong>未來 1、3、5 個交易日</strong>相對於目前收盤價的漲跌機率。每個期限分開分析，搭配歷史驗證一起看。</p>
       <div class="feature-grid">
         <div class="feature-card">
-          <div class="feature-card-title">明日預測</div>
-          <div class="feature-card-desc">明天大概會漲還是跌？機率各是多少？系統有多大把握？</div>
+          <div class="feature-card-title">1／3／5 個交易日</div>
+          <div class="feature-card-desc">各自顯示上漲機率、方向與目標收盤日期。交易日會避開週末與休市日，不是連續三天的逐日價格預測。</div>
         </div>
         <div class="feature-card">
-          <div class="feature-card-title">判斷依據</div>
-          <div class="feature-card-desc">SHAP 分析列出影響最大的前 5 個因素，讓你知道為什麼這樣判斷。</div>
+          <div class="feature-card-title">把不確定說清楚</div>
+          <div class="feature-card-desc">機率接近五五波，或歷史驗證未優於基準時，顯示「方向不明」。不會為了給出答案就硬選漲或跌。</div>
         </div>
         <div class="feature-card">
-          <div class="feature-card-title">新聞情緒</div>
-          <div class="feature-card-desc">AI 自動搜尋並分析近期新聞的正面或負面程度，融合到預測中。可自由挑選要用哪一家的 AI 模型。</div>
+          <div class="feature-card-title">歷史驗證一起看</div>
+          <div class="feature-card-desc">列出歷史模型命中率、多數方向基準與測試筆數。機率與驗證結果分開呈現，方便判斷這次分析有多少參考價值。</div>
         </div>
         <div class="feature-card">
-          <div class="feature-card-title">3 日走勢推估</div>
-          <div class="feature-card-desc">AI 綜合技術面與情緒面，推估未來 3 天的多空方向。</div>
+          <div class="feature-card-title">選用 AI 整理新聞</div>
+          <div class="feature-card-desc">填入自己的 OpenRouter API Key，搜尋、選擇模型整理近期新聞；清單可更新，也能查看參考價格。新聞分析獨立呈現，不直接改動模型機率。</div>
         </div>
         <div class="feature-card">
-          <div class="feature-card-title">K 線走勢圖</div>
-          <div class="feature-card-desc">互動式 K 線圖，支援縮放、拖曳，含均線與成交量副圖。</div>
+          <div class="feature-card-title">K 線與大字模式</div>
+          <div class="feature-card-desc">互動式 K 線、均線與成交量，可縮放、拖曳。大字模式讓日期、機率和重點說明更容易閱讀。</div>
         </div>
         <div class="feature-card">
-          <div class="feature-card-title">自我進化</div>
-          <div class="feature-card-desc">越用越準，系統會自動學習並定期更新模型，適應市場變化。</div>
+          <div class="feature-card-title">自選清單與追蹤記錄</div>
+          <div class="feature-card-desc">收藏常看的股票，從總覽查看已有分析。各期限的預測留下記錄，等目標日完整收盤後補上結果，方便回頭檢查。</div>
         </div>
       </div>
     </div>
 
-    <!-- 怎麼預測的 -->
     <div class="content-section">
-      <h2 class="section-title">怎麼預測的？</h2>
-      <p>系統分三步，就像問三個不同的專家然後綜合意見：</p>
+      <h2 class="section-title">這次更新了什麼？</h2>
+      <p>v1.7.0 把短線分析重新整理：先確認資料是完整收盤，再分別評估不同期限，讓畫面上的數字和日期更容易核對。</p>
       <div class="feature-grid">
         <div class="feature-card">
-          <div class="feature-card-title">Step 1 — 看歷史找規律</div>
-          <div class="feature-card-desc">用 Transformer（跟 ChatGPT 同類型的 AI）分析過去 7 年的走勢，一次看 300 天資料，找出季節性和長期規律。</div>
+          <div class="feature-card-title">資料與目標日期更清楚</div>
+          <div class="feature-card-desc">明確標示「資料截至」和「預測目標」。盤中尚未完成的日 K 不會拿來當作當日收盤資料。</div>
         </div>
         <div class="feature-card">
-          <div class="feature-card-title">Step 2 — 綜合多方資訊</div>
-          <div class="feature-card-desc">技術指標、美股隔夜、三大法人動態、融資融券、市場氣氛、成交量異常偵測，交給 3 組模型投票判斷。</div>
+          <div class="feature-card-title">更嚴謹的歷史檢查</div>
+          <div class="feature-card-desc">依時間先後分開訓練、機率校準與測試，並隔開會重疊的預測期間。歷史資料的表現仍不代表未來會準。</div>
         </div>
         <div class="feature-card">
-          <div class="feature-card-title">Step 3 — 新聞微調</div>
-          <div class="feature-card-desc">AI 搜尋最新新聞分析正負面，小幅微調預測。新聞影響上限 15%，避免被聳動標題誤導。</div>
+          <div class="feature-card-title">AI 模型清單可以更新</div>
+          <div class="feature-card-desc">在設定搜尋模型名稱或廠商，一鍵更新 OpenRouter 清單與價格資訊。更新清單會保留你原本選用的模型。</div>
         </div>
       </div>
     </div>
 
-    <!-- 畫面截圖 -->
+    <div class="content-section">
+      <h2 class="section-title">怎麼開始使用？</h2>
+      <ol class="usage-steps">
+        <li><strong>下載完整 ZIP，先解壓縮。</strong>開啟解壓後資料夾中的「台股預測分析系統.exe」。整個資料夾要一起保留，不要只搬走 EXE。</li>
+        <li><strong>輸入股票代碼或名稱，按「短線分析」。</strong>第一次需要下載歷史資料與建立模型，請等待進度完成。</li>
+        <li><strong>先核對日期，再看機率與歷史驗證。</strong>上漲機率是模型估計，不是保證；「方向不明」也是一個有用的結果。</li>
+        <li><strong>需要新聞解讀，再設定 OpenRouter。</strong>API Key 為選填；不填也能做量化分析。AI 模型費用由 OpenRouter 依實際用量計收。</li>
+      </ol>
+    </div>
+
     <div class="content-section">
       <h2 class="section-title">系統畫面</h2>
+      <p class="section-note">以下為 v1.7.0 實際畫面：0050 資料截至 2026/10/02 收盤，於 2026/10/04 擷取。圖片可點擊放大；畫面中的機率僅代表當次分析。</p>
       <div class="gallery">
-        <div class="gallery-item">
-          <img src="../images/projects/stock-main.png" alt="系統主畫面" loading="lazy">
-          <div class="gallery-caption">系統主畫面 — 輸入股票代碼即可開始預測</div>
+        <div class="gallery-item detail-image">
+          <img src="../images/projects/stock-v170-horizons.png" width="680" height="1150" alt="分析面板放大：資料日期、歷史驗證與 1／3／5 個交易日目標，均顯示方向不明" loading="lazy">
+          <div class="gallery-caption">分析面板放大 — 日期、基準與三個期限一起看；本次未啟用 AI 新聞分析。</div>
         </div>
-        <div class="gallery-item">
-          <img src="../images/projects/stock-progress.png" alt="預測進度" loading="lazy">
-          <div class="gallery-caption">預測進度 — 即時顯示目前執行到哪個步驟</div>
-        </div>
-        <div class="gallery-item">
-          <img src="../images/projects/stock-cover.png" alt="預測結果" loading="lazy">
-          <div class="gallery-caption">預測結果 — K 線圖、漲跌機率、SHAP 分析、3 日走勢、新聞情緒一次看完</div>
+        <div class="gallery-item detail-image">
+          <img src="../images/projects/stock-v170-settings.png" width="680" height="740" alt="新版設定：OpenRouter API Key 選填，模型搜尋、清單更新與參考價格" loading="lazy">
+          <div class="gallery-caption">模型設定 — API Key 選填，模型可以搜尋與更新。清單與費用以 OpenRouter 當時提供的資訊為準。</div>
         </div>
       </div>
     </div>
 
-    <!-- 系統需求 -->
+    <div class="content-section" id="update">
+      <h2 class="section-title">已經裝過的人怎麼更新？</h2>
+      <p>開啟軟體後會檢查新版，也可以到<strong>設定 → 關於／更新</strong>手動檢查，跟著提示下載並重新啟動。本次 v1.7.0 使用完整更新包。</p>
+      <p>如果舊版的更新功能無法完成，可從這一頁重新下載完整 ZIP，解壓到新資料夾後啟動。程式會讀取同一個 Windows 使用者的設定、自選清單與記錄。</p>
+      <p class="section-note">更新前建議備份個人資料：<code>%LOCALAPPDATA%\台股預測分析系統\</code>。舊版預測記錄會保留並備份，與新版各期限的統計分開計算。</p>
+    </div>
+
     <div class="content-section">
-      <h2 class="section-title">系統需求</h2>
+      <h2 class="section-title">系統需求與費用</h2>
       <table class="info-table">
-        <tr><td>作業系統</td><td>Windows 10 / 11（64 位元）</td></tr>
-        <tr><td>硬碟空間</td><td>約 700 MB</td></tr>
-        <tr><td>網路</td><td>需要連網（抓股價資料和新聞）</td></tr>
-        <tr><td>安裝方式</td><td>解壓即用，不需安裝 Python 或其他依賴</td></tr>
-        <tr><td>OpenRouter API Key</td><td>需自行申請（用於 AI 新聞分析），到 openrouter.ai 註冊後取得，格式為 sk-or-v1- 開頭</td></tr>
-        <tr><td>可選 AI 模型</td><td>設定裡內建 10 種主流模型：GPT、Claude、Gemini、Grok、DeepSeek、Qwen，一把 Key 通吃，隨時切換</td></tr>
-        <tr><td>Brave Search Key</td><td>選用，有的話新聞搜尋品質更好</td></tr>
+        <tr><td>作業系統</td><td>Windows 10／11（64 位元）</td></tr>
+        <tr><td>下載與空間</td><td>完整 ZIP 約 <span data-stock-size>679 MB</span>；v1.7.0 解壓後約 2.1 GB，建議預留至少 5 GB 供解壓、資料與更新使用。</td></tr>
+        <tr><td>網路</td><td>取得行情、新聞、模型清單與軟體更新需要連網。</td></tr>
+        <tr><td>安裝方式</td><td>解壓即用，已包含所需執行環境，不需安裝 Python。</td></tr>
+        <tr><td>軟體費用</td><td>軟體免費；基本量化分析不需要 AI API Key。</td></tr>
+        <tr><td>OpenRouter</td><td>選用，僅供 AI 新聞分析。到 <a class="release-link" href="https://openrouter.ai/keys" target="_blank" rel="noopener">OpenRouter</a> 申請自己的 Key；模型可用性與費用依供應商及帳號而定。</td></tr>
+        <tr><td>可選 AI 模型</td><td>可搜尋 GPT、Claude、Gemini、Grok、DeepSeek、Qwen 等模型系列，並在設定更新清單及參考價格。</td></tr>
+        <tr><td>Brave Search</td><td>Key 為選填；未填時使用備用新聞來源。找不到新聞時會顯示無可用新聞。</td></tr>
       </table>
     </div>
 
-    <!-- 聲明 -->
     <div class="disclaimer">
-      <strong>重要聲明：</strong>本系統僅供參考，不構成任何投資建議。股票市場充滿不確定性，任何工具都無法保證預測正確。所有投資決策及其後果，由使用者自行負責。<br>
-      簡單說：賺了是你厲害，賠了不能怪系統。
+      <strong>使用前先知道：</strong>本工具供研究與資訊參考，不構成投資建議。歷史命中率不是實際交易報酬，也不保證未來預測正確。請搭配自己的判斷與風險管理，勿只憑一個數字做投資決策。
     </div>
 
-    <!-- 底部下載 -->
     <div style="text-align:center; margin-bottom: 2rem;">
-      <a href="https://drive.google.com/file/d/1ELeGMH7CEh_4z9ZsP2CzmZ8GvHe0Cx3a/view?usp=sharing" target="_blank" rel="noopener" class="download-btn">
-        <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-        下載系統
+      <a href="https://github.com/littleblackmann/stock-predictor/releases/download/v1.7.0/StockPredictor-v1.7.0.zip" class="download-btn" data-stock-download>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+        免費下載 Windows 版
       </a>
-      <p class="download-note">v1.6.0 ｜ Windows 10 / 11 ｜ 約 650 MB ｜ 解壓即用</p>
+      <p class="download-note"><span data-stock-version>v1.7.0</span> · Windows 10／11 · 完整 ZIP 約 <span data-stock-size>679 MB</span><br>
+        <a class="release-link" href="https://github.com/littleblackmann/stock-predictor/releases/latest" target="_blank" rel="noopener">版本紀錄與備用下載 →</a></p>
     </div>
 
   </div>
@@ -600,6 +625,7 @@
     <p>&copy; MMXXVI &middot; Little Black</p>
   </footer>
 
+  <script src="stock-release.js?v=20261004"></script>
   <script src="../image-lightbox.js"></script>
   <script data-goatcounter="https://littleblack.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
