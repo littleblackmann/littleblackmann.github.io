@@ -4,6 +4,14 @@
 
 ---
 
+## 2026-10-04（Instagram 帳號更新）
+
+- 依使用者提供的新帳號，將首頁「找到我」與 SIGNAL FIELD 頁尾的 Instagram 連結及顯示名稱同步改為 `@free__yi`。
+- 使用乾淨的個人頁網址 `https://www.instagram.com/free__yi/`，移除 QR 分享參數；保留原有社群卡片樣式。
+- 發布前確認正式 HTML 沒有舊帳號 `tomeikitchen`，兩處 Instagram 皆指向新網址；`git diff --check` 通過。
+
+---
+
 ## 2026-10-04（台股預測介紹頁與 GitHub 下載更新）
 
 - 更新 `projects/stock-predictor.html` 為 v1.7.0 的實際功能：1／3／5 個交易日獨立分析、完整收盤日期、歷史驗證與基準比較、方向不明、大字模式、自選總覽及預測追蹤。
