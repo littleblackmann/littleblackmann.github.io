@@ -22,6 +22,12 @@
 - 9 筆本機引用路徑、3 張圖片尺寸、JSON、sitemap XML、內嵌／外部 JavaScript 語法與 `git diff --check` 通過。
 - 驗證腳本及實際結果資料保存在股票專案的 `build/verification/`，未公開個人設定或 API Key。
 
+### 上線核對
+
+- 網站內容提交 `4b06e6c` 已 push 到 `main`；GitHub Pages build／deployment（run `37171609388`）成功。
+- 正式網址 `https://littleblackmann.github.io/projects/stock-predictor.html` 已顯示新版。介紹頁、下載腳本、首頁、projects.json、sitemap 與三張圖片共 8 項均回應 HTTP 200，內容與本機一致（文字比較先統一 CRLF／LF，圖片比對 SHA-256）。
+- 正式頁面兩個下載按鈕均指向 `StockPredictor-v1.7.0.zip`，版本顯示 v1.7.0，封面比例正確，沒有 console error。上線畫面與核對報告保存在 `build/verification/website-stock-v170-published.png`、`published-stock-site-audit.json`。
+
 ---
 
 ## 2026-10-02（小黑工具箱介紹頁更新）
