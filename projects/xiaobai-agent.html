@@ -12,20 +12,20 @@
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>小白 XiaoBai — 小黑 Little Black</title>
-  <meta name="description" content="小白是會記得家人的家庭語音 AI，能管理 Profile、聲紋、提醒、家庭事項、Life Log 生活回顧與主動事件。">
+  <meta name="description" content="小白是家庭語音 AI 助理實驗，串起家人記憶、提醒、生活回顧與音樂控制。新增 OpenRouter 語音通道、AI 模型選單、收音設定與新版首頁。">
   <link rel="canonical" href="https://littleblackmann.github.io/projects/xiaobai-agent.html">
   <meta property="og:title" content="小白 XiaoBai — 小黑 Little Black">
-  <meta property="og:description" content="小白是會記得家人的家庭語音 AI，能管理 Profile、聲紋、提醒、家庭事項、Life Log 生活回顧與主動事件。">
+  <meta property="og:description" content="小白是家庭語音 AI 助理實驗，串起家人記憶、提醒、生活回顧與音樂控制。新增 OpenRouter 語音通道、AI 模型選單、收音設定與新版首頁。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://littleblackmann.github.io/projects/xiaobai-agent.html">
-  <meta property="og:image" content="https://littleblackmann.github.io/images/projects/%E5%B0%8F%E9%BB%91%E7%9A%84AI-agent-%E8%A8%AD%E5%AE%9A%E5%AE%8C%E7%95%AB%E9%9D%A2.jpg">
-  <meta property="og:image:alt" content="小白 XiaoBai 專案封面">
+  <meta property="og:image" content="https://littleblackmann.github.io/images/projects/xiaobai-c112-home.jpg">
+  <meta property="og:image:alt" content="小白 C112 首頁介面示意，使用測試資料">
   <meta property="og:site_name" content="小黑 Little Black">
   <meta property="og:locale" content="zh_TW">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="小白 XiaoBai — 小黑 Little Black">
-  <meta name="twitter:description" content="小白是會記得家人的家庭語音 AI，能管理 Profile、聲紋、提醒、家庭事項、Life Log 生活回顧與主動事件。">
-  <meta name="twitter:image" content="https://littleblackmann.github.io/images/projects/%E5%B0%8F%E9%BB%91%E7%9A%84AI-agent-%E8%A8%AD%E5%AE%9A%E5%AE%8C%E7%95%AB%E9%9D%A2.jpg">
+  <meta name="twitter:description" content="小白是家庭語音 AI 助理實驗，串起家人記憶、提醒、生活回顧與音樂控制。新增 OpenRouter 語音通道、AI 模型選單、收音設定與新版首頁。">
+  <meta name="twitter:image" content="https://littleblackmann.github.io/images/projects/xiaobai-c112-home.jpg">
   <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -154,6 +154,14 @@
       padding: 4px 10px;
     }
 
+    .update-note, .screen-note {
+      font-size: 12px;
+      line-height: 1.7;
+      color: var(--ink-mute);
+      text-align: center;
+    }
+    .update-note { margin-top: 10px; }
+    .screen-note { margin: -1.5rem 0 2.5rem; }
     .family-note {
       display: inline-block;
       font-family: var(--mono);
@@ -239,7 +247,7 @@
 
     .highlight-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 1rem;
       margin-bottom: 1.5rem;
     }
@@ -358,6 +366,8 @@
       width: 120px;
     }
 
+    .cover-image img { width: 100%; height: auto; max-height: none; }
+    .gallery-item img { height: 260px; object-fit: contain; background: #0a0d10; }
     .privacy-box {
       background: var(--bg-soft);
       border: 1px solid var(--line);
@@ -461,11 +471,13 @@
       .highlight-grid { grid-template-columns: repeat(2, 1fr); }
       .gallery { grid-template-columns: repeat(2, 1fr); }
       .back-link { top: 0.8rem; left: 0.8rem; font-size: 10px; padding: 0.3rem 0.8rem; }
-      .cover-image img { max-height: 500px; }
       .donation-section { padding: 0 1rem; }
       .donation-content { padding: 1.5rem 1.2rem 1.8rem; }
       .donation-title { font-size: 1rem; }
       .donation-text { font-size: 0.8rem; }
+    }
+    @media (max-width: 540px) {
+      .gallery { grid-template-columns: 1fr; }
     }
   </style>
   <link rel="stylesheet" href="../image-lightbox.css">
@@ -485,197 +497,145 @@
     <div class="project-header">
       <h1 class="project-title">小白 XiaoBai</h1>
       <div class="project-chinese">Xiao Bai · Home Voice AI</div>
-      <p class="project-subtitle">會記得家人的家庭語音 AI。<br>從提醒、記憶、待辦到每日生活回顧，小白把家裡的瑣事整理成可以被理解、被追蹤、被接續的生活脈絡。</p>
+      <p class="project-subtitle">從一句「小白」，開始把家裡的小事接起來。<br>用聲音聊天、記住偏好、安排提醒，也把待辦、生活回顧和音樂放在同一個地方。</p>
       <div class="project-tags">
         <span class="project-tag">Python</span>
         <span class="project-tag">FastAPI</span>
-        <span class="project-tag">OpenAI Realtime</span>
+        <span class="project-tag">OpenRouter</span>
         <span class="project-tag">家庭 AI</span>
       </div>
-      <div class="family-note">家庭內部使用 · 不對外開放</div>
+      <div class="family-note">家庭內部使用 · 持續開發中</div>
+      <div class="update-note">更新於 <time datetime="2026-10-07">2026.10.07</time> · C112 開發版</div>
     </div>
 
-    <!-- Cover -->
     <div class="cover-image">
-      <img src="../images/projects/小黑的AI-agent-設定完畫面.jpg" alt="小白 — A·REACTOR 主畫面">
+      <img src="../images/projects/xiaobai-c112-home.jpg" width="1440" height="900" alt="小白 C112 首頁：藍色核心、今日簡報、家庭事項與音樂控制；測試資料示意" fetchpriority="high">
     </div>
+    <p class="screen-note">新版首頁介面示意 · 使用測試資料，非真實家人紀錄</p>
 
-    <!-- 這是什麼 -->
     <div class="content-section">
-      <h2 class="section-title">這是什麼？</h2>
-      <p>小白是一個專為家庭打造的<strong>語音 AI 生活中樞</strong>，可以在手機、平板或電腦瀏覽器開啟，直接用說話的方式互動。它不是客服系統，也不是一般聊天機器人，而是把家人的 Profile、提醒、任務、記憶與生活回顧接在一起的家庭助手。</p>
-      <p>它能認得不同家人，記住穩定偏好，幫你建立提醒與家庭事項，也會把任務、提醒、記憶、主動推播整理成 Life Log。你可以問「我今天做了什麼？」或「還有什麼沒收尾？」小白會用比較像家人助理的方式，把生活裡散掉的小事收回來。</p>
+      <h2 class="section-title">想做一個放在家裡的語音助理</h2>
+      <p>最初的想法很單純：做一個能用聲音叫醒、能陪家人處理日常小事的助理。慢慢加上家人 Profile、記憶、提醒、採買和家務，再把這些事情整理成可以回頭看的生活紀錄。</p>
+      <p>你可以說「三十分鐘後提醒我關火」、「採買清單加一瓶牛奶」，或問「我還有什麼沒收尾？」小白會把相關工具和記憶接起來，讓一句話能接著變成提醒、待辦或查詢結果。</p>
     </div>
 
-    <!-- 怎麼用 -->
     <div class="content-section">
-      <h2 class="section-title">怎麼用？</h2>
-      <div class="how-to-use">
-        <span class="step">建立家人</span>
-        <span class="step-arrow">→</span>
-        <span class="step">設定偏好</span>
-        <span class="step-arrow">→</span>
-        <span class="step">設定或跳過聲紋</span>
-        <span class="step-arrow">→</span>
-        <span class="step">說「小白」喚醒</span>
-        <span class="step-arrow">→</span>
-        <span class="step">開始記錄與提醒</span>
-      </div>
+      <h2 class="section-title">這次更新了什麼？</h2>
+      <p><strong>原本的藍色核心，做得更清楚。</strong>保留三欄與軌道感，重新調整光影、面板、文字和手機布局。天氣改成容易看的重點資料，音樂也有直接可用的控制入口。</p>
+      <p><strong>設定整理成六個分類。</strong>日常偏好、語音收音、AI 模型、通知提醒、重要記憶、安全裝置。模型可以用選單挑選，也能填自訂 ID；辨識、對話、發聲和聲音選擇集中管理。</p>
+      <p><strong>語音新增 OpenRouter 通道。</strong>辨識、對話與發聲可透過同一個 OpenRouter key 串接不同模型，同時保留 OpenAI Realtime 作為可切換的通道。</p>
     </div>
 
-    <!-- 重點數據 -->
     <div class="content-section">
       <div class="highlight-grid">
-        <div class="highlight-card">
-          <div class="highlight-value">Profile</div>
-          <div class="highlight-label">家人各自偏好</div>
-        </div>
-        <div class="highlight-card">
-          <div class="highlight-value">Voice</div>
-          <div class="highlight-label">聲紋保存在本機</div>
-        </div>
-        <div class="highlight-card">
-          <div class="highlight-value">Life Log</div>
-          <div class="highlight-label">生活事件時間線</div>
-        </div>
-        <div class="highlight-card">
-          <div class="highlight-value">Radar</div>
-          <div class="highlight-label">找出還沒收尾的事</div>
-        </div>
+        <div class="highlight-card"><div class="highlight-value">Voice</div><div class="highlight-label">說話處理日常小事</div></div>
+        <div class="highlight-card"><div class="highlight-value">Memory</div><div class="highlight-label">家人各自的偏好與記憶</div></div>
+        <div class="highlight-card"><div class="highlight-value">Models</div><div class="highlight-label">語音與 AI 模型可選</div></div>
+        <div class="highlight-card"><div class="highlight-value">Music</div><div class="highlight-label">點歌與主機音樂控制</div></div>
       </div>
     </div>
 
-    <!-- 核心特色 -->
     <div class="content-section">
-      <h2 class="section-title">核心特色</h2>
+      <h2 class="section-title">日常可以怎麼用？</h2>
+      <div class="how-to-use">
+        <span class="step">一鍵啟動主機</span><span class="step-arrow">→</span>
+        <span class="step">選擇家人</span><span class="step-arrow">→</span>
+        <span class="step">設定聲紋與收音</span><span class="step-arrow">→</span>
+        <span class="step">說「小白」喚醒</span><span class="step-arrow">→</span>
+        <span class="step">聊天、查詢、安排日常</span>
+      </div>
+      <p>電腦上雙擊啟動程式，等服務就緒後會自動開啟頁面。手機、平板也能連到家中的小白主機；家人先選自己的 Profile，再使用對應的偏好和記憶。</p>
+    </div>
+
+    <div class="content-section">
+      <h2 class="section-title">小白現在有哪些功能？</h2>
       <div class="tool-list">
-        <div class="tool-card">
-          <div class="tool-info">
-            <div class="tool-name">家人 Profile</div>
-            <div class="tool-desc">每位家人都能建立自己的稱呼、頭像、家庭角色、Email、生日與互動偏好，小白會用對應的語氣與記憶空間回應。</div>
-          </div>
-        </div>
-        <div class="tool-card">
-          <div class="tool-info">
-            <div class="tool-name">Wake Word + 聲紋</div>
-            <div class="tool-desc">說「小白」喚醒後開始對話，聲紋用來判斷現在是哪位家人。聲紋資料保存在本機，可以先跳過，之後再補設定。</div>
-          </div>
-        </div>
-        <div class="tool-card">
-          <div class="tool-info">
-            <div class="tool-name">Reminder Hub / Task Hub</div>
-            <div class="tool-desc">提醒、採買、家務、待確認事項集中管理。可以用語音建立提醒，也能在首頁看到目前有哪些家庭事項需要處理。</div>
-          </div>
-        </div>
-        <div class="tool-card">
-          <div class="tool-info">
-            <div class="tool-name">Life Log 生活回顧</div>
-            <div class="tool-desc">把任務、提醒、記憶與主動推送整理成生活時間線，再產生每日摘要，讓使用者可以回頭問「我今天做了什麼」。</div>
-          </div>
-        </div>
-        <div class="tool-card">
-          <div class="tool-info">
-            <div class="tool-name">Follow-up Radar</div>
-            <div class="tool-desc">找出過期提醒、待確認動作、很久沒更新的任務，讓小白不只是回答問題，也能幫家裡把未完成的事接起來。</div>
-          </div>
-        </div>
-        <div class="tool-card">
-          <div class="tool-info">
-            <div class="tool-name">主動事件中心</div>
-            <div class="tool-desc">管理背景推播、主動提醒與補講紀錄，讓小白慢慢從被動問答變成會在適合時機提醒你的家庭 AI。</div>
-          </div>
-        </div>
+        <div class="tool-card"><div class="tool-info">
+          <div class="tool-name">家人 Profile 與長期記憶</div>
+          <div class="tool-desc">家人各自保存稱呼、頭像、互動偏好與重要記憶。選好 Profile 後，用本機喚醒詞與聲紋確認使用者，再接續對話。</div>
+        </div></div>
+        <div class="tool-card"><div class="tool-info">
+          <div class="tool-name">可選模型的語音通道</div>
+          <div class="tool-desc">OpenRouter 串起語音辨識、對話／家庭工具、語音發聲；OpenAI Realtime 通道也保留。可以調整不同階段的模型與聲音，沿用家人的工具和記憶。</div>
+        </div></div>
+        <div class="tool-card"><div class="tool-info">
+          <div class="tool-name">收音設定與插話</div>
+          <div class="tool-desc">可選麥克風、做六秒底噪校正，並區分耳機與喇叭模式。喇叭播放時可按鈕打斷；耳機模式加入說話打斷，讓對話控制更直接。</div>
+        </div></div>
+        <div class="tool-card"><div class="tool-info">
+          <div class="tool-name">提醒、採買與家務</div>
+          <div class="tool-desc">用語音建立提醒與家庭事項，在首頁查看提醒、採買、家務及待確認動作。需要核對的操作會保留確認流程。</div>
+        </div></div>
+        <div class="tool-card"><div class="tool-info">
+          <div class="tool-name">主機上的音樂</div>
+          <div class="tool-desc">可說歌名、歌手或音樂類型，也能在首頁點歌、暫停、繼續、切歌和調整 YouTube Music 音量。會區分操作已送出與已確認播放，失敗時說明原因；音樂由小白主機播放。</div>
+        </div></div>
+        <div class="tool-card"><div class="tool-info">
+          <div class="tool-name">天氣、新聞與生活查詢</div>
+          <div class="tool-desc">查天氣、新聞、時間、農曆、假日或搜尋日常資訊。首頁保留今日簡報，溫度、降雨與下一個提醒可以直接看到。</div>
+        </div></div>
+        <div class="tool-card"><div class="tool-info">
+          <div class="tool-name">生活回顧與主動提醒</div>
+          <div class="tool-desc">將任務、提醒、記憶和主動推送整理成 Life Log 與每日摘要。也能找出過期提醒、待確認動作和久未更新的任務，接續還沒收尾的事。</div>
+        </div></div>
+        <div class="tool-card"><div class="tool-info">
+          <div class="tool-name">整理過的設定介面</div>
+          <div class="tool-desc">六個分類搭配模型選單，個人偏好與共用 AI 設定分開儲存。切換分類保留草稿，儲存失敗保留輸入；手機和電腦使用同一套設定入口。</div>
+        </div></div>
       </div>
     </div>
 
-    <!-- 畫面截圖 -->
     <div class="content-section">
-      <h2 class="section-title">畫面</h2>
+      <h2 class="section-title">新版設定畫面</h2>
+      <p>點圖片可放大查看。以下為 C112 介面與示範家人資料，模型選項是介面示例。</p>
       <div class="gallery">
         <div class="gallery-item">
-          <img src="../images/projects/小黑的AI-agent-初始畫面.jpg" alt="初始設定" loading="lazy">
-          <div class="gallery-caption">初始歡迎畫面</div>
+          <img src="../images/projects/xiaobai-c112-models.jpg" width="1440" height="1050" alt="AI 模型分類：OpenRouter 語音通道與辨識、對話、發聲選單；示範設定" loading="lazy">
+          <div class="gallery-caption">AI 模型與語音服務</div>
         </div>
         <div class="gallery-item">
-          <img src="../images/projects/小黑的AI-agent-設定基本資料1.jpg" alt="填寫基本資料" loading="lazy">
-          <div class="gallery-caption">填寫基本資料</div>
+          <img src="../images/projects/xiaobai-c112-microphone.jpg" width="1440" height="1050" alt="語音收音分類：耳機／喇叭模式、麥克風與底噪校正；示範設定" loading="lazy">
+          <div class="gallery-caption">麥克風與收音設定</div>
         </div>
         <div class="gallery-item">
-          <img src="../images/projects/小黑的AI-agent-設定基本資料2.jpg" alt="填寫基本資料續" loading="lazy">
-          <div class="gallery-caption">填寫基本資料（續）</div>
-        </div>
-        <div class="gallery-item">
-          <img src="../images/projects/小黑的AI-agent-設定基本資料3.jpg" alt="填寫基本資料續" loading="lazy">
-          <div class="gallery-caption">填寫基本資料（續）</div>
-        </div>
-        <div class="gallery-item">
-          <img src="../images/projects/小黑的AI-agent-設定聲紋1.jpg" alt="設定聲紋" loading="lazy">
-          <div class="gallery-caption">設定聲紋</div>
-        </div>
-        <div class="gallery-item">
-          <img src="../images/projects/小黑的AI-agent-設定聲紋2.jpg" alt="設定聲紋續" loading="lazy">
-          <div class="gallery-caption">設定聲紋（續）</div>
-        </div>
-        <div class="gallery-item">
-          <img src="../images/projects/小黑的AI-agent-設定選項1.jpg" alt="互動偏好設定" loading="lazy">
-          <div class="gallery-caption">互動偏好設定</div>
-        </div>
-        <div class="gallery-item">
-          <img src="../images/projects/小黑的AI-agent-設定選項2.jpg" alt="互動偏好設定續" loading="lazy">
-          <div class="gallery-caption">互動偏好設定（續）</div>
-        </div>
-        <div class="gallery-item">
-          <img src="../images/projects/小黑的AI-agent-切換使用者畫面.jpg" alt="切換使用者" loading="lazy">
-          <div class="gallery-caption">家人 Profile 切換</div>
-        </div>
-        <div class="gallery-item">
-          <img src="../images/projects/小黑的AI-agent-設定完畫面.jpg" alt="設定完成" loading="lazy">
-          <div class="gallery-caption">A·REACTOR 主畫面</div>
+          <img src="../images/projects/xiaobai-c112-mobile-settings.jpg" width="390" height="844" alt="手機版六分類設定與示範家人的日常偏好" loading="lazy">
+          <div class="gallery-caption">手機版六分類設定</div>
         </div>
       </div>
     </div>
 
-    <!-- 技術原理 -->
     <div class="content-section">
       <h2 class="section-title">怎麼做到的？</h2>
       <div class="tool-list">
-        <div class="tool-card">
-          <div class="tool-info">
-            <div class="tool-name">OpenAI Realtime API + WebRTC</div>
-            <div class="tool-desc">瀏覽器直接建立低延遲語音對話，搭配 Web Audio、Wake Word 與 VAD，讓小白能在家庭情境中更自然地被喚醒與回應。</div>
-          </div>
-        </div>
-        <div class="tool-card">
-          <div class="tool-info">
-            <div class="tool-name">FastAPI + SQLite</div>
-            <div class="tool-desc">後端以 FastAPI 管理 Profile session、提醒、任務、記憶、Life Log 與推播；SQLite 保存本機家庭資料，適合個人與家庭內部部署。</div>
-          </div>
-        </div>
-        <div class="tool-card">
-          <div class="tool-info">
-            <div class="tool-name">PWA / Web Push / 本機聲紋</div>
-            <div class="tool-desc">支援瀏覽器通知、手機加入主畫面、背景事件串流與本機聲紋資料，讓小白更像常駐在家裡的生活助理。</div>
-          </div>
-        </div>
+        <div class="tool-card"><div class="tool-info">
+          <div class="tool-name">OpenRouter / OpenAI Realtime</div>
+          <div class="tool-desc">OpenRouter 採辨識 → 對話／工具 → 發聲的分段流程；OpenAI Realtime 保留 WebRTC 即時通道。兩種方式共用家庭工具、Profile 與記憶，不預設使用 Google AI 模型。</div>
+        </div></div>
+        <div class="tool-card"><div class="tool-info">
+          <div class="tool-name">FastAPI + SQLite</div>
+          <div class="tool-desc">Python 後端管理家人 session、提醒、任務、記憶、生活回顧和推送；家庭資料由本機保存。音樂操作在背景執行，並避免同時操作播放器造成衝突。</div>
+        </div></div>
+        <div class="tool-card"><div class="tool-info">
+          <div class="tool-name">瀏覽器介面 + 本機喚醒</div>
+          <div class="tool-desc">Web Audio 處理麥克風與語音播放，喚醒與聲紋在本機運作；PWA 與 Web Push 提供加入主畫面和背景通知的入口。</div>
+        </div></div>
       </div>
     </div>
 
-    <!-- 系統需求 -->
     <div class="content-section">
-      <h2 class="section-title">使用環境</h2>
+      <h2 class="section-title">使用環境與目前進度</h2>
       <table class="info-table">
-        <tr><td>裝置</td><td>手機、平板、電腦，任何可開現代瀏覽器的裝置</td></tr>
-        <tr><td>瀏覽器</td><td>Chrome、Safari、Edge（需支援 WebRTC / Web Audio / Notification API）</td></tr>
-        <tr><td>連線方式</td><td>本機 HTTP 或 ngrok HTTPS；手機加入主畫面時建議使用 HTTPS</td></tr>
-        <tr><td>麥克風</td><td>需授權瀏覽器使用麥克風</td></tr>
-        <tr><td>網路</td><td>需要（語音對話與天氣、搜尋等工具會呼叫外部 API）</td></tr>
-        <tr><td>開放對象</td><td>家庭內部使用，不對外開放</td></tr>
+        <tr><td>小白主機</td><td>Windows 電腦執行 Python 後端；音樂控制使用主機上的 YouTube Music App</td></tr>
+        <tr><td>操作裝置</td><td>電腦、手機、平板瀏覽器；目前主要驗證 Chrome／Chromium 環境</td></tr>
+        <tr><td>連線方式</td><td>主機本機頁面可使用 localhost；手機連線需配置 HTTPS 並授權麥克風</td></tr>
+        <tr><td>AI 服務</td><td>使用所選的 OpenRouter 或 OpenAI API 憑證；雲端模型需要網路，API 費用另計</td></tr>
+        <tr><td>開放對象</td><td>家庭內部使用，目前不提供公開下載</td></tr>
       </table>
+      <p><strong>目前是 C112 開發版。</strong>首頁、六分類設定與音樂控制已完成程式更新，桌面／手機介面與模擬語音、控制流程已驗證。真實收音、音色、延遲及歌曲播放仍待實機驗收；這裡展示的是開發進度。</p>
     </div>
 
-    <!-- 隱私 -->
     <div class="privacy-box">
-      <strong>關於資料與隱私：</strong>API key 不暴露在前端；聲紋、Profile、偏好、提醒與長期記憶保存在本機資料庫。刪除使用者時，會同步清理對話、記憶、提醒、任務、Life Log 與每日摘要，避免舊資料殘留。
+      <strong>關於資料與隱私：</strong>聲紋、家人設定與生活紀錄在本機保存，API key 由後端保管。使用雲端語音與 AI 功能時，所需錄音、文字及相關記憶脈絡會傳送到選定的 AI 服務處理；小白並非完全離線系統。
     </div>
 
   </div>
@@ -689,7 +649,7 @@
       <div class="donation-content">
         <h2 class="donation-title">請小黑吃雞腿便當</h2>
         <p class="donation-text">
-          作品都是免費的。如果你喜歡、想回饋，<br>
+          如果你喜歡這個家庭 AI 實驗、想支持後續開發，<br>
           歡迎請我吃個雞腿便當，讓我更有動力繼續做下去。
         </p>
         <a href="https://payment.opay.tw/Broadcaster/Donate/7341A28F6CDE05A1A6646A7B26DF4CD8" target="_blank" rel="noopener" class="donation-btn">

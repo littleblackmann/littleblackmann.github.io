@@ -8,10 +8,10 @@
   },
   {
     "name": "小白",
-    "description": "語音互動、提醒、記錄與回顧等功能的小型 AI 助手實驗，嘗試把日常資訊整理成可以接續的脈絡。",
-    "image": "images/projects/小黑的AI-agent-設定完畫面.jpg",
+    "description": "串起家人記憶、提醒、生活回顧與音樂的家庭語音助理實驗，新增 OpenRouter 語音、模型選單與收音設定。",
+    "image": "images/projects/xiaobai-c112-home.jpg",
     "link": "projects/xiaobai-agent.html",
-    "tags": ["Python", "FastAPI", "OpenAI Realtime", "家庭 AI"]
+    "tags": ["Python", "FastAPI", "OpenRouter", "家庭 AI"]
   },
   {
     "name": "今日紫微",
