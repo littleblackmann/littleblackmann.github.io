@@ -8,8 +8,8 @@
   },
   {
     "name": "小白",
-    "description": "串起家人記憶、提醒、生活回顧與音樂的家庭語音助理實驗，新增 OpenRouter 語音、模型選單與收音設定。",
-    "image": "images/projects/xiaobai-c112-home.jpg",
+    "description": "串起家人記憶、提醒與音樂的家庭語音助理實驗：全息光球、OpenRouter 模型選單，以及 Pear 背景播放與帳號登入入口。",
+    "image": "images/projects/xiaobai-c123-home.jpg",
     "link": "projects/xiaobai-agent.html",
     "tags": ["Python", "FastAPI", "OpenRouter", "家庭 AI"]
   },
