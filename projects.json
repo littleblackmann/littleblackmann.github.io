@@ -8,7 +8,7 @@
   },
   {
     "name": "小白",
-    "description": "串起家人記憶、提醒與音樂的家庭語音助理實驗：青紫流光的全息能量球、OpenRouter 模型選單，以及 Pear 背景播放與帳號登入入口。",
+    "description": "串起家人記憶、提醒與音樂的家庭語音助理實驗：全息能量球、OpenRouter Perplexity 搜尋模型選單，以及 Pear 背景播放與帳號登入入口。",
     "image": "images/projects/xiaobai-c124-home.jpg",
     "link": "projects/xiaobai-agent.html",
     "tags": ["Python", "FastAPI", "OpenRouter", "家庭 AI"]
