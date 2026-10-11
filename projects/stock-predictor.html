@@ -478,11 +478,11 @@
         <span class="project-tag">OpenRouter</span>
         <span class="project-tag">PySide6</span>
       </div>
-      <a href="https://github.com/littleblackmann/stock-predictor/releases/download/v1.7.4/StockPredictor-v1.7.4.zip" class="download-btn" data-stock-download>
+      <a href="https://github.com/littleblackmann/stock-predictor/releases/download/v1.7.5/StockPredictor-v1.7.5.zip" class="download-btn" data-stock-download>
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
         免費下載 Windows 版
       </a>
-      <p class="download-note"><span data-stock-version>v1.7.4</span> · 完整 ZIP 約 <span data-stock-size>351 MB</span> · 發行 <span data-stock-date>2026/10/11</span><br>
+      <p class="download-note"><span data-stock-version>v1.7.5</span> · 完整 ZIP 約 <span data-stock-size>351 MB</span> · 發行 <span data-stock-date>2026/10/12</span><br>
         GitHub 直接下載，免註冊帳號。<a class="release-link" href="https://github.com/littleblackmann/stock-predictor/releases/latest" target="_blank" rel="noopener">版本紀錄與備用下載 →</a></p>
     </div>
 
@@ -501,7 +501,7 @@
         </div>
         <div class="feature-card">
           <div class="feature-card-title">把不確定說清楚</div>
-          <div class="feature-card-desc">機率接近五五波，或歷史驗證未優於基準時，顯示「方向不明」。不會為了給出答案就硬選漲或跌。</div>
+          <div class="feature-card-desc">機率接近五成時顯示「接近五五波 · 暫觀望」；偏向明顯但回測不足時，顯示「模型偏多／偏空（驗證不足）」，並說明命中率或機率誤差的原因。</div>
         </div>
         <div class="feature-card">
           <div class="feature-card-title">歷史驗證一起看</div>
@@ -517,14 +517,15 @@
         </div>
         <div class="feature-card">
           <div class="feature-card-title">自選清單與追蹤記錄</div>
-          <div class="feature-card-desc">收藏常看的股票，從總覽查看已有分析。各期限的預測留下記錄，等目標日完整收盤後補上結果，方便回頭檢查。</div>
+          <div class="feature-card-desc">各期限分開保存，完整收盤後更新實際結果。「機率對照」包含觀望分析；「方向對錯」只評當時明確訊號，方便核對而不改寫原判斷。</div>
         </div>
       </div>
     </div>
 
     <div class="content-section">
       <h2 class="section-title">這次更新了什麼？</h2>
-      <p>v1.7.4 新增 <strong>OpenRouter Perplexity 網路搜尋</strong>：不必另申請搜尋 Key，保留你原本選定的 AI 模型。設定可調整搜尋次數、資料量與 RSS 備援；分析畫面能點開資料來源，搜尋失敗也會說明原因。</p>
+      <p>v1.7.5 修復<strong>實際結果回填與觀望說明</strong>：分清五五波和驗證不足；新增「機率對照」，原有觀望分析也能在收盤後檢查偏向是否符合實際。舊版待回填紀錄恢復處理並備份，推定日期另有說明；尚未收盤、行情缺漏或取得失敗會分別顯示，方便重試。</p>
+      <p>保留 v1.7.4 的 <strong>OpenRouter Perplexity 網路搜尋</strong>：不必另申請搜尋 Key，保留你原本選定的 AI 模型。設定可調整搜尋次數、資料量與 RSS 備援；分析畫面能點開資料來源，搜尋失敗也會說明原因。</p>
       <p>預設每次分析最多搜尋 1 次、每次最多 5 筆來源；30 分鐘內同股、同模型與同搜尋設定的成功結果可重用。仍可切換原本的 Brave Search 或 Google News RSS。搜尋有額外費用，詳見下方說明。</p>
       <p>沿用 v1.7.3 的資源負擔改善：分析套件需要時才載入、背景工作依序處理，更新分批下載與解壓。第一次建立模型或更新仍可能需要等待。</p>
       <p>v1.7.0 把短線分析重新整理：先確認資料是完整收盤，再分別評估不同期限，讓畫面上的數字和日期更容易核對。</p>
@@ -549,18 +550,19 @@
       <ol class="usage-steps">
         <li><strong>下載完整 ZIP，先解壓縮。</strong>開啟解壓後資料夾中的「台股預測分析系統.exe」。整個資料夾要一起保留，不要只搬走 EXE。</li>
         <li><strong>輸入股票代碼或名稱，按「短線分析」。</strong>第一次需要下載歷史資料與建立模型，請等待進度完成。</li>
-        <li><strong>先核對日期，再看機率與歷史驗證。</strong>上漲機率是模型估計，不是保證；「方向不明」也是一個有用的結果。</li>
+        <li><strong>先核對日期，再看機率與歷史驗證。</strong>上漲機率是模型估計，不是保證；模型偏多但驗證不足時，仍維持觀望。</li>
+        <li><strong>收盤後追蹤結果。</strong>在「記錄」按「更新實際結果」；台北時間 15:00 後才採用當日完整日線。「機率對照」以 50% 分界核對漲跌偏向，剛好 50% 不評分；觀望的「方向對錯」會顯示不評分。</li>
         <li><strong>需要新聞解讀，再設定 OpenRouter。</strong>在「設定 → API 設定」填入 Key、選 AI 模型與新聞搜尋來源。Perplexity 共用這把 Key，不必另申請；預設最多搜尋一次。API Key 為選填，不填也能做量化分析。</li>
       </ol>
     </div>
 
     <div class="content-section">
       <h2 class="section-title">系統畫面</h2>
-      <p class="section-note">行情與分析圖沿用 v1.7.0 實際畫面：0050 資料截至 2026/10/02 收盤，於 2026/10/04 擷取。設定圖已更新為 v1.7.4，於 2026/10/11 以空白 Key 擷取，未呼叫付費搜尋。圖片可點擊放大；畫面中的機率僅代表當次分析。</p>
+      <p class="section-note">下方分析面板更新為 v1.7.5：0050 資料截至 2026/10/08 收盤，於 2026/10/12 擷取，未啟用 AI 新聞。頁首主畫面保留 v1.7.0 範例，設定圖為 v1.7.4 的空白 Key 畫面。圖片可點擊放大；機率僅代表當次分析，不代表未來命中率。</p>
       <div class="gallery">
         <div class="gallery-item detail-image">
-          <img src="../images/projects/stock-v170-horizons.png" width="680" height="1150" alt="分析面板放大：資料日期、歷史驗證與 1／3／5 個交易日目標，均顯示方向不明" loading="lazy">
-          <div class="gallery-caption">分析面板放大 — 日期、基準與三個期限一起看；本次未啟用 AI 新聞分析。</div>
+          <img src="../images/projects/stock-v175-horizons.png" width="680" height="1370" alt="v1.7.5 實際分析：1 日接近五五波，3／5 日模型偏多但驗證不足，列出觀望原因" loading="lazy">
+          <div class="gallery-caption">v1.7.5 分析面板 — 五五波、模型偏向與驗證不足分開說明；本次未啟用 AI 新聞分析。</div>
         </div>
         <div class="gallery-item detail-image">
           <img src="../images/projects/stock-v174-settings.png" width="680" height="740" alt="v1.7.4 設定：Perplexity 共用 OpenRouter Key，搜尋次數、資料量、RSS 備援與 AI 模型選擇" loading="lazy">
@@ -580,7 +582,7 @@
       <h2 class="section-title">系統需求與費用</h2>
       <table class="info-table">
         <tr><td>作業系統</td><td>Windows 10／11（64 位元）</td></tr>
-        <tr><td>下載與空間</td><td>完整 ZIP 約 <span data-stock-size>351 MB</span>；v1.7.4 解壓後約 0.9 GB，建議預留至少 5 GB 供解壓、資料與更新使用。</td></tr>
+        <tr><td>下載與空間</td><td>完整 ZIP 約 <span data-stock-size>351 MB</span>；解壓後約 0.9 GB，建議預留至少 5 GB 供解壓、資料與更新使用。</td></tr>
         <tr><td>網路</td><td>取得行情、新聞、模型清單與軟體更新需要連網。</td></tr>
         <tr><td>安裝方式</td><td>解壓即用，已包含所需執行環境，不需安裝 Python。</td></tr>
         <tr><td>軟體費用</td><td>軟體免費；基本量化分析不需要 AI API Key。</td></tr>
@@ -596,11 +598,11 @@
     </div>
 
     <div style="text-align:center; margin-bottom: 2rem;">
-      <a href="https://github.com/littleblackmann/stock-predictor/releases/download/v1.7.4/StockPredictor-v1.7.4.zip" class="download-btn" data-stock-download>
+      <a href="https://github.com/littleblackmann/stock-predictor/releases/download/v1.7.5/StockPredictor-v1.7.5.zip" class="download-btn" data-stock-download>
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
         免費下載 Windows 版
       </a>
-      <p class="download-note"><span data-stock-version>v1.7.4</span> · Windows 10／11 · 完整 ZIP 約 <span data-stock-size>351 MB</span><br>
+      <p class="download-note"><span data-stock-version>v1.7.5</span> · Windows 10／11 · 完整 ZIP 約 <span data-stock-size>351 MB</span><br>
         <a class="release-link" href="https://github.com/littleblackmann/stock-predictor/releases/latest" target="_blank" rel="noopener">版本紀錄與備用下載 →</a></p>
     </div>
 
