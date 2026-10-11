@@ -4,6 +4,17 @@
 
 ---
 
+## 2026-10-11（台股預測 v1.7.4 Perplexity 搜尋）
+
+- 股票預測作品頁加入 OpenRouter Perplexity 網路搜尋、共用原 Key 與所選模型、可點開新聞來源、搜尋時間及 RSS 備援說明；不宣稱提高勝率，也不改寫量化機率。
+- 更新新手設定步驟與搜尋費用：預設每次分析最多一次、每次最多五筆來源，可選最多三次／資料量；US$0.005／次搜尋參考費加模型 token 費，含免費模型與成功結果 30 分鐘快取說明。Brave／RSS 仍可選。
+- 更新 v1.7.4 直接下載備援、日期、約 351 MB 與相關 sitemap 日期，保留現有 GitHub latest 動態讀取與失敗備援。
+- 新增真實 v1.7.4 設定介面截圖，以空白 Key 擷取，無私人資料及付費搜尋。行情圖仍是原 v1.7.0 實際畫面，分別標示版本／日期；原圖片保留。
+- 本機 Edge 檢查 320／375／520／768／1280／1440px：圖片載入、版本與下載連結、無橫向溢出／page error，圖片放大與 Escape 通過。GitHub latest script 15 情境及內嵌 JS 語法通過。本機以 file URL 檢查並攔截 latest 回傳已建置 v1.7.4 fixture；公開部署另行驗證。
+- 股票程式完整 ZIP、AppData 保存、舊更新器及 source／EXE 驗證記於股票專案 `DEVLOG/2026-10-11-perplexity-search.md`。保留網站暖金風格、其他作品、IG、Analytics／返回與贊助入口。
+
+---
+
 ## 2026-10-09（小白 C125 Perplexity 搜尋與會員登入視窗）
 
 - 依使用者授權移除 Brave，改成 OpenRouter Perplexity Sonar／Sonar Pro、獨立搜尋選單。搜尋整理問題並顯示參考來源，無完整回答或來源時明講未確認。首頁介紹、卡片、快取與sitemap同步。
