@@ -11,13 +11,13 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>小黑 Little Black｜個人作品集與開發筆記</title>
-<meta name="description" content="小黑 Little Black 的個人網站，整理一些程式作品、AI 工具實驗、生活工具與開發筆記。">
+<title>小黑 Little Black｜Windows 工具、Android App 與 AI 作品</title>
+<meta name="description" content="小黑的個人作品網站：Windows 圖片處理與 OCR 工具、AI 食譜 App、紫微斗數排盤、計步養成遊戲、台股分析與家庭語音 AI。查看功能、實際畫面、使用需求與下載方式。">
 <meta name="author" content="小黑 Little Black">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://littleblackmann.github.io/" />
-<meta property="og:title" content="小黑 Little Black｜個人作品集與開發筆記">
-<meta property="og:description" content="一些程式作品、AI 工具實驗、生活工具與開發筆記。">
+<meta property="og:title" content="小黑 Little Black｜Windows 工具、Android App 與 AI 作品">
+<meta property="og:description" content="從圖片處理、AI 食譜到計步遊戲，看看小黑做的日常工具與 AI 實驗。附功能介紹、實際畫面與下載方式。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://littleblackmann.github.io/">
 <meta property="og:image" content="https://littleblackmann.github.io/images/og-image.png">
@@ -27,8 +27,8 @@
 <meta property="og:site_name" content="小黑 Little Black">
 <meta property="og:locale" content="zh_TW">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小黑 Little Black｜個人作品集與開發筆記">
-<meta name="twitter:description" content="一些程式作品、AI 工具實驗、生活工具與開發筆記。">
+<meta name="twitter:title" content="小黑 Little Black｜Windows 工具、Android App 與 AI 作品">
+<meta name="twitter:description" content="從圖片處理、AI 食譜到計步遊戲，看看小黑做的日常工具與 AI 實驗。附功能介紹、實際畫面與下載方式。">
 <meta name="twitter:url" content="https://littleblackmann.github.io/">
 <meta name="twitter:image" content="https://littleblackmann.github.io/images/og-image.png">
 <script type="application/ld+json">
@@ -37,7 +37,7 @@
   "@type": "WebSite",
   "name": "小黑 Little Black",
   "url": "https://littleblackmann.github.io/",
-  "description": "小黑 Little Black 的個人網站，整理一些程式作品、AI 工具實驗、生活工具與開發筆記。",
+  "description": "小黑的 Windows 生活工具、Android App 與 AI 作品，附功能介紹、實際畫面、使用需求與下載方式。",
   "inLanguage": "zh-TW"
 }
 </script>
@@ -593,7 +593,8 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
 .work-tile:hover .work-arrow{opacity:1;transform:translateX(0)}
 
 /* reveal-on-scroll */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+.reveal{transition:opacity .9s ease,transform .9s ease}
+.reveal.pending{opacity:0;transform:translateY(24px)}
 .reveal.in{opacity:1;transform:translateY(0)}
 
 /* ====== responsive ====== */
@@ -663,10 +664,12 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
         但我<strong>樂在其中</strong>。這裡放的是我做過的東西，
         每一個都代表我往前走了一步。
         <br><br>
-        這裡整理一些我做過的小工具、AI 實驗、程式作品與日常開發筆記。慢慢做，慢慢放。
+        這裡放的是我做的 Windows 生活工具、Android App 與 AI 實驗。
+        想整理圖片、用冰箱食材找食譜，或讓走路多一點樂趣，可以從下面的作品開始。
+        每個作品都有功能介紹、實際畫面與使用需求；開放下載的作品也附上下載方式。
       </p>
       <div class="hero-meta">
-        <span>Projects<b id="metaCount">—</b></span>
+        <span>Projects<b id="metaCount">07</b></span>
         <span>Stack<b>Kotlin · Python</b></span>
         <span>Status<b>Building</b></span>
       </div>
@@ -684,7 +687,73 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
       </div>
     </div>
   </div>
-  <div class="hero-works" id="heroWorks"></div>
+  <div class="hero-works" id="heroWorks">
+    <!-- projects:tiles:start -->
+    <a class="work-tile" href="projects/signal-field.html">
+      <div class="work-tile-inner">
+        <span class="work-num">01</span>
+        <div class="work-thumb"><img src="images/projects/signal-field-cover.jpg" alt="SIGNAL FIELD · 全息工作台畫面預覽" loading="lazy" decoding="async"></div>
+        <div class="work-name">SIGNAL FIELD · 全息工作台</div>
+        <span class="work-tag">Wallpaper Engine · WebGL2</span>
+      </div>
+      <span class="work-arrow" aria-hidden="true">→</span>
+    </a>
+    <a class="work-tile" href="projects/xiaobai-agent.html">
+      <div class="work-tile-inner">
+        <span class="work-num">02</span>
+        <div class="work-thumb"><img src="images/projects/xiaobai-c124-home.jpg" alt="小白畫面預覽" loading="lazy" decoding="async"></div>
+        <div class="work-name">小白</div>
+        <span class="work-tag">Python · FastAPI</span>
+      </div>
+      <span class="work-arrow" aria-hidden="true">→</span>
+    </a>
+    <a class="work-tile" href="projects/ziwei-today.html">
+      <div class="work-tile-inner">
+        <span class="work-num">03</span>
+        <div class="work-thumb"><img src="images/projects/ziwei-v142-home.png" alt="今日紫微畫面預覽" loading="lazy" decoding="async"></div>
+        <div class="work-name">今日紫微</div>
+        <span class="work-tag">Kotlin · Jetpack Compose</span>
+      </div>
+      <span class="work-arrow" aria-hidden="true">→</span>
+    </a>
+    <a class="work-tile" href="projects/chef-ai-toolbox.html">
+      <div class="work-tile-inner">
+        <span class="work-num">04</span>
+        <div class="work-thumb"><img src="images/projects/chef-v091-home.png" alt="AI 廚房畫面預覽" loading="lazy" decoding="async"></div>
+        <div class="work-name">AI 廚房</div>
+        <span class="work-tag">Kotlin · ChatGPT 會員</span>
+      </div>
+      <span class="work-arrow" aria-hidden="true">→</span>
+    </a>
+    <a class="work-tile" href="projects/life-steps.html">
+      <div class="work-tile-inner">
+        <span class="work-num">05</span>
+        <div class="work-thumb"><img src="images/projects/人生步數-首頁.jpg" alt="人生步數畫面預覽" loading="lazy" decoding="async"></div>
+        <div class="work-name">人生步數</div>
+        <span class="work-tag">Kotlin · Jetpack Compose</span>
+      </div>
+      <span class="work-arrow" aria-hidden="true">→</span>
+    </a>
+    <a class="work-tile" href="projects/stock-predictor.html">
+      <div class="work-tile-inner">
+        <span class="work-num">06</span>
+        <div class="work-thumb"><img src="images/projects/stock-v170-main.png" alt="台股預測分析系統畫面預覽" loading="lazy" decoding="async"></div>
+        <div class="work-name">台股預測分析系統</div>
+        <span class="work-tag">Python · LightGBM</span>
+      </div>
+      <span class="work-arrow" aria-hidden="true">→</span>
+    </a>
+    <a class="work-tile" href="projects/toolbox.html">
+      <div class="work-tile-inner">
+        <span class="work-num">07</span>
+        <div class="work-thumb"><img src="images/projects/toolbox-v1.2-home.jpg" alt="小黑工具箱畫面預覽" loading="lazy" decoding="async"></div>
+        <div class="work-name">小黑工具箱</div>
+        <span class="work-tag">Python · Flask</span>
+      </div>
+      <span class="work-arrow" aria-hidden="true">→</span>
+    </a>
+    <!-- projects:tiles:end -->
+  </div>
   </section>
 
   <!-- ====== PROJECTS ====== -->
@@ -694,9 +763,96 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
         <div class="label">— Selected Works</div>
         <h2>專案<em>作品</em></h2>
       </div>
-      <div class="count" id="projCount">— Loading</div>
+      <div class="count" id="projCount">07 · Works</div>
     </div>
-    <div class="projects" id="projectsList"></div>
+    <div class="projects" id="projectsList">
+    <!-- projects:rows:start -->
+    <a class="project" href="projects/signal-field.html">
+      <div class="project-num">01 / 07</div>
+      <div class="project-info">
+        <h3 class="project-title">SIGNAL FIELD · 全息工作台</h3>
+        <p class="project-desc">想讓桌面顯示電腦狀態？這款 Wallpaper Engine 全息 HUD 動態桌布，整合硬體監控、天氣與音訊頻譜。附安裝步驟與 Steam 訂閱入口。</p>
+        <div class="project-tags"><span class="project-tag">Wallpaper Engine</span><span class="project-tag">WebGL2</span><span class="project-tag">PowerShell</span><span class="project-tag">Windows</span></div>
+      </div>
+      <div class="project-thumb">
+        <img src="images/projects/signal-field-cover.jpg" alt="SIGNAL FIELD · 全息工作台畫面預覽" loading="lazy" decoding="async">
+        <div class="project-arrow"><span>查看詳情</span><b aria-hidden="true">→</b></div>
+      </div>
+    </a>
+    <a class="project" href="projects/xiaobai-agent.html">
+      <div class="project-num">02 / 07</div>
+      <div class="project-info">
+        <h3 class="project-title">小白</h3>
+        <p class="project-desc">用聲音聊天、安排提醒、記住家人偏好與播放音樂的家庭 AI 語音助理。看看實際介面與開發進度；目前家庭內部使用，未開放下載。</p>
+        <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">FastAPI</span><span class="project-tag">OpenRouter</span><span class="project-tag">家庭 AI</span></div>
+      </div>
+      <div class="project-thumb">
+        <img src="images/projects/xiaobai-c124-home.jpg" alt="小白畫面預覽" loading="lazy" decoding="async">
+        <div class="project-arrow"><span>查看詳情</span><b aria-hidden="true">→</b></div>
+      </div>
+    </a>
+    <a class="project" href="projects/ziwei-today.html">
+      <div class="project-num">03 / 07</div>
+      <div class="project-info">
+        <h3 class="project-title">今日紫微</h3>
+        <p class="project-desc">想在手機上查看紫微命盤與每日生活主題？Android App 提供本機紫微斗數排盤、八大主題與歷史回顧；AI 解讀需符合資格的 ChatGPT 會員。</p>
+        <div class="project-tags"><span class="project-tag">Kotlin</span><span class="project-tag">Jetpack Compose</span><span class="project-tag">會員登入</span><span class="project-tag">Android</span></div>
+      </div>
+      <div class="project-thumb">
+        <img src="images/projects/ziwei-v142-home.png" alt="今日紫微畫面預覽" loading="lazy" decoding="async">
+        <div class="project-arrow"><span>查看詳情</span><b aria-hidden="true">→</b></div>
+      </div>
+    </a>
+    <a class="project" href="projects/chef-ai-toolbox.html">
+      <div class="project-num">04 / 07</div>
+      <div class="project-info">
+        <h3 class="project-title">AI 廚房</h3>
+        <p class="project-desc">冰箱剩下的食材能煮什麼？選食材與飲食偏好，用 AI 生成食譜，並整理料理本與照片熱量估算。Android App，需自己的 ChatGPT Plus／Pro 會員。</p>
+        <div class="project-tags"><span class="project-tag">Kotlin</span><span class="project-tag">ChatGPT 會員</span><span class="project-tag">Android</span><span class="project-tag">AI 食譜</span></div>
+      </div>
+      <div class="project-thumb">
+        <img src="images/projects/chef-v091-home.png" alt="AI 廚房畫面預覽" loading="lazy" decoding="async">
+        <div class="project-arrow"><span>查看詳情</span><b aria-hidden="true">→</b></div>
+      </div>
+    </a>
+    <a class="project" href="projects/life-steps.html">
+      <div class="project-num">05 / 07</div>
+      <div class="project-info">
+        <h3 class="project-title">人生步數</h3>
+        <p class="project-desc">把每天的步數變成角色成長：從嬰兒、職業到老年，走路就能推進一段人生。Android 計步養成遊戲，附遊戲畫面與 APK 下載方式。</p>
+        <div class="project-tags"><span class="project-tag">Kotlin</span><span class="project-tag">Jetpack Compose</span><span class="project-tag">Room</span><span class="project-tag">Android</span></div>
+      </div>
+      <div class="project-thumb">
+        <img src="images/projects/人生步數-首頁.jpg" alt="人生步數畫面預覽" loading="lazy" decoding="async">
+        <div class="project-arrow"><span>查看詳情</span><b aria-hidden="true">→</b></div>
+      </div>
+    </a>
+    <a class="project" href="projects/stock-predictor.html">
+      <div class="project-num">06 / 07</div>
+      <div class="project-info">
+        <h3 class="project-title">台股預測分析系統</h3>
+        <p class="project-desc">在 Windows 查看台股 K 線、自選清單與未來 1、3、5 個交易日的漲跌機率，對照歷史驗證，也可選用 AI 整理新聞。分析結果不保證獲利。</p>
+        <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">LightGBM</span><span class="project-tag">OpenRouter</span><span class="project-tag">PySide6</span></div>
+      </div>
+      <div class="project-thumb">
+        <img src="images/projects/stock-v170-main.png" alt="台股預測分析系統畫面預覽" loading="lazy" decoding="async">
+        <div class="project-arrow"><span>查看詳情</span><b aria-hidden="true">→</b></div>
+      </div>
+    </a>
+    <a class="project" href="projects/toolbox.html">
+      <div class="project-num">07 / 07</div>
+      <div class="project-info">
+        <h3 class="project-title">小黑工具箱</h3>
+        <p class="project-desc">圖片太多、檔名太亂？在 Windows 批次處理圖片、AI 去背、OCR 辨識文字、處理 PDF 與批次改名。9 項本機工具，解壓即用，檔案留在電腦上。</p>
+        <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">Flask</span><span class="project-tag">BiRefNet</span><span class="project-tag">EasyOCR</span></div>
+      </div>
+      <div class="project-thumb">
+        <img src="images/projects/toolbox-v1.2-home.jpg" alt="小黑工具箱畫面預覽" loading="lazy" decoding="async">
+        <div class="project-arrow"><span>查看詳情</span><b aria-hidden="true">→</b></div>
+      </div>
+    </a>
+    <!-- projects:rows:end -->
+    </div>
   </section>
 
   <!-- ====== CONNECT (social + donation) ====== -->
@@ -794,92 +950,15 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
 
 /* reveal on scroll */
 (function(){
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const els=document.querySelectorAll('.reveal');
   const io=new IntersectionObserver(es=>{
     es.forEach(e=>e.isIntersecting&&e.target.classList.add('in'));
   },{threshold:.12});
-  els.forEach(el=>io.observe(el));
+  els.forEach(el=>{el.classList.add('pending');io.observe(el)});
 })();
 
-/* load projects */
-(function(){
-  const list=document.getElementById('projectsList');
-  const heroWorks=document.getElementById('heroWorks');
-  const count=document.getElementById('projCount');
-  const meta =document.getElementById('metaCount');
-  const fallbackProjects=[
-    {
-      name:'AI 語音助手實驗',
-      description:'整理語音互動、記憶與提醒等概念，作為個人 AI 工具的小型實驗。',
-      tags:['AI','Voice','Prototype']
-    },
-    {
-      name:'生活工具開發',
-      description:'把日常會重複遇到的小麻煩，慢慢做成可重用、可維護的小工具。',
-      tags:['Tools','Everyday','Utility']
-    },
-    {
-      name:'資料分析小工具',
-      description:'嘗試用簡單清楚的方式整理資料、觀察趨勢，讓資訊更容易被理解。',
-      tags:['Data','Analysis','Notes']
-    }
-  ];
 
-  function renderProjects(data,isFallback){
-    const projects=Array.isArray(data)&&data.length?data:fallbackProjects;
-    const fallback=isFallback||projects===fallbackProjects;
-    list.innerHTML='';
-    heroWorks.innerHTML='';
-    count.textContent=String(projects.length).padStart(2,'0')+(fallback?' · Notes':' · Works');
-    meta.textContent=String(projects.length).padStart(2,'0');
-
-    projects.forEach((p,i)=>{
-      const ext=p.link&&/^https?:/.test(p.link);
-
-      /* hero works strip */
-      const tile=document.createElement('a');
-      tile.className='work-tile';
-      tile.href=p.link||'#';
-      if(ext){tile.target='_blank';tile.rel='noopener'}
-      tile.innerHTML=`
-        <div class="work-tile-inner">
-          <span class="work-num">${String(i+1).padStart(2,'0')}</span>
-          <div class="work-thumb">${p.image?`<img src="${p.image}" alt="專案展示圖片" loading="lazy">`:''}</div>
-          <div class="work-name">${p.name}</div>
-          <span class="work-tag">${(p.tags||[]).slice(0,2).join(' · ')}</span>
-        </div>
-        <span class="work-arrow">→</span>`;
-      heroWorks.appendChild(tile);
-
-      /* detailed list */
-      const a=document.createElement('a');
-      a.className='project';
-      a.href=p.link||'#';
-      if(ext){a.target='_blank';a.rel='noopener'}
-      const tags=(p.tags||[]).map(t=>`<span class="project-tag">${t}</span>`).join('');
-      a.innerHTML=`
-        <div class="project-num">${String(i+1).padStart(2,'0')} / ${String(projects.length).padStart(2,'0')}</div>
-        <div class="project-info">
-          <h3 class="project-title">${p.name}</h3>
-          <p class="project-desc">${p.description||''}</p>
-          <div class="project-tags">${tags}</div>
-        </div>
-        <div class="project-thumb">
-          ${p.image?`<img src="${p.image}" alt="專案展示圖片" loading="lazy">`:''}
-          <div class="project-arrow"><span>查看詳情</span><b>→</b></div>
-        </div>`;
-      list.appendChild(a);
-    });
-  }
-
-  fetch('projects.json?v=20261013-ziwei142-chef092')
-    .then(r=>{
-      if(!r.ok) throw new Error('Unable to load projects');
-      return r.json();
-    })
-    .then(data=>renderProjects(data,false))
-    .catch(()=>renderProjects(fallbackProjects,true));
-})();
 </script>
 <script data-goatcounter="https://littleblack.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>

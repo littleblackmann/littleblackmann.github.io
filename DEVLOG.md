@@ -689,3 +689,16 @@ littleblackmann.github.io-main/
 - 調整展示順序，前三張為首頁／主題／解讀。重複版本標籤與工程測試長文改成日常功能名稱、短說明；版本範圍與「解讀／歷史非實際AI生成」保留在區塊下方的小註記，維持誠實展示。
 - 本機320／375／520／640／641／768／1280／1440px共72張縮圖比例檢查，渲染內容比例與900:1950相符，誤差低於0.01%，無橫向溢出；手機實際圖片放大、下一張與Escape通過，兩處APK下載仍為正式v1.4.2。只有既有GoatCounter localhost提示，無產品JS錯誤。
 - 僅修改紫微介紹HTML與本日誌；不改APK、會員、下載腳本、其他作品或共用lightbox。正式Pages部署與正式展示截圖於上傳後另行核對，證據存於今日紫微 ignored dist/publish-audit/gallery-fix。
+
+---
+
+## 2026-10-13（搜尋入口與作品用途整理）
+
+- 使用者授權直接改善 Google 搜尋入口。保留暖炭黑／暖金版型、個人語氣、作品順序、現有截圖與所有下載／社群／贊助入口，不增加真名、所在地、履歷資訊或 Person schema。
+- 首頁及七個作品頁更新搜尋標題、meta description、Open Graph／Twitter 分享文案。以實際用途描述 Windows 圖片批次處理／OCR、Android 食譜／紫微排盤／計步遊戲、台股分析、家庭語音 AI 與動態桌布；移除摘要中的內部版本細節。AI 廚房與紫微頁首短介紹同步，保留會員需求與既有限制，不宣稱預測獲利或未驗證效果。
+- 首頁作品預覽、七筆清單、文字、圖片 alt、數量與真實連結改為直接存在 HTML，移除瀏覽器 fetch projects.json 及籠統 fallback。滾動動畫改為漸進增強，沒有 JavaScript 或停用動畫時也能看到完整內容。
+- projects.json 仍是首頁作品資料的唯一來源。新增零依賴 scripts/build-home.mjs 與維護說明；後續修改 JSON 必須執行 node scripts/build-home.mjs，並一併提交 index.html。--check 可檢查兩者一致；腳本檢查本機作品頁／封面是否存在並跳脫 HTML 文字。此流程取代舊日誌「只改 JSON 即可」的動態載入方式。
+- 八頁 canonical、唯一標題／摘要、單一 H1、索引允許、Analytics／GoatCounter、sitemap XML 與 111 筆站內引用通過；9 段 inline JavaScript 與 JSON-LD 語法正常。原下載連結、全部 Release 讀取腳本與共用 lightbox 相較修改前未變。
+- 實際瀏覽器驗證首頁 320／375／768／1280px，以及 AI 廚房與紫微頁 375／1280px，無橫向溢出；首頁七個作品連結完整。以本機 CSP script-src 'none' 阻擋全部腳本，確認七個作品可見、工具箱入口可點及兩處下載備援存在。正常首頁瀏覽器無 console error。證據在網站 repo 外的 E:\小黑的網頁\seo-verification-20261013。
+- sitemap 各頁日期反映本次實際修改。沿用 main 根目錄 GitHub Pages 發布方式；正式 build 與公開內容於推送後核對，不把 source push 當作上線證明。
+- 未登入或設定 Google Search Console，未提交 sitemap／要求建立索引。網站修正不等於 Google 已收錄或流量已提升；後續需檢查搜尋曝光、點擊、入口頁與下載資料，單憑總使用者／瀏覽量無法評估作品是否吸引人。
