@@ -12,20 +12,20 @@
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>今日紫微 — 小黑 Little Black</title>
-  <meta name="description" content="結合紫微斗數與 AI 智慧解讀的個人化運勢 App — 每天用幾分鐘，了解自己的流日運勢。">
+  <meta name="description" content="今日紫微 v1.4.2：本機排盤、自己的會員登入、八大生活主題與歷史回顧。星軌漸層介面，支援大字與版本更新提醒。">
   <link rel="canonical" href="https://littleblackmann.github.io/projects/ziwei-today.html">
   <meta property="og:title" content="今日紫微 — 小黑 Little Black">
-  <meta property="og:description" content="結合紫微斗數與 AI 智慧解讀的個人化運勢 App — 每天用幾分鐘，了解自己的流日運勢。">
+  <meta property="og:description" content="今日紫微 v1.4.2：本機排盤、自己的會員登入、八大生活主題與歷史回顧。星軌漸層介面，支援大字與版本更新提醒。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://littleblackmann.github.io/projects/ziwei-today.html">
-  <meta property="og:image" content="https://littleblackmann.github.io/images/projects/%E4%BB%8A%E6%97%A5%E7%B4%AB%E5%BE%AE-%E8%B5%B7%E5%A7%8B%E7%95%AB%E9%9D%A21.jpg">
+  <meta property="og:image" content="https://littleblackmann.github.io/images/projects/ziwei-v142-home.png">
   <meta property="og:image:alt" content="今日紫微 專案封面">
   <meta property="og:site_name" content="小黑 Little Black">
   <meta property="og:locale" content="zh_TW">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="今日紫微 — 小黑 Little Black">
-  <meta name="twitter:description" content="結合紫微斗數與 AI 智慧解讀的個人化運勢 App — 每天用幾分鐘，了解自己的流日運勢。">
-  <meta name="twitter:image" content="https://littleblackmann.github.io/images/projects/%E4%BB%8A%E6%97%A5%E7%B4%AB%E5%BE%AE-%E8%B5%B7%E5%A7%8B%E7%95%AB%E9%9D%A21.jpg">
+  <meta name="twitter:description" content="今日紫微 v1.4.2：本機排盤、自己的會員登入、八大生活主題與歷史回顧。星軌漸層介面，支援大字與版本更新提醒。">
+  <meta name="twitter:image" content="https://littleblackmann.github.io/images/projects/ziwei-v142-home.png">
   <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,6 +60,12 @@
     a { color: inherit; text-decoration: none; transition: color 0.3s; }
     a:hover { color: var(--accent); }
     img { max-width: 100%; display: block; }
+    a:focus-visible { outline: 2px solid var(--accent-hi); outline-offset: 5px; }
+    .content-section { scroll-margin-top: 72px; }
+    .tool-info, .info-table td { min-width: 0; overflow-wrap: anywhere; }
+    .release-links { margin-top: .8rem; font-size: .8rem; color: var(--accent-hi); }
+    .release-links a { text-decoration: underline; text-underline-offset: 4px; }
+    .gallery-note { font-size: .78rem; color: var(--ink-mute); }
 
     /* film-grain texture overlay */
     .grain {
@@ -560,30 +566,32 @@
     <div class="project-header">
       <h1 class="project-title">Ziwei Today</h1>
       <div class="project-chinese">今日紫微</div>
-      <p class="project-subtitle">結合傳統紫微斗數與 AI 智慧解讀的個人化運勢 App。<br>每天用幾分鐘，了解今日的流日運勢，八大主題任選。</p>
+      <p class="project-subtitle">讀懂星曜，找到自己的節奏。<br>本機排盤、自己的會員登入，從今天在意的主題開始。</p>
       <div class="project-tags">
         <span class="project-tag">Kotlin</span>
         <span class="project-tag">Jetpack Compose</span>
-        <span class="project-tag">OpenAI API</span>
+        <span class="project-tag">會員登入</span>
         <span class="project-tag">Android</span>
       </div>
-      <a href="https://drive.google.com/file/d/1lAeduRl6uYM5AViogIKndYNMFL-RgqK9/view?usp=sharing" target="_blank" rel="noopener" class="download-btn">
+      <a href="https://github.com/littleblackmann/ziwei-today/releases/latest" target="_blank" rel="noopener" class="download-btn" data-ziwei-download>
         <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
         下載 APK
       </a>
-      <p class="download-note"><strong>僅支援 Android 8.0 以上</strong>｜v1.0.0｜約 2.4 MB｜iPhone / iPad 無法安裝</p>
+      <p class="download-note"><strong>Android 8.0 以上</strong>｜<span data-release-version>v1.4.2</span>｜<span data-release-size>2.0 MB</span>｜<span data-release-date>2026/10/13</span></p>
+      <p class="release-links"><a href="#updates">新版與安裝說明</a> · <a href="https://github.com/littleblackmann/ziwei-today/releases/latest" target="_blank" rel="noopener">GitHub 下載備援</a></p>
     </div>
 
     <!-- Cover -->
     <div class="cover-image">
-      <img src="../images/projects/今日紫微-起始畫面1.jpg" alt="今日紫微 — 起始畫面">
+      <img src="../images/projects/ziwei-v142-home.png" alt="今日紫微 v1.4.2 星軌漸層首頁，示範家人 QA" width="900" height="1950" fetchpriority="high">
     </div>
 
     <!-- 這是什麼 -->
     <div class="content-section">
       <h2 class="section-title">這是什麼？</h2>
-      <p>今日紫微是一款把傳統「<strong>紫微斗數</strong>」與現代 AI 結合在一起的個人化運勢 App。只要輸入出生年月日時，App 就會自動排出你的專屬命盤，每天計算當日的流日運勢，再由 AI 用自然語言寫成你看得懂的解讀。</p>
-      <p>命盤計算在手機本機完成，完全離線。AI 解讀部分則使用你自己的 OpenAI API Key，資料不經過任何第三方伺服器，費用也由你自己掌控。</p>
+      <p>把傳統「<strong>紫微斗數</strong>」整理成容易閱讀的每日生活提醒。新增出生資料後，在手機上排出命盤，再選擇今天在意的主題，閱讀今日重點、分段建議與提醒標籤。</p>
+      <p>命盤與已保存的歷史可在本機查看。產生新解讀時，登入並授權<strong>自己的會員帳號</strong>即可，不用手動填入 API Key。</p>
+      <p>新解讀目前需要符合資格的 <strong>ChatGPT Plus／Pro</strong> 與會員額度授權，並共用該帳號的使用限制；可用性依實際授權結果而定。App 免費下載，Free 帳號支援仍未確認。</p>
     </div>
 
     <!-- 怎麼用 -->
@@ -592,7 +600,7 @@
       <div class="how-to-use">
         <span class="step">新增家人資料</span>
         <span class="step-arrow">→</span>
-        <span class="step">設定 API Key</span>
+        <span class="step">登入並授權會員</span>
         <span class="step-arrow">→</span>
         <span class="step">選擇運勢主題</span>
         <span class="step-arrow">→</span>
@@ -608,16 +616,16 @@
           <div class="highlight-label">運勢主題</div>
         </div>
         <div class="highlight-card">
-          <div class="highlight-value">無限</div>
-          <div class="highlight-label">家人人數</div>
+          <div class="highlight-value">3 級</div>
+          <div class="highlight-label">字體大小</div>
         </div>
         <div class="highlight-card">
           <div class="highlight-value">離線</div>
           <div class="highlight-label">命盤計算</div>
         </div>
         <div class="highlight-card">
-          <div class="highlight-value">每天</div>
-          <div class="highlight-label">新一份解讀</div>
+          <div class="highlight-value">本機</div>
+          <div class="highlight-label">家人與歷史保存</div>
         </div>
       </div>
     </div>
@@ -637,7 +645,7 @@
           <div class="tool-icon">🤖</div>
           <div class="tool-info">
             <div class="tool-name">AI 個人化解讀</div>
-            <div class="tool-desc">透過 OpenAI GPT 根據你的命盤與流日，用自然語言撰寫屬於你的運勢解讀。包含運勢等級、今日重點、具體建議與關鍵詞標籤。</div>
+            <div class="tool-desc">依命盤摘要與查詢日期整理生活提醒，包含今日主軸、分段建議與標籤。使用您授權的會員額度；同日同主題優先讀取已保存內容，重新解讀才再次產生。</div>
           </div>
         </div>
         <div class="tool-card">
@@ -651,17 +659,30 @@
           <div class="tool-icon">👨‍👩‍👧‍👦</div>
           <div class="tool-info">
             <div class="tool-name">家人命盤管理</div>
-            <div class="tool-desc">可新增多位家人，分別建立命盤。設定主帳號後，開啟 App 會優先顯示。所有資料只存在手機裡。</div>
+            <div class="tool-desc">新增多位家人，支援國曆／農曆輸入、出生時辰與晚子時選項。各自建立命盤，首頁可切換對象；家人檔案保存在裝置。</div>
           </div>
         </div>
         <div class="tool-card">
           <div class="tool-icon">📚</div>
           <div class="tool-info">
             <div class="tool-name">詢問記錄回顧</div>
-            <div class="tool-desc">每次查詢結果自動儲存，可隨時翻閱過去的運勢解讀，方便回顧與比對。</div>
+            <div class="tool-desc">完整解讀自動保存，可依原日期回看。連線中斷、服務拒絕或不完整的內容不會存成一筆成功紀錄。</div>
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="content-section">
+      <h2 class="section-title">更舒服的閱讀方式</h2>
+      <p>新版以星空深藍、藍紫青漸層與細邊框呈現，搭配短暫依序淡入與頁面轉場。淺色模式改用冰藍與淡紫，保留標準、大、特大三種字體，寬螢幕也會置中閱讀。</p>
+      <p>完整命盤可左右滑動，宮位內的星曜可上下捲動。帳號、家人、歷史與設定都有獨立入口，讓每天的操作更單純。</p>
+    </div>
+
+    <div class="content-section" id="updates">
+      <h2 class="section-title">v1.4.2 與更新方式</h2>
+      <p>這次修正解讀文字的串流收集，避免已回傳的文字被誤判為空白；也補上拒絕、額度限制與未完成回覆的區分。若遇到問題，可展開並複製錯誤資訊協助檢查。</p>
+      <p>相同簽名的新版 APK 可直接覆蓋安裝，保留家人與歷史，不用先移除舊版。若安裝顯示簽名不符，請先確認原安裝來源，GitHub 發行頁另有開發簽名相容包。</p>
+      <p>App 會在開啟／回到前景及背景排程檢查新版，也可到設定手動檢查。背景通知受 Android 排程與通知權限影響；確認更新後，前往 GitHub 下載，再由 Android 確認安裝。</p>
     </div>
 
     <!-- 八大主題 -->
@@ -688,43 +709,17 @@
     <!-- App 畫面 -->
     <div class="content-section">
       <h2 class="section-title">App 畫面</h2>
+      <p class="gallery-note">首頁取自 v1.4.2，其餘畫面為沿用相同外觀的 v1.4.1。皆為專用模擬器與示範家人資料；解讀與歷史是版面驗收範例，並非線上 AI 生成結果。點圖片可放大。</p>
       <div class="gallery">
-        <div class="gallery-item">
-          <img src="../images/projects/今日紫微-起始畫面1.jpg" alt="起始畫面" loading="lazy">
-          <div class="gallery-caption">起始畫面</div>
-        </div>
-        <div class="gallery-item">
-          <img src="../images/projects/今日紫微-起始畫面2.jpg" alt="起始畫面 2" loading="lazy">
-          <div class="gallery-caption">免責聲明確認</div>
-        </div>
-        <div class="gallery-item">
-          <img src="../images/projects/今日紫微-設定基本資料1.jpg" alt="設定基本資料" loading="lazy">
-          <div class="gallery-caption">設定基本資料</div>
-        </div>
-        <div class="gallery-item">
-          <img src="../images/projects/今日紫微-設定基本資料2.jpg" alt="設定出生時辰" loading="lazy">
-          <div class="gallery-caption">設定出生時辰</div>
-        </div>
-        <div class="gallery-item">
-          <img src="../images/projects/今日紫微-設定APIKEY.jpg" alt="設定 API Key" loading="lazy">
-          <div class="gallery-caption">設定 OpenAI API Key</div>
-        </div>
-        <div class="gallery-item">
-          <img src="../images/projects/今日紫微-申請APIKEY教學.jpg" alt="申請 API Key 教學" loading="lazy">
-          <div class="gallery-caption">內建申請 Key 教學</div>
-        </div>
-        <div class="gallery-item">
-          <img src="../images/projects/今日紫微-紫微描述.jpg" alt="運勢解讀" loading="lazy">
-          <div class="gallery-caption">今日運勢解讀</div>
-        </div>
-        <div class="gallery-item">
-          <img src="../images/projects/今日紫微-紫微紀錄.jpg" alt="詢問紀錄" loading="lazy">
-          <div class="gallery-caption">歷史詢問紀錄</div>
-        </div>
-        <div class="gallery-item">
-          <img src="../images/projects/今日紫微-紫薇種類.jpg" alt="主題選擇" loading="lazy">
-          <div class="gallery-caption">八大主題選擇</div>
-        </div>
+        <div class="gallery-item"><img src="../images/projects/ziwei-v142-home.png" alt="v1.4.2 星軌首頁，隔離測試資料" width="900" height="1950" loading="lazy"><div class="gallery-caption">v1.4.2 星軌首頁</div></div>
+        <div class="gallery-item"><img src="../images/projects/ziwei-v141-topics.png" alt="v1.4.1 八大主題，隔離測試資料" width="900" height="1950" loading="lazy"><div class="gallery-caption">v1.4.1 八大主題</div></div>
+        <div class="gallery-item"><img src="../images/projects/ziwei-v141-account.png" alt="v1.4.1 會員登入入口，隔離測試資料" width="900" height="1950" loading="lazy"><div class="gallery-caption">v1.4.1 會員登入入口</div></div>
+        <div class="gallery-item"><img src="../images/projects/ziwei-v141-family.png" alt="v1.4.1 家人管理，隔離測試資料" width="900" height="1950" loading="lazy"><div class="gallery-caption">v1.4.1 家人管理</div></div>
+        <div class="gallery-item"><img src="../images/projects/ziwei-v141-family-edit.png" alt="v1.4.1 出生資料設定，隔離測試資料" width="900" height="1950" loading="lazy"><div class="gallery-caption">v1.4.1 出生資料設定</div></div>
+        <div class="gallery-item"><img src="../images/projects/ziwei-v141-reading-demo.png" alt="v1.4.1 解讀版面示範，隔離測試資料" width="900" height="1950" loading="lazy"><div class="gallery-caption">v1.4.1 解讀版面示範</div></div>
+        <div class="gallery-item"><img src="../images/projects/ziwei-v141-history-demo.png" alt="v1.4.1 歷史版面示範，隔離測試資料" width="900" height="1950" loading="lazy"><div class="gallery-caption">v1.4.1 歷史版面示範</div></div>
+        <div class="gallery-item"><img src="../images/projects/ziwei-v141-chart.png" alt="v1.4.1 淺色完整命盤，隔離測試資料" width="900" height="1950" loading="lazy"><div class="gallery-caption">v1.4.1 淺色完整命盤</div></div>
+        <div class="gallery-item"><img src="../images/projects/ziwei-v141-settings.png" alt="v1.4.1 字體與外觀設定，隔離測試資料" width="900" height="1950" loading="lazy"><div class="gallery-caption">v1.4.1 字體與外觀設定</div></div>
       </div>
     </div>
 
@@ -741,13 +736,13 @@
         <div class="tool-card">
           <div class="tool-info">
             <div class="tool-name">AI 解讀整合</div>
-            <div class="tool-desc">將命盤摘要與流日狀態組成 prompt，透過你自己的 OpenAI API Key 呼叫 GPT 生成個人化文字。資料直達 OpenAI，不經過任何第三方。</div>
+            <div class="tool-desc">透過官方帳號登入與會員授權，傳送命盤星曜摘要、查詢日期及主題。只在收到完整成功回應並通過內容格式檢查後保存；登出、切換帳號或取消後，不保存舊連線的回覆。</div>
           </div>
         </div>
         <div class="tool-card">
           <div class="tool-info">
             <div class="tool-name">本機資料儲存</div>
-            <div class="tool-desc">Room 資料庫儲存家人命盤與詢問記錄，DataStore 存 API Key 與偏好設定，全部只在手機裡，開發者看不到任何東西。</div>
+            <div class="tool-desc">家人與歷史放在裝置的 Room 資料庫，偏好設定由 DataStore 保存。登入憑證以 Android Keystore 保護並加密保存；登出保留家人與歷史。</div>
           </div>
         </div>
       </div>
@@ -759,10 +754,10 @@
       <table class="info-table">
         <tr><td>作業系統</td><td>Android 8.0（API 26）以上，建議 Android 10+</td></tr>
         <tr><td>iOS 支援</td><td>不支援（iPhone / iPad 無法安裝）</td></tr>
-        <tr><td>檔案大小</td><td>約 2.4 MB</td></tr>
+        <tr><td>檔案大小</td><td><span data-release-size>2.0 MB</span>，64 位元 arm64／x86_64</td></tr>
         <tr><td>網路</td><td>命盤計算不需要；AI 解讀查詢時需要</td></tr>
-        <tr><td>OpenAI Key</td><td>需自備一組（App 內有申請教學，每次查詢約 NT$0.03 以下）</td></tr>
-        <tr><td>費用</td><td>App 本身完全免費、無廣告、無內購</td></tr>
+        <tr><td>會員帳號</td><td>符合資格的 ChatGPT Plus／Pro，允許 App 使用會員額度；Free 支援未確認</td></tr>
+        <tr><td>費用</td><td>App 免費下載、無廣告、無內購；會員訂閱與使用限制依帳號方案</td></tr>
       </table>
     </div>
 
@@ -773,16 +768,17 @@
 
     <!-- 隱私 -->
     <div class="privacy-box">
-      <strong>關於你的資料：</strong>命盤計算在手機本機進行，不上傳給任何人。進行 AI 查詢時，App 會將命盤摘要透過你自己的 API Key 傳送給 OpenAI（不傳給 App 開發者）。家人姓名與出生資料儲存在你的手機，開發者完全看不到。
+      <strong>關於你的資料：</strong>家人姓名、完整出生資料與歷史保存在裝置。產生新解讀時，命盤星曜摘要、查詢日期及主題會送到 OpenAI，不傳送家人姓名或完整出生資料。可在帳號頁登出，並到 ChatGPT 管理 App 授權。這是生活與文化參考，重要決定仍請依實際情況判斷。
     </div>
 
     <!-- 底部下載 -->
     <div style="text-align:center; margin-bottom: 2rem;">
-      <a href="https://drive.google.com/file/d/1lAeduRl6uYM5AViogIKndYNMFL-RgqK9/view?usp=sharing" target="_blank" rel="noopener" class="download-btn">
+      <a href="https://github.com/littleblackmann/ziwei-today/releases/latest" target="_blank" rel="noopener" class="download-btn" data-ziwei-download>
         <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
         下載 APK
       </a>
-      <p class="download-note">v1.0.0 ｜ Android 8.0+ ｜ 約 2.4 MB</p>
+      <p class="download-note"><span data-release-version>v1.4.2</span> ｜ Android 8.0+ ｜ <span data-release-size>2.0 MB</span></p>
+      <p class="release-links"><a href="https://github.com/littleblackmann/ziwei-today/releases/latest" target="_blank" rel="noopener">查看 GitHub 發行內容與下載備援</a></p>
     </div>
 
   </div>
@@ -810,6 +806,7 @@
     <p>&copy; MMXXVI · Little Black · All rights reserved</p>
   </footer>
 
+  <script src="ziwei-release.js?v=20261013-v142" defer></script>
   <script src="../image-lightbox.js"></script>
   <script data-goatcounter="https://littleblack.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
