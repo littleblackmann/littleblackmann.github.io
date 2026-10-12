@@ -21,11 +21,11 @@
     "tags": ["Kotlin", "Jetpack Compose", "OpenAI API", "Android"]
   },
   {
-    "name": "廚師 AI 工具箱",
-    "description": "根據現有食材整理食譜方向與步驟提示的 AI 料理工具，偏向日常使用與流程整理。",
-    "image": "images/projects/廚房AI-首頁圖片.jpg",
+    "name": "AI 廚房",
+    "description": "用自己的 ChatGPT Plus／Pro 會員搭配冰箱食材，三步找到料理靈感；新版漸層介面、照片熱量估算與手機料理本。",
+    "image": "images/projects/chef-v091-home.png",
     "link": "projects/chef-ai-toolbox.html",
-    "tags": ["Kotlin", "OpenAI API", "Android", "AI 食譜"]
+    "tags": ["Kotlin", "ChatGPT 會員", "Android", "AI 食譜"]
   },
   {
     "name": "人生步數",

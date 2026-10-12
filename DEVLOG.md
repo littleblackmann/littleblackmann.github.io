@@ -4,6 +4,18 @@
 
 ---
 
+## 2026-10-13（AI 廚房 v0.9.2）
+
+- APP 原始碼 c016040 已推 master，正式 GitHub Release v0.9.2 附 APK 與 SHA256SUMS；匿名下載 12,186,114 bytes，SHA-256 與本機已驗證版本相同。沿用原簽章，舊版直接覆蓋安裝保留資料。
+- 作品介紹移除舊 API Key／儲值教學、Google Drive 下載與未經證實的營養誤差百分比。改為自己的 ChatGPT Plus／Pro 與方案用量授權，明列 Free 目前不支援及訂閱另計。
+- 介紹新版深藍漸層 UI、三步料理、照片估算、料理本與 Release 更新通知；說明 Android 背景排程及手動下載，git push 不等於發布通知。保留真人照片推論與完整保存仍待實機驗收的限制。
+- 新增五張 v0.9.1 實際介面截圖，明確標示 v0.9.2 沿用同設計；只有示範食材操作，無真實會員資料或假 AI 結果。原圖片保留。
+- 首頁 AI 廚房項目、快取版本及相關 sitemap 同步；維持暖金網站、Analytics／GoatCounter、返回、圖片放大及贊助入口。
+- Edge 本機 320／375／520／768／1280／1440px 無橫向溢出、圖片比例正確，lightbox 左右切換／Escape、首頁 375／1280px 可見性與無 JavaScript 下載通過。下載腳本 21 情境（正式／未來版、異常 URL、草稿、無 APK、API 失敗及逾時）通過；無 pageerror／console error。
+- 同時偵測到另一任務的紫微網站修改；只提交 chef 專用檔案與共享檔案的 chef 部分，保留對方未提交變更。驗證證據存於 AI 廚房忽略目錄 build/verification/github-publication-092。正式 Pages 上線結果另核對。
+
+---
+
 ## 2026-10-11（台股預測 v1.7.4 Perplexity 搜尋）
 
 - 股票預測作品頁加入 OpenRouter Perplexity 網路搜尋、共用原 Key 與所選模型、可點開新聞來源、搜尋時間及 RSS 備援說明；不宣稱提高勝率，也不改寫量化機率。

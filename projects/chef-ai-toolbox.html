@@ -11,21 +11,21 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>廚師 AI 工具箱 — 小黑 Little Black</title>
-  <meta name="description" content="一款 Android AI 料理助理 — 冰箱有什麼就煮什麼，AI 廚師出食譜連眉角都教你。">
+  <title>AI 廚房 — 小黑 Little Black</title>
+  <meta name="description" content="AI 廚房 Android App：三步搭配冰箱食材、生成食譜、記錄餐點。用自己的 ChatGPT Plus／Pro 會員登入，免填 API Key。">
   <link rel="canonical" href="https://littleblackmann.github.io/projects/chef-ai-toolbox.html">
-  <meta property="og:title" content="廚師 AI 工具箱 — 小黑 Little Black">
-  <meta property="og:description" content="一款 Android AI 料理助理 — 冰箱有什麼就煮什麼，AI 廚師出食譜連眉角都教你。">
+  <meta property="og:title" content="AI 廚房 — 小黑 Little Black">
+  <meta property="og:description" content="AI 廚房 Android App：三步搭配冰箱食材、生成食譜、記錄餐點。用自己的 ChatGPT Plus／Pro 會員登入，免填 API Key。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://littleblackmann.github.io/projects/chef-ai-toolbox.html">
-  <meta property="og:image" content="https://littleblackmann.github.io/images/projects/%E5%BB%9A%E6%88%BFAI-%E9%A6%96%E9%A0%81%E5%9C%96%E7%89%87.jpg">
-  <meta property="og:image:alt" content="廚師 AI 工具箱 專案封面">
+  <meta property="og:image" content="https://littleblackmann.github.io/images/projects/chef-v091-home.png">
+  <meta property="og:image:alt" content="AI 廚房新版深藍漸層首頁">
   <meta property="og:site_name" content="小黑 Little Black">
   <meta property="og:locale" content="zh_TW">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="廚師 AI 工具箱 — 小黑 Little Black">
-  <meta name="twitter:description" content="一款 Android AI 料理助理 — 冰箱有什麼就煮什麼，AI 廚師出食譜連眉角都教你。">
-  <meta name="twitter:image" content="https://littleblackmann.github.io/images/projects/%E5%BB%9A%E6%88%BFAI-%E9%A6%96%E9%A0%81%E5%9C%96%E7%89%87.jpg">
+  <meta name="twitter:title" content="AI 廚房 — 小黑 Little Black">
+  <meta name="twitter:description" content="AI 廚房 Android App：三步搭配冰箱食材、生成食譜、記錄餐點。用自己的 ChatGPT Plus／Pro 會員登入，免填 API Key。">
+  <meta name="twitter:image" content="https://littleblackmann.github.io/images/projects/chef-v091-home.png">
   <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -205,6 +205,7 @@
     .cover-image img {
       max-height: 600px;
       width: auto;
+      height: auto;
       filter: grayscale(.2) brightness(.9);
       transition: all 0.5s;
     }
@@ -333,6 +334,8 @@
 
     .gallery-item img {
       width: 100%;
+      height: auto;
+      display: block;
       filter: grayscale(.2) brightness(.9);
       transition: all 0.5s;
     }
@@ -442,6 +445,11 @@
     .privacy-box strong {
       color: var(--accent);
     }
+
+    .download-note a, .install-note a, .privacy-box a { color: var(--accent-hi); text-underline-offset: 3px; }
+    .content-section, .info-table td, .download-note { overflow-wrap: anywhere; }
+    .content-section[id] { scroll-margin-top: 4rem; }
+    a:focus-visible { outline: 2px solid var(--accent-hi); outline-offset: 5px; }
 
     /* --- Donation --- */
     .donation-section {
@@ -563,179 +571,137 @@
     <!-- Header -->
     <div class="project-header">
       <h1 class="project-title">Chef AI Toolbox</h1>
-      <div class="project-chinese">廚師 AI 工具箱</div>
-      <p class="project-subtitle">冰箱有什麼、就煮什麼 — 由 20 年廚師調教過的 AI，<br>每道食譜都有只有廚房老手才知道的眉角。</p>
+      <div class="project-chinese">AI 廚房</div>
+      <p class="project-subtitle">從冰箱到餐桌，找到下一道料理靈感。<br>挑食材、選偏好，讓今晚的菜單慢慢成形。</p>
       <div class="project-tags">
-        <span class="project-tag">Kotlin</span>
-        <span class="project-tag">OpenAI API</span>
-        <span class="project-tag">Android</span>
-        <span class="project-tag">AI 食譜</span>
+        <span class="project-tag">Kotlin</span><span class="project-tag">ChatGPT 會員</span>
+        <span class="project-tag">Android</span><span class="project-tag">AI 食譜</span>
       </div>
-      <a href="https://drive.google.com/file/d/10HYPLadG7iBR5fSXlc0SOmQnvA_RsxeH/view?usp=sharing" target="_blank" rel="noopener" class="download-btn">
+      <a href="https://github.com/littleblackmann/ChefAIToolbox/releases/download/v0.9.2/ChefAIToolbox-0.9.2.apk" data-chef-download target="_blank" rel="noopener" class="download-btn">
         <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
         下載 APK
       </a>
-      <p class="download-note"><strong>僅支援 Android 8.0 以上</strong>｜約 17.1 MB｜iPhone / iPad 無法安裝</p>
+      <p class="download-note"><strong>Android 8.0 以上</strong> · <span data-release-version>v0.9.2</span> · <span data-release-size>12.2 MB</span> · <span data-release-date>2026/10/13</span><br>iPhone / iPad 無法安裝 · <a href="https://github.com/littleblackmann/ChefAIToolbox/releases/latest" target="_blank" rel="noopener">版本說明與備用下載</a></p>
+      <p class="download-note">APP 免費；AI 需要符合資格的 ChatGPT Plus／Pro 與方案用量授權。<br>Free 帳號目前不支援此整合，仍受帳號與模型用量限制。</p>
     </div>
 
-    <!-- Cover -->
     <div class="cover-image">
-      <img src="../images/projects/廚房AI-首頁圖片.jpg" alt="廚師 AI 工具箱 — App 首頁">
+      <img src="../images/projects/chef-v091-home.png" width="1080" height="2400" alt="AI 廚房新版首頁，深藍底與青綠紫色漸層料理卡片" fetchpriority="high">
     </div>
 
-    <!-- 這是什麼 -->
     <div class="content-section">
       <h2 class="section-title">這是什麼？</h2>
-      <p>廚師 AI 工具箱是一款 Android 料理助理 App，有三個核心功能：<strong>冰箱食譜生成器</strong>、<strong>熱量雷達</strong>、<strong>我的紀錄</strong>。</p>
-      <p>跟一般 AI 食譜 App 最不一樣的地方 — 食譜不是機器直接丟給你，而是經過真廚師反覆調教的 AI 出的，每個步驟都會告訴你「為什麼這樣做」：醃肉順序、翻鍋時機、醬油沿鍋邊淋的原因。像一個真的會做菜的朋友站在旁邊講給你聽。</p>
-      <p>App 本身完全免費。沒有訂閱、沒有廣告、沒有後端伺服器。你用自己的 OpenAI API Key，AI 費用直接進你的帳戶，開發者一分錢都不碰。</p>
+      <p>AI 廚房（Chef AI Toolbox）是一款 Android 料理助理：用現有食材整理食譜、拍照估算餐點營養，再把完成的內容收進手機料理本。</p>
+      <p>新版以深藍底、青綠到紫色的漸層和柔和光暈，搭配分步引導，把選食材、口味與確認菜單拆成清楚的三個階段。可以回頭修改，切換頁面也保留這次的選擇。</p>
+      <p>使用自己的 ChatGPT 會員，在官方登入頁授權後回到 APP，無需複製 API Key。APP 本身免費，ChatGPT 訂閱另計；目前這條整合需要符合資格的 Plus／Pro 與方案用量授權，可用模型及額度依帳號實際結果為準。</p>
     </div>
 
-    <!-- 怎麼用 -->
     <div class="content-section">
       <h2 class="section-title">怎麼用？</h2>
       <div class="how-to-use">
-        <span class="step">選食材</span>
-        <span class="step-arrow">→</span>
-        <span class="step">設定風格 & 人數</span>
-        <span class="step-arrow">→</span>
-        <span class="step">點生成</span>
-        <span class="step-arrow">→</span>
-        <span class="step">串流食譜</span>
-        <span class="step-arrow">→</span>
-        <span class="step">自動存紀錄</span>
+        <span class="step">01 挑食材</span><span class="step-arrow">→</span>
+        <span class="step">02 選偏好</span><span class="step-arrow">→</span>
+        <span class="step">03 確認生成</span><span class="step-arrow">→</span>
+        <span class="step">完成後收進料理本</span>
       </div>
     </div>
 
-    <!-- 重點數據 -->
     <div class="content-section">
       <div class="highlight-grid">
-        <div class="highlight-card">
-          <div class="highlight-value">3</div>
-          <div class="highlight-label">核心功能</div>
-        </div>
-        <div class="highlight-card">
-          <div class="highlight-value">6</div>
-          <div class="highlight-label">大食材分類</div>
-        </div>
-        <div class="highlight-card">
-          <div class="highlight-value">5</div>
-          <div class="highlight-label">種料理風格</div>
-        </div>
-        <div class="highlight-card">
-          <div class="highlight-value">50</div>
-          <div class="highlight-label">筆本地紀錄</div>
-        </div>
+        <div class="highlight-card"><div class="highlight-value">3</div><div class="highlight-label">步完成料理設定</div></div>
+        <div class="highlight-card"><div class="highlight-value">1–3</div><div class="highlight-label">道菜自由搭配</div></div>
+        <div class="highlight-card"><div class="highlight-value">5</div><div class="highlight-label">種料理風格</div></div>
+        <div class="highlight-card"><div class="highlight-value">50</div><div class="highlight-label">筆食譜／熱量各自保存</div></div>
       </div>
     </div>
 
-    <!-- 三大功能 -->
     <div class="content-section">
       <h2 class="section-title">三大功能</h2>
       <div class="tool-list">
         <div class="tool-card">
-          <div class="tool-icon">🥬</div>
-          <div class="tool-info">
-            <div class="tool-name">冰箱食譜生成器</div>
-            <div class="tool-desc">從六大分類（蔬菜、肉類、海鮮、蛋奶豆、五穀、調味料）選出冰箱現有食材，搭配料理風格（家常／日式／西式／低卡／快手）和幾人份，AI 立刻出 1–3 道食譜。每道菜附精確克數、5 步驟、廚師眉角，出來的菜名也有記憶點。</div>
+          <div class="tool-icon" aria-hidden="true">01</div>
+          <div class="tool-info"><div class="tool-name">冰箱食譜生成器</div>
+            <div class="tool-desc">分類挑選、搜尋或自訂手邊食材，再選家常／日式／西式／低卡／快手風格、1–8 人份與 1–3 道菜。確認後生成食材用量、步驟與料理提醒，多道食譜可滑動或按鈕切換。</div>
           </div>
         </div>
         <div class="tool-card">
-          <div class="tool-icon">🔥</div>
-          <div class="tool-info">
-            <div class="tool-name">熱量雷達</div>
-            <div class="tool-desc">拍一張料理照片（或從相簿選），AI 辨識菜色後估算熱量、蛋白質、碳水、脂肪，並給 2–3 句具體可執行的降熱量建議。誤差約 ±15%，供參考用，不是醫療建議。</div>
+          <div class="tool-icon" aria-hidden="true">02</div>
+          <div class="tool-info"><div class="tool-name">拍照看熱量</div>
+            <div class="tool-desc">拍照或透過系統相簿選圖，補充份量與烹調資訊，再用支援圖片的模型估算熱量、蛋白質、碳水與脂肪。照片無法準確量出油量和份量，數值只供日常參考，不作為醫療或精準飲食依據。</div>
           </div>
         </div>
         <div class="tool-card">
-          <div class="tool-icon">📚</div>
-          <div class="tool-info">
-            <div class="tool-name">我的紀錄</div>
-            <div class="tool-desc">每次生成的食譜和熱量分析都自動存進手機本機，下次想看直接翻，不用重複扣 API 費用。最多 50 筆，超過會自動淘汰最舊的，不佔空間。</div>
+          <div class="tool-icon" aria-hidden="true">03</div>
+          <div class="tool-info"><div class="tool-name">手機料理本</div>
+            <div class="tool-desc">完整完成的食譜與熱量分析保存在本機，回看不必重新生成。支援搜尋、單筆及批次刪除，清空前會確認；兩類紀錄各保留最近 50 筆，超過時移除最舊紀錄。取消或失敗的生成不會當成完成紀錄保存。</div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 畫面截圖 -->
     <div class="content-section">
       <h2 class="section-title">App 畫面</h2>
+      <p>以下為 v0.9.1 的實際介面截圖，v0.9.2 沿用此設計。食材與偏好為示範操作；點擊圖片可以放大。</p>
       <div class="gallery">
-        <div class="gallery-item">
-          <img src="../images/projects/廚房AI-冰箱廚房生成圖片1.jpg" alt="食材選擇畫面" loading="lazy">
-          <div class="gallery-caption">食材選擇</div>
-        </div>
-        <div class="gallery-item">
-          <img src="../images/projects/廚房AI-冰箱廚房生成圖片2.jpg" alt="食材選擇更多選項" loading="lazy">
-          <div class="gallery-caption">食材選擇（更多分類）</div>
-        </div>
-        <div class="gallery-item">
-          <img src="../images/projects/廚房AI-冰箱廚房生成食譜圖片.jpg" alt="AI 生成食譜" loading="lazy">
-          <div class="gallery-caption">AI 即時串流食譜</div>
-        </div>
-        <div class="gallery-item">
-          <img src="../images/projects/廚房AI-紀錄圖片.jpg" alt="我的紀錄" loading="lazy">
-          <div class="gallery-caption">我的紀錄</div>
-        </div>
+        <div class="gallery-item"><img src="../images/projects/chef-v091-ingredients.png" width="1080" height="2400" alt="第一步：食材分類與搜尋" loading="lazy"><div class="gallery-caption">01 · 挑食材</div></div>
+        <div class="gallery-item"><img src="../images/projects/chef-v091-preferences.png" width="1080" height="2400" alt="第二步：選擇料理風格與人份" loading="lazy"><div class="gallery-caption">02 · 選偏好</div></div>
+        <div class="gallery-item"><img src="../images/projects/chef-v091-review.png" width="1080" height="2400" alt="第三步：確認菜單，連結自己的 ChatGPT" loading="lazy"><div class="gallery-caption">03 · 確認生成</div></div>
+        <div class="gallery-item"><img src="../images/projects/chef-v091-photo.png" width="1080" height="2400" alt="拍照看熱量：相機與系統相簿入口" loading="lazy"><div class="gallery-caption">從一張照片開始</div></div>
       </div>
     </div>
 
-    <!-- 怎麼做到的 -->
     <div class="content-section">
-      <h2 class="section-title">怎麼做到的？</h2>
+      <h2 class="section-title">帳號與日常使用</h2>
       <div class="tool-list">
-        <div class="tool-card">
-          <div class="tool-info">
-            <div class="tool-name">AI 串流食譜生成</div>
-            <div class="tool-desc">呼叫 OpenAI Chat API，搭配由真廚師反覆調教的 system prompt，串流輸出每一個字。食譜的「廚師眉角」段落是 prompt 設計的核心，不是通用的食譜模板。</div>
-          </div>
-        </div>
-        <div class="tool-card">
-          <div class="tool-info">
-            <div class="tool-name">視覺辨識熱量分析</div>
-            <div class="tool-desc">使用 GPT-4o Vision 分析料理照片，辨識菜色後估算熱量與營養成分，並給出具體可執行的降熱量建議。</div>
-          </div>
-        </div>
-        <div class="tool-card">
-          <div class="tool-info">
-            <div class="tool-name">本地優先架構</div>
-            <div class="tool-desc">Room 資料庫儲存食譜與熱量紀錄，DataStore 存 API Key，Coil 處理熱量分析的縮圖。App 完全沒有後端伺服器，所有資料都在你的手機裡。</div>
-          </div>
-        </div>
+        <div class="tool-card"><div class="tool-info"><div class="tool-name">自己的會員，自己的模型</div>
+          <div class="tool-desc">Continue with ChatGPT 會開啟官方登入頁。回到 APP 後，等帳號、方案授權與模型清單載入完成即可使用；可切換帳號、選模型、重新登入及登出。瀏覽器收到登入回應不等於 APP 已連線完成。</div>
+        </div></div>
+        <div class="tool-card"><div class="tool-info"><div class="tool-name">一步一步，不用一次填完</div>
+          <div class="tool-desc">食譜確認前可返回改食材與偏好；照片選好後再補充備註。生成時可以取消，遇到額度、網路或服務問題會顯示提示，再決定重試或查看帳號。</div>
+        </div></div>
+        <div class="tool-card"><div class="tool-info"><div class="tool-name">料理紀錄留在手機</div>
+          <div class="tool-desc">原生 Kotlin／Jetpack Compose 介面，歷史紀錄可離線回看；使用 AI 與檢查更新需要網路。登入資料由 Android Keystore 加密保存，APP 不提供手動 API Key 設定。</div>
+        </div></div>
       </div>
     </div>
 
-    <!-- 系統需求 -->
     <div class="content-section">
       <h2 class="section-title">系統需求</h2>
       <table class="info-table">
         <tr><td>作業系統</td><td>Android 8.0（API 26）以上</td></tr>
         <tr><td>iOS 支援</td><td>不支援（iPhone / iPad 無法安裝）</td></tr>
-        <tr><td>檔案大小</td><td>約 17.1 MB</td></tr>
-        <tr><td>網路</td><td>需要網路（Wi-Fi 或行動數據）</td></tr>
-        <tr><td>權限</td><td>相機（熱量雷達拍照）、照片（從相簿選圖）</td></tr>
-        <tr><td>費用</td><td>App 免費，需自備 OpenAI API Key（用多少扣多少）</td></tr>
+        <tr><td>目前版本</td><td><span data-release-version>v0.9.2</span> · <span data-release-date>2026/10/13</span></td></tr>
+        <tr><td>檔案大小</td><td><span data-release-size>12.2 MB</span>（APK）</td></tr>
+        <tr><td>網路</td><td>AI、會員登入與檢查更新需要網路；本機紀錄可離線回看</td></tr>
+        <tr><td>權限</td><td>拍照時使用相機；相簿使用系統照片選取器；更新通知可選擇允許</td></tr>
+        <tr><td>AI 帳號</td><td>符合資格的 ChatGPT Plus／Pro，並允許使用方案用量；Free 目前不支援此整合</td></tr>
+        <tr><td>費用</td><td>APP 免費；ChatGPT 訂閱另計，依帳號實際額度與模型限制使用</td></tr>
       </table>
     </div>
 
-    <!-- 安裝提醒 -->
     <div class="install-note">
-      <strong>安裝提醒：</strong>因為是個人作品、沒有上架 Google Play，第一次安裝時 Android 會跳出「未知來源」警告，這是系統的正常行為，不是 bug。在設定中允許「安裝未知應用程式」即可。<br><br>
-      <strong>第一次開啟：</strong>需要輸入你自己的 OpenAI API Key（格式：sk-開頭的一串字）。沒有 Key 的話，到 platform.openai.com 申請一把，先儲值 5 美金試水溫，一般家庭用一個月大概 NT$ 30–80 左右。
+      <strong>第一次安裝：</strong>從上方下載 APK，依 Android 提示允許瀏覽器「安裝未知應用程式」。開啟 APP 後連結自己的 ChatGPT，完成官方登入與方案用量授權，再確認可用模型。<br><br>
+      <strong>舊版升級：</strong>直接覆蓋安裝，勿先解除安裝，以保留登入、料理紀錄與照片。若安裝來源的簽章不同，請先確認原版本與資料備份，不要為了強制安裝直接清除資料。
     </div>
 
-    <!-- 隱私 -->
+    <div class="content-section" id="updates">
+      <h2 class="section-title">新版通知與這次更新</h2>
+      <p>v0.9.2 修正部分裝置收到回應卻無法讀取食譜串流的問題，改善錯誤提示，沿用新版漸層介面與三步料理流程。已在 MSI 保留既有登入並收到食譜文字；完整保存、真人照片分析與各廠牌相機仍持續實機驗收。</p>
+      <p>支援更新功能的版本會在開啟時檢查新版，背景約每 12 小時檢查，實際時間由 Android 安排。Android 13 以上可在設定允許更新通知；也能隨時手動檢查，未允許通知仍可在 APP 內看到更新提示。</p>
+      <p>更新以 GitHub 的正式 Release 與 APK 為準，推送原始碼不會直接通知。收到提示後開啟版本頁下載、覆蓋安裝；較舊、沒有更新功能的版本，請從這個頁面手動下載。</p>
+    </div>
+
     <div class="privacy-box">
-      <strong>隱私保證：</strong>App 沒有後端伺服器。你輸入的食材、拍的照片，直接送到 OpenAI，不經過開發者。你的 API Key 只存在你手機的本地儲存，永遠不會上傳到任何地方。食譜紀錄、熱量紀錄都只在你的手機裡，App 開發者完全看不到。
+      <strong>資料與隱私：</strong>料理紀錄與餐點照片保存在手機，登入憑證在本機加密。啟動 AI 時，這次的食材、備註或照片會直接送往 OpenAI，沒有開發者 AI 中繼伺服器；服務端處理及留存依 OpenAI 政策。檢查版本會連線 GitHub。登出會清除本機登入；若遠端撤銷未成功，可到 ChatGPT 管理連線。<br><br>
+      會員資格與可用性以 <a href="https://developers.openai.com/siwc/quickstart" target="_blank" rel="noopener">OpenAI 官方整合說明</a>及帳號實際授權結果為準。
     </div>
 
-    <!-- 底部下載 -->
     <div style="text-align:center; margin-bottom: 2rem;">
-      <a href="https://drive.google.com/file/d/10HYPLadG7iBR5fSXlc0SOmQnvA_RsxeH/view?usp=sharing" target="_blank" rel="noopener" class="download-btn">
+      <a href="https://github.com/littleblackmann/ChefAIToolbox/releases/download/v0.9.2/ChefAIToolbox-0.9.2.apk" data-chef-download target="_blank" rel="noopener" class="download-btn">
         <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
         下載 APK
       </a>
-      <p class="download-note">Android 8.0+ ｜ 約 17.1 MB</p>
+      <p class="download-note">Android 8.0+ · <span data-release-version>v0.9.2</span> · <span data-release-size>12.2 MB</span><br><a href="https://github.com/littleblackmann/ChefAIToolbox/releases/latest" target="_blank" rel="noopener">版本說明、SHA-256 與備用下載</a></p>
     </div>
 
   </div>
@@ -764,6 +730,7 @@
   </footer>
 
   <script src="../image-lightbox.js"></script>
+  <script src="chef-ai-release.js?v=20261013-092" defer></script>
   <script data-goatcounter="https://littleblack.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
