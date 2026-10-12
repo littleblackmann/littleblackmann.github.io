@@ -59,13 +59,14 @@
 
     a { color: inherit; text-decoration: none; transition: color 0.3s; }
     a:hover { color: var(--accent); }
-    img { max-width: 100%; display: block; }
+    img { max-width: 100%; height: auto; display: block; }
     a:focus-visible { outline: 2px solid var(--accent-hi); outline-offset: 5px; }
     .content-section { scroll-margin-top: 72px; }
     .tool-info, .info-table td { min-width: 0; overflow-wrap: anywhere; }
     .release-links { margin-top: .8rem; font-size: .8rem; color: var(--accent-hi); }
     .release-links a { text-decoration: underline; text-underline-offset: 4px; }
-    .gallery-note { font-size: .78rem; color: var(--ink-mute); }
+    .gallery-lead { margin-bottom: 1.2rem; font-size: .85rem; color: var(--ink-mute); }
+    .gallery-note { margin-top: 1rem; font-size: .72rem; line-height: 1.8; color: var(--ink-mute); }
 
     /* film-grain texture overlay */
     .grain {
@@ -358,38 +359,57 @@
     /* --- Gallery --- */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 1.2rem;
-      margin-bottom: 1.5rem;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
     }
 
     .gallery-item {
+      min-width: 0;
       border: 1px solid var(--line);
+      border-radius: 14px;
       overflow: hidden;
       background: var(--bg-card);
+      transition: border-color .2s;
+    }
+
+    .gallery-item:hover {
+      border-color: var(--accent);
+    }
+
+    .gallery-preview {
+      display: flex;
+      justify-content: center;
+      padding: 18px 14px;
+      background: linear-gradient(145deg, #211e19, #151411);
     }
 
     .gallery-item img {
       width: 100%;
-      filter: grayscale(.2) brightness(.9);
-      transition: filter 0.6s, transform 1.2s;
-    }
-
-    .gallery-item:hover img {
-      filter: grayscale(0) brightness(1);
-      transform: scale(1.03);
+      max-width: 176px;
+      height: auto;
+      object-fit: contain;
+      border: 1px solid rgba(243, 237, 226, .12);
+      border-radius: 9px;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, .25);
     }
 
     .gallery-caption {
-      padding: 0.7rem 1rem;
-      background: var(--bg-card);
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: var(--ink-dim);
+      padding: 12px 15px 14px;
       border-top: 1px solid var(--line);
-      text-align: center;
+    }
+
+    .gallery-caption strong {
+      display: block;
+      color: var(--ink);
+      font-size: .85rem;
+      font-weight: 400;
+    }
+
+    .gallery-caption span {
+      display: block;
+      margin-top: 3px;
+      color: var(--ink-mute);
+      font-size: .7rem;
     }
 
     /* --- Info table --- */
@@ -539,7 +559,6 @@
       .container { padding: 3.5rem 1.2rem 2rem; }
       .project-title { font-size: clamp(28px, 5vw, 36px); }
       .highlight-grid { grid-template-columns: repeat(2, 1fr); }
-      .gallery { grid-template-columns: repeat(2, 1fr); }
       .back-link { top: 0.8rem; left: 0.8rem; font-size: 10px; padding: 0.3rem 0.8rem; }
       .tool-card { flex-direction: column; }
       .cover-image img { max-height: 500px; }
@@ -547,6 +566,14 @@
       .donation-content { padding: 1.5rem 1.2rem 1.8rem; }
       .donation-title { font-size: 1rem; }
       .donation-text { font-size: 0.8rem; }
+    }
+
+    @media (max-width: 640px) {
+      .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+      .gallery-preview { padding: 12px 10px; }
+      .gallery-caption { padding: 10px 11px 12px; }
+      .gallery-caption strong { font-size: .8rem; }
+      .gallery-caption span { font-size: .68rem; }
     }
   </style>
   <link rel="stylesheet" href="../image-lightbox.css">
@@ -707,20 +734,21 @@
     </div>
 
     <!-- App 畫面 -->
-    <div class="content-section">
+    <div class="content-section" id="app-screens">
       <h2 class="section-title">App 畫面</h2>
-      <p class="gallery-note">首頁取自 v1.4.2，其餘畫面為沿用相同外觀的 v1.4.1。皆為專用模擬器與示範家人資料；解讀與歷史是版面驗收範例，並非線上 AI 生成結果。點圖片可放大。</p>
+      <p class="gallery-lead">從今天在意的主題開始，慢慢讀懂自己的日常。點選畫面可放大。</p>
       <div class="gallery">
-        <div class="gallery-item"><img src="../images/projects/ziwei-v142-home.png" alt="v1.4.2 星軌首頁，隔離測試資料" width="900" height="1950" loading="lazy"><div class="gallery-caption">v1.4.2 星軌首頁</div></div>
-        <div class="gallery-item"><img src="../images/projects/ziwei-v141-topics.png" alt="v1.4.1 八大主題，隔離測試資料" width="900" height="1950" loading="lazy"><div class="gallery-caption">v1.4.1 八大主題</div></div>
-        <div class="gallery-item"><img src="../images/projects/ziwei-v141-account.png" alt="v1.4.1 會員登入入口，隔離測試資料" width="900" height="1950" loading="lazy"><div class="gallery-caption">v1.4.1 會員登入入口</div></div>
-        <div class="gallery-item"><img src="../images/projects/ziwei-v141-family.png" alt="v1.4.1 家人管理，隔離測試資料" width="900" height="1950" loading="lazy"><div class="gallery-caption">v1.4.1 家人管理</div></div>
-        <div class="gallery-item"><img src="../images/projects/ziwei-v141-family-edit.png" alt="v1.4.1 出生資料設定，隔離測試資料" width="900" height="1950" loading="lazy"><div class="gallery-caption">v1.4.1 出生資料設定</div></div>
-        <div class="gallery-item"><img src="../images/projects/ziwei-v141-reading-demo.png" alt="v1.4.1 解讀版面示範，隔離測試資料" width="900" height="1950" loading="lazy"><div class="gallery-caption">v1.4.1 解讀版面示範</div></div>
-        <div class="gallery-item"><img src="../images/projects/ziwei-v141-history-demo.png" alt="v1.4.1 歷史版面示範，隔離測試資料" width="900" height="1950" loading="lazy"><div class="gallery-caption">v1.4.1 歷史版面示範</div></div>
-        <div class="gallery-item"><img src="../images/projects/ziwei-v141-chart.png" alt="v1.4.1 淺色完整命盤，隔離測試資料" width="900" height="1950" loading="lazy"><div class="gallery-caption">v1.4.1 淺色完整命盤</div></div>
-        <div class="gallery-item"><img src="../images/projects/ziwei-v141-settings.png" alt="v1.4.1 字體與外觀設定，隔離測試資料" width="900" height="1950" loading="lazy"><div class="gallery-caption">v1.4.1 字體與外觀設定</div></div>
+        <figure class="gallery-item"><div class="gallery-preview"><img src="../images/projects/ziwei-v142-home.png" alt="今日紫微每日首頁，示範家人資料" width="900" height="1950" loading="lazy"></div><figcaption class="gallery-caption"><strong>每日首頁</strong> <span>今天的探索，從這裡開始</span></figcaption></figure>
+        <figure class="gallery-item"><div class="gallery-preview"><img src="../images/projects/ziwei-v141-topics.png" alt="八大生活主題選單" width="900" height="1950" loading="lazy"></div><figcaption class="gallery-caption"><strong>八大主題</strong> <span>選擇此刻在意的事</span></figcaption></figure>
+        <figure class="gallery-item"><div class="gallery-preview"><img src="../images/projects/ziwei-v141-reading-demo.png" alt="今日解讀的版面示範，非實際生成結果" width="900" height="1950" loading="lazy"></div><figcaption class="gallery-caption"><strong>今日解讀</strong> <span>分段閱讀重點與提醒</span></figcaption></figure>
+        <figure class="gallery-item"><div class="gallery-preview"><img src="../images/projects/ziwei-v141-family.png" alt="家人管理，示範家人資料" width="900" height="1950" loading="lazy"></div><figcaption class="gallery-caption"><strong>家人管理</strong> <span>切換想了解的家人</span></figcaption></figure>
+        <figure class="gallery-item"><div class="gallery-preview"><img src="../images/projects/ziwei-v141-family-edit.png" alt="出生日期與時辰設定" width="900" height="1950" loading="lazy"></div><figcaption class="gallery-caption"><strong>出生資料</strong> <span>國曆、農曆與時辰設定</span></figcaption></figure>
+        <figure class="gallery-item"><div class="gallery-preview"><img src="../images/projects/ziwei-v141-chart.png" alt="淺色模式的完整命盤" width="900" height="1950" loading="lazy"></div><figcaption class="gallery-caption"><strong>完整命盤</strong> <span>查看十二宮與星曜</span></figcaption></figure>
+        <figure class="gallery-item"><div class="gallery-preview"><img src="../images/projects/ziwei-v141-history-demo.png" alt="歷史回顧的版面示範，非實際生成結果" width="900" height="1950" loading="lazy"></div><figcaption class="gallery-caption"><strong>歷史回顧</strong> <span>回看先前保存的內容</span></figcaption></figure>
+        <figure class="gallery-item"><div class="gallery-preview"><img src="../images/projects/ziwei-v141-account.png" alt="自己的會員帳號登入入口" width="900" height="1950" loading="lazy"></div><figcaption class="gallery-caption"><strong>我的帳號</strong> <span>登入與管理會員授權</span></figcaption></figure>
+        <figure class="gallery-item"><div class="gallery-preview"><img src="../images/projects/ziwei-v141-settings.png" alt="字體大小與淺深色外觀設定" width="900" height="1950" loading="lazy"></div><figcaption class="gallery-caption"><strong>閱讀設定</strong> <span>調整字體與淺深色外觀</span></figcaption></figure>
       </div>
+      <p class="gallery-note">畫面版本 v1.4.1–v1.4.2。解讀與歷史為版面示範，非實際 AI 生成結果。</p>
     </div>
 
     <!-- 技術原理 -->
