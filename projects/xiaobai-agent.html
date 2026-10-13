@@ -381,79 +381,6 @@
 
     .privacy-box strong { color: var(--accent); }
 
-    .donation-section {
-      max-width: 720px;
-      margin: 0 auto 3rem;
-      padding: 0 2rem;
-    }
-
-    .donation-card {
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, var(--bg-soft), var(--bg));
-      overflow: hidden;
-      transition: border-color 0.4s;
-    }
-
-    .donation-card:hover { border-color: var(--accent); }
-
-    .donation-banner {
-      width: 100%;
-      overflow: hidden;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .donation-banner img {
-      width: 100%;
-      height: auto;
-      display: block;
-      filter: grayscale(.2) brightness(.9);
-      transition: filter 0.6s, transform 0.6s;
-    }
-
-    .donation-card:hover .donation-banner img {
-      filter: grayscale(0) brightness(1);
-      transform: scale(1.03);
-    }
-
-    .donation-content {
-      padding: 1.8rem 1.5rem 2rem;
-      text-align: center;
-    }
-
-    .donation-title {
-      font-family: var(--serif-cjk);
-      font-size: 1.1rem;
-      color: var(--ink);
-      letter-spacing: 2px;
-      margin-bottom: 0.7rem;
-      font-weight: 400;
-    }
-
-    .donation-text {
-      font-size: 0.85rem;
-      color: var(--ink-mute);
-      line-height: 1.9;
-      margin-bottom: 1.4rem;
-    }
-
-    .donation-btn {
-      display: inline-block;
-      padding: 14px 22px;
-      border: 1px solid var(--accent);
-      background: transparent;
-      color: var(--accent-hi);
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: 17px;
-      letter-spacing: 2px;
-      transition: all 0.3s;
-    }
-
-    .donation-btn:hover {
-      background: var(--accent);
-      color: var(--bg);
-    }
-
     .page-footer {
       text-align: center;
       padding: 2rem;
@@ -471,16 +398,13 @@
       .highlight-grid { grid-template-columns: repeat(2, 1fr); }
       .gallery { grid-template-columns: repeat(2, 1fr); }
       .back-link { top: 0.8rem; left: 0.8rem; font-size: 10px; padding: 0.3rem 0.8rem; }
-      .donation-section { padding: 0 1rem; }
-      .donation-content { padding: 1.5rem 1.2rem 1.8rem; }
-      .donation-title { font-size: 1rem; }
-      .donation-text { font-size: 0.8rem; }
     }
     @media (max-width: 540px) {
       .gallery { grid-template-columns: 1fr; }
     }
   </style>
   <link rel="stylesheet" href="../image-lightbox.css">
+<link rel="stylesheet" href="../bento-support.css?v=20261014">
 </head>
 <body>
 
@@ -645,24 +569,16 @@
 
   </div>
 
-  <!-- 請小黑吃便當 -->
-  <div class="donation-section">
-    <div class="donation-card">
-      <div class="donation-banner">
-        <img src="../images/donation-banner.jpg" alt="深夜裡的一份雞腿便當">
-      </div>
-      <div class="donation-content">
-        <h2 class="donation-title">請小黑吃雞腿便當</h2>
-        <p class="donation-text">
-          如果你喜歡這個家庭 AI 實驗、想支持後續開發，<br>
-          歡迎請我吃個雞腿便當，讓我更有動力繼續做下去。
-        </p>
-        <a href="https://payment.opay.tw/Broadcaster/Donate/7341A28F6CDE05A1A6646A7B26DF4CD8" target="_blank" rel="noopener" class="donation-btn">
-          我要請客 →
-        </a>
-      </div>
+  <!-- 頁尾支持入口 -->
+  <aside class="bento-support" aria-labelledby="bento-support-title">
+    <img class="bento-support__image" src="../images/donation-banner.jpg" alt="" width="1920" height="341" loading="lazy" decoding="async">
+    <div class="bento-support__body">
+      <h2 class="bento-support__title" id="bento-support-title">請小黑吃雞腿便當</h2>
+      <p class="bento-support__text">如果你喜歡這個家庭 AI 實驗，也歡迎請小黑吃個雞腿便當。</p>
+      <a class="bento-support__link" href="https://payment.opay.tw/Broadcaster/Donate/7341A28F6CDE05A1A6646A7B26DF4CD8" target="_blank" rel="noopener">請一份便當 <span aria-hidden="true">→</span></a>
     </div>
-  </div>
+  </aside>
+
 
   <footer class="page-footer">
     <p>&copy; MMXXVI · Little Black · All rights reserved</p>
