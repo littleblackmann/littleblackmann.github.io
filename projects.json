@@ -7,11 +7,11 @@
     "tags": ["Wallpaper Engine", "WebGL2", "PowerShell", "Windows"]
   },
   {
-    "name": "小白",
-    "description": "用聲音聊天、安排提醒、記住家人偏好與播放音樂的家庭 AI 語音助理。看看實際介面與開發進度；目前家庭內部使用，未開放下載。",
-    "image": "images/projects/xiaobai-c124-home.jpg",
+    "name": "Personal AI · 專屬語音助理",
+    "description": "從小白演進的個人 AI：替助理取名字、連接自己的 OpenRouter Key，用聲音聊天、記憶、提醒與播放音樂。漸進式首次設定與完整重設，仍在自用測試，未開放下載。",
+    "image": "images/projects/xiaobai-c131-home.jpg",
     "link": "projects/xiaobai-agent.html",
-    "tags": ["Python", "FastAPI", "OpenRouter", "家庭 AI"]
+    "tags": ["Python", "FastAPI", "OpenRouter", "個人 AI"]
   },
   {
     "name": "今日紫微",
