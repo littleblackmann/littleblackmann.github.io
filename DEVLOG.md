@@ -4,6 +4,15 @@
 
 ---
 
+## 2026-10-16（Personal AI C140 私人預覽進度）
+
+- 使用者授權恢復更新介紹；軟體與原始碼仍PRIVATE、預覽包只供私人驗證，沒有公開下載。作品頁與首頁卡片同步Awaken AI啟動器、有限次鬧鐘、平板本機HTTPS／音訊操作、語音查天氣與GitHub更新準備。
+- 移除已過時的Email投遞待修與CWA API說明；預設每分鐘提醒一次共三次，並說明服務／頁面需運作。天氣改沿用OpenRouter Sonar／Sonar Pro搜尋，並非專用即時觀測API；首頁不顯示天氣卡。
+- 新增三張C140實際前端的隔離fixture圖片（首頁、更新設定、手機更新設定）；C131首次設定與重設圖片保留並標示舊版。圖片沒有真實Key／音樂帳號／生活紀錄。沒有把私人repo／Release／下載ZIP加入頁面。
+- 更新器支援簽章／雜湊／續傳、相同依賴程式更新、下次啟動套用、個人資料保留與失敗復原，維持私人通道。預覽仍需Python及首次依賴準備，不能宣稱免安裝EXE。公開前還需處理歷史隱私、授權與乾淨電腦驗收。
+- 保留匿名暖金設計、gtag.js／GoatCounter、共享lightbox／返回／低調支持。projects.json與生成index同步，僅更新首頁與本作品的sitemap日期。五尺寸作品頁、首頁兩尺寸、圖片載入／lightbox下一張／Escape與0pageerrors通過，build-home --check一致。
+- Pages上線與公開資源SHA核對結果保存於助理ignored release-readiness-c140/website；軟體私人GitHub上傳和網站介紹發布分別驗證。未代啟動正式助理，沒有發布軟體。
+
 ## 2026-10-15（Personal AI C131 個人化與完整重設）
 
 - 使用者恢復授權更新網站。原小白介紹轉為專屬個人AI：自訂助理名字、自己的OpenRouter Key、漸進式全螢幕首次設定；不再以選家人／頭像為主要入口。
