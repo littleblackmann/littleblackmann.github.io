@@ -8,7 +8,7 @@
   },
   {
     "name": "Personal AI · 專屬語音助理",
-    "description": "從小白演進的個人 AI：替助理取名字、連接自己的 OpenRouter Key，用聲音聊天、記憶、提醒與播放音樂。漸進式首次設定、Awaken AI 啟動器與有限次鬧鐘，提供 Windows 安裝包與線上更新測試。",
+    "description": "從小白演進的個人 AI：替助理取名字、連接自己的 OpenRouter Key，用聲音聊天、記憶、提醒與播放音樂。漸進式首次設定、Awaken AI 啟動器與有限次鬧鐘，提供 Windows 安裝包、線上更新與自動重啟。",
     "image": "images/projects/xiaobai-c140-home.jpg",
     "link": "projects/xiaobai-agent.html",
     "tags": ["Python", "FastAPI", "OpenRouter", "個人 AI"]
