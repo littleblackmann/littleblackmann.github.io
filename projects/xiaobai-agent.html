@@ -12,10 +12,10 @@
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal AI｜專屬語音助理（原小白）</title>
-  <meta name="description" content="替 AI 取自己的名字，用自己的 OpenRouter Key 連接語音、搜尋與記憶。Personal AI 由小白專案演進，加入 Awaken AI 啟動器、有限次鬧鐘、平板連線與個人化；目前未開放下載。">
+  <meta name="description" content="替 AI 取自己的名字，用自己的 OpenRouter Key 連接語音、搜尋與記憶。Personal AI 由小白專案演進，加入 Awaken AI 啟動器、有限次鬧鐘、平板連線與個人化；提供 Windows 安裝包與簽章線上更新。">
   <link rel="canonical" href="https://littleblackmann.github.io/projects/xiaobai-agent.html">
   <meta property="og:title" content="Personal AI｜專屬語音助理（原小白）">
-  <meta property="og:description" content="替 AI 取自己的名字，用自己的 OpenRouter Key 連接語音、搜尋與記憶。Personal AI 由小白專案演進，加入 Awaken AI 啟動器、有限次鬧鐘、平板連線與個人化；目前未開放下載。">
+  <meta property="og:description" content="替 AI 取自己的名字，用自己的 OpenRouter Key 連接語音、搜尋與記憶。Personal AI 由小白專案演進，加入 Awaken AI 啟動器、有限次鬧鐘、平板連線與個人化；提供 Windows 安裝包與簽章線上更新。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://littleblackmann.github.io/projects/xiaobai-agent.html">
   <meta property="og:image" content="https://littleblackmann.github.io/images/projects/xiaobai-c140-home.jpg">
@@ -24,7 +24,7 @@
   <meta property="og:locale" content="zh_TW">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Personal AI｜專屬語音助理（原小白）">
-  <meta name="twitter:description" content="替 AI 取自己的名字，用自己的 OpenRouter Key 連接語音、搜尋與記憶。Personal AI 由小白專案演進，加入 Awaken AI 啟動器、有限次鬧鐘、平板連線與個人化；目前未開放下載。">
+  <meta name="twitter:description" content="替 AI 取自己的名字，用自己的 OpenRouter Key 連接語音、搜尋與記憶。Personal AI 由小白專案演進，加入 Awaken AI 啟動器、有限次鬧鐘、平板連線與個人化；提供 Windows 安裝包與簽章線上更新。">
   <meta name="twitter:image" content="https://littleblackmann.github.io/images/projects/xiaobai-c140-home.jpg">
   <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -161,6 +161,10 @@
       text-align: center;
     }
     .update-note { margin-top: 10px; }
+    .release-links { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin:16px 0; }
+    .release-links a { padding:10px 16px; border:1px solid var(--accent); color:var(--accent-hi); font-size:13px; }
+    .release-links a + a { border-color:var(--line); color:var(--ink-mute); }
+    .release-links a:focus-visible { outline:2px solid var(--accent-hi); outline-offset:4px; }
     .screen-note { margin: -1.5rem 0 2.5rem; }
     .family-note {
       display: inline-block;
@@ -422,11 +426,12 @@
       <div class="project-chinese">專屬語音助理 · 原小白專案</div>
       <p class="project-subtitle">替它取一個名字，讓日常從一句話開始。<br>用自己的 AI 帳號，聊天、記住重要的事、安排提醒與播放音樂。</p>
       <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">FastAPI</span><span class="project-tag">OpenRouter</span><span class="project-tag">個人 AI</span></div>
-      <div class="family-note">個人使用 · 持續開發中 · 尚未開放下載</div>
-      <div class="update-note">更新於 <time datetime="2026-10-16">2026.10.16</time> · C140 私人預覽</div>
+      <div class="family-note">Windows 10／11 x64 · 公開測試版</div>
+      <div class="release-links"><a href="https://github.com/littleblackmann/awaken-ai-releases/releases/latest" target="_blank" rel="noopener">下載 Windows 測試版 ↗</a><a href="https://github.com/littleblackmann/awaken-ai-releases/blob/main/UPDATE.md" target="_blank" rel="noopener">已安裝？查看更新步驟 ↗</a></div>
+      <div class="update-note">更新於 <time datetime="2026-10-17">2026.10.17</time> · 0.3.0／C143</div>
     </div>
     <div class="cover-image"><img src="../images/projects/xiaobai-c140-home.jpg" width="1440" height="900" alt="C140 個人首頁：全息光球、個人事項、音樂與下一個提醒；隔離示範資料" fetchpriority="high"></div>
-    <p class="screen-note">目前介面的實際截圖 · 全部使用隔離示範資料</p>
+    <p class="screen-note">介面示範截圖（C140）· 新版延續相同布局 · 隔離示範資料</p>
 
     <div class="content-section">
       <h2 class="section-title">從家庭助理，走向一個人的專屬 AI</h2>
@@ -442,7 +447,7 @@
       <p><strong>從啟動就開始準備。</strong>Awaken AI 啟動器用全息球與階段進度顯示準備狀態，平常隱藏命令列視窗，完成後開啟助理。還沒命名時顯示「你的 AI」，設定後使用自己的名字。</p>
       <p><strong>提醒像鬧鐘。</strong>移除 Email 提醒，改為自行設定提醒幾次、每隔幾分鐘；預設每分鐘一次、總共三次，包含第一次，最後一次後停止。電腦、服務與助理頁面需保持開啟，亦可提前停止。</p>
       <p><strong>首頁更簡潔。</strong>移除天氣卡、中央來源按鈕及底部推送列。需要天氣直接用語音詢問；搜尋先說結論，再補少量重點。通知設定也只留下日常會使用的鬧鐘選項。</p>
-      <p><strong>為往後更新做準備。</strong>設定加入軟體更新入口，下載後先驗證，下次啟動才套用，並保留個人設定與資料。更新通道目前仍是私人測試，尚未開放下載。</p>
+      <p><strong>安裝與線上更新。</strong>Windows 安裝包隨附 Python 與 CPU 語音環境，可選安裝位置、閱讀資料使用說明並查看進度。新版從獨立公開更新區下載，驗證簽章後於下次啟動套用，保留個人設定。已安裝 C142 的使用者第一次需使用一次更新工具切換來源。</p>
     </div>
 
     <div class="content-section">
@@ -477,9 +482,9 @@
         <tr><td>操作裝置</td><td>電腦、手機與平板瀏覽器；目前主要驗證 Chrome／Chromium</td></tr>
         <tr><td>連線方式</td><td>主機使用 localhost；同 Wi-Fi 的手機／平板有本機 HTTPS 指引，iPad 需一次性安裝並信任憑證，再允許麥克風。金鑰、軟體更新與完整重設需在主機操作</td></tr>
         <tr><td>AI 帳號</td><td>自行提供 OpenRouter API Key；所選雲端服務需要網路，API 使用費另計</td></tr>
-        <tr><td>開放狀態</td><td>C140 私人預覽，進行隱私與更新流程驗證，尚未提供公開下載</td></tr>
+        <tr><td>開放狀態</td><td>0.3.0／C143 公開測試版；提供安裝包、簽章更新與程式快照，舊歷史庫仍維持私人</td></tr>
       </table>
-      <p>首次設定、七類設定、完整重設、語音與音樂已用隔離資料和模擬服務驗證。更新流程也測試簽章、下載續傳、資料保留與失敗復原；目前預覽包仍需 Python 與首次依賴準備，並非免安裝 EXE。這些測試不代表所有雲端模型、會員或裝置情境都已驗收，軟體與原始碼仍維持私人狀態。</p>
+      <p>首次設定、七類設定、完整重設、語音與音樂已用隔離資料和模擬服務驗證。更新流程也測試簽章、下載續傳、資料保留與失敗復原；安裝版不需另外安裝 Python，首次喚醒模型與選用播放器另下載。C143 新增21個經官方目錄核對的文字模型選項；更新與安裝使用隔離資料驗證，雲端模型、會員及真實裝置仍需使用者測試。Windows EXE 尚無發行者簽章，可能顯示未知發行者。</p>
     </div>
     <div class="privacy-box"><strong>關於資料與隱私：</strong>個人設定、聲紋與生活紀錄保存在主機，API Key 由後端保管，新儲存的 Windows 金鑰使用系統加密。使用雲端功能時，所需錄音、文字及記憶脈絡仍會傳送到選定的服務。原廠重設清除這套助理及 Pear 的本機登入，不會刪除 Google 帳號或 Chrome 登入；舊資料移至資源回收筒，無法移入時隔離於專案外並提示位置，並非磁碟安全抹除。</div>
 
