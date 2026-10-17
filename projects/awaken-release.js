@@ -1,4 +1,4 @@
-// The verified installer and the release-page link work without this enhancement.
+// The verified installer link works without this enhancement.
 (() => {
   const repository = 'littleblackmann/awaken-ai-releases';
   const controller = new AbortController();
@@ -29,6 +29,6 @@
       node.textContent = asset.size >= 1e9 ? `${(asset.size / 1e9).toFixed(2)} GB` : `${Math.round(asset.size / 1e6)} MB`;
     });
   }).catch(() => {
-    // Keep the previously verified download; the visitor can also browse all releases.
+    // Keep the previously verified installer download.
   }).finally(() => clearTimeout(timeout));
 })();
