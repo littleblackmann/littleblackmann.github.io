@@ -18,14 +18,14 @@
   <meta property="og:description" content="替 AI 取自己的名字，用自己的 OpenRouter Key 連接語音、搜尋與記憶。Personal AI 由小白專案演進，加入 Awaken AI 啟動器、有限次鬧鐘、平板連線與個人化；提供 Windows 安裝包與簽章線上更新。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://littleblackmann.github.io/projects/xiaobai-agent.html">
-  <meta property="og:image" content="https://littleblackmann.github.io/images/projects/xiaobai-c140-home.jpg">
-  <meta property="og:image:alt" content="Personal AI C140 個人首頁與全息光球，使用示範資料">
+  <meta property="og:image" content="https://littleblackmann.github.io/images/projects/xiaobai-c145-home.jpg">
+  <meta property="og:image:alt" content="Personal AI C145 個人首頁與全息光球，使用示範資料">
   <meta property="og:site_name" content="小黑 Little Black">
   <meta property="og:locale" content="zh_TW">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Personal AI｜專屬語音助理（原小白）">
   <meta name="twitter:description" content="替 AI 取自己的名字，用自己的 OpenRouter Key 連接語音、搜尋與記憶。Personal AI 由小白專案演進，加入 Awaken AI 啟動器、有限次鬧鐘、平板連線與個人化；提供 Windows 安裝包與簽章線上更新。">
-  <meta name="twitter:image" content="https://littleblackmann.github.io/images/projects/xiaobai-c140-home.jpg">
+  <meta name="twitter:image" content="https://littleblackmann.github.io/images/projects/xiaobai-c145-home.jpg">
   <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -164,6 +164,12 @@
     .release-links { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin:16px 0; }
     .release-links a { padding:10px 16px; border:1px solid var(--accent); color:var(--accent-hi); font-size:13px; }
     .release-links a + a { border-color:var(--line); color:var(--ink-mute); }
+    .release-meta { font-family:var(--mono); font-size:11px; color:var(--ink-mute); text-align:center; }
+    .install-steps { padding-left:1.4rem; margin-bottom:1rem; }
+    .install-steps li { padding-left:.3rem; margin-bottom:.8rem; }
+    .install-steps a { text-decoration:underline; text-underline-offset:3px; }
+    .gallery-group-title { margin:2rem 0 1rem; font-size:1.05rem; color:var(--accent); font-weight:400; }
+    .release-links a { min-height:44px; display:inline-flex; align-items:center; justify-content:center; }
     .release-links a:focus-visible { outline:2px solid var(--accent-hi); outline-offset:4px; }
     .screen-note { margin: -1.5rem 0 2.5rem; }
     .family-note {
@@ -427,16 +433,29 @@
       <p class="project-subtitle">替它取一個名字，讓日常從一句話開始。<br>用自己的 AI 帳號，聊天、記住重要的事、安排提醒與播放音樂。</p>
       <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">FastAPI</span><span class="project-tag">OpenRouter</span><span class="project-tag">個人 AI</span></div>
       <div class="family-note">Windows 10／11 x64 · 公開測試版</div>
-      <div class="release-links"><a href="https://github.com/littleblackmann/awaken-ai-releases/releases/latest" target="_blank" rel="noopener">下載 Windows 測試版 ↗</a><a href="https://github.com/littleblackmann/awaken-ai-releases/blob/main/UPDATE.md" target="_blank" rel="noopener">已安裝？查看更新步驟 ↗</a></div>
+      <div class="release-links"><a data-awaken-download href="https://github.com/littleblackmann/awaken-ai-releases/releases/download/v0.3.2/AwakenAI-Setup-0.3.2-x64.exe">下載 Windows 安裝包（.exe）↓</a><a href="https://github.com/littleblackmann/awaken-ai-releases/releases/latest" target="_blank" rel="noopener">所有版本與更新紀錄 ↗</a><a href="https://github.com/littleblackmann/awaken-ai-releases/blob/main/UPDATE.md" target="_blank" rel="noopener">已安裝？查看更新步驟 ↗</a></div>
+      <p class="release-meta">公開測試版 <span data-awaken-version>0.3.2</span> · 約 <span data-awaken-size>290 MB</span> · Windows 10／11 x64 · 不需 GitHub 帳號</p>
       <div class="update-note">更新於 <time datetime="2026-10-17">2026.10.17</time> · 0.3.2／C145</div>
     </div>
-    <div class="cover-image"><img src="../images/projects/xiaobai-c140-home.jpg" width="1440" height="900" alt="C140 個人首頁：全息光球、個人事項、音樂與下一個提醒；隔離示範資料" fetchpriority="high"></div>
-    <p class="screen-note">介面示範截圖（C140）· 新版延續相同布局 · 隔離示範資料</p>
+    <div class="cover-image"><img src="../images/projects/xiaobai-c145-home.jpg" width="1440" height="1000" alt="C145 個人首頁：全息光球、個人事項、音樂與下一個提醒；示範資料" fetchpriority="high"></div>
+    <p class="screen-note">C145 實際介面 · 名字與生活紀錄使用示範資料</p>
 
     <div class="content-section">
       <h2 class="section-title">從家庭助理，走向一個人的專屬 AI</h2>
       <p>最早叫做「小白」，想做一個能用聲音喚醒的家庭助理。現在把入口重新整理成個人空間：不用挑家人或頭像，替 AI 取名字、告訴它怎麼稱呼你，再連接自己的 OpenRouter 帳號。</p>
       <p>保留原本的全息光球與日常工具。你可以說「三十分鐘後提醒我出門」、「記住我喜歡清淡一點」，或請它查資料、播放音樂。介面和喚醒詞會跟著你替助理取的名字改變。</p>
+    </div>
+
+    <div class="content-section" id="getting-started">
+      <h2 class="section-title">第一次使用，從這裡開始</h2>
+      <ol class="install-steps">
+        <li><strong>下載並安裝。</strong>開啟 Windows 安裝包，選擇安裝位置並閱讀隱私說明。Python 與必要語音套件已隨附；音樂播放器可以稍後準備。</li>
+        <li><strong>打造自己的助理。</strong>替 AI 取名字、設定它如何稱呼你，再輸入自己的 <a href="https://openrouter.ai/settings/keys" target="_blank" rel="noopener">OpenRouter API Key ↗</a>。雲端功能使用你帳號的額度，API 費用另計。</li>
+        <li><strong>開始說話。</strong>允許麥克風，用剛取的名字喚醒助理。聲紋、音樂帳號與進階偏好，都能之後在設定補上。</li>
+      </ol>
+      <p class="screen-note">首次喚醒模型與選用播放器需要另外下載。已安裝舊版時，先從系統匣結束助理與 Pear，再選原位置覆蓋安裝，既有資料會保留。</p>
+      <p><strong>之後怎麼更新？</strong>在「設定 → 系統與重設」檢查更新，保留勾選下載完成後自動重啟即可。</p>
+      <p><strong>需要解除安裝？</strong>到 Windows「設定 → 應用程式 → 已安裝的應用程式」找到 Awaken AI。一般解除安裝保留個人設定與音樂登入；要清除這些資料，先在助理完成「回到原廠狀態」。</p>
     </div>
 
     <div class="content-section">
@@ -463,15 +482,23 @@
     </div>
 
     <div class="content-section">
-      <h2 class="section-title">實際介面</h2>
-      <p>點圖片可放大。首頁與更新設定為 C140；首次設定與重設沿用 C131 圖片並標示版本。名字與資料皆為隔離示範，連線由測試替身提供，不含真實金鑰、音樂帳號或生活紀錄。</p>
+      <h2 class="section-title">從開啟到第一次對話</h2>
+      <p>點圖片可放大、左右切換。以下為 C145 示範畫面；啟動器使用介面繪圖預覽，其餘來自實際前端，沒有真實金鑰、音樂帳號或生活紀錄。</p>
       <div class="gallery">
-        <div class="gallery-item"><img src="../images/projects/xiaobai-c140-updates.jpg" width="1440" height="900" alt="C140 軟體更新設定，顯示私人通道尚未公開；示範資料" loading="lazy"><div class="gallery-caption">C140 · 為往後更新做準備</div></div>
-        <div class="gallery-item"><img src="../images/projects/xiaobai-c140-mobile-updates.jpg" width="390" height="844" alt="C140 手機版軟體更新與平板安全連線設定；示範資料" loading="lazy"><div class="gallery-caption">C140 · 手機版設定</div></div>
-        <div class="gallery-item"><img src="../images/projects/xiaobai-c131-welcome.jpg" width="1440" height="1050" alt="C131 全螢幕首次設定歡迎畫面與全息光球；示範資料" loading="lazy"><div class="gallery-caption">C131 · 第一次開啟</div></div>
-        <div class="gallery-item"><img src="../images/projects/xiaobai-c131-personal.jpg" width="1440" height="1050" alt="C131 設定第一頁整合重新個人化與個人資料；示範資料" loading="lazy"><div class="gallery-caption">個人化移進設定</div></div>
-        <div class="gallery-item"><img src="../images/projects/xiaobai-c131-reset.jpg" width="1440" height="1050" alt="C131 完整原廠重設，包含金鑰、音樂登入及清除範圍；示範畫面，未重設正式資料" loading="lazy"><div class="gallery-caption">完整重設與明確確認</div></div>
-        <div class="gallery-item"><img src="../images/projects/xiaobai-c131-mobile-reset.jpg" width="390" height="844" alt="C131 手機版七類設定與系統重設頁；示範畫面" loading="lazy"><div class="gallery-caption">手機版設定</div></div>
+        <div class="gallery-item"><img src="../images/projects/xiaobai-c145-launcher.jpg" width="1440" height="1120" alt="C145 啟動器 · 依階段顯示準備進度；共用繪圖器介面預覽" loading="lazy"><div class="gallery-caption">啟動器 · 依階段顯示準備進度</div></div>
+        <div class="gallery-item"><img src="../images/projects/xiaobai-c145-welcome.jpg" width="1440" height="1000" alt="C145 第一次開啟，從歡迎開始；示範資料，未使用真實帳號或金鑰" loading="lazy"><div class="gallery-caption">第一次開啟，從歡迎開始</div></div>
+        <div class="gallery-item"><img src="../images/projects/xiaobai-c145-name.jpg" width="1440" height="1000" alt="C145 替你的 AI 取一個名字；示範資料，未使用真實帳號或金鑰" loading="lazy"><div class="gallery-caption">替你的 AI 取一個名字</div></div>
+        <div class="gallery-item"><img src="../images/projects/xiaobai-c145-key.jpg" width="1440" height="1000" alt="C145 使用自己的 OpenRouter Key；示範資料，未使用真實帳號或金鑰" loading="lazy"><div class="gallery-caption">使用自己的 OpenRouter Key</div></div>
+      </div>
+      <h3 class="gallery-group-title">日常設定與更新</h3>
+      <div class="gallery">
+        <div class="gallery-item"><img src="../images/projects/xiaobai-c145-personal.jpg" width="1440" height="1000" alt="C145 稱呼、語氣與偏好，依你設定；示範資料，未使用真實帳號或金鑰" loading="lazy"><div class="gallery-caption">稱呼、語氣與偏好，依你設定</div></div>
+        <div class="gallery-item"><img src="../images/projects/xiaobai-c145-models.jpg" width="1440" height="1000" alt="C145 辨識、對話、發聲分開選模型；示範資料，未使用真實帳號或金鑰" loading="lazy"><div class="gallery-caption">辨識、對話、發聲分開選模型</div></div>
+        <div class="gallery-item"><img src="../images/projects/xiaobai-c145-music.jpg" width="1440" height="1000" alt="C145 登入自己的音樂帳號；示範資料，未使用真實帳號或金鑰" loading="lazy"><div class="gallery-caption">登入自己的音樂帳號</div></div>
+        <div class="gallery-item"><img src="../images/projects/xiaobai-c145-reminders.jpg" width="1440" height="1000" alt="C145 提醒幾次、間隔多久，自己決定；示範資料，未使用真實帳號或金鑰" loading="lazy"><div class="gallery-caption">提醒幾次、間隔多久，自己決定</div></div>
+        <div class="gallery-item"><img src="../images/projects/xiaobai-c145-updates.jpg" width="1440" height="1000" alt="C145 更新完成後，自動重新啟動；示範資料，未使用真實帳號或金鑰" loading="lazy"><div class="gallery-caption">更新完成後，自動重新啟動</div></div>
+        <div class="gallery-item"><img src="../images/projects/xiaobai-c145-mobile-updates.jpg" width="390" height="844" alt="C145 手機也能查看設定；示範資料，未使用真實帳號或金鑰" loading="lazy"><div class="gallery-caption">手機也能查看設定</div></div>
+        <div class="gallery-item"><img src="../images/projects/xiaobai-c145-reset.jpg" width="1440" height="1000" alt="C145 重新開始前，確認資料清除範圍；示範資料，未使用真實帳號或金鑰" loading="lazy"><div class="gallery-caption">重新開始前，確認資料清除範圍</div></div>
       </div>
     </div>
 
@@ -505,6 +532,7 @@
     <p>&copy; MMXXVI · Little Black · All rights reserved</p>
   </footer>
 
+  <script src="awaken-release.js?v=1"></script>
   <script src="../image-lightbox.js"></script>
   <script data-goatcounter="https://littleblack.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
