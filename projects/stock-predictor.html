@@ -399,11 +399,11 @@
         <span class="project-tag">OpenRouter</span>
         <span class="project-tag">PySide6</span>
       </div>
-      <a href="https://github.com/littleblackmann/stock-predictor/releases/download/v1.7.5/StockPredictor-v1.7.5.zip" class="download-btn" data-stock-download>
+      <a href="https://github.com/littleblackmann/stock-predictor/releases/download/v1.7.6/StockPredictor-v1.7.6.zip" class="download-btn" data-stock-download>
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
         免費下載 Windows 版
       </a>
-      <p class="download-note"><span data-stock-version>v1.7.5</span> · 完整 ZIP 約 <span data-stock-size>351 MB</span> · 發行 <span data-stock-date>2026/10/12</span><br>
+      <p class="download-note"><span data-stock-version>v1.7.6</span> · 完整 ZIP 約 <span data-stock-size>351 MB</span> · 發行 <span data-stock-date>2026/11/03</span><br>
         GitHub 直接下載，免註冊帳號。<a class="release-link" href="https://github.com/littleblackmann/stock-predictor/releases/latest" target="_blank" rel="noopener">版本紀錄與備用下載 →</a></p>
     </div>
 
@@ -445,6 +445,9 @@
 
     <div class="content-section">
       <h2 class="section-title">這次更新了什麼？</h2>
+      <p>v1.7.6 更新 <strong>OpenRouter 模型目錄與清單復原</strong>：內建清單更新為 359 個文字模型、14 個精選，加入 GPT-6.1 Terra、Claude Haiku 5.5、MiniMax M3.1 Flash。升級後會使用較新的模型清單，修復舊快取一直蓋住新目錄的問題；手動刷新較新時仍優先採用，原本選定的模型與 Key 保留。</p>
+      <p>有分時或長上下文分級的模型會顯示費用提示，實際費率依供應商計費。新選項依公開能力與價格評估，尚未進行付費品質或延遲測試；本次量化預測模型與判定門檻維持原設定。</p>
+      <p>新聞分析也相容新版搜尋次數回報；明確回報沒有執行搜尋時，不採用該次新聞回應，既有搜尋上限與 RSS 備援設定保留。</p>
       <p>v1.7.5 修復<strong>實際結果回填與觀望說明</strong>：分清五五波和驗證不足；新增「機率對照」，原有觀望分析也能在收盤後檢查偏向是否符合實際。舊版待回填紀錄恢復處理並備份，推定日期另有說明；尚未收盤、行情缺漏或取得失敗會分別顯示，方便重試。</p>
       <p>保留 v1.7.4 的 <strong>OpenRouter Perplexity 網路搜尋</strong>：不必另申請搜尋 Key，保留你原本選定的 AI 模型。設定可調整搜尋次數、資料量與 RSS 備援；分析畫面能點開資料來源，搜尋失敗也會說明原因。</p>
       <p>預設每次分析最多搜尋 1 次、每次最多 5 筆來源；30 分鐘內同股、同模型與同搜尋設定的成功結果可重用。仍可切換原本的 Brave Search 或 Google News RSS。搜尋有額外費用，詳見下方說明。</p>
@@ -461,7 +464,7 @@
         </div>
         <div class="feature-card">
           <div class="feature-card-title">AI 模型清單可以更新</div>
-          <div class="feature-card-desc">在設定搜尋模型名稱或廠商，一鍵更新 OpenRouter 清單與價格資訊。更新清單會保留你原本選用的模型。</div>
+          <div class="feature-card-desc">在設定搜尋名稱或廠商，一鍵更新清單與價格資訊。升級會比較內建與本機目錄的更新時間，清單異常時可回復有效資料；更新仍保留你選定的模型。</div>
         </div>
       </div>
     </div>
@@ -479,15 +482,15 @@
 
     <div class="content-section">
       <h2 class="section-title">系統畫面</h2>
-      <p class="section-note">下方分析面板更新為 v1.7.5：0050 資料截至 2026/10/08 收盤，於 2026/10/12 擷取，未啟用 AI 新聞。頁首主畫面保留 v1.7.0 範例，設定圖為 v1.7.4 的空白 Key 畫面。圖片可點擊放大；機率僅代表當次分析，不代表未來命中率。</p>
+      <p class="section-note">下方分析與設定圖更新為 v1.7.6，於 2026/11/03 擷取：0050 行情截至 11/02 收盤，未啟用 AI 新聞；設定使用空白 Key，展示更新日期與費用說明。頁首主畫面保留 v1.7.0 範例。圖片可點擊放大；機率僅代表當次分析，不代表未來命中率。</p>
       <div class="gallery">
         <div class="gallery-item detail-image">
-          <img src="../images/projects/stock-v175-horizons.png" width="680" height="1370" alt="v1.7.5 實際分析：1 日接近五五波，3／5 日模型偏多但驗證不足，列出觀望原因" loading="lazy">
-          <div class="gallery-caption">v1.7.5 分析面板 — 五五波、模型偏向與驗證不足分開說明；本次未啟用 AI 新聞分析。</div>
+          <img src="../images/projects/stock-v176-horizons.png" width="680" height="1370" alt="v1.7.6 實際分析：11/02 收盤資料、1／3／5 交易日目標及觀望原因" loading="lazy">
+          <div class="gallery-caption">v1.7.6 分析面板 — 目標日為 11/03、11/05、11/09，五五波與驗證不足分開說明；未啟用 AI 新聞分析。</div>
         </div>
         <div class="gallery-item detail-image">
-          <img src="../images/projects/stock-v174-settings.png" width="680" height="740" alt="v1.7.4 設定：Perplexity 共用 OpenRouter Key，搜尋次數、資料量、RSS 備援與 AI 模型選擇" loading="lazy">
-          <div class="gallery-caption">v1.7.4 新聞搜尋設定 — Perplexity、Brave、RSS 可選，搜尋上限與參考費用清楚顯示；原模型選擇保留。</div>
+          <img src="../images/projects/stock-v176-models.png" width="680" height="740" alt="v1.7.6 設定：11/03 模型目錄、分級費用提示及 Perplexity 搜尋選項，空白 API Key" loading="lazy">
+          <div class="gallery-caption">v1.7.6 模型與搜尋設定 — 顯示最新目錄日期、分級費率提示；保留原模型選擇、搜尋上限與 RSS 備援。</div>
         </div>
       </div>
     </div>
@@ -519,11 +522,11 @@
     </div>
 
     <div style="text-align:center; margin-bottom: 2rem;">
-      <a href="https://github.com/littleblackmann/stock-predictor/releases/download/v1.7.5/StockPredictor-v1.7.5.zip" class="download-btn" data-stock-download>
+      <a href="https://github.com/littleblackmann/stock-predictor/releases/download/v1.7.6/StockPredictor-v1.7.6.zip" class="download-btn" data-stock-download>
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
         免費下載 Windows 版
       </a>
-      <p class="download-note"><span data-stock-version>v1.7.5</span> · Windows 10／11 · 完整 ZIP 約 <span data-stock-size>351 MB</span><br>
+      <p class="download-note"><span data-stock-version>v1.7.6</span> · Windows 10／11 · 完整 ZIP 約 <span data-stock-size>351 MB</span><br>
         <a class="release-link" href="https://github.com/littleblackmann/stock-predictor/releases/latest" target="_blank" rel="noopener">版本紀錄與備用下載 →</a></p>
     </div>
 

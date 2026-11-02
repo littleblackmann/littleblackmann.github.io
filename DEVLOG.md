@@ -755,3 +755,13 @@ littleblackmann.github.io-main/
 - 本機八頁各測 320／375／768／1280px，共32組：無橫向溢出、文字無截斷、支持連結皆44px、圖片載入且使用cover。支持區塊實測約156–179px；紫微375px由約306px縮到171px，首頁375px由約543px縮到171px。鍵盤可聚焦支持連結並顯示2px外框。
 - 八頁共119筆本機引用通過。逐頁比對修改前後，支持區塊以外的body內容、全部原href、作品圖片、SEO metadata、內嵌腳本與追蹤碼均保留；Release讀取腳本、lightbox、projects.json與首頁產生器未變。node scripts/build-home.mjs --check 通過；本次更新sitemap實際修改日期，不需要變更作品清單。
 - 驗證程式、量測與畫面存於repo外 E:\小黑的網頁\bento-verification-20261014；不公開付款或私人帳號測試資料，未實際送出付款。沿用main根目錄Pages發布，正式部署與公開內容於推送後另行核對。
+
+---
+
+## 2026-11-03（台股預測 v1.7.6 每月維護）
+
+- 台股預測正式 Release v1.7.6 已發布，下載備援更新為完整 ZIP；保留既有動態 latest 驗證、GitHub 發行頁備援、SEO、其他作品及共用頁尾。
+- 專案頁新增 359 個文字模型／14 精選的公開目錄更新、Terra／Haiku 5.5／MiniMax M3.1 Flash 選項、分時／長上下文分級費用提示。說明舊快取遮蔽新清單的修復、原模型選擇及 Key 保留，以及新版搜尋次數回報的相容處理。
+- 分析與設定圖更新為 v1.7.6：0050 行情至 11/02，1／3／5 交易日目標 11/03、11/05、11/09；設定為空白 Key，沒有付費 AI 呼叫。頁首 v1.7.0 主畫面範例保留並標示日期，未宣稱勝率或新模型品質提升。
+- 本機 Chrome 六種寬度 320／375／520／768／1280／1440 通過，無溢出、壞圖或 JS 錯誤，縮圖比例、兩處下載與 lightbox／Escape 正常。既有 lazy 頁尾圖也完成載入核對，未安裝新的瀏覽器。
+- 修改在 E:\小黑的網頁\littleblackmann.github.io-main 既有 checkout 進行，原始 HEAD 與 origin/main 均 4c051fba084f4a999dca7098f4ac2b2d824bf88f，原工作樹乾淨。正式 Pages 與 E 槽最終 commit 驗收紀錄見軟體專案 DEVLOG/2026-11-03-monthly-maintenance.md。
