@@ -4,24 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>小黑的永恆插件管理器｜休閒個人專案</title>
-  <meta name="description" content="為《魔獸世界：永恆》準備的 Windows 插件管理器：選擇遊戲資料夾，一鍵安裝與更新整合插件，支援繁中與線上更新。">
+  <meta name="description" content="小黑的永恆插件管理器：Windows 繁中工具，可選遊戲路徑、安裝與更新 Questie、AtlasLoot、DBM 等整合插件。附實際操作截圖、完整安裝步驟與兩種更新的說明。">
   <link rel="canonical" href="https://littleblackmann.github.io/projects/forever-addon-manager.html">
   <meta property="og:title" content="小黑的永恆插件管理器｜休閒個人專案">
-  <meta property="og:description" content="為《魔獸世界：永恆》準備的 Windows 插件管理器，一鍵安裝與更新整合插件。">
+  <meta property="og:description" content="方便整理與更新《魔獸世界：永恆》插件的個人小工具。整合插件由各原作者開發，附實際畫面與完整使用說明。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://littleblackmann.github.io/projects/forever-addon-manager.html">
-  <meta property="og:image" content="https://littleblackmann.github.io/images/og-image.png">
+  <meta property="og:image" content="https://littleblackmann.github.io/images/projects/forever-manager-v110-home.png">
+  <meta property="og:image:alt" content="永恆插件管理器 v1.1.0 實際主畫面">
   <meta property="og:site_name" content="小黑 Little Black">
   <meta property="og:locale" content="zh_TW">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="小黑的永恆插件管理器｜休閒個人專案">
-  <meta name="twitter:description" content="為《魔獸世界：永恆》準備的 Windows 插件管理器，一鍵安裝與更新整合插件。">
-  <meta name="twitter:image" content="https://littleblackmann.github.io/images/og-image.png">
+  <meta name="twitter:description" content="方便整理與更新《魔獸世界：永恆》插件的個人小工具。整合插件由各原作者開發，附實際畫面與完整使用說明。">
+  <meta name="twitter:image" content="https://littleblackmann.github.io/images/projects/forever-manager-v110-home.png">
   <link rel="shortcut icon" href="../images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../bento-support.css?v=20261014">
+  <link rel="stylesheet" href="../image-lightbox.css">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4N8JT4VXM"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-G4N8JT4VXM');</script>
   <style>
@@ -31,9 +33,12 @@
     .back{position:fixed;top:1.2rem;left:1.5rem;z-index:100;display:inline-flex;align-items:center;gap:.55rem;padding:.4rem 1rem;background:rgba(15,14,12,.85);border:1px solid var(--line);backdrop-filter:blur(12px);color:var(--muted);font-size:.72rem;letter-spacing:.08em;text-decoration:none}.back:hover{color:var(--gold);border-color:var(--gold)}
     main{max-width:800px;margin:auto;padding:4rem 2rem 3rem}header{text-align:center}.eyebrow{color:var(--gold);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
     main h1,main h2,main h3{font-family:'Noto Serif TC',serif;font-weight:400;line-height:1.4}main h1{font-size:clamp(2.25rem,5vw,3rem);letter-spacing:3px;margin:.8rem 0 1rem}main h2{font-size:1.5rem;letter-spacing:2px;margin:0 0 1.2rem;padding-bottom:.5rem;border-bottom:1px solid var(--line)}main h3{color:var(--gold);font-size:1rem;margin:0 0 .45rem}
-    .intro{color:var(--muted);max-width:520px;margin:0 auto;font-size:.95rem;line-height:1.9}.tags{display:flex;justify-content:center;flex-wrap:wrap;gap:.5rem;margin:1.4rem 0 1.5rem}.tag{border:1px solid var(--line);border-radius:999px;color:var(--muted);padding:.25rem .65rem;font-size:.7rem;letter-spacing:.04em}
+    .intro{color:var(--muted);max-width:520px;margin:0 auto;font-size:.95rem;line-height:1.9}.authorship{max-width:600px;margin:1.3rem auto 0;color:#d1c3af;font-size:.84rem;line-height:1.95;padding:1rem 1.1rem;border:1px solid var(--line);background:#15130f}.authorship strong{color:var(--gold);font-weight:500}.tags{display:flex;justify-content:center;flex-wrap:wrap;gap:.5rem;margin:1.4rem 0 1.5rem}.tag{border:1px solid var(--line);border-radius:999px;color:var(--muted);padding:.25rem .65rem;font-size:.7rem;letter-spacing:.04em}
     .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.7rem 2rem;background:transparent;border:1px solid #b8956a;color:var(--gold);font-family:'Noto Serif TC',serif;text-decoration:none;transition:background .2s,color .2s}.button:hover{background:#b8956a;color:#0f0e0c}
     .download-note,.caption{font-size:.78rem;color:var(--muted);margin:.65rem 0 0}.hero{margin:2.7rem 0 0}.hero img{display:block;width:100%;height:auto;border:1px solid var(--line)}.caption{text-align:right}
+    .gallery-item{margin:1.5rem 0 0;border:1px solid var(--line);background:var(--card)}.gallery-item img{display:block;width:100%;height:auto;object-fit:contain}.gallery-caption{margin:0;padding:.9rem 1rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);line-height:1.8}
+    .info-table{width:100%;border-collapse:collapse;font-size:.86rem;line-height:1.9}.info-table th,.info-table td{text-align:left;vertical-align:top;padding:.9rem .75rem;border-bottom:1px solid var(--line);overflow-wrap:anywhere}.info-table th{font-weight:500;color:var(--gold)}.info-table th[scope="row"]{width:30%}.info-table td{color:#c6bcad}.info-table code{font-size:.95em}.info-table thead{background:var(--card)}
+    .points{padding-left:1.25rem;color:#c6bcad;line-height:2}.points li{margin:.65rem 0}.points strong{color:var(--gold);font-weight:500}.faq{padding:1.1rem 0;border-bottom:1px solid var(--line)}.faq summary{cursor:pointer;color:var(--gold);font-size:.95rem;min-height:36px}.faq p{color:var(--muted);font-size:.86rem;line-height:1.95;margin:.8rem 0 .2rem}
     section{margin-top:4rem}.section-label{display:block;color:#9d876a;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:.7rem}.lead{color:#c6bcad;line-height:2;max-width:730px}
     .features{display:grid;grid-template-columns:1fr;gap:1rem}.feature{background:linear-gradient(180deg,#15130f,var(--bg));border:1px solid var(--line);padding:1.2rem 1.5rem}.feature p{color:var(--muted);font-size:.86rem;margin:0;line-height:1.9}
     .steps{list-style:none;padding:0;margin:0;counter-reset:step}.steps li{counter-increment:step;display:grid;grid-template-columns:2.2rem 1fr;gap:.5rem;padding:1rem 0;border-bottom:1px solid var(--line);color:#cec5b7}.steps li::before{content:'0' counter(step);font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1.2rem}
@@ -49,40 +54,104 @@
     <header>
       <span class="eyebrow">A little project for adventures</span>
       <h1>小黑的永恆插件管理器</h1>
-      <p class="intro">平常和朋友玩《魔獸世界：永恆》時，整理插件做的小工具。選好遊戲資料夾，就能安裝整合清單裡的插件，之後也能一起檢查更新。</p>
+      <p class="intro">平常和朋友玩《魔獸世界：永恆》時做的 Windows 小工具。從選擇遊戲位置、安裝任務與副本插件，到之後的版本更新和繁中整理，放在同一個視窗裡處理。</p>
+      <p class="authorship"><strong>這是一個方便整理、安裝與更新插件的個人整合工具。</strong><br>清單中的 Questie、AtlasLoot、DBM 等插件皆由各原作者開發，並不是我製作的插件；我主要整理安裝更新流程、整合清單與部分繁中內容。</p>
       <div class="tags"><span class="tag">休閒個人專案</span><span class="tag">Windows</span><span class="tag">繁體中文</span></div>
       <a class="button" data-forever-download href="https://github.com/littleblackmann/wow-forever-addon-updater/releases/latest" target="_blank" rel="noopener noreferrer">下載 Windows 版　↓</a>
       <p class="download-note"><span data-forever-version>最新版本</span> · <span data-forever-size>ZIP</span> · 不需另外安裝 Python 或 Git<br>若未直接開始下載，會開啟 GitHub 發行頁。</p>
-      <figure class="hero"><img src="../images/projects/forever-addon-cover.svg" alt="以深色視窗呈現插件管理流程的概念插畫" width="1200" height="800"><figcaption class="caption">為冒險準備的一個小工具 · 插畫示意</figcaption></figure>
+      <figure class="hero cover-image"><img src="../images/projects/forever-manager-v110-home.png" alt="管理器 v1.1.0 實際主畫面，顯示遊戲位置、插件目的地與兩種更新按鈕" width="1042" height="772"><figcaption class="caption">v1.1.0 實際主畫面 · 點圖可放大</figcaption></figure>
     </header>
 
     <section>
       <span class="section-label">A small convenience</span>
       <h2>把整理插件的時間留給遊戲</h2>
-      <p class="lead">原本是想讓自己和朋友不用一個一個找插件、確認版本，於是做了這個簡單的管理器。它會從插件作者的發布來源取得檔案，也會同步小黑整理的繁中和遊戲內總入口。</p>
+      <p class="lead">原本只是想讓自己和朋友少花一點時間找插件、核對版本和整理中文，所以做了這個休閒專案。沒有裝過插件的電腦，可以從整合清單開始安裝；已經有插件的電腦，也能檢查版本並保留可合併的本機修改。</p>
       <div class="features">
-        <div class="feature"><h3>安裝與更新遊戲插件</h3><p>檢查所選《永恆》資料夾內的插件，更新已有項目，也會補裝整合清單裡缺少的插件。</p></div>
-        <div class="feature"><h3>兩種更新分開</h3><p>「一鍵更新遊戲插件」處理遊戲插件；「更新管理器介面（UI）」則是在工具本身有新版時使用。</p></div>
-        <div class="feature"><h3>整合清單與繁中</h3><p>任務助手 Questie、副本掉落 AtlasLoot、仇恨監控、DBM、地圖與路線等，方便一次整理。</p></div>
-        <div class="feature"><h3>保留可合併的修改</h3><p>更新時比對原版與本機差異；如果無法安全合併，會顯示原因並保留現況。</p></div>
+        <div class="feature"><h3>自己選遊戲位置</h3><p>不用跟小黑放在同一個磁碟。選擇自己的《永恆》遊戲資料夾，管理器會記住位置，並顯示插件將安裝到哪裡。</p></div>
+        <div class="feature"><h3>缺少的安裝，已有的更新</h3><p>從插件作者的正式發布來源取得適用版本，檢查 ZIP、版本與必要依賴。清單內缺少的插件或模組會補裝，已有的則檢查更新。</p></div>
+        <div class="feature"><h3>繁中與遊戲內總入口</h3><p>整理既有繁中修改，包括 AtlasLoot 的永恆地城、團隊和首領名稱。另附小黑插件總入口，方便在遊戲裡開啟已安裝插件的設定；資料庫類插件會註明沒有獨立設定視窗。</p></div>
+        <div class="feature"><h3>整合內容可以線上同步</h3><p>之後有新增的整合插件、翻譯或總入口調整，可透過 GitHub 發布。朋友按更新時就能取得新清單，不用每次重新傳一整包。</p></div>
+        <div class="feature"><h3>保留能合併的個人修改</h3><p>以原版、目前檔案和新版內容比對，不直接覆蓋所有本機差異。遇到衝突或驗證失敗會保留現況，並在結果欄顯示原因。</p></div>
       </div>
     </section>
 
     <section>
+      <span class="section-label">Actual app screens</span>
+      <h2>實際操作畫面</h2>
+      <p class="lead">主畫面可以直接看到遊戲路徑、插件安裝位置和兩種更新。先按「只檢查」，就能比對本機與發布版本，再決定何時關閉遊戲進行更新。</p>
+      <figure class="gallery-item"><img src="../images/projects/forever-manager-v110-check.png" alt="按只檢查後的實際結果，列出本機與發布版本以及可更新或可同步整合的項目" width="1042" height="772" loading="lazy" decoding="async"><figcaption class="gallery-caption">只檢查的實際結果：列出插件名稱、本機版本、發布版本與處理狀態。這張畫面尚未執行安裝或更新；遊戲路徑與插件版本依你的電腦而定。點圖可放大。</figcaption></figure>
+    </section>
+
+    <section>
+      <span class="section-label">Two different updates</span>
+      <h2>這幾個按鈕有什麼不同？</h2>
+      <table class="info-table"><thead><tr><th scope="col">按鈕</th><th scope="col">用途</th></tr></thead><tbody>
+        <tr><th scope="row">只檢查</th><td>同步整合清單並查詢版本，列出可安裝、可更新或需要處理的項目。遊戲開著時也能先檢查。</td></tr>
+        <tr><th scope="row">一鍵更新遊戲插件</th><td>更新所選《永恆》<code>AddOns</code> 裡的插件，也會補裝整合清單中缺少的項目。執行前必須完全退出遊戲。</td></tr>
+        <tr><th scope="row">更新管理器介面（UI）</th><td>更新這個 Windows 管理器程式本身，有新版時才會亮起。下載驗證後會更換程式並重新開啟，保留已選的遊戲位置。</td></tr>
+        <tr><th scope="row">查看保留檔案</th><td>開啟保留檔案的位置。若舊版無法送到資源回收筒，結果欄會告訴你檔案留在哪裡。</td></tr>
+      </tbody></table>
+    </section>
+
+    <section>
+      <span class="section-label">The addon collection</span>
+      <h2>整合哪些遊戲插件？</h2>
+      <p class="lead">目前的整合清單涵蓋任務、導航、地圖、戰鬥與日常介面。以下是主要用途；實際可安裝的版本會依《永恆》客戶端和作者發布狀態判斷。</p>
+      <table class="info-table"><thead><tr><th scope="col">用途</th><th scope="col">主要插件</th></tr></thead><tbody>
+        <tr><th scope="row">任務與路線</th><td><a href="https://www.curseforge.com/wow/addons/questie" target="_blank" rel="noopener noreferrer">Questie</a> 任務助手、<a href="https://www.curseforge.com/wow/addons/shortest-path-forever" target="_blank" rel="noopener noreferrer">Shortest Path Forever</a> 最短路線，以及所需的 <a href="https://www.curseforge.com/wow/addons/questiedb" target="_blank" rel="noopener noreferrer">QuestieDB</a>／ForeverCore。QuestieDB 是地點資料庫，沒有獨立設定視窗。</td></tr>
+        <tr><th scope="row">副本與戰鬥</th><td><a href="https://www.curseforge.com/wow/addons/atlasloot-forever" target="_blank" rel="noopener noreferrer">AtlasLoot</a> 副本掉落查詢、<a href="https://www.curseforge.com/wow/addons/threatclassic2" target="_blank" rel="noopener noreferrer">ThreatClassic2</a> 仇恨監控，以及 <a href="https://github.com/DeadlyBossMods" target="_blank" rel="noopener noreferrer">DBM</a> 核心、五人副本、團隊與世界首領模組。</td></tr>
+        <tr><th scope="row">地圖與區域</th><td><a href="https://www.curseforge.com/wow/addons/leatrix-maps" target="_blank" rel="noopener noreferrer">Leatrix Maps</a> 地圖調整、<a href="https://www.curseforge.com/wow/addons/zone-info-forever" target="_blank" rel="noopener noreferrer">Zone Info Forever</a> 區域資訊。</td></tr>
+        <tr><th scope="row">互動與拾取</th><td><a href="https://www.curseforge.com/wow/addons/lueur" target="_blank" rel="noopener noreferrer">Lueur</a> 互動物件發光、<a href="https://www.curseforge.com/wow/addons/forever-loot-sparkles" target="_blank" rel="noopener noreferrer">Forever Loot Sparkles</a> 任務戰利品閃光。</td></tr>
+        <tr><th scope="row">介面與日常</th><td><a href="https://www.curseforge.com/wow/addons/betterblizzframes" target="_blank" rel="noopener noreferrer">BetterBlizzFrames</a>、<a href="https://www.curseforge.com/wow/addons/minimap-button-drawer" target="_blank" rel="noopener noreferrer">Minimap Button Drawer</a> 小地圖按鈕收納，以及 <a href="https://www.curseforge.com/wow/addons/project-1701676" target="_blank" rel="noopener noreferrer">WhatsTraining</a> 技能學習清單。</td></tr>
+      </tbody></table>
+      <p class="download-note">一鍵更新處理的是這份整合清單；其他自行安裝、尚未設定可信來源的插件，會列出並略過。</p>
+      <p class="download-note">上方插件名稱連結可前往各原始專案。插件的功能、原始程式與相關授權歸各原作者；這個頁面介紹的是整理與更新工具。</p>
+    </section>
+
+    <section>
       <span class="section-label">Getting started</span>
-      <h2>怎麼開始？</h2>
+      <h2>第一次使用，照這幾步開始</h2>
       <ol class="steps">
-        <li><span>下載 ZIP，解壓縮到桌面等可寫入的資料夾，開啟管理器。</span></li>
-        <li><span>選擇裡面有 <code>_forever_</code> 的 <code>World of Warcraft</code> 資料夾。畫面會顯示插件要安裝的位置。</span></li>
-        <li><span>完全關閉遊戲，再按「一鍵更新遊戲插件」，等檢查與安裝完成後重新開啟遊戲。</span></li>
+        <li><span>從本頁下載 Windows ZIP，完整解壓縮到桌面等可寫入的位置。更新器本身不用放進遊戲的 <code>AddOns</code>。</span></li>
+        <li><span>開啟「永恆插件更新器.exe」，按「選擇資料夾」，選擇裡面有 <code>_forever_</code> 的 <code>World of Warcraft</code> 資料夾。</span></li>
+        <li><span>核對「插件自動裝到」的路徑是否屬於你正在玩的那套遊戲。也可選 <code>_forever_</code>、<code>Interface</code> 或 <code>AddOns</code>，管理器會判斷對應位置。</span></li>
+        <li><span>先按「只檢查」查看版本。準備安裝或更新時，完全退出《魔獸世界》，再按「一鍵更新遊戲插件」。</span></li>
+        <li><span>等處理完成，查看結果欄與「需查看」數量；如有衝突、下載失敗或缺少依賴，先依顯示的原因處理。</span></li>
+        <li><span>重新啟動遊戲載入插件。之後把管理器留在原位置，更新時直接再開啟即可。</span></li>
       </ol>
       <p class="note">插件會自動放到 <code>World of Warcraft\_forever_\Interface\AddOns</code>。更新器會保留原版 ZIP 供下次比對；請保留解壓後的管理器資料夾。</p>
     </section>
 
     <section>
+      <span class="section-label">When updating</span>
+      <h2>更新時，怎麼保留原本的東西？</h2>
+      <ul class="points">
+        <li><strong>先核對再安裝：</strong>檢查客戶端版本、插件版本、壓縮檔路徑、載入檔和必要依賴，避免把不適用的版本裝進去。</li>
+        <li><strong>有衝突先保留現況：</strong>無法合併的本機修改不會硬蓋過去，會留在結果欄讓你查看；這不代表所有改動都能自動合併。</li>
+        <li><strong>成功後整理當次舊檔：</strong>新版寫入並驗證後，當次舊插件和舊原版 ZIP 會送到資源回收筒；如果回收失敗，就保留並顯示路徑。</li>
+        <li><strong>保存下次比對的資料：</strong>請保留管理器旁的 <code>settings.json</code>、<code>baselines</code>／<code>clients</code> 和 <code>online</code> 資料夾，它們保存選定位置、原版與舊翻譯。</li>
+      </ul>
+    </section>
+
+    <section>
+      <span class="section-label">Common questions</span>
+      <h2>幾個常見問題</h2>
+      <details class="faq"><summary>朋友完全沒有裝過插件，也可以用嗎？</summary><p>可以。選好自己的《永恆》遊戲資料夾後，一鍵更新會安裝整合清單中缺少的插件，並處理清單內的必要模組；不用先複製小黑整個遊戲資料夾。</p></details>
+      <details class="faq"><summary>本機和發布版本相同，為什麼還有「可同步整合／補齊模組」？</summary><p>這個狀態不只比較插件版號，也可能代表整合翻譯、總入口、必要模組或更新基準需要同步。它和作者發布新插件版本的「可更新」是不同情況。</p></details>
+      <details class="faq"><summary>更新管理器，要重新選遊戲位置嗎？</summary><p>正常的內建介面更新會保留原位置和設定。若是從更早、沒有線上更新的離線版開始，需手動換成本版一次，之後才能使用內建介面更新。</p></details>
+      <details class="faq"><summary>沒有網路還能用嗎？</summary><p>GitHub 連不上時，管理器會沿用上次成功下載且驗證通過的整合清單；第一次離線則使用內附清單。不過插件查版和下載仍需網路。</p></details>
+    </section>
+
+    <section>
       <span class="section-label">Before you download</span>
       <h2>使用前知道的事</h2>
-      <p class="lead">適用 Windows 10／11 64 位元及《魔獸世界：永恆》。查詢和下載需要網路；遊戲開啟時可先檢查，安裝或更新插件前請完全退出遊戲。</p>
+      <table class="info-table"><tbody>
+        <tr><th scope="row">作業系統</th><td>Windows 10／11，64 位元。</td></tr>
+        <tr><th scope="row">遊戲</th><td>《魔獸世界：永恆》，管理器會依本機客戶端判斷適用版本。</td></tr>
+        <tr><th scope="row">安裝方式</th><td>完整解壓 ZIP 即可開啟，不需另外安裝 Python 或 Git。</td></tr>
+        <tr><th scope="row">下載與空間</th><td>管理器 ZIP <span data-forever-size>約 14 MB</span>，遊戲插件會另外從作者來源下載；請另留插件、原版 ZIP 和更新暫存所需空間。</td></tr>
+        <tr><th scope="row">網路與遊戲狀態</th><td>查版與下載需要網路。遊戲開著時可先檢查，安裝或更新插件前請完全退出遊戲。</td></tr>
+      </tbody></table>
       <p class="lead">這是自己和朋友使用的休閒個人專案，並非《魔獸世界》官方工具。遊戲版本和插件作者的更新可能影響相容性，遇到需要處理的項目時，管理器會顯示原因。</p>
       <div class="links"><a class="button" data-forever-download href="https://github.com/littleblackmann/wow-forever-addon-updater/releases/latest" target="_blank" rel="noopener noreferrer">下載 Windows 版　↓</a><a class="secondary" href="https://github.com/littleblackmann/wow-forever-addon-updater" target="_blank" rel="noopener noreferrer">查看 GitHub 專案 →</a></div>
     </section>
@@ -92,6 +161,7 @@
     <div class="bento-support__body"><h2 class="bento-support__title" id="bento-support-title">請小黑吃雞腿便當</h2><p class="bento-support__text">如果這個作品剛好幫上忙，也歡迎請小黑吃個雞腿便當。</p><a class="bento-support__link" href="https://payment.opay.tw/Broadcaster/Donate/7341A28F6CDE05A1A6646A7B26DF4CD8" target="_blank" rel="noopener">請一份便當 <span aria-hidden="true">→</span></a></div>
   </aside>
   <footer>© MMXXVI · LITTLE BLACK</footer>
+  <script src="../image-lightbox.js"></script>
   <script src="forever-addon-release.js"></script>
   <script data-goatcounter="https://littleblack.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
