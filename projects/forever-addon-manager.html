@@ -36,7 +36,7 @@
     .intro{color:var(--muted);max-width:520px;margin:0 auto;font-size:.95rem;line-height:1.9}.authorship{max-width:600px;margin:1.3rem auto 0;color:#d1c3af;font-size:.84rem;line-height:1.95;padding:1rem 1.1rem;border:1px solid var(--line);background:#15130f}.authorship strong{color:var(--gold);font-weight:500}.tags{display:flex;justify-content:center;flex-wrap:wrap;gap:.5rem;margin:1.4rem 0 1.5rem}.tag{border:1px solid var(--line);border-radius:999px;color:var(--muted);padding:.25rem .65rem;font-size:.7rem;letter-spacing:.04em}
     .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.7rem 2rem;background:transparent;border:1px solid #b8956a;color:var(--gold);font-family:'Noto Serif TC',serif;text-decoration:none;transition:background .2s,color .2s}.button:hover{background:#b8956a;color:#0f0e0c}
     .download-note,.caption{font-size:.78rem;color:var(--muted);margin:.65rem 0 0}.hero{margin:2.7rem 0 0}.hero img{display:block;width:100%;height:auto;border:1px solid var(--line)}.caption{text-align:right}
-    .gallery-item{margin:1.5rem 0 0;border:1px solid var(--line);background:var(--card)}.gallery-item img{display:block;width:100%;height:auto;object-fit:contain}.gallery-caption{margin:0;padding:.9rem 1rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);line-height:1.8}
+    .gallery-item{margin:1.5rem 0 0;border:1px solid var(--line);background:var(--card)}.gallery-item img{display:block;width:100%;height:auto;object-fit:contain}.gallery-item img.dialog-shot{max-width:600px;margin-inline:auto}.gallery-caption{margin:0;padding:.9rem 1rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);line-height:1.8}
     .info-table{width:100%;border-collapse:collapse;font-size:.86rem;line-height:1.9}.info-table th,.info-table td{text-align:left;vertical-align:top;padding:.9rem .75rem;border-bottom:1px solid var(--line);overflow-wrap:anywhere}.info-table th{font-weight:500;color:var(--gold)}.info-table th[scope="row"]{width:30%}.info-table td{color:#c6bcad}.info-table code{font-size:.95em}.info-table thead{background:var(--card)}
     .points{padding-left:1.25rem;color:#c6bcad;line-height:2}.points li{margin:.65rem 0}.points strong{color:var(--gold);font-weight:500}.faq{padding:1.1rem 0;border-bottom:1px solid var(--line)}.faq summary{cursor:pointer;color:var(--gold);font-size:.95rem;min-height:36px}.faq p{color:var(--muted);font-size:.86rem;line-height:1.95;margin:.8rem 0 .2rem}
     section{margin-top:4rem}.section-label{display:block;color:#9d876a;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:.7rem}.lead{color:#c6bcad;line-height:2;max-width:730px}
@@ -54,7 +54,7 @@
     <header>
       <span class="eyebrow">A little project for adventures</span>
       <h1>小黑的永恆插件管理器</h1>
-      <p class="intro">平常和朋友玩《魔獸世界：永恆》時做的 Windows 小工具。從選擇遊戲位置、安裝任務與副本插件，到之後的版本更新和繁中整理，放在同一個視窗裡處理。</p>
+      <p class="intro">平常和朋友玩《魔獸世界：永恆》時做的 Windows 小工具。黑灰石紋、金屬框與金色標題，搭配清楚的遊戲路徑和插件清單，從安裝、更新到繁中整理，都在同一個視窗裡處理。</p>
       <p class="authorship"><strong>這是一個方便整理、安裝與更新插件的個人整合工具。</strong><br>清單中的 Questie、AtlasLoot、DBM 等插件皆由各原作者製作，並非本人開發；我僅整理成方便下載、安裝與更新的懶人包，並提供部分繁中內容。</p>
       <div class="tags"><span class="tag">休閒個人專案</span><span class="tag">Windows</span><span class="tag">繁體中文</span></div>
       <a class="button" data-forever-download href="https://github.com/littleblackmann/wow-forever-addon-updater/releases/latest" target="_blank" rel="noopener noreferrer">下載 Windows 版　↓</a>
@@ -67,6 +67,7 @@
       <h2>把整理插件的時間留給遊戲</h2>
       <p class="lead">原本只是想讓自己和朋友少花一點時間找插件、核對版本和整理中文，所以做了這個休閒專案。沒有裝過插件的電腦，可以從整合清單開始安裝；已經有插件的電腦，也能檢查版本並保留可合併的本機修改。</p>
       <div class="features">
+        <div class="feature"><h3>熟悉的魔獸風格介面</h3><p>石紋背景、金屬視窗框和暗紅更新按鈕，搭配對齊的版本欄位。可拖曳標題列、調整大小或最大化；需要操作指引時，直接開啟「安裝說明」。</p></div>
         <div class="feature"><h3>自己選遊戲位置</h3><p>不用跟小黑放在同一個磁碟。選擇自己的《永恆》遊戲資料夾，管理器會記住位置，並顯示插件將安裝到哪裡。</p></div>
         <div class="feature"><h3>缺少的安裝，已有的更新</h3><p>選好遊戲位置後，一次處理清單內插件。缺少的會自動下載安裝，已安裝的則檢查更新，不用逐個找下載點。</p></div>
         <div class="feature"><h3>繁中與遊戲內總入口</h3><p>整理既有繁中修改，包括 AtlasLoot 的永恆地城、團隊和首領名稱。另附小黑插件總入口，方便在遊戲裡開啟已安裝插件的設定；資料庫類插件會註明沒有獨立設定視窗。</p></div>
@@ -79,8 +80,8 @@
       <span class="section-label">Actual app screens</span>
       <h2>實際操作畫面</h2>
       <p class="lead">主畫面可以直接看到遊戲路徑、插件安裝位置和兩種更新。先按「只檢查」，就能比對本機與發布版本，再決定何時關閉遊戲進行更新。</p>
-      <figure class="gallery-item"><img src="../images/projects/forever-manager-v113-home.jpg" alt="管理器操作示例，顯示遊戲位置、插件目的地與兩種更新按鈕" width="1042" height="772" loading="lazy" decoding="async"><figcaption class="gallery-caption">主畫面示例：選擇遊戲位置、查看插件安裝路徑，再選擇只檢查或開始更新。新版右上角另有作者說明及本網頁連結。點圖可放大。</figcaption></figure>
-      <figure class="gallery-item"><img src="../images/projects/forever-manager-v113-check.jpg" alt="管理器實際版本檢查結果，列出已安裝版本、發布版本與處理狀態" width="1046" height="1046" loading="lazy" decoding="async"><figcaption class="gallery-caption">版本檢查：一眼查看哪些插件已是最新、哪些可以更新；雙擊需要處理的項目，可看完整原因。實際版本依你的電腦與作者發布狀態而定。點圖可放大。</figcaption></figure>
+      <figure class="gallery-item"><img src="../images/projects/forever-manager-v121-main.jpg" alt="v1.2.1 魔獸風格管理器實際畫面：石紋金屬介面、遊戲位置與插件版本檢查" width="1443" height="1260" loading="lazy" decoding="async"><figcaption class="gallery-caption">v1.2.1 實際畫面：確認遊戲路徑後，按「只檢查」查看本機版本、發布版本和可更新項目。兩種更新按鈕各自處理遊戲插件與管理器介面；雙擊插件列可看完整結果。版本依你的電腦與作者發布狀態而定。點圖可放大。</figcaption></figure>
+      <figure class="gallery-item"><img class="dialog-shot" src="../images/projects/forever-manager-v121-disclaimer.jpg" alt="v1.2.1 免責聲明小視窗，說明插件原作者及非官方整合工具，內含小黑的網站入口" width="600" height="350" loading="lazy" decoding="async"><figcaption class="gallery-caption">右上角「免責聲明」會開啟簡短說明：插件皆由各原作者製作，小黑僅整理成方便安裝與更新的非官方懶人包。網站入口也收在這裡，主畫面保持簡潔。點圖可放大。</figcaption></figure>
     </section>
 
     <section>
@@ -165,7 +166,7 @@
   </aside>
   <footer>© MMXXVI · LITTLE BLACK</footer>
   <script src="../image-lightbox.js"></script>
-  <script src="forever-addon-release.js?v=20261113-114"></script>
+  <script src="forever-addon-release.js?v=20261113-121"></script>
   <script data-goatcounter="https://littleblack.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
