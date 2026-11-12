@@ -514,6 +514,9 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
 .work-thumb{width:100%;aspect-ratio:3/2;overflow:hidden;background:var(--bg-card);margin-bottom:14px;border:1px solid var(--line-soft)}
 .work-thumb img{width:100%;height:100%;object-fit:cover;filter:grayscale(.5) brightness(.7);transition:filter .5s,transform .8s}
 .work-tile:hover .work-thumb img{filter:grayscale(0) brightness(.95);transform:scale(1.06)}
+/* Keep the adventure cover warm and legible at thumbnail size. */
+a[href="projects/forever-addon-manager.html"] .project-thumb img,
+a[href="projects/forever-addon-manager.html"] .work-thumb img{filter:brightness(.94) contrast(1.03)}
 .work-name{font-family:var(--serif-cjk);font-size:14px;font-weight:400;color:var(--ink-mute);line-height:1.3;transition:color .3s}
 .work-tile:hover .work-name{color:var(--accent-hi)}
 .work-tag{font-family:var(--mono);font-size:9px;color:var(--ink-dim);letter-spacing:.12em;margin-top:6px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -678,7 +681,7 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
     <a class="work-tile" href="projects/forever-addon-manager.html">
       <div class="work-tile-inner">
         <span class="work-num">08</span>
-        <div class="work-thumb"><img src="images/projects/forever-manager-v112-check.png" alt="永恆插件管理器實際插件版本檢查結果" loading="lazy" decoding="async"></div>
+        <div class="work-thumb"><img src="images/projects/forever-adventure-cover.png" alt="永恆插件管理器冒險主題封面示意：暗金羅盤、任務地圖與戰利品" loading="lazy" decoding="async"></div>
         <div class="work-name">小黑的永恆插件管理器</div>
         <span class="work-tag">休閒個人專案 · Windows</span>
       </div>
@@ -791,7 +794,7 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
         <div class="project-tags"><span class="project-tag">休閒個人專案</span><span class="project-tag">Windows</span><span class="project-tag">遊戲插件</span><span class="project-tag">繁體中文</span></div>
       </div>
       <div class="project-thumb">
-        <img src="images/projects/forever-manager-v112-check.png" alt="永恆插件管理器實際插件版本檢查結果" loading="lazy" decoding="async">
+        <img src="images/projects/forever-adventure-cover.png" alt="永恆插件管理器冒險主題封面示意：暗金羅盤、任務地圖與戰利品" loading="lazy" decoding="async">
         <div class="project-arrow"><span>查看詳情</span><b aria-hidden="true">→</b></div>
       </div>
     </a>

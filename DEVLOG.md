@@ -813,3 +813,16 @@ littleblackmann.github.io-main/
 - 作品頁新增新版修正、原版比對檔用途、無法補取時保留現況FAQ與實際驗證範圍；首次v1.1.0自動重開限制及原作者歸屬仍保留。兩下載鍵維持同一已驗證latest資產與備援，不寫死舊版URL。
 - 本機5寬度首頁／頁面／下載、離線／不可信來源／無JS備援，4寬度兩圖比例／放大／下一張／Escape通過，首頁產生器--check與diff檢查通過。截圖與測試證據在E:\魔獸世界-永恆\_codex-backups\baseline-recovery-20261113-002347；正式Pages與公開驗證另記於魔獸WORKLOG／共用HANDOFF。
 - 本人要自行測試1.1.1→1.1.2自動重開，故桌面exe保留1.1.1供本人按內建更新；沒有偷換桌面二進位而聲稱本人升級測試成功。E槽正式exe及根目錄分享ZIP已換1.1.2。
+
+
+---
+
+## 2026-11-13（v1.1.3 限流處理、下載不依賴訪客API額度與冒險封面）
+
+- 本人一鍵更新後三組DBM顯示HTTP403；實際GitHub回應remaining=0／limit=60，確認查詢額度耗盡。此前連續驗證也共用此網路額度，不能把每次當成插件損壞。管理器v1.1.3加入5分鐘公開metadata快取、尊重重試時間的共享cooldown，以及同一作者官方release／expanded_assets頁備援，仍核對URL／tag／精確大小／SHA256，無憑證或第三方代理。45項測試通過，API額度0的三DBM及manager/catalog實際查詢成功；正式桌面v1.1.3查版0待更新／0需查看，settings保留。無基準隔離遷移15項處理＋保留1項較新QuestieDB、0錯誤，未降版。不是朋友機／遊戲內實測。
+- 網站新增forever-addon-latest.json，只含已正式上傳並逐bytes／SHA核對的v1.1.3 ZIP公開下載資料；JS先讀同站描述檔，不用每位訪客都打GitHub API，該檔失敗才查API，最後退回latest發行頁。release_tools產出website-release.json、發布說明固定後續每版驗證後同步描述檔。資料不含個人路徑／token。Runtime source/tag2877148，發布工具後續commita3e5596。
+- 本人指出首頁管理器截圖當封面缺乏吸引力，明確要求換圖。使用內建image_gen產生暗金羅盤、地圖、任務標記、戰利品與遠景城堡的冒險封面，原始PNG1672×941，儲存images/projects/forever-adventure-cover.png；不把生成封面冒充真實程式。提示詞與模式存於魔獸本次audit/image-prompt.txt，原圖留在Codex generated_images。
+- 首頁八項順序／版型不變，只有本作品封面與其縮圖亮度覆寫以保留暖金色；封面同步作品hero及OG/Twitter，明示封面示意。作品「實際操作畫面」保留真正v1.1.3主畫面與查版結果兩張：1042×772及1046×1046，工具原始格式是JPEG，使用.jpg副檔名，沒有把修改過的畫面充作實測。本人調高視窗後的結果圖可看到三組DBM正常版本與0需查看。
+- 作品頁補限流處理及不同於缺原版比對檔的FAQ，保留1.1.0首次重開限制、原作者歸屬與插件安裝流程。只檢查沒有更新遊戲插件，QuestieDB1.0.16較新時保留，網站如實說明。
+- 本機HTTP preview五寬度320／375／520／768／1280首頁與頁面無溢出；下載在完全封鎖GitHub API時仍兩鍵v1.1.3、API呼叫數0；同站失敗→API備援、雙失敗／錯誤來源→latest頁及無JS通過。三張圖比例與lightbox下一張／Escape通過，首頁產生器--check及9頁本機引用／單H1通過；人工檢視375／1280首頁新封面。
+- 後續發布結果與公開驗證記於魔獸WORKLOG／共用HANDOFF；證據E:\魔獸世界-永恆\_codex-backups\github-rate-limit-20261113-005527。桌面exe已直接修正1.1.3並保留設定，不將手動部署冒稱使用者完成自動更新測試。

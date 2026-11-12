@@ -10,14 +10,14 @@
   <meta property="og:description" content="方便整理與更新《魔獸世界：永恆》插件的個人小工具。整合插件由各原作者開發，附實際畫面與完整使用說明。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://littleblackmann.github.io/projects/forever-addon-manager.html">
-  <meta property="og:image" content="https://littleblackmann.github.io/images/projects/forever-manager-v112-home.png">
-  <meta property="og:image:alt" content="永恆插件管理器 v1.1.2 實際主畫面">
+  <meta property="og:image" content="https://littleblackmann.github.io/images/projects/forever-adventure-cover.png">
+  <meta property="og:image:alt" content="永恆插件管理器冒險主題封面示意">
   <meta property="og:site_name" content="小黑 Little Black">
   <meta property="og:locale" content="zh_TW">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="小黑的永恆插件管理器｜休閒個人專案">
   <meta name="twitter:description" content="方便整理與更新《魔獸世界：永恆》插件的個人小工具。整合插件由各原作者開發，附實際畫面與完整使用說明。">
-  <meta name="twitter:image" content="https://littleblackmann.github.io/images/projects/forever-manager-v112-home.png">
+  <meta name="twitter:image" content="https://littleblackmann.github.io/images/projects/forever-adventure-cover.png">
   <link rel="shortcut icon" href="../images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,15 +59,15 @@
       <div class="tags"><span class="tag">休閒個人專案</span><span class="tag">Windows</span><span class="tag">繁體中文</span></div>
       <a class="button" data-forever-download href="https://github.com/littleblackmann/wow-forever-addon-updater/releases/latest" target="_blank" rel="noopener noreferrer">下載 Windows 版　↓</a>
       <p class="download-note"><span data-forever-version>最新版本</span> · <span data-forever-size>ZIP</span> · 不需另外安裝 Python 或 Git<br>若未直接開始下載，會開啟 GitHub 發行頁。</p>
-      <figure class="hero cover-image"><img src="../images/projects/forever-manager-v112-home.png" alt="管理器 v1.1.2 實際主畫面，顯示遊戲位置、插件目的地與兩種更新按鈕" width="1042" height="772"><figcaption class="caption">v1.1.2 實際主畫面 · 點圖可放大</figcaption></figure>
+      <figure class="hero cover-image"><img src="../images/projects/forever-adventure-cover.png" alt="冒險主題封面示意，暗金羅盤、任務地圖與戰利品" width="1672" height="941"><figcaption class="caption">冒險主題封面示意 · 實際操作畫面見下方</figcaption></figure>
     </header>
 
     <section>
       <span class="section-label">Release notes · 2026.11.13</span>
-      <h2>v1.1.2：重新下載也能接續更新</h2>
-      <p class="lead">重新解壓管理器時，遊戲裡原本可能已有較舊的插件。v1.1.2 會先向作者來源補取與現有版本一致的原版 ZIP，驗證後再保留繁中和個人修改進行更新；標題下方也精簡為遊戲名稱與版本。</p>
+      <h2>v1.1.3：查版限流也有官方備援</h2>
+      <p class="lead">版本查詢加入 5 分鐘快取。GitHub API 達到查詢額度時，會暫停重試，改讀同一作者的官方發布頁取得下載資料，仍核對精確大小與 SHA-256；管理器及整合清單查詢也使用這個流程，不需要登入或提供金鑰。</p>
       <p class="note">如果你目前用 v1.1.0，第一次按「更新管理器介面（UI）」後沒有自動開啟，請手動再開一次原本的 exe。也可從本頁下載新版 ZIP，只替換 exe 並保留原本的設定、基準和 online 資料夾。v1.1.1 修正後續更新的自動重開。</p>
-      <p class="download-note">36 項單元測試通過；用作者正式來源，對完全不帶舊基準的既有插件副本完成 16 項處理、0 錯誤。本機被擋住的 5 項也已更新，再檢查 0 待更新。尚未在朋友電腦或遊戲內實測。下方為 v1.1.2 的實際主畫面與只檢查結果。</p>
+      <p class="download-note">45 項測試通過；API 額度為 0 時，DBM 三個來源仍能取得官方版本資料。無基準的既有插件副本完成 15 項處理、保留 1 項較新版本、0 錯誤；桌面打包程式查版也是 0 待更新、0 需查看。尚未在朋友電腦或遊戲內實測。下方保留 v1.1.3 真實操作畫面。</p>
     </section>
 
     <section>
@@ -87,7 +87,8 @@
       <span class="section-label">Actual app screens</span>
       <h2>實際操作畫面</h2>
       <p class="lead">主畫面可以直接看到遊戲路徑、插件安裝位置和兩種更新。先按「只檢查」，就能比對本機與發布版本，再決定何時關閉遊戲進行更新。</p>
-      <figure class="gallery-item"><img src="../images/projects/forever-manager-v112-check.png" alt="v1.1.2 實際查版結果，本機與發布版本一致，0 待更新、0 需查看" width="1042" height="772" loading="lazy" decoding="async"><figcaption class="gallery-caption">v1.1.2 只檢查的實際結果：本機補齊原版比對檔並完成插件更新後，再次查版顯示 0 待更新、0 需查看。這張截圖的操作只查版；遊戲路徑與插件版本依你的電腦而定。點圖可放大。</figcaption></figure>
+      <figure class="gallery-item"><img src="../images/projects/forever-manager-v113-home.jpg" alt="管理器 v1.1.3 實際主畫面，顯示遊戲位置、插件目的地與兩種更新按鈕" width="1042" height="772" loading="lazy" decoding="async"><figcaption class="gallery-caption">v1.1.3 真實主畫面。選擇遊戲位置後，可先只檢查，再決定何時更新遊戲插件。點圖可放大。</figcaption></figure>
+      <figure class="gallery-item"><img src="../images/projects/forever-manager-v113-check.jpg" alt="v1.1.3 實際查版結果，DBM 三列正常取得版本，0 待更新、0 需查看" width="1046" height="1046" loading="lazy" decoding="async"><figcaption class="gallery-caption">v1.1.3 實際只檢查結果：DBM 三個套件正常取得版本，0 待更新、0 需查看。QuestieDB 本機較新時保留新版，避免降版。這張截圖的操作只查版；版本依你的電腦與作者發布狀態而定。點圖可放大。</figcaption></figure>
     </section>
 
     <section>
@@ -150,6 +151,7 @@
       <details class="faq"><summary>小黑裝了新插件，我這邊就會跟著收到嗎？</summary><p>要先由小黑把插件來源、依賴、中文入口和整合資料發布到 GitHub，朋友下次按「一鍵更新遊戲插件」才會同步並安裝。單純在小黑自己的遊戲資料夾放入插件，不會自動公開或傳到朋友電腦。資料格式仍相容時，不需要為了新增清單而更新管理器介面。</p></details>
       <details class="faq"><summary>v1.1.0 更新後，視窗沒有自動回來怎麼辦？</summary><p>手動再開一次原本的「永恆插件更新器.exe」即可。第一次升級仍由舊版執行換檔流程；v1.1.1 修正後續更新的自動重開。也可以下載本頁最新版 ZIP，更換 exe，保留 settings.json、baselines／clients 和 online 資料夾。</p></details>
       <details class="faq"><summary>重新下載管理器，為什麼舊版會說「無法辨識本機修改」？</summary><p>管理器需要舊版原版 ZIP，才能分辨插件原有內容與個人修改。全新解壓的舊管理器沒有這些比對檔，因此會保留現況而暫停部分更新。v1.1.2 會自動從作者來源找回同版本原版；若作者已不提供、檔案無法驗證或修改有衝突，仍會保留插件並顯示原因。</p></details>
+      <details class="faq"><summary>DBM 顯示 HTTP 403 是插件壞了嗎？</summary><p>可能是 GitHub API 查詢額度暫時用完。v1.1.3 加入快取及冷卻時間，遇到限流會改讀同一作者的官方發布頁；仍核對檔名、大小、SHA-256 與插件內容。如果兩個管道都無法驗證，會保留現有插件並顯示原因。</p></details>
       <details class="faq"><summary>沒有網路還能用嗎？</summary><p>GitHub 連不上時，管理器會沿用上次成功下載且驗證通過的整合清單；第一次離線則使用內附清單。不過插件查版和下載仍需網路。</p></details>
     </section>
 
@@ -173,7 +175,7 @@
   </aside>
   <footer>© MMXXVI · LITTLE BLACK</footer>
   <script src="../image-lightbox.js"></script>
-  <script src="forever-addon-release.js?v=20261113-112"></script>
+  <script src="forever-addon-release.js?v=20261113-113"></script>
   <script data-goatcounter="https://littleblack.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

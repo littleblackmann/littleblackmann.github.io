@@ -1,14 +1,17 @@
 (() => {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 8000);
-  fetch('https://api.github.com/repos/littleblackmann/wow-forever-addon-updater/releases/latest', {
-    headers: { Accept: 'application/vnd.github+json' }, cache: 'no-store', signal: controller.signal,
+  const read = url => fetch(url, {
+    headers: { Accept: 'application/json' }, cache: 'no-store', signal: controller.signal,
   })
     .then(response => {
       if (!response.ok) throw new Error('Release unavailable');
       return response.json();
-    })
+    });
+  read(new URL('forever-addon-latest.json', document.currentScript.src))
+    .catch(() => read('https://api.github.com/repos/littleblackmann/wow-forever-addon-updater/releases/latest'))
     .then(release => {
+      if (release.repository && release.repository !== 'littleblackmann/wow-forever-addon-updater') return;
       if (release.draft || release.prerelease || !/^v\d+\.\d+\.\d+$/.test(release.tag_name)) return;
       const name = `XiaoHeiForeverUpdater-${release.tag_name}.zip`;
       const asset = (release.assets || []).find(item => item.name === name && item.state === 'uploaded');
