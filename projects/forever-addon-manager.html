@@ -55,31 +55,23 @@
       <span class="eyebrow">A little project for adventures</span>
       <h1>小黑的永恆插件管理器</h1>
       <p class="intro">平常和朋友玩《魔獸世界：永恆》時做的 Windows 小工具。從選擇遊戲位置、安裝任務與副本插件，到之後的版本更新和繁中整理，放在同一個視窗裡處理。</p>
-      <p class="authorship"><strong>這是一個方便整理、安裝與更新插件的個人整合工具。</strong><br>清單中的 Questie、AtlasLoot、DBM 等插件皆由各原作者開發，並不是我製作的插件；我主要整理安裝更新流程、整合清單與部分繁中內容。</p>
+      <p class="authorship"><strong>這是一個方便整理、安裝與更新插件的個人整合工具。</strong><br>清單中的 Questie、AtlasLoot、DBM 等插件皆由各原作者製作，並非本人開發；我僅整理成方便下載、安裝與更新的懶人包，並提供部分繁中內容。</p>
       <div class="tags"><span class="tag">休閒個人專案</span><span class="tag">Windows</span><span class="tag">繁體中文</span></div>
       <a class="button" data-forever-download href="https://github.com/littleblackmann/wow-forever-addon-updater/releases/latest" target="_blank" rel="noopener noreferrer">下載 Windows 版　↓</a>
       <p class="download-note"><span data-forever-version>最新版本</span> · <span data-forever-size>ZIP</span> · 不需另外安裝 Python 或 Git<br>若未直接開始下載，會開啟 GitHub 發行頁。</p>
       <figure class="hero cover-image"><img src="../images/projects/forever-adventure-cover.png" alt="冒險主題封面示意，暗金羅盤、任務地圖與戰利品" width="1672" height="941"><figcaption class="caption">冒險主題封面示意 · 實際操作畫面見下方</figcaption></figure>
     </header>
 
-    <section>
-      <span class="section-label">Release notes · 2026.11.13</span>
-      <h2>v1.1.3：查版限流也有官方備援</h2>
-      <p class="lead">版本查詢加入 5 分鐘快取。GitHub API 達到查詢額度時，會暫停重試，改讀同一作者的官方發布頁取得下載資料，仍核對精確大小與 SHA-256；管理器及整合清單查詢也使用這個流程，不需要登入或提供金鑰。</p>
-      <p class="note">如果你目前用 v1.1.0，第一次按「更新管理器介面（UI）」後沒有自動開啟，請手動再開一次原本的 exe。也可從本頁下載新版 ZIP，只替換 exe 並保留原本的設定、基準和 online 資料夾。v1.1.1 修正後續更新的自動重開。</p>
-      <p class="download-note">45 項測試通過；API 額度為 0 時，DBM 三個來源仍能取得官方版本資料。無基準的既有插件副本完成 15 項處理、保留 1 項較新版本、0 錯誤；桌面打包程式查版也是 0 待更新、0 需查看。尚未在朋友電腦或遊戲內實測。下方保留 v1.1.3 真實操作畫面。</p>
-    </section>
-
-    <section>
+<section>
       <span class="section-label">A small convenience</span>
       <h2>把整理插件的時間留給遊戲</h2>
       <p class="lead">原本只是想讓自己和朋友少花一點時間找插件、核對版本和整理中文，所以做了這個休閒專案。沒有裝過插件的電腦，可以從整合清單開始安裝；已經有插件的電腦，也能檢查版本並保留可合併的本機修改。</p>
       <div class="features">
         <div class="feature"><h3>自己選遊戲位置</h3><p>不用跟小黑放在同一個磁碟。選擇自己的《永恆》遊戲資料夾，管理器會記住位置，並顯示插件將安裝到哪裡。</p></div>
-        <div class="feature"><h3>缺少的安裝，已有的更新</h3><p>從插件作者的正式發布來源取得適用版本，檢查 ZIP、版本與必要依賴。清單內缺少的插件或模組會補裝，已有的則檢查更新。</p></div>
+        <div class="feature"><h3>缺少的安裝，已有的更新</h3><p>選好遊戲位置後，一次處理清單內插件。缺少的會自動下載安裝，已安裝的則檢查更新，不用逐個找下載點。</p></div>
         <div class="feature"><h3>繁中與遊戲內總入口</h3><p>整理既有繁中修改，包括 AtlasLoot 的永恆地城、團隊和首領名稱。另附小黑插件總入口，方便在遊戲裡開啟已安裝插件的設定；資料庫類插件會註明沒有獨立設定視窗。</p></div>
-        <div class="feature"><h3>整合內容可以線上同步</h3><p>小黑將新增的整合插件、翻譯或總入口調整發布到 GitHub 後，朋友再按「一鍵更新遊戲插件」就能取得新清單並補裝缺少項目，不用每次重新傳一整包。</p></div>
-        <div class="feature"><h3>保留能合併的個人修改</h3><p>以原版、目前檔案和新版內容比對，不直接覆蓋所有本機差異。遇到衝突或驗證失敗會保留現況，並在結果欄顯示原因。</p></div>
+        <div class="feature"><h3>整合內容可以線上同步</h3><p>之後整合清單新增插件或中文內容時，按「一鍵更新遊戲插件」即可一起取得，不用每次重新下載整個懶人包。</p></div>
+        <div class="feature"><h3>保留能合併的個人修改</h3><p>已有的繁中與個人調整會盡量保留。遇到無法自動處理的項目，會保留原檔並在結果欄顯示原因。</p></div>
       </div>
     </section>
 
@@ -87,8 +79,8 @@
       <span class="section-label">Actual app screens</span>
       <h2>實際操作畫面</h2>
       <p class="lead">主畫面可以直接看到遊戲路徑、插件安裝位置和兩種更新。先按「只檢查」，就能比對本機與發布版本，再決定何時關閉遊戲進行更新。</p>
-      <figure class="gallery-item"><img src="../images/projects/forever-manager-v113-home.jpg" alt="管理器 v1.1.3 實際主畫面，顯示遊戲位置、插件目的地與兩種更新按鈕" width="1042" height="772" loading="lazy" decoding="async"><figcaption class="gallery-caption">v1.1.3 真實主畫面。選擇遊戲位置後，可先只檢查，再決定何時更新遊戲插件。點圖可放大。</figcaption></figure>
-      <figure class="gallery-item"><img src="../images/projects/forever-manager-v113-check.jpg" alt="v1.1.3 實際查版結果，DBM 三列正常取得版本，0 待更新、0 需查看" width="1046" height="1046" loading="lazy" decoding="async"><figcaption class="gallery-caption">v1.1.3 實際只檢查結果：DBM 三個套件正常取得版本，0 待更新、0 需查看。QuestieDB 本機較新時保留新版，避免降版。這張截圖的操作只查版；版本依你的電腦與作者發布狀態而定。點圖可放大。</figcaption></figure>
+      <figure class="gallery-item"><img src="../images/projects/forever-manager-v113-home.jpg" alt="管理器操作示例，顯示遊戲位置、插件目的地與兩種更新按鈕" width="1042" height="772" loading="lazy" decoding="async"><figcaption class="gallery-caption">主畫面示例：選擇遊戲位置、查看插件安裝路徑，再選擇只檢查或開始更新。新版右上角另有作者說明及本網頁連結。點圖可放大。</figcaption></figure>
+      <figure class="gallery-item"><img src="../images/projects/forever-manager-v113-check.jpg" alt="管理器實際版本檢查結果，列出已安裝版本、發布版本與處理狀態" width="1046" height="1046" loading="lazy" decoding="async"><figcaption class="gallery-caption">版本檢查：一眼查看哪些插件已是最新、哪些可以更新；雙擊需要處理的項目，可看完整原因。實際版本依你的電腦與作者發布狀態而定。點圖可放大。</figcaption></figure>
     </section>
 
     <section>
@@ -128,31 +120,29 @@
         <li><span>等處理完成，查看結果欄與「需查看」數量；如有衝突、下載失敗或缺少依賴，先依顯示的原因處理。</span></li>
         <li><span>重新啟動遊戲載入插件。之後把管理器留在原位置，更新時直接再開啟即可。</span></li>
       </ol>
-      <p class="note">插件會自動放到 <code>World of Warcraft\_forever_\Interface\AddOns</code>。更新器會保留原版 ZIP 供下次比對；請保留解壓後的管理器資料夾。</p>
+      <p class="note">插件會自動放到 <code>World of Warcraft\_forever_\Interface\AddOns</code>。請保留解壓後的管理器整個資料夾，方便之後繼續使用。</p>
     </section>
 
     <section>
       <span class="section-label">When updating</span>
-      <h2>更新時，怎麼保留原本的東西？</h2>
+      <h2>更新前後，留意這幾件事</h2>
       <ul class="points">
-        <li><strong>先核對再安裝：</strong>檢查客戶端版本、插件版本、壓縮檔路徑、載入檔和必要依賴，避免把不適用的版本裝進去。</li>
-        <li><strong>有衝突先保留現況：</strong>無法合併的本機修改不會硬蓋過去，會留在結果欄讓你查看；這不代表所有改動都能自動合併。</li>
-        <li><strong>成功後整理當次舊檔：</strong>新版寫入並驗證後，當次舊插件和舊原版 ZIP 會送到資源回收筒；如果回收失敗，就保留並顯示路徑。</li>
-        <li><strong>保存下次比對的資料：</strong>請保留管理器旁的 <code>settings.json</code>、<code>baselines</code>／<code>clients</code> 和 <code>online</code> 資料夾，它們保存選定位置、原版與舊翻譯。</li>
+        <li><strong>更新前先關閉遊戲：</strong>遊戲開著時可以只檢查；準備安裝或更新插件時，請完全退出遊戲。</li>
+        <li><strong>保留管理器整個資料夾：</strong>之後在原位置繼續使用，讓程式記住遊戲路徑和更新資料。手動換新版時，只需更換 exe，保留其他檔案。</li>
+        <li><strong>完成後看一下結果：</strong>若有「需查看」項目，雙擊該列查看原因，再決定怎麼處理；沒有完成更新的插件會保留原狀。</li>
+        <li><strong>重開遊戲載入新版：</strong>成功更新的舊檔會送到資源回收筒；若程式無法回收，會顯示保留位置。</li>
       </ul>
     </section>
 
     <section>
       <span class="section-label">Common questions</span>
       <h2>幾個常見問題</h2>
-      <details class="faq"><summary>朋友完全沒有裝過插件，也可以用嗎？</summary><p>可以。選好自己的《永恆》遊戲資料夾後，一鍵更新會安裝整合清單中缺少的插件，並處理清單內的必要模組；不用先複製小黑整個遊戲資料夾。</p></details>
-      <details class="faq"><summary>本機和發布版本相同，為什麼還有「可同步整合／補齊模組」？</summary><p>這個狀態不只比較插件版號，也可能代表整合翻譯、總入口、必要模組或更新基準需要同步。它和作者發布新插件版本的「可更新」是不同情況。</p></details>
-      <details class="faq"><summary>更新管理器，要重新選遊戲位置嗎？</summary><p>正常的內建介面更新會保留原位置和設定。若是從更早、沒有線上更新的離線版開始，需手動換成本版一次，之後才能使用內建介面更新。</p></details>
-      <details class="faq"><summary>小黑裝了新插件，我這邊就會跟著收到嗎？</summary><p>要先由小黑把插件來源、依賴、中文入口和整合資料發布到 GitHub，朋友下次按「一鍵更新遊戲插件」才會同步並安裝。單純在小黑自己的遊戲資料夾放入插件，不會自動公開或傳到朋友電腦。資料格式仍相容時，不需要為了新增清單而更新管理器介面。</p></details>
-      <details class="faq"><summary>v1.1.0 更新後，視窗沒有自動回來怎麼辦？</summary><p>手動再開一次原本的「永恆插件更新器.exe」即可。第一次升級仍由舊版執行換檔流程；v1.1.1 修正後續更新的自動重開。也可以下載本頁最新版 ZIP，更換 exe，保留 settings.json、baselines／clients 和 online 資料夾。</p></details>
-      <details class="faq"><summary>重新下載管理器，為什麼舊版會說「無法辨識本機修改」？</summary><p>管理器需要舊版原版 ZIP，才能分辨插件原有內容與個人修改。全新解壓的舊管理器沒有這些比對檔，因此會保留現況而暫停部分更新。v1.1.2 會自動從作者來源找回同版本原版；若作者已不提供、檔案無法驗證或修改有衝突，仍會保留插件並顯示原因。</p></details>
-      <details class="faq"><summary>DBM 顯示 HTTP 403 是插件壞了嗎？</summary><p>可能是 GitHub API 查詢額度暫時用完。v1.1.3 加入快取及冷卻時間，遇到限流會改讀同一作者的官方發布頁；仍核對檔名、大小、SHA-256 與插件內容。如果兩個管道都無法驗證，會保留現有插件並顯示原因。</p></details>
-      <details class="faq"><summary>沒有網路還能用嗎？</summary><p>GitHub 連不上時，管理器會沿用上次成功下載且驗證通過的整合清單；第一次離線則使用內附清單。不過插件查版和下載仍需網路。</p></details>
+      <details class="faq"><summary>完全沒有裝過插件，也可以用嗎？</summary><p>可以。選好自己的《永恆》遊戲資料夾後，按「一鍵更新遊戲插件」，就會安裝整合清單內缺少的插件，不用先複製別人的遊戲資料夾。</p></details>
+      <details class="faq"><summary>本機與發布版本相同，為什麼還能更新？</summary><p>除了插件本身的新版，也可能有新的中文內容、總入口調整或缺少的模組需要補齊，依結果欄的說明處理即可。</p></details>
+      <details class="faq"><summary>更新管理器後，視窗沒有自動回來怎麼辦？</summary><p>先手動再開一次原本的「永恆插件更新器.exe」。如果仍無法開啟，可從本頁重新下載最新版，用新版 exe 替換舊檔，保留管理器資料夾內的其他檔案。</p></details>
+      <details class="faq"><summary>顯示「保留現況」或下載失敗，怎麼辦？</summary><p>雙擊該列查看完整原因。若是網路或來源暫時無法連線，可以稍後再試；如果是個人修改需要處理，先保留原檔。需要協助時，可附上結果畫面。</p></details>
+      <details class="faq"><summary>能把自己用過的資料夾直接傳給朋友嗎？</summary><p>建議分享本頁連結或原始下載 ZIP，讓朋友自行選擇遊戲位置，避免一併傳出你的本機路徑與使用紀錄。</p></details>
+      <details class="faq"><summary>使用時需要網路嗎？</summary><p>查詢版本和下載插件需要網路。暫時斷線時先保留現有插件，等連線恢復再更新即可。</p></details>
     </section>
 
     <section>
@@ -162,7 +152,7 @@
         <tr><th scope="row">作業系統</th><td>Windows 10／11，64 位元。</td></tr>
         <tr><th scope="row">遊戲</th><td>《魔獸世界：永恆》，管理器會依本機客戶端判斷適用版本。</td></tr>
         <tr><th scope="row">安裝方式</th><td>完整解壓 ZIP 即可開啟，不需另外安裝 Python 或 Git。</td></tr>
-        <tr><th scope="row">下載與空間</th><td>管理器 ZIP <span data-forever-size>約 14 MB</span>，遊戲插件會另外從作者來源下載；請另留插件、原版 ZIP 和更新暫存所需空間。</td></tr>
+        <tr><th scope="row">下載與空間</th><td>管理器 ZIP <span data-forever-size>約 14 MB</span>，遊戲插件會另外下載；請預留足夠的安裝與更新空間。</td></tr>
         <tr><th scope="row">網路與遊戲狀態</th><td>查版與下載需要網路。遊戲開著時可先檢查，安裝或更新插件前請完全退出遊戲。</td></tr>
       </tbody></table>
       <p class="lead">這是自己和朋友使用的休閒個人專案，並非《魔獸世界》官方工具。遊戲版本和插件作者的更新可能影響相容性，遇到需要處理的項目時，管理器會顯示原因。</p>
@@ -175,7 +165,7 @@
   </aside>
   <footer>© MMXXVI · LITTLE BLACK</footer>
   <script src="../image-lightbox.js"></script>
-  <script src="forever-addon-release.js?v=20261113-113"></script>
+  <script src="forever-addon-release.js?v=20261113-114"></script>
   <script data-goatcounter="https://littleblack.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

@@ -8,7 +8,10 @@
       if (!response.ok) throw new Error('Release unavailable');
       return response.json();
     });
-  read(new URL('forever-addon-latest.json', document.currentScript.src))
+  const scriptUrl = new URL(document.currentScript.src);
+  const descriptorUrl = new URL('forever-addon-latest.json', scriptUrl);
+  descriptorUrl.search = scriptUrl.search;
+  read(descriptorUrl)
     .catch(() => read('https://api.github.com/repos/littleblackmann/wow-forever-addon-updater/releases/latest'))
     .then(release => {
       if (release.repository && release.repository !== 'littleblackmann/wow-forever-addon-updater') return;
