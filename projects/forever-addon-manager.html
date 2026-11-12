@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小黑的永恆插件管理器｜休閒個人專案</title>
+  <meta name="description" content="為《魔獸世界：永恆》準備的 Windows 插件管理器：選擇遊戲資料夾，一鍵安裝與更新整合插件，支援繁中與線上更新。">
+  <link rel="canonical" href="https://littleblackmann.github.io/projects/forever-addon-manager.html">
+  <meta property="og:title" content="小黑的永恆插件管理器｜休閒個人專案">
+  <meta property="og:description" content="為《魔獸世界：永恆》準備的 Windows 插件管理器，一鍵安裝與更新整合插件。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://littleblackmann.github.io/projects/forever-addon-manager.html">
+  <meta property="og:image" content="https://littleblackmann.github.io/images/og-image.png">
+  <meta property="og:site_name" content="小黑 Little Black">
+  <meta property="og:locale" content="zh_TW">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="小黑的永恆插件管理器｜休閒個人專案">
+  <meta name="twitter:description" content="為《魔獸世界：永恆》準備的 Windows 插件管理器，一鍵安裝與更新整合插件。">
+  <meta name="twitter:image" content="https://littleblackmann.github.io/images/og-image.png">
+  <link rel="shortcut icon" href="../images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../bento-support.css?v=20261014">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4N8JT4VXM"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-G4N8JT4VXM');</script>
+  <style>
+    :root{color-scheme:dark;--bg:#0f0e0c;--card:#181613;--line:#302920;--ink:#f3ede2;--muted:#b1a898;--gold:#d4b486}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,'Noto Sans TC',sans-serif;line-height:1.8;font-size:15px;-webkit-font-smoothing:antialiased}
+    a{color:inherit}a:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+    .back{position:fixed;top:1.2rem;left:1.5rem;z-index:100;display:inline-flex;align-items:center;gap:.55rem;padding:.4rem 1rem;background:rgba(15,14,12,.85);border:1px solid var(--line);backdrop-filter:blur(12px);color:var(--muted);font-size:.72rem;letter-spacing:.08em;text-decoration:none}.back:hover{color:var(--gold);border-color:var(--gold)}
+    main{max-width:800px;margin:auto;padding:4rem 2rem 3rem}header{text-align:center}.eyebrow{color:var(--gold);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
+    main h1,main h2,main h3{font-family:'Noto Serif TC',serif;font-weight:400;line-height:1.4}main h1{font-size:clamp(2.25rem,5vw,3rem);letter-spacing:3px;margin:.8rem 0 1rem}main h2{font-size:1.5rem;letter-spacing:2px;margin:0 0 1.2rem;padding-bottom:.5rem;border-bottom:1px solid var(--line)}main h3{color:var(--gold);font-size:1rem;margin:0 0 .45rem}
+    .intro{color:var(--muted);max-width:520px;margin:0 auto;font-size:.95rem;line-height:1.9}.tags{display:flex;justify-content:center;flex-wrap:wrap;gap:.5rem;margin:1.4rem 0 1.5rem}.tag{border:1px solid var(--line);border-radius:999px;color:var(--muted);padding:.25rem .65rem;font-size:.7rem;letter-spacing:.04em}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.7rem 2rem;background:transparent;border:1px solid #b8956a;color:var(--gold);font-family:'Noto Serif TC',serif;text-decoration:none;transition:background .2s,color .2s}.button:hover{background:#b8956a;color:#0f0e0c}
+    .download-note,.caption{font-size:.78rem;color:var(--muted);margin:.65rem 0 0}.hero{margin:2.7rem 0 0}.hero img{display:block;width:100%;height:auto;border:1px solid var(--line)}.caption{text-align:right}
+    section{margin-top:4rem}.section-label{display:block;color:#9d876a;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:.7rem}.lead{color:#c6bcad;line-height:2;max-width:730px}
+    .features{display:grid;grid-template-columns:1fr;gap:1rem}.feature{background:linear-gradient(180deg,#15130f,var(--bg));border:1px solid var(--line);padding:1.2rem 1.5rem}.feature p{color:var(--muted);font-size:.86rem;margin:0;line-height:1.9}
+    .steps{list-style:none;padding:0;margin:0;counter-reset:step}.steps li{counter-increment:step;display:grid;grid-template-columns:2.2rem 1fr;gap:.5rem;padding:1rem 0;border-bottom:1px solid var(--line);color:#cec5b7}.steps li::before{content:'0' counter(step);font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1.2rem}
+    code{font-size:.86em;color:#e2cba8;overflow-wrap:anywhere}.note{border-left:2px solid #8c704e;background:#17140f;padding:1rem 1.2rem;color:var(--muted);font-size:.84rem;line-height:1.9}.links{display:flex;align-items:center;flex-wrap:wrap;gap:1.5rem}.secondary{color:var(--gold);font-size:.84rem;text-underline-offset:.3em}
+    footer{text-align:center;padding:2rem;color:#82786a;border-top:1px solid var(--line);font-size:.7rem;letter-spacing:.12em}
+    @media(max-width:600px){main{padding:3.5rem 1.2rem 2rem}.back{top:.8rem;left:.8rem;font-size:.65rem;padding:.3rem .8rem}section{margin-top:3rem}.feature{padding:1.2rem}.hero{margin-top:2rem}main h1{font-size:clamp(1.75rem,7vw,2.25rem)}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  </style>
+</head>
+<body>
+  <a class="back" href="../index.html#projects">← 返回作品列表</a>
+  <main>
+    <header>
+      <span class="eyebrow">A little project for adventures</span>
+      <h1>小黑的永恆插件管理器</h1>
+      <p class="intro">平常和朋友玩《魔獸世界：永恆》時，整理插件做的小工具。選好遊戲資料夾，就能安裝整合清單裡的插件，之後也能一起檢查更新。</p>
+      <div class="tags"><span class="tag">休閒個人專案</span><span class="tag">Windows</span><span class="tag">繁體中文</span></div>
+      <a class="button" data-forever-download href="https://github.com/littleblackmann/wow-forever-addon-updater/releases/latest" target="_blank" rel="noopener noreferrer">下載 Windows 版　↓</a>
+      <p class="download-note"><span data-forever-version>最新版本</span> · <span data-forever-size>ZIP</span> · 不需另外安裝 Python 或 Git<br>若未直接開始下載，會開啟 GitHub 發行頁。</p>
+      <figure class="hero"><img src="../images/projects/forever-addon-cover.svg" alt="以深色視窗呈現插件管理流程的概念插畫" width="1200" height="800"><figcaption class="caption">為冒險準備的一個小工具 · 插畫示意</figcaption></figure>
+    </header>
+
+    <section>
+      <span class="section-label">A small convenience</span>
+      <h2>把整理插件的時間留給遊戲</h2>
+      <p class="lead">原本是想讓自己和朋友不用一個一個找插件、確認版本，於是做了這個簡單的管理器。它會從插件作者的發布來源取得檔案，也會同步小黑整理的繁中和遊戲內總入口。</p>
+      <div class="features">
+        <div class="feature"><h3>安裝與更新遊戲插件</h3><p>檢查所選《永恆》資料夾內的插件，更新已有項目，也會補裝整合清單裡缺少的插件。</p></div>
+        <div class="feature"><h3>兩種更新分開</h3><p>「一鍵更新遊戲插件」處理遊戲插件；「更新管理器介面（UI）」則是在工具本身有新版時使用。</p></div>
+        <div class="feature"><h3>整合清單與繁中</h3><p>任務助手 Questie、副本掉落 AtlasLoot、仇恨監控、DBM、地圖與路線等，方便一次整理。</p></div>
+        <div class="feature"><h3>保留可合併的修改</h3><p>更新時比對原版與本機差異；如果無法安全合併，會顯示原因並保留現況。</p></div>
+      </div>
+    </section>
+
+    <section>
+      <span class="section-label">Getting started</span>
+      <h2>怎麼開始？</h2>
+      <ol class="steps">
+        <li><span>下載 ZIP，解壓縮到桌面等可寫入的資料夾，開啟管理器。</span></li>
+        <li><span>選擇裡面有 <code>_forever_</code> 的 <code>World of Warcraft</code> 資料夾。畫面會顯示插件要安裝的位置。</span></li>
+        <li><span>完全關閉遊戲，再按「一鍵更新遊戲插件」，等檢查與安裝完成後重新開啟遊戲。</span></li>
+      </ol>
+      <p class="note">插件會自動放到 <code>World of Warcraft\_forever_\Interface\AddOns</code>。更新器會保留原版 ZIP 供下次比對；請保留解壓後的管理器資料夾。</p>
+    </section>
+
+    <section>
+      <span class="section-label">Before you download</span>
+      <h2>使用前知道的事</h2>
+      <p class="lead">適用 Windows 10／11 64 位元及《魔獸世界：永恆》。查詢和下載需要網路；遊戲開啟時可先檢查，安裝或更新插件前請完全退出遊戲。</p>
+      <p class="lead">這是自己和朋友使用的休閒個人專案，並非《魔獸世界》官方工具。遊戲版本和插件作者的更新可能影響相容性，遇到需要處理的項目時，管理器會顯示原因。</p>
+      <div class="links"><a class="button" data-forever-download href="https://github.com/littleblackmann/wow-forever-addon-updater/releases/latest" target="_blank" rel="noopener noreferrer">下載 Windows 版　↓</a><a class="secondary" href="https://github.com/littleblackmann/wow-forever-addon-updater" target="_blank" rel="noopener noreferrer">查看 GitHub 專案 →</a></div>
+    </section>
+  </main>
+  <aside class="bento-support" aria-labelledby="bento-support-title">
+    <img class="bento-support__image" src="../images/donation-banner.jpg" alt="" width="1920" height="341" loading="lazy" decoding="async">
+    <div class="bento-support__body"><h2 class="bento-support__title" id="bento-support-title">請小黑吃雞腿便當</h2><p class="bento-support__text">如果這個作品剛好幫上忙，也歡迎請小黑吃個雞腿便當。</p><a class="bento-support__link" href="https://payment.opay.tw/Broadcaster/Donate/7341A28F6CDE05A1A6646A7B26DF4CD8" target="_blank" rel="noopener">請一份便當 <span aria-hidden="true">→</span></a></div>
+  </aside>
+  <footer>© MMXXVI · LITTLE BLACK</footer>
+  <script src="forever-addon-release.js"></script>
+  <script data-goatcounter="https://littleblack.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

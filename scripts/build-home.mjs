@@ -15,14 +15,14 @@ const links = new Set();
 for (const project of projects) {
   if (!project.name || !project.description || !Array.isArray(project.tags)
       || !/^projects\/[a-z0-9-]+\.html$/.test(project.link)
-      || !/^images\/projects\/[^/]+\.(png|jpe?g|webp)$/.test(project.image)
+      || !/^images\/projects\/[^/]+\.(png|jpe?g|webp|svg)$/.test(project.image)
       || links.has(project.link)) throw new Error(`Invalid project: ${project.name}`);
   links.add(project.link);
   await Promise.all([access(new URL(project.link, root)), access(new URL(project.image, root))]);
 }
 
 const number = index => String(index + 1).padStart(2, '0');
-const image = project => `<img src="${escape(project.image)}" alt="${escape(project.name)}畫面預覽" loading="lazy" decoding="async">`;
+const image = project => `<img src="${escape(project.image)}" alt="${escape(project.imageAlt || `${project.name}畫面預覽`)}" loading="lazy" decoding="async">`;
 const tiles = projects.map((project, index) => `
     <a class="work-tile" href="${escape(project.link)}">
       <div class="work-tile-inner">

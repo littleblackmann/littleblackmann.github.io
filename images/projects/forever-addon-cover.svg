@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">小黑的永恆插件管理器</title>
+  <desc id="desc">深色背景與插件管理器視窗的圖形插畫</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#161f2c"/><stop offset="1" stop-color="#101316"/></linearGradient>
+    <linearGradient id="gold" x2="1" y2="1"><stop stop-color="#e3c69a"/><stop offset="1" stop-color="#88673f"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#bb9870" stop-opacity=".18"/><stop offset="1" stop-color="#bb9870" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <circle cx="940" cy="110" r="430" fill="url(#glow)"/>
+  <path d="M0 665 1200 365M0 740 1200 440" stroke="#c5a479" stroke-opacity=".10" fill="none"/>
+  <rect x="135" y="122" width="930" height="535" rx="17" fill="#101a28" stroke="#8c775a" stroke-opacity=".55" stroke-width="2"/>
+  <rect x="136" y="123" width="928" height="86" rx="16" fill="#1b2b42"/>
+  <path d="M136 193h928v16H136z" fill="#1b2b42"/>
+  <circle cx="180" cy="166" r="13" fill="url(#gold)"/>
+  <text x="214" y="174" fill="#eee4d5" font-family="Arial,sans-serif" font-size="26" font-weight="600" letter-spacing="3">FOREVER ADDON MANAGER</text>
+  <circle cx="988" cy="166" r="6" fill="#718195"/><circle cx="1015" cy="166" r="6" fill="#718195"/>
+  <text x="186" y="273" fill="#d0b48b" font-family="Arial,sans-serif" font-size="18" letter-spacing="4">A LITTLE PROJECT FOR ADVENTURES</text>
+  <rect x="186" y="306" width="515" height="54" rx="6" fill="#202f43" stroke="#4d6177"/>
+  <text x="209" y="340" fill="#a4b2c0" font-family="Arial,sans-serif" font-size="18">World of Warcraft / _forever_ / AddOns</text>
+  <rect x="727" y="306" width="188" height="54" rx="6" fill="#bf9d6d"/>
+  <text x="821" y="340" fill="#161b22" font-family="Arial,sans-serif" font-size="18" font-weight="700" text-anchor="middle">UPDATE</text>
+  <g fill="#233246"><rect x="186" y="401" width="729" height="47" rx="4"/><rect x="186" y="460" width="729" height="47" rx="4"/><rect x="186" y="519" width="729" height="47" rx="4"/></g>
+  <g fill="#d5c2a5" font-family="Arial,sans-serif" font-size="18"><text x="211" y="431">QUESTS</text><text x="211" y="490">DUNGEONS</text><text x="211" y="549">MAPS &amp; RAIDS</text></g>
+  <g fill="#9dc8ae"><circle cx="872" cy="424" r="7"/><circle cx="872" cy="483" r="7"/><circle cx="872" cy="542" r="7"/></g>
+  <text x="135" y="718" fill="#9b8870" font-family="Arial,sans-serif" font-size="16" letter-spacing="5">LITTLE BLACK / PERSONAL PROJECT</text>
+</svg>
