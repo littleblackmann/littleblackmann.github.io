@@ -2,7 +2,7 @@
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 8000);
   fetch('https://api.github.com/repos/littleblackmann/wow-forever-addon-updater/releases/latest', {
-    headers: { Accept: 'application/vnd.github+json' }, signal: controller.signal,
+    headers: { Accept: 'application/vnd.github+json' }, cache: 'no-store', signal: controller.signal,
   })
     .then(response => {
       if (!response.ok) throw new Error('Release unavailable');

@@ -63,6 +63,14 @@
     </header>
 
     <section>
+      <span class="section-label">Release notes · 2026.11.12</span>
+      <h2>v1.1.1：讓朋友更新更順利</h2>
+      <p class="lead">這次修正管理器更新後的自動重開，以及繁中和作者新版相鄰修改被誤判為衝突的情況；整合資料的發布也會清掉已取消的舊翻譯，並核對管理器實際版號。</p>
+      <p class="note">如果你目前用 v1.1.0，第一次按「更新管理器介面（UI）」後沒有自動開啟，請手動再開一次原本的 exe。也可從本頁下載新版 ZIP，只替換 exe 並保留原本的設定、基準和 online 資料夾。v1.1.1 修正後續更新的自動重開。</p>
+      <p class="download-note">驗證包含打包版的新增插件、作者升版、繁中同步與衝突保留，以及作者正式下載來源的隔離整套升級（16 項成功、0 錯誤）。尚未在朋友電腦或遊戲內實測。下方實際截圖為 v1.1.0，兩種更新按鈕的用途相同。</p>
+    </section>
+
+    <section>
       <span class="section-label">A small convenience</span>
       <h2>把整理插件的時間留給遊戲</h2>
       <p class="lead">原本只是想讓自己和朋友少花一點時間找插件、核對版本和整理中文，所以做了這個休閒專案。沒有裝過插件的電腦，可以從整合清單開始安裝；已經有插件的電腦，也能檢查版本並保留可合併的本機修改。</p>
@@ -70,7 +78,7 @@
         <div class="feature"><h3>自己選遊戲位置</h3><p>不用跟小黑放在同一個磁碟。選擇自己的《永恆》遊戲資料夾，管理器會記住位置，並顯示插件將安裝到哪裡。</p></div>
         <div class="feature"><h3>缺少的安裝，已有的更新</h3><p>從插件作者的正式發布來源取得適用版本，檢查 ZIP、版本與必要依賴。清單內缺少的插件或模組會補裝，已有的則檢查更新。</p></div>
         <div class="feature"><h3>繁中與遊戲內總入口</h3><p>整理既有繁中修改，包括 AtlasLoot 的永恆地城、團隊和首領名稱。另附小黑插件總入口，方便在遊戲裡開啟已安裝插件的設定；資料庫類插件會註明沒有獨立設定視窗。</p></div>
-        <div class="feature"><h3>整合內容可以線上同步</h3><p>之後有新增的整合插件、翻譯或總入口調整，可透過 GitHub 發布。朋友按更新時就能取得新清單，不用每次重新傳一整包。</p></div>
+        <div class="feature"><h3>整合內容可以線上同步</h3><p>小黑將新增的整合插件、翻譯或總入口調整發布到 GitHub 後，朋友再按「一鍵更新遊戲插件」就能取得新清單並補裝缺少項目，不用每次重新傳一整包。</p></div>
         <div class="feature"><h3>保留能合併的個人修改</h3><p>以原版、目前檔案和新版內容比對，不直接覆蓋所有本機差異。遇到衝突或驗證失敗會保留現況，並在結果欄顯示原因。</p></div>
       </div>
     </section>
@@ -139,6 +147,8 @@
       <details class="faq"><summary>朋友完全沒有裝過插件，也可以用嗎？</summary><p>可以。選好自己的《永恆》遊戲資料夾後，一鍵更新會安裝整合清單中缺少的插件，並處理清單內的必要模組；不用先複製小黑整個遊戲資料夾。</p></details>
       <details class="faq"><summary>本機和發布版本相同，為什麼還有「可同步整合／補齊模組」？</summary><p>這個狀態不只比較插件版號，也可能代表整合翻譯、總入口、必要模組或更新基準需要同步。它和作者發布新插件版本的「可更新」是不同情況。</p></details>
       <details class="faq"><summary>更新管理器，要重新選遊戲位置嗎？</summary><p>正常的內建介面更新會保留原位置和設定。若是從更早、沒有線上更新的離線版開始，需手動換成本版一次，之後才能使用內建介面更新。</p></details>
+      <details class="faq"><summary>小黑裝了新插件，我這邊就會跟著收到嗎？</summary><p>要先由小黑把插件來源、依賴、中文入口和整合資料發布到 GitHub，朋友下次按「一鍵更新遊戲插件」才會同步並安裝。單純在小黑自己的遊戲資料夾放入插件，不會自動公開或傳到朋友電腦。資料格式仍相容時，不需要為了新增清單而更新管理器介面。</p></details>
+      <details class="faq"><summary>v1.1.0 更新後，視窗沒有自動回來怎麼辦？</summary><p>手動再開一次原本的「永恆插件更新器.exe」即可。第一次升級仍由舊版執行換檔流程；v1.1.1 修正後續更新的自動重開。也可以下載本頁最新版 ZIP，更換 exe，保留 settings.json、baselines／clients 和 online 資料夾。</p></details>
       <details class="faq"><summary>沒有網路還能用嗎？</summary><p>GitHub 連不上時，管理器會沿用上次成功下載且驗證通過的整合清單；第一次離線則使用內附清單。不過插件查版和下載仍需網路。</p></details>
     </section>
 
@@ -162,7 +172,7 @@
   </aside>
   <footer>© MMXXVI · LITTLE BLACK</footer>
   <script src="../image-lightbox.js"></script>
-  <script src="forever-addon-release.js"></script>
+  <script src="forever-addon-release.js?v=20261112-111"></script>
   <script data-goatcounter="https://littleblack.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
