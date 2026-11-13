@@ -860,3 +860,21 @@ littleblackmann.github.io-main/
 ## 2026-11-13（調整永恆管理器下載區）
 
 - 依本人要求，移除作品頁底部「查看 GitHub 專案」連結，保留兩個 Windows 下載入口及插件作者來源連結。下載次數使用既有 GitHub Release 資產統計查詢，不在公開頁面顯示。
+
+
+## 2026-11-14（永恆插件介紹與原作者：本機待發布）
+
+- 本人要求在第八個永恆作品內點入插件介紹，不新增首頁第九個作品；涵蓋目前全部插件，並說明本整合的繁中與便利調整。已新增projects/forever-addons.html，管理器頁原列表改為精簡介紹與新頁入口，兩頁可互相返回，首頁projects.json/index.html保持8件且未變。
+- 對照當前PACKAGES23組、37個第三方插件/附屬目錄，加上XiaoHeiAddonHub共38個遊戲AddOns目錄全部覆蓋；另介紹Windows管理器，共2個小黑整合工具。AtlasLoot9個模組、DBM核心4個/地城2個/團隊世界首領2個、ShortestPathForever與ForeverCore都逐項附用途、作者/發行維護與官方來源，不將共用資料庫誤稱一律沒有設定。
+- 作者資訊交叉核官方發行TOC與作者頁/metadata。Lueur採Armytille；小地圖抽屜TOC寫You，改用官方作者Odigo而非誤記本人作品；ForeverLootSparkles註作者Ashtar Senior與專案維護conoar；What’s Training?用作者實際whats-training-forever官方頁（同project1701676），避免舊placeholder來源頁不好開。AtlasBIStooltips未另標原作者，清楚寫隨附模組/發行維護而非猜作者。
+- 每張卡片有用途、原作者/維護者、作者頁/官方下載及本整合實際調整，區分作者原生繁中與本機補翻，將優化定位為安裝/更新/中文入口操作流程，未虛稱全插件為本人開發或未量測的效能提升。按任務升級、地圖採集探索、戰鬥副本、背包拍賣、聊天日常分類，支援搜尋名稱/用途/作者/子模組，套件模組可展開。保留作者原版權利與支持作者入口。
+- QuickChannels及後續7組新配套/插件共8組標「下次整合加入」，不宣稱尚未公開的本機版本已在下載包。官方原版連結說明不含本整合額外中文與總入口，指引選Forever版本；沒有公開測試數、API/hash/內部維護步驟。
+- 內容資料projects/forever-addons.json為白名單公開介紹，scripts/build-addon-guide.mjs產靜態HTML且可--check；配套CSS/JS與sitemap同步，既有冒險封面標示示意，分享圖沿用真實v1.2.1管理器圖，未新增假程式截圖。
+- 驗證：資料23/37與本機清單逐一對上、各模組作者/用途/來源完整；唯一H1/ID、相對連結/anchor/JSON-LD/sitemap、兩生成器check及diff check通過。實際IAB瀏覽桌面與375手機，另測320/768無橫向溢出；DBM-VPVEM搜尋找到核心卡並展開子模組，無結果/清除搜尋/分類點擊重置搜尋均過，主頁→新頁→返回導航通過。主頁兩下載鍵仍指向公開v1.2.1，未改版本描述或下載。
+- 證據：E:\魔獸世界-永恆\_codex-backups\website-addon-guide-20261114（官方作者與本機清單、桌面/手機截圖）。本機預覽http://127.0.0.1:8766/projects/forever-addons.html，HTTP server會話20955暫留供本人看。本次只有本機工作檔，沒有commit/push/Pages部署或遊戲變動，等本人週四通知再隨累積修正處理；屆時依正式收錄清單更新upcoming標記並重新產頁。
+
+## 2026-11-14（網站先發布，插件更新繼續暫緩）
+
+- 本人明確解除網站暫緩，授權先發布第八作品內的完整插件介紹子頁。此授權僅限網站；本機管理器1.2.2、23組pending catalog與插件/繁中修正均不發布，仍等本人週四通知，不建立排程。
+- 發布範圍為forever-addon-manager.html入口、forever-addons.html/css/js/json、build-addon-guide.mjs與sitemap；首頁仍8作品，公開下載描述檔維持1.2.1。8組尚未公開項目保留「下次整合加入」，原作者與本整合中文/便利調整分別標示。
+- 本次發布前兩生成器--check、JS語法及diff check通過；沿用當次已完成桌面/手機與搜尋導航驗證。GitHub Pages使用main根目錄，發布後核對對應commit建置及線上資產再結案。

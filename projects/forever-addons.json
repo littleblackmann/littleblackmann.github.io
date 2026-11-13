@@ -1,0 +1,586 @@
+{
+  "updated": "2026-11-14",
+  "categories": [
+    {
+      "id": "quest",
+      "name": "任務與升級",
+      "description": "任務目標、交通路線，以及下一個值得學的技能。",
+      "addons": [
+        "questie",
+        "questiedb",
+        "shortest",
+        "training"
+      ]
+    },
+    {
+      "id": "explore",
+      "name": "地圖、採集與探索",
+      "description": "看懂地圖，記住採集點，也留意路上的稀有驚喜。",
+      "addons": [
+        "leatrix",
+        "zone",
+        "rarescanner",
+        "gathermate",
+        "lueur",
+        "sparkles"
+      ]
+    },
+    {
+      "id": "combat",
+      "name": "戰鬥與副本",
+      "description": "血條、仇恨、技能提醒與想帶回家的戰利品。",
+      "addons": [
+        "platynator",
+        "bbf",
+        "threat",
+        "dbm",
+        "dbm-party",
+        "dbm-raid",
+        "atlasloot"
+      ]
+    },
+    {
+      "id": "inventory",
+      "name": "背包與拍賣",
+      "description": "整理身上的物品，查找庫存，處理日常買賣。",
+      "addons": [
+        "baganator",
+        "syndicator",
+        "auctionator"
+      ]
+    },
+    {
+      "id": "interface",
+      "name": "聊天與日常介面",
+      "description": "減少重複操作，把常用的功能放在順手的位置。",
+      "addons": [
+        "quickchannels",
+        "leatrixplus",
+        "drawer"
+      ]
+    }
+  ],
+  "addons": [
+    {
+      "id": "platynator",
+      "name": "Platynator",
+      "title": "怪物血條與施法條",
+      "description": "調整頭頂名條的外觀、施法顯示與仇恨配色，讓戰鬥中的目標更容易辨認。",
+      "author": "plusmouse",
+      "url": "https://www.curseforge.com/wow/addons/platynator",
+      "download": "https://www.curseforge.com/wow/addons/platynator/files/all",
+      "contribution": "保留作者繁中，補上少數漏翻設定，接入中文總入口。",
+      "upcoming": true,
+      "modules": [
+        {
+          "name": "Platynator",
+          "author": "plusmouse",
+          "description": "調整頭頂名條的外觀、施法顯示與仇恨配色，讓戰鬥中的目標更容易辨認。",
+          "url": "https://www.curseforge.com/wow/addons/platynator"
+        }
+      ]
+    },
+    {
+      "id": "rarescanner",
+      "name": "RareScanner",
+      "title": "稀有怪與寶箱提醒",
+      "description": "偵測到支援的稀有怪、寶箱或事件時，用畫面與聲音提醒；實際涵蓋內容依作者資料更新。",
+      "author": "maqjav、Maggie Wazosky",
+      "url": "https://www.curseforge.com/wow/addons/rarescanner",
+      "download": "https://www.curseforge.com/wow/addons/rarescanner/files/all",
+      "contribution": "保留原生繁中，另補部分設定與操作說明翻譯，接入中文總入口。",
+      "upcoming": true,
+      "modules": [
+        {
+          "name": "RareScanner",
+          "author": "maqjav, Maggie Wazosky",
+          "description": "偵測到支援的稀有怪、寶箱或事件時，用畫面與聲音提醒；實際涵蓋內容依作者資料更新。",
+          "url": "https://www.curseforge.com/wow/addons/rarescanner"
+        }
+      ]
+    },
+    {
+      "id": "gathermate",
+      "name": "GatherMate2",
+      "title": "採集地點紀錄",
+      "description": "記住你採過的草藥、礦點與魚群位置，將紀錄顯示在世界地圖和小地圖。",
+      "author": "kagaro、Xinhuan、nevcairiel；專案維護 moonfann",
+      "url": "https://www.curseforge.com/wow/addons/gathermate2",
+      "download": "https://www.curseforge.com/wow/addons/gathermate2/files/all",
+      "contribution": "補充圖示設定的繁中說明；保留作者的採集點名稱，不預先匯入額外節點資料。",
+      "upcoming": true,
+      "modules": [
+        {
+          "name": "GatherMate2",
+          "author": "kagaro, xinhuan, nevcairiel",
+          "description": "記住你採過的草藥、礦點與魚群位置，將紀錄顯示在世界地圖和小地圖。",
+          "url": "https://www.curseforge.com/wow/addons/gathermate2"
+        }
+      ]
+    },
+    {
+      "id": "syndicator",
+      "name": "Syndicator",
+      "title": "跨角色物品追蹤",
+      "description": "記錄角色背包、銀行等物品資訊，支援搜尋與提示，也為 Baganator 提供物品資料；有自己的追蹤設定。",
+      "author": "plusmouse",
+      "url": "https://www.curseforge.com/wow/addons/syndicator",
+      "download": "https://www.curseforge.com/wow/addons/syndicator/files/all",
+      "contribution": "以必要配套一併安裝，清楚標明用途與中文設定入口。",
+      "upcoming": true,
+      "modules": [
+        {
+          "name": "Syndicator",
+          "author": "plusmouse",
+          "description": "記錄角色背包、銀行等物品資訊，支援搜尋與提示，也為 Baganator 提供物品資料；有自己的追蹤設定。",
+          "url": "https://www.curseforge.com/wow/addons/syndicator"
+        }
+      ]
+    },
+    {
+      "id": "baganator",
+      "name": "Baganator",
+      "title": "背包分類與搜尋",
+      "description": "以分類或大背包視窗整理物品，提供搜尋與排序；需要 Syndicator 一起使用。",
+      "author": "plusmouse",
+      "url": "https://www.curseforge.com/wow/addons/baganator",
+      "download": "https://www.curseforge.com/wow/addons/baganator/files/all",
+      "contribution": "保留作者原生繁中，補上少數漏翻提示與設定文字，接入中文總入口。",
+      "upcoming": true,
+      "modules": [
+        {
+          "name": "Baganator",
+          "author": "plusmouse",
+          "description": "以分類或大背包視窗整理物品，提供搜尋與排序；需要 Syndicator 一起使用。",
+          "url": "https://www.curseforge.com/wow/addons/baganator"
+        }
+      ]
+    },
+    {
+      "id": "auctionator",
+      "name": "Auctionator",
+      "title": "拍賣搜尋與購物清單",
+      "description": "讓拍賣搜尋、購物清單和上架操作更方便，並提供物品價格相關資訊。",
+      "author": "plusmouse、Borjamacare",
+      "url": "https://www.curseforge.com/wow/addons/auctionator",
+      "download": "https://www.curseforge.com/wow/addons/auctionator/files/all",
+      "contribution": "保留原生繁中，補充少數漏翻標題，接入作者的設定頁面。",
+      "upcoming": true,
+      "modules": [
+        {
+          "name": "Auctionator",
+          "author": "plusmouse, Borjamacare",
+          "description": "讓拍賣搜尋、購物清單和上架操作更方便，並提供物品價格相關資訊。",
+          "url": "https://www.curseforge.com/wow/addons/auctionator"
+        }
+      ]
+    },
+    {
+      "id": "leatrixplus",
+      "name": "Leatrix Plus",
+      "title": "日常便利功能百寶箱",
+      "description": "把修裝、售出灰色物品、聊天與其他日常便利選項集中管理，依自己的習慣個別啟用。",
+      "author": "Leatrix",
+      "url": "https://www.curseforge.com/wow/addons/leatrix-plus",
+      "download": "https://www.curseforge.com/wow/addons/leatrix-plus/files/all",
+      "contribution": "保留原生繁中，另補少數漏翻字串與語言選項，接入中文總入口。",
+      "upcoming": true,
+      "modules": [
+        {
+          "name": "Leatrix_Plus",
+          "author": "Leatrix",
+          "description": "把修裝、售出灰色物品、聊天與其他日常便利選項集中管理，依自己的習慣個別啟用。",
+          "url": "https://www.curseforge.com/wow/addons/leatrix-plus"
+        }
+      ]
+    },
+    {
+      "id": "quickchannels",
+      "name": "QuickChannels",
+      "title": "聊天頻道快捷列",
+      "description": "用按鈕切換公會、隊伍、團隊、密語與已加入的頻道；可拖曳位置與調整排列。",
+      "author": "itsindolence／QuickChannels contributors",
+      "url": "https://www.curseforge.com/wow/addons/quickchannels",
+      "download": "https://www.curseforge.com/wow/addons/quickchannels/files/all",
+      "contribution": "使用作者內建繁中，接入中文總入口的操作說明；右鍵頻道按鈕可開設定。",
+      "upcoming": true,
+      "modules": [
+        {
+          "name": "QuickChannels",
+          "author": "QuickChannels contributors",
+          "description": "用按鈕切換公會、隊伍、團隊、密語與已加入的頻道；可拖曳位置與調整排列。",
+          "url": "https://www.curseforge.com/wow/addons/quickchannels"
+        }
+      ]
+    },
+    {
+      "id": "lueur",
+      "name": "Lueur",
+      "title": "任務與採集物件發光",
+      "description": "讓附近支援的任務物件、寶箱、礦脈、草藥與釣魚浮標更醒目，減少漏看。",
+      "author": "Armytille",
+      "url": "https://www.curseforge.com/wow/addons/lueur",
+      "download": "https://www.curseforge.com/wow/addons/lueur/files/all",
+      "contribution": "補充繁中翻譯與插件說明，接入中文總入口。",
+      "upcoming": false,
+      "modules": [
+        {
+          "name": "Lueur",
+          "author": "Armytille",
+          "description": "讓附近支援的任務物件、寶箱、礦脈、草藥與釣魚浮標更醒目，減少漏看。",
+          "url": "https://www.curseforge.com/wow/addons/lueur"
+        }
+      ]
+    },
+    {
+      "id": "atlasloot",
+      "name": "AtlasLoot Classic Forever",
+      "title": "副本掉落與裝備查詢",
+      "description": "查詢地城、團隊、陣營、專業與 PvP 的戰利品和獎勵，另含裝備推薦提示等附屬模組。",
+      "author": "Sliccer／AtlasLoot Classic Forever 發行團隊",
+      "url": "https://www.curseforge.com/wow/addons/atlasloot-forever",
+      "download": "https://www.curseforge.com/wow/addons/atlasloot-forever/files/all",
+      "contribution": "補充永恆地城、團隊與首領名稱等繁中內容，整理部分介面與物品提示翻譯。",
+      "upcoming": false,
+      "modules": [
+        {
+          "name": "AtlasLootClassic",
+          "author": "Sliccer／AtlasLoot Forever 發行團隊",
+          "description": "戰利品查詢的核心介面。",
+          "url": "https://www.curseforge.com/wow/addons/atlasloot-forever"
+        },
+        {
+          "name": "AtlasBIStooltips",
+          "author": "AtlasLoot Forever 隨附模組（發行維護：Sliccer）",
+          "description": "在物品提示中顯示職業與專精的裝備推薦。",
+          "url": "https://www.curseforge.com/wow/addons/atlasloot-forever"
+        },
+        {
+          "name": "AtlasLootClassic_Collections",
+          "author": "Sliccer／AtlasLoot Forever 發行團隊",
+          "description": "收藏與套裝等物品資料。",
+          "url": "https://www.curseforge.com/wow/addons/atlasloot-forever"
+        },
+        {
+          "name": "AtlasLootClassic_Crafting",
+          "author": "Sliccer／AtlasLoot Forever 發行團隊",
+          "description": "專業技能製作品資料。",
+          "url": "https://www.curseforge.com/wow/addons/atlasloot-forever"
+        },
+        {
+          "name": "AtlasLootClassic_Data",
+          "author": "Sliccer／AtlasLoot Forever 發行團隊",
+          "description": "查詢頁面所需的共同資料與設定。",
+          "url": "https://www.curseforge.com/wow/addons/atlasloot-forever"
+        },
+        {
+          "name": "AtlasLootClassic_DungeonsAndRaids",
+          "author": "Sliccer／AtlasLoot Forever 發行團隊",
+          "description": "地城、團隊副本與首領戰利品資料。",
+          "url": "https://www.curseforge.com/wow/addons/atlasloot-forever"
+        },
+        {
+          "name": "AtlasLootClassic_Factions",
+          "author": "Sliccer／AtlasLoot Forever 發行團隊",
+          "description": "陣營與聲望相關獎勵資料。",
+          "url": "https://www.curseforge.com/wow/addons/atlasloot-forever"
+        },
+        {
+          "name": "AtlasLootClassic_Options",
+          "author": "Sliccer／AtlasLoot Forever 發行團隊",
+          "description": "AtlasLoot 的設定介面。",
+          "url": "https://www.curseforge.com/wow/addons/atlasloot-forever"
+        },
+        {
+          "name": "AtlasLootClassic_PvP",
+          "author": "Sliccer／AtlasLoot Forever 發行團隊",
+          "description": "戰場與 PvP 獎勵物品資料。",
+          "url": "https://www.curseforge.com/wow/addons/atlasloot-forever"
+        }
+      ]
+    },
+    {
+      "id": "threat",
+      "name": "ThreatClassic2",
+      "title": "仇恨值監控",
+      "description": "用列表顯示隊伍或團隊的仇恨資訊，協助觀察坦克仇恨與可能的轉移。",
+      "author": "Dennis-Florian Herr（dfherr）",
+      "url": "https://www.curseforge.com/wow/addons/threatclassic2",
+      "download": "https://www.curseforge.com/wow/addons/threatclassic2/files/all",
+      "contribution": "沿用作者功能與翻譯，集中安裝更新並接入小黑總入口。",
+      "upcoming": false,
+      "modules": [
+        {
+          "name": "ThreatClassic2",
+          "author": "Dennis-Florian Herr (dfherr)",
+          "description": "用列表顯示隊伍或團隊的仇恨資訊，協助觀察坦克仇恨與可能的轉移。",
+          "url": "https://www.curseforge.com/wow/addons/threatclassic2"
+        }
+      ]
+    },
+    {
+      "id": "questiedb",
+      "name": "QuestieDB",
+      "title": "任務與地點資料庫",
+      "description": "提供 Questie 的任務、NPC 與物件資料，也供最短路線查詢附近服務使用；沒有獨立設定視窗。",
+      "author": "Logonz／Questie 資料貢獻者；Lawgon、TheCrux_BB、cheeq 維護",
+      "url": "https://www.curseforge.com/wow/addons/questiedb",
+      "download": "https://www.curseforge.com/wow/addons/questiedb/files/all",
+      "contribution": "說明配套用途，隨整合清單處理安裝與更新。",
+      "upcoming": false,
+      "modules": [
+        {
+          "name": "QuestieDB",
+          "author": "Code: Logonz Data: Muehe/TheCrux(BreakBB)/Drejjmit/Dyaxler/Cheeq/TechnoHunter/Yttrium/Everyone else",
+          "description": "提供 Questie 的任務、NPC 與物件資料，也供最短路線查詢附近服務使用；沒有獨立設定視窗。",
+          "url": "https://www.curseforge.com/wow/addons/questiedb"
+        }
+      ]
+    },
+    {
+      "id": "questie",
+      "name": "Questie",
+      "title": "任務助手",
+      "description": "在地圖與小地圖標示任務接取、回報和目標，讓解任務時更容易找到方向。",
+      "author": "Questie 團隊（Aero、Logon、Muehe、TheCrux／BreakBB、Drejjmit 等貢獻者）",
+      "url": "https://www.curseforge.com/wow/addons/questie",
+      "download": "https://www.curseforge.com/wow/addons/questie/files/all",
+      "contribution": "沿用作者的任務功能與繁中，接入小黑總入口及整合更新。",
+      "upcoming": false,
+      "modules": [
+        {
+          "name": "Questie",
+          "author": "Aero/Logon/Muehe/TheCrux(BreakBB)/Drejjmit/Dyaxler/Cheeq/TechnoHunter/Yttrium/Everyone else",
+          "description": "在地圖與小地圖標示任務接取、回報和目標，讓解任務時更容易找到方向。",
+          "url": "https://www.curseforge.com/wow/addons/questie"
+        }
+      ]
+    },
+    {
+      "id": "bbf",
+      "name": "BetterBlizzFrames",
+      "title": "人物頭像與血條",
+      "description": "強化原生人物、目標與隊伍框架，可調整外框、光環、施法條與相關顯示。",
+      "author": "Bodify",
+      "url": "https://www.curseforge.com/wow/addons/betterblizzframes",
+      "download": "https://www.curseforge.com/wow/addons/betterblizzframes/files/all",
+      "contribution": "整理插件清單中的繁中名稱與說明，接入中文總入口。",
+      "upcoming": false,
+      "modules": [
+        {
+          "name": "BetterBlizzFrames",
+          "author": "Bodify",
+          "description": "強化原生人物、目標與隊伍框架，可調整外框、光環、施法條與相關顯示。",
+          "url": "https://www.curseforge.com/wow/addons/betterblizzframes"
+        }
+      ]
+    },
+    {
+      "id": "sparkles",
+      "name": "ForeverLootSparkles",
+      "title": "任務戰利品閃光",
+      "description": "維持遊戲原生的任務戰利品閃光提示，方便辨認可拾取的任務物品。",
+      "author": "Ashtar Senior；專案維護 conoar",
+      "url": "https://www.curseforge.com/wow/addons/forever-loot-sparkles",
+      "download": "https://www.curseforge.com/wow/addons/forever-loot-sparkles/files/all",
+      "contribution": "整理部分繁中說明與提示，從總入口開啟作者設定。",
+      "upcoming": false,
+      "modules": [
+        {
+          "name": "ForeverLootSparkles",
+          "author": "Ashtar Senior",
+          "description": "維持遊戲原生的任務戰利品閃光提示，方便辨認可拾取的任務物品。",
+          "url": "https://www.curseforge.com/wow/addons/forever-loot-sparkles"
+        }
+      ]
+    },
+    {
+      "id": "shortest",
+      "name": "ShortestPathForever",
+      "title": "最短路線與交通導航",
+      "description": "把步行、飛行點、船隻、飛艇、電車與傳送門等交通方式一起納入路線規劃。",
+      "author": "cjber",
+      "url": "https://www.curseforge.com/wow/addons/shortest-path-forever",
+      "download": "https://www.curseforge.com/wow/addons/shortest-path-forever/files/all",
+      "contribution": "整理中文插件名稱與用途，接入中文總入口；導航功能由作者提供。",
+      "upcoming": false,
+      "modules": [
+        {
+          "name": "ShortestPathForever",
+          "author": "cjber",
+          "description": "路線規劃與交通導航主插件。",
+          "url": "https://www.curseforge.com/wow/addons/shortest-path-forever"
+        },
+        {
+          "name": "ForeverCore",
+          "author": "cjber",
+          "description": "作者插件共用的基礎程式，供路線與相關功能使用，通常不需單獨設定。",
+          "url": "https://www.curseforge.com/wow/addons/shortest-path-forever"
+        }
+      ]
+    },
+    {
+      "id": "leatrix",
+      "name": "Leatrix Maps",
+      "title": "世界地圖整理",
+      "description": "調整世界地圖外觀、顯示未探索區域和地圖標記，讓探索與找路更方便。",
+      "author": "Leatrix",
+      "url": "https://www.curseforge.com/wow/addons/leatrix-maps",
+      "download": "https://www.curseforge.com/wow/addons/leatrix-maps/files/all",
+      "contribution": "整理插件清單中的中文名稱與說明，接入小黑總入口。",
+      "upcoming": false,
+      "modules": [
+        {
+          "name": "Leatrix_Maps",
+          "author": "Leatrix",
+          "description": "調整世界地圖外觀、顯示未探索區域和地圖標記，讓探索與找路更方便。",
+          "url": "https://www.curseforge.com/wow/addons/leatrix-maps"
+        }
+      ]
+    },
+    {
+      "id": "zone",
+      "name": "ZoneInfoForever",
+      "title": "地區等級與資訊",
+      "description": "在世界地圖上查看區域等級與地區資訊，幫助判斷接下來適合去哪裡探索。",
+      "author": "Vaniron",
+      "url": "https://www.curseforge.com/wow/addons/zone-info-forever",
+      "download": "https://www.curseforge.com/wow/addons/zone-info-forever/files/all",
+      "contribution": "補充部分繁中名稱、提示與設定文字，接入中文總入口。",
+      "upcoming": false,
+      "modules": [
+        {
+          "name": "ZoneInfoForever",
+          "author": "Vaniron",
+          "description": "在世界地圖上查看區域等級與地區資訊，幫助判斷接下來適合去哪裡探索。",
+          "url": "https://www.curseforge.com/wow/addons/zone-info-forever"
+        }
+      ]
+    },
+    {
+      "id": "drawer",
+      "name": "MinimapButtonDrawer",
+      "title": "小地圖按鈕收納",
+      "description": "把小地圖周圍的插件按鈕集中到可展開的抽屜，讓介面清爽一些。",
+      "author": "Odigo",
+      "url": "https://www.curseforge.com/wow/addons/minimap-button-drawer",
+      "download": "https://www.curseforge.com/wow/addons/minimap-button-drawer/files/all",
+      "contribution": "整理設定與提示的繁中內容，接入中文總入口。",
+      "upcoming": false,
+      "modules": [
+        {
+          "name": "MinimapButtonDrawer",
+          "author": "You",
+          "description": "把小地圖周圍的插件按鈕集中到可展開的抽屜，讓介面清爽一些。",
+          "url": "https://www.curseforge.com/wow/addons/minimap-button-drawer"
+        }
+      ]
+    },
+    {
+      "id": "training",
+      "name": "What’s Training? (Forever)",
+      "title": "可學技能與費用",
+      "description": "從法術書旁的按鈕查看職業可學技能、所需等級與費用，方便安排回城學技能。",
+      "author": "Zerkaa（永恆分支維護）",
+      "url": "https://www.curseforge.com/wow/addons/whats-training-forever",
+      "download": "https://www.curseforge.com/wow/addons/whats-training-forever/files/all",
+      "contribution": "補充技能清單與插件說明的繁中內容，接入總入口的查看功能。",
+      "upcoming": false,
+      "modules": [
+        {
+          "name": "WhatsTraining",
+          "author": "Zerka \"Gloryboy - Spineshatter Horde\"",
+          "description": "從法術書旁的按鈕查看職業可學技能、所需等級與費用，方便安排回城學技能。",
+          "url": "https://www.curseforge.com/wow/addons/whats-training-forever"
+        }
+      ]
+    },
+    {
+      "id": "dbm",
+      "name": "DBM-Core",
+      "title": "DBM 戰鬥警報核心",
+      "description": "提供首領技能警報、計時條、設定介面與語音支援；實際首領機制由對應模組提供。",
+      "author": "DBM 團隊（MysticalOS、QartemisT）；VEM 語音包 Iceoven",
+      "url": "https://github.com/DeadlyBossMods/DeadlyBossMods",
+      "download": "https://github.com/DeadlyBossMods/DeadlyBossMods/releases",
+      "contribution": "補充部分繁中設定文字，整理更新流程與中文總入口。",
+      "upcoming": false,
+      "modules": [
+        {
+          "name": "DBM-Core",
+          "author": "MysticalOS, QartemisT",
+          "description": "首領警報與共用核心。",
+          "url": "https://github.com/DeadlyBossMods/DeadlyBossMods"
+        },
+        {
+          "name": "DBM-GUI",
+          "author": "MysticalOS, QartemisT",
+          "description": "DBM 的設定視窗。",
+          "url": "https://github.com/DeadlyBossMods/DeadlyBossMods"
+        },
+        {
+          "name": "DBM-StatusBarTimers",
+          "author": "MysticalOS, QartemisT",
+          "description": "技能計時條的顯示元件。",
+          "url": "https://github.com/DeadlyBossMods/DeadlyBossMods"
+        },
+        {
+          "name": "DBM-VPVEM",
+          "author": "Iceoven",
+          "description": "隨核心套件附帶的 VEM 語音包，可在 DBM 中選擇。",
+          "url": "https://github.com/DeadlyBossMods/DeadlyBossMods"
+        }
+      ]
+    },
+    {
+      "id": "dbm-party",
+      "name": "DBM-Party-Forever",
+      "title": "DBM 五人地城模組",
+      "description": "把作者已支援的五人地城機制、技能提醒與計時資料提供給 DBM 核心使用。",
+      "author": "MysticalOS／DBM 團隊",
+      "url": "https://github.com/DeadlyBossMods/DBM-Dungeons",
+      "download": "https://github.com/DeadlyBossMods/DBM-Dungeons/releases",
+      "contribution": "隨整合清單處理相關模組與依賴；警報設定共用 DBM 核心。",
+      "upcoming": false,
+      "modules": [
+        {
+          "name": "DBM-Party-Forever",
+          "author": "MysticalOS",
+          "description": "永恆五人地城的機制提醒。",
+          "url": "https://github.com/DeadlyBossMods/DBM-Dungeons"
+        },
+        {
+          "name": "DBM-Party-Vanilla",
+          "author": "MysticalOS",
+          "description": "經典五人地城的機制提醒。",
+          "url": "https://github.com/DeadlyBossMods/DBM-Dungeons"
+        }
+      ]
+    },
+    {
+      "id": "dbm-raid",
+      "name": "DBM-Raids-Vanilla",
+      "title": "DBM 團隊與世界首領",
+      "description": "提供作者已支援的經典團隊副本與世界首領機制提醒；覆蓋範圍依模組內容而定。",
+      "author": "MysticalOS／DBM 團隊",
+      "url": "https://github.com/DeadlyBossMods/DBM-Vanilla",
+      "download": "https://github.com/DeadlyBossMods/DBM-Vanilla/releases",
+      "contribution": "隨整合清單處理相關模組與依賴；設定共用 DBM 核心。",
+      "upcoming": false,
+      "modules": [
+        {
+          "name": "DBM-Raids-Vanilla",
+          "author": "MysticalOS",
+          "description": "經典團隊副本的機制提醒。",
+          "url": "https://github.com/DeadlyBossMods/DBM-Vanilla"
+        },
+        {
+          "name": "DBM-Azeroth",
+          "author": "MysticalOS／DBM 團隊",
+          "description": "世界首領機制資料，隨團隊套件提供。",
+          "url": "https://github.com/DeadlyBossMods/DBM-Vanilla"
+        }
+      ]
+    }
+  ]
+}
