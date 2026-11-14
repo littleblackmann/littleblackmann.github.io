@@ -878,3 +878,11 @@ littleblackmann.github.io-main/
 - 本人明確解除網站暫緩，授權先發布第八作品內的完整插件介紹子頁。此授權僅限網站；本機管理器1.2.2、23組pending catalog與插件/繁中修正均不發布，仍等本人週四通知，不建立排程。
 - 發布範圍為forever-addon-manager.html入口、forever-addons.html/css/js/json、build-addon-guide.mjs與sitemap；首頁仍8作品，公開下載描述檔維持1.2.1。8組尚未公開項目保留「下次整合加入」，原作者與本整合中文/便利調整分別標示。
 - 本次發布前兩生成器--check、JS語法及diff check通過；沿用當次已完成桌面/手機與搜尋導航驗證。GitHub Pages使用main根目錄，發布後核對對應commit建置及線上資產再結案。
+
+## 2026-11-14（v1.2.2 正式整合與網站下載同步）
+
+- 本人明確授權本輪插件管理器提前發布，並再次要求網站下載點一起更新。管理器v1.2.2及23組catalog已公開；網站同步release_tools產出的、已匿名下載核對過的forever-addon-latest.json，上下兩個Windows下載鍵均指向XiaoHeiForeverUpdater-v1.2.2.zip，script query更新為20261114-122。
+- 主畫面及分享OG/Twitter換成真正v1.2.2執行檔的新版截圖forever-manager-v122-main.jpg（1160x940），畫面取自正式遊戲位置的「只檢查」，結果0可更新/0需查看；聲明窗使用同一正式binary擷取的forever-manager-v122-disclaimer.jpg（600x350）。僅JPEG轉檔，沒有生成或改造UI。首頁/hero仍依偏好用冒險示意，首頁維持8作品。
+- 插件介紹23組/37第三方模組維持完整作者與用途，8組新收錄項移除下次加入標記，改成已收錄並提示舊版先更新UI再更新遊戲插件。主作品頁加簡短給使用者看的本輪更新及操作順序，無製作者測試報告。
+- 375手機與1280桌面確認無橫向溢出、兩下載鍵皆1.2.2、主圖/聲明圖原始比例與lightbox/下一張/關閉、主頁與子頁導航正常；兩個產生器--check、H1/ID/本機引用及diff檢查過。下載JS在隔離程式環境模擬GitHub API封鎖時仍使用同站1.2.2描述，全部網路失效時保留latest頁備援。
+- 管理器公開source/tag目標51575a2e1f6ac70d8f21e7c1d4e57d52a234c49e；發布與遷移詳細證據記在魔獸專案日誌。本站這次只發布圖片/介紹/版本描述，不公開任何遊戲設定、baselines或私人日誌。網站推送後另核對對應Pages建置及公開資產。

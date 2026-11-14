@@ -70,7 +70,7 @@
       "url": "https://www.curseforge.com/wow/addons/platynator",
       "download": "https://www.curseforge.com/wow/addons/platynator/files/all",
       "contribution": "保留作者繁中，補上少數漏翻設定，接入中文總入口。",
-      "upcoming": true,
+      "upcoming": false,
       "modules": [
         {
           "name": "Platynator",
@@ -89,7 +89,7 @@
       "url": "https://www.curseforge.com/wow/addons/rarescanner",
       "download": "https://www.curseforge.com/wow/addons/rarescanner/files/all",
       "contribution": "保留原生繁中，另補部分設定與操作說明翻譯，接入中文總入口。",
-      "upcoming": true,
+      "upcoming": false,
       "modules": [
         {
           "name": "RareScanner",
@@ -108,7 +108,7 @@
       "url": "https://www.curseforge.com/wow/addons/gathermate2",
       "download": "https://www.curseforge.com/wow/addons/gathermate2/files/all",
       "contribution": "補充圖示設定的繁中說明；保留作者的採集點名稱，不預先匯入額外節點資料。",
-      "upcoming": true,
+      "upcoming": false,
       "modules": [
         {
           "name": "GatherMate2",
@@ -127,7 +127,7 @@
       "url": "https://www.curseforge.com/wow/addons/syndicator",
       "download": "https://www.curseforge.com/wow/addons/syndicator/files/all",
       "contribution": "以必要配套一併安裝，清楚標明用途與中文設定入口。",
-      "upcoming": true,
+      "upcoming": false,
       "modules": [
         {
           "name": "Syndicator",
@@ -146,7 +146,7 @@
       "url": "https://www.curseforge.com/wow/addons/baganator",
       "download": "https://www.curseforge.com/wow/addons/baganator/files/all",
       "contribution": "保留作者原生繁中，補上少數漏翻提示與設定文字，接入中文總入口。",
-      "upcoming": true,
+      "upcoming": false,
       "modules": [
         {
           "name": "Baganator",
@@ -165,7 +165,7 @@
       "url": "https://www.curseforge.com/wow/addons/auctionator",
       "download": "https://www.curseforge.com/wow/addons/auctionator/files/all",
       "contribution": "保留原生繁中，補充少數漏翻標題，接入作者的設定頁面。",
-      "upcoming": true,
+      "upcoming": false,
       "modules": [
         {
           "name": "Auctionator",
@@ -184,7 +184,7 @@
       "url": "https://www.curseforge.com/wow/addons/leatrix-plus",
       "download": "https://www.curseforge.com/wow/addons/leatrix-plus/files/all",
       "contribution": "保留原生繁中，另補少數漏翻字串與語言選項，接入中文總入口。",
-      "upcoming": true,
+      "upcoming": false,
       "modules": [
         {
           "name": "Leatrix_Plus",
@@ -203,7 +203,7 @@
       "url": "https://www.curseforge.com/wow/addons/quickchannels",
       "download": "https://www.curseforge.com/wow/addons/quickchannels/files/all",
       "contribution": "使用作者內建繁中，接入中文總入口的操作說明；右鍵頻道按鈕可開設定。",
-      "upcoming": true,
+      "upcoming": false,
       "modules": [
         {
           "name": "QuickChannels",
