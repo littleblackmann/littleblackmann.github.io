@@ -893,3 +893,9 @@ littleblackmann.github.io-main/
 - 真正E槽130執行檔擷取main1160x940、news760x660、disclaimer600x350，使用forever-manager-v130-*新檔名同步主頁與OG/Twitter。新增更新內容視窗圖；首頁/hero冒險示意與8作品、23組/37第三方模組作者介紹維持。
 - 主圖取自真實「只檢查」0更新0需查看；更新內容圖為本人現有插件齊全時的本次改善，未偽造缺少插件。僅原始PNG轉JPEG。兩生成器check、圖片存在/尺寸/比例、唯一ID、兩下載鍵、API封鎖仍同站描述/全離線latest備援皆過。CSS與lightbox未修改，沿用既有手機/桌面布局；本輪尚未重新瀏覽器視覺驗收，不宣稱已完成。
 - GitHub Pages部署後核對同commit built及公開HTML/JSON/3張圖片與下載描述；維修及遊戲插件驗證詳永恆WORKLOG與release-1.3.0-20261114證據。
+
+## 2026-11-17（AtlasLoot1.4.1修正與v1.3.1下載同步）
+- 本人要求立即修復所有使用者可能遇到的AtlasLoot繁中更新衝突。本輪管理器131/source a33bfd541a972476dc59d6dab314338aa1314046及修正catalog已公開；匿名下載exe/ZIP/sums與雜湊/CRC已驗，舊公開130 runtime實際連新catalog及作者141下載，隔離升級成功且重按0。
+- 網站採當次release_tools已驗證website-release.json，兩個Windows下載鍵同步131；作品頁更新修正說明，122以上使用者只需退出遊戲後按一鍵更新遊戲插件，不需刪除插件或設定。
+- 本次僅修正整合資料、沒有改介面操作，保留標示實際130的既有主圖/提醒/聲明圖（亦作OG），不把舊圖改標成131。本人正在遊戲且已說稍後才關，避免為新截圖搶遊戲焦點。首頁/hero、8作品、完整作者/用途介紹不變。
+- 兩生成器check、diff檢查、兩下載鍵在API封鎖時同站131/全部離線latest備援通過；未新增CSS/DOM布局/圖片改動，沿用既有布局，不宣稱本輪重做瀏覽器手機/桌面視覺驗收。發布後另核Pages同commit built與公開HTML/JSON/引用資產一致。
