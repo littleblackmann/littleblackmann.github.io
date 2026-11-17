@@ -21,7 +21,7 @@
     document.querySelector('#empty-result').hidden = visible !== 0;
   };
   input.addEventListener('input', update);
-  document.querySelectorAll('.category-nav a').forEach(link => link.addEventListener('click', () => {
+  document.querySelectorAll('.category-nav a, #starter-picks a[href^="#"]').forEach(link => link.addEventListener('click', () => {
     if (input.value) { input.value = ''; update(); }
   }));
 })();
