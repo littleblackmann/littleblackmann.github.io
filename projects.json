@@ -50,7 +50,7 @@
   },
   {
     "name": "小黑的永恆插件管理器",
-    "description": "魔獸風格的 Windows 插件管理小工具，可選遊戲路徑、補裝更新與線上同步繁中。清單內插件皆由原作者開發；附新版實際畫面與完整使用說明。",
+    "description": "魔獸風格的 Windows 插件管理小工具，可選遊戲路徑、補裝更新與線上同步寶箱總入口。清單內插件皆由原作者開發；附新版實際畫面與完整使用說明。",
     "image": "images/projects/forever-adventure-cover.png",
     "imageAlt": "永恆插件管理器冒險主題封面示意：暗金羅盤、任務地圖與戰利品",
     "link": "projects/forever-addon-manager.html",

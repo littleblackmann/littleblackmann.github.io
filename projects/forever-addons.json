@@ -9,7 +9,8 @@
         "questie",
         "questiedb",
         "shortest",
-        "training"
+        "training",
+        "dialogueui"
       ]
     },
     {
@@ -62,6 +63,25 @@
   ],
   "addons": [
     {
+      "id": "dialogueui",
+      "name": "Dialogue UI",
+      "title": "任務對話介面",
+      "description": "放大任務文字、調整 NPC 對話外觀，可依喜好開關對話鏡頭移動。",
+      "author": "Raenore、Peterodox",
+      "url": "https://www.curseforge.com/wow/addons/dialogueui",
+      "download": "https://www.curseforge.com/wow/addons/dialogueui/files/all",
+      "contribution": "使用作者內建繁中，可從小黑總入口開啟設定。",
+      "upcoming": false,
+      "modules": [
+        {
+          "name": "Dialogue UI",
+          "author": "Raenore、Peterodox",
+          "description": "調整任務字體、NPC 對話版面與鏡頭選項。",
+          "url": "https://www.curseforge.com/wow/addons/dialogueui"
+        }
+      ]
+    },
+    {
       "id": "platynator",
       "name": "Platynator",
       "title": "怪物血條與施法條",
@@ -69,7 +89,7 @@
       "author": "plusmouse",
       "url": "https://www.curseforge.com/wow/addons/platynator",
       "download": "https://www.curseforge.com/wow/addons/platynator/files/all",
-      "contribution": "保留作者繁中，補上少數漏翻設定，接入中文總入口。",
+      "contribution": "使用作者的語系，繁中語系會顯示作者已翻譯的文字。可從小黑總入口開啟設定。",
       "upcoming": false,
       "modules": [
         {
@@ -88,7 +108,7 @@
       "author": "maqjav、Maggie Wazosky",
       "url": "https://www.curseforge.com/wow/addons/rarescanner",
       "download": "https://www.curseforge.com/wow/addons/rarescanner/files/all",
-      "contribution": "保留原生繁中，另補部分設定與操作說明翻譯，接入中文總入口。",
+      "contribution": "使用作者內建繁中，可從小黑總入口開啟設定。",
       "upcoming": false,
       "modules": [
         {
@@ -107,7 +127,7 @@
       "author": "kagaro、Xinhuan、nevcairiel；專案維護 moonfann",
       "url": "https://www.curseforge.com/wow/addons/gathermate2",
       "download": "https://www.curseforge.com/wow/addons/gathermate2/files/all",
-      "contribution": "補充圖示設定的繁中說明；保留作者的採集點名稱，不預先匯入額外節點資料。",
+      "contribution": "使用作者的採集點名稱與語系。可從小黑總入口開啟設定。",
       "upcoming": false,
       "modules": [
         {
@@ -145,7 +165,7 @@
       "author": "plusmouse",
       "url": "https://www.curseforge.com/wow/addons/baganator",
       "download": "https://www.curseforge.com/wow/addons/baganator/files/all",
-      "contribution": "保留作者原生繁中，補上少數漏翻提示與設定文字，接入中文總入口。",
+      "contribution": "使用作者內建繁中，可從小黑總入口開啟設定。",
       "upcoming": false,
       "modules": [
         {
@@ -164,7 +184,7 @@
       "author": "plusmouse、Borjamacare",
       "url": "https://www.curseforge.com/wow/addons/auctionator",
       "download": "https://www.curseforge.com/wow/addons/auctionator/files/all",
-      "contribution": "保留原生繁中，補充少數漏翻標題，接入作者的設定頁面。",
+      "contribution": "使用作者內建繁中，可從小黑總入口開啟作者的設定頁面。",
       "upcoming": false,
       "modules": [
         {
@@ -183,7 +203,7 @@
       "author": "Leatrix",
       "url": "https://www.curseforge.com/wow/addons/leatrix-plus",
       "download": "https://www.curseforge.com/wow/addons/leatrix-plus/files/all",
-      "contribution": "保留原生繁中，另補少數漏翻字串與語言選項，接入中文總入口。",
+      "contribution": "跟隨遊戲語系，或在作者的「語言／Language」選擇繁體中文。",
       "upcoming": false,
       "modules": [
         {
@@ -221,7 +241,7 @@
       "author": "Armytille",
       "url": "https://www.curseforge.com/wow/addons/lueur",
       "download": "https://www.curseforge.com/wow/addons/lueur/files/all",
-      "contribution": "補充繁中翻譯與插件說明，接入中文總入口。",
+      "contribution": "使用作者內建繁中。首次由總入口處理時，語言為「自動」會優先顯示繁中。已指定的語言會保留。",
       "upcoming": false,
       "modules": [
         {
@@ -240,7 +260,7 @@
       "author": "Sliccer／AtlasLoot Classic Forever 發行團隊",
       "url": "https://www.curseforge.com/wow/addons/atlasloot-forever",
       "download": "https://www.curseforge.com/wow/addons/atlasloot-forever/files/all",
-      "contribution": "補充永恆地城、團隊與首領名稱等繁中內容，整理部分介面與物品提示翻譯。",
+      "contribution": "使用作者原版與原有翻譯，可從小黑總入口查詢掉落與開啟插件設定。",
       "upcoming": false,
       "modules": [
         {
@@ -383,7 +403,7 @@
       "author": "Ashtar Senior；專案維護 conoar",
       "url": "https://www.curseforge.com/wow/addons/forever-loot-sparkles",
       "download": "https://www.curseforge.com/wow/addons/forever-loot-sparkles/files/all",
-      "contribution": "整理部分繁中說明與提示，從總入口開啟作者設定。",
+      "contribution": "使用作者原版，從小黑總入口開啟設定。",
       "upcoming": false,
       "modules": [
         {
@@ -427,7 +447,7 @@
       "author": "Leatrix",
       "url": "https://www.curseforge.com/wow/addons/leatrix-maps",
       "download": "https://www.curseforge.com/wow/addons/leatrix-maps/files/all",
-      "contribution": "整理插件清單中的中文名稱與說明，接入小黑總入口。",
+      "contribution": "跟隨遊戲語系，或在作者的「語言／Language」選擇繁體中文。",
       "upcoming": false,
       "modules": [
         {
@@ -446,7 +466,7 @@
       "author": "Vaniron",
       "url": "https://www.curseforge.com/wow/addons/zone-info-forever",
       "download": "https://www.curseforge.com/wow/addons/zone-info-forever/files/all",
-      "contribution": "補充部分繁中名稱、提示與設定文字，接入中文總入口。",
+      "contribution": "依作者原版顯示，可從小黑總入口開啟地區資訊設定。",
       "upcoming": false,
       "modules": [
         {
@@ -465,7 +485,7 @@
       "author": "Odigo",
       "url": "https://www.curseforge.com/wow/addons/minimap-button-drawer",
       "download": "https://www.curseforge.com/wow/addons/minimap-button-drawer/files/all",
-      "contribution": "整理設定與提示的繁中內容，接入中文總入口。",
+      "contribution": "依作者提供的語言顯示，可從小黑總入口開啟設定。",
       "upcoming": false,
       "modules": [
         {
@@ -484,7 +504,7 @@
       "author": "Zerkaa（永恆分支維護）",
       "url": "https://www.curseforge.com/wow/addons/whats-training-forever",
       "download": "https://www.curseforge.com/wow/addons/whats-training-forever/files/all",
-      "contribution": "補充技能清單與插件說明的繁中內容，接入總入口的查看功能。",
+      "contribution": "依作者提供的語言顯示，可從小黑總入口查看技能清單。",
       "upcoming": false,
       "modules": [
         {
@@ -503,7 +523,7 @@
       "author": "DBM 團隊（MysticalOS、QartemisT）；VEM 語音包 Iceoven",
       "url": "https://github.com/DeadlyBossMods/DeadlyBossMods",
       "download": "https://github.com/DeadlyBossMods/DeadlyBossMods/releases",
-      "contribution": "補充部分繁中設定文字，整理更新流程與中文總入口。",
+      "contribution": "沿用作者的翻譯，從小黑總入口查找首領戰鬥警報設定。",
       "upcoming": false,
       "modules": [
         {
