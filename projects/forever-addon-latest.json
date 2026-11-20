@@ -1,15 +1,15 @@
 {
   "repository": "littleblackmann/wow-forever-addon-updater",
-  "tag_name": "v1.3.3",
+  "tag_name": "v1.3.4",
   "draft": false,
   "prerelease": false,
   "assets": [
     {
-      "name": "XiaoHeiForeverUpdater-v1.3.3.zip",
+      "name": "XiaoHeiForeverUpdater-v1.3.4.zip",
       "state": "uploaded",
-      "size": 32479610,
-      "digest": "sha256:fd71641c43f6db4ac8fd8fdf9c330dfde67c08b8d2907d76ce28f1e8d853b5f3",
-      "browser_download_url": "https://github.com/littleblackmann/wow-forever-addon-updater/releases/download/v1.3.3/XiaoHeiForeverUpdater-v1.3.3.zip"
+      "size": 32479421,
+      "digest": "sha256:47a312b2e1d53cf0e77e612653246b1929851bb2c6bc886eb2b54d978d906b86",
+      "browser_download_url": "https://github.com/littleblackmann/wow-forever-addon-updater/releases/download/v1.3.4/XiaoHeiForeverUpdater-v1.3.4.zip"
     }
   ]
 }
