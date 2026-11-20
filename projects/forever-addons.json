@@ -434,8 +434,8 @@
         {
           "name": "ForeverCore",
           "author": "cjber",
-          "description": "作者插件共用的基礎程式，供路線與相關功能使用，通常不需單獨設定。",
-          "url": "https://www.curseforge.com/wow/addons/shortest-path-forever"
+          "description": "作者插件共用的程式庫。最短路線 1.43.9 已內附 ForeverCore，安裝新版即可使用。",
+          "url": "https://www.curseforge.com/wow/addons/forevercore"
         }
       ]
     },
