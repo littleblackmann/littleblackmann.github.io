@@ -15,7 +15,7 @@ if (assigned.length !== ids.size || new Set(assigned).size !== ids.size || assig
 const moduleCount = data.addons.reduce((n, a) => n+a.modules.length, 0);
 const guideHeading = '魔獸世界永恆插件推薦';
 const guideTitle = `${guideHeading}｜繁中插件清單與原作者連結`;
-const guideDescription = '《魔獸世界：永恆》新手插件推薦：Questie 看任務、AtlasLoot 查副本掉落、DBM 提醒首領技能。按用途查找插件、原作者、下載來源和原版繁中支援。';
+const guideDescription = '《魔獸世界：永恆》新手插件推薦：Questie 看任務、DungeonJournal 查副本任務和掉落、DBM 提醒首領技能。按用途查找插件、原作者、下載來源和原版繁中支援。';
 const card = a => `<article class="addon" id="addon-${esc(a.id)}" data-addon="${esc(a.id)}">
   <div class="card-top"><span class="card-kind">${a.modules.length>1 ? '套件與附屬模組' : '遊戲插件'}</span>${a.upcoming?'<span class="upcoming">下次整合加入</span>':''}</div>
   <h3>${esc(a.title)}</h3><p class="addon-name">${esc(a.name)}</p>
@@ -54,10 +54,10 @@ const html = `<!DOCTYPE html>
   <h2 id="starter-title">新手插件怎麼選？</h2>
   <div class="about-grid starter-grid">
     <div><h3><a href="#addon-questie">解任務：Questie</a></h3><p>在世界地圖找任務起點與目標。解任務時常找不到要去哪裡，可以先從它開始。</p></div>
-    <div><h3><a href="#addon-atlasloot">查掉落：AtlasLoot</a></h3><p>出發前先查哪個副本、哪個首領會掉你想要的裝備。可從小黑插件總入口直接開啟。</p></div>
+    <div><h3><a href="#addon-dungeonjournal">看副本手冊：DungeonJournal</a></h3><p>出發前一起查看副本任務、接交地點、地圖和首領掉落。可從小黑插件總入口開啟，也能輸入 /dj。</p></div>
     <div><h3><a href="#addon-dbm">打副本：DBM</a></h3><p>倒數與警報會提醒你留意首領技能。可以先裝核心，再依要打的五人副本或團隊選擇模組。</p></div>
   </div>
-  <p class="availability">想在同一個視窗查任務、地圖與掉落，可先看<a href="#addon-dungeonjournal">DungeonJournal 副本手冊</a>的作者原版。它預計在下一次整合加入。想取得目前的整合清單，可以到<a href="forever-addon-manager.html">永恆插件管理器下載頁</a>。</p>
+  <p class="availability">想一起安裝或更新整合清單，可以到<a href="forever-addon-manager.html">永恆插件管理器下載頁</a>。</p>
 </section>
 <section class="about" aria-labelledby="about-title"><p class="eyebrow">ORIGINAL WORKS · LOCAL TOUCHES</p><h2 id="about-title">插件是作者的作品，整合是我們的用心。</h2><div class="about-grid"><div><h3>原作者提供插件本體</h3><p>任務、導航、戰鬥警報、背包與拍賣等功能，來自下方列出的各插件作者與貢獻者。原始內容及相關權利歸各原作者所有，本工具為非官方整理。</p></div><div><h3>小黑整理安裝與設定入口</h3><p>我們製作管理器和遊戲內的中文寶箱總入口，方便安裝、更新、勾選插件與查找設定。第三方插件使用作者原版，含作者提供的語言。</p></div></div><p class="availability"><span class="status-dot" aria-hidden="true"></span>${data.addons.some(a=>a.upcoming)?'標示「下次整合加入」的項目正在準備下一次整合更新，目前公開下載包可能尚未收錄。':'下列插件均已收錄於目前整合清單。使用舊版管理器的朋友，請先更新管理器程式，再按「一鍵更新遊戲插件」取得新增項目。'}自行下載作者原版時請選擇 Forever 版本。想用中文總入口則從管理器安裝。</p></section>
 <div class="directory-tools"><nav class="category-nav" aria-label="插件分類">${data.categories.map(c=>`<a href="#${esc(c.id)}">${esc(c.name)}</a>`).join('')}<a href="#our-tools">小黑的工具</a></nav><div class="search-row" hidden id="search-row"><label for="addon-search">找插件</label><input id="addon-search" type="search" placeholder="搜尋名稱、用途、作者或模組…" autocomplete="off"><span id="result-count" role="status" aria-live="polite">全部 ${data.addons.length} 組</span></div></div>

@@ -37,7 +37,6 @@
         "dbm",
         "dbm-party",
         "dbm-raid",
-        "atlasloot",
         "dungeonjournal"
       ]
     },
@@ -261,81 +260,14 @@
       "author": "ExehnTV",
       "url": "https://www.curseforge.com/wow/addons/dungeonjournal",
       "download": "https://www.curseforge.com/wow/addons/dungeonjournal/files/all?version=1.60.1",
-      "contribution": "使用作者內建繁中，下一次整合將提供小黑插件總入口的手冊與設定按鈕。自行安裝作者版後可用 /dj 開啟。",
-      "upcoming": true,
+      "contribution": "使用作者內建繁中，可從小黑插件總入口開啟「副本手冊」及設定，或在遊戲內輸入 /dj。",
+      "upcoming": false,
       "modules": [
         {
           "name": "ForeverDungeonJournal",
           "author": "ExehnTV",
           "description": "查看《永恆》副本任務、地圖、首領掉落與跑本紀錄。",
           "url": "https://www.curseforge.com/wow/addons/dungeonjournal"
-        }
-      ]
-    },
-    {
-      "id": "atlasloot",
-      "name": "AtlasLoot Classic Forever",
-      "title": "副本掉落與裝備查詢",
-      "description": "查詢地城、團隊、陣營、專業與 PvP 的戰利品和獎勵，另含裝備推薦提示等附屬模組。",
-      "author": "Sliccer／AtlasLoot Classic Forever 發行團隊",
-      "url": "https://www.curseforge.com/wow/addons/atlasloot-forever",
-      "download": "https://www.curseforge.com/wow/addons/atlasloot-forever/files/all",
-      "contribution": "使用作者原版與原有翻譯，可從小黑總入口查詢掉落與開啟插件設定。",
-      "upcoming": false,
-      "modules": [
-        {
-          "name": "AtlasLootClassic",
-          "author": "Sliccer／AtlasLoot Forever 發行團隊",
-          "description": "戰利品查詢的核心介面。",
-          "url": "https://www.curseforge.com/wow/addons/atlasloot-forever"
-        },
-        {
-          "name": "AtlasBIStooltips",
-          "author": "AtlasLoot Forever 隨附模組（發行維護：Sliccer）",
-          "description": "在物品提示中顯示職業與專精的裝備推薦。",
-          "url": "https://www.curseforge.com/wow/addons/atlasloot-forever"
-        },
-        {
-          "name": "AtlasLootClassic_Collections",
-          "author": "Sliccer／AtlasLoot Forever 發行團隊",
-          "description": "收藏與套裝等物品資料。",
-          "url": "https://www.curseforge.com/wow/addons/atlasloot-forever"
-        },
-        {
-          "name": "AtlasLootClassic_Crafting",
-          "author": "Sliccer／AtlasLoot Forever 發行團隊",
-          "description": "專業技能製作品資料。",
-          "url": "https://www.curseforge.com/wow/addons/atlasloot-forever"
-        },
-        {
-          "name": "AtlasLootClassic_Data",
-          "author": "Sliccer／AtlasLoot Forever 發行團隊",
-          "description": "查詢頁面所需的共同資料與設定。",
-          "url": "https://www.curseforge.com/wow/addons/atlasloot-forever"
-        },
-        {
-          "name": "AtlasLootClassic_DungeonsAndRaids",
-          "author": "Sliccer／AtlasLoot Forever 發行團隊",
-          "description": "地城、團隊副本與首領戰利品資料。",
-          "url": "https://www.curseforge.com/wow/addons/atlasloot-forever"
-        },
-        {
-          "name": "AtlasLootClassic_Factions",
-          "author": "Sliccer／AtlasLoot Forever 發行團隊",
-          "description": "陣營與聲望相關獎勵資料。",
-          "url": "https://www.curseforge.com/wow/addons/atlasloot-forever"
-        },
-        {
-          "name": "AtlasLootClassic_Options",
-          "author": "Sliccer／AtlasLoot Forever 發行團隊",
-          "description": "AtlasLoot 的設定介面。",
-          "url": "https://www.curseforge.com/wow/addons/atlasloot-forever"
-        },
-        {
-          "name": "AtlasLootClassic_PvP",
-          "author": "Sliccer／AtlasLoot Forever 發行團隊",
-          "description": "戰場與 PvP 獎勵物品資料。",
-          "url": "https://www.curseforge.com/wow/addons/atlasloot-forever"
         }
       ]
     },
