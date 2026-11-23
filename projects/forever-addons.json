@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-14",
+  "updated": "2026-11-23",
   "categories": [
     {
       "id": "quest",
@@ -37,7 +37,8 @@
         "dbm",
         "dbm-party",
         "dbm-raid",
-        "atlasloot"
+        "atlasloot",
+        "dungeonjournal"
       ]
     },
     {
@@ -249,6 +250,25 @@
           "author": "Armytille",
           "description": "讓附近支援的任務物件、寶箱、礦脈、草藥與釣魚浮標更醒目，減少漏看。",
           "url": "https://www.curseforge.com/wow/addons/lueur"
+        }
+      ]
+    },
+    {
+      "id": "dungeonjournal",
+      "name": "DungeonJournal",
+      "title": "副本手冊與任務",
+      "description": "同一個視窗查看副本任務、接交地點、地圖與首領掉落。可以隱藏已完成的任務，適合進副本前補接。",
+      "author": "ExehnTV",
+      "url": "https://www.curseforge.com/wow/addons/dungeonjournal",
+      "download": "https://www.curseforge.com/wow/addons/dungeonjournal/files/all?version=1.60.1",
+      "contribution": "使用作者內建繁中，下一次整合將提供小黑插件總入口的手冊與設定按鈕。自行安裝作者版後可用 /dj 開啟。",
+      "upcoming": true,
+      "modules": [
+        {
+          "name": "ForeverDungeonJournal",
+          "author": "ExehnTV",
+          "description": "查看《永恆》副本任務、地圖、首領掉落與跑本紀錄。",
+          "url": "https://www.curseforge.com/wow/addons/dungeonjournal"
         }
       ]
     },
