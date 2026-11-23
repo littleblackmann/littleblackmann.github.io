@@ -451,6 +451,11 @@ button{font:inherit;background:none;border:none;color:inherit;cursor:pointer}
   font-family:var(--mono);font-size:11px;
   color:var(--ink-dim);letter-spacing:.1em;
 }
+.social-email-address{color:var(--ink-mute);overflow-wrap:anywhere}
+.social-note{
+  margin-top:16px;color:var(--ink-mute);font-size:13px;line-height:1.8;
+  text-wrap:balance;
+}
 .social-arrow{
   font-family:var(--serif);font-style:italic;
   color:var(--ink-dim);font-size:18px;
@@ -809,7 +814,7 @@ a[href="projects/forever-addon-manager.html"] .work-thumb img{filter:brightness(
         <div class="label">— Reach Out</div>
         <h2>連繫與<em>支持</em></h2>
       </div>
-      <div class="count">02 · Channels</div>
+      <div class="count">03 · Channels</div>
     </div>
 
     <div class="connect">
@@ -842,7 +847,23 @@ a[href="projects/forever-addon-manager.html"] .work-thumb img{filter:brightness(
             </span>
             <span class="social-arrow">→</span>
           </a>
+          <a class="social-item" href="mailto:kchbk2000@gmail.com" aria-describedby="email-note">
+            <span class="social-item-l">
+              <span class="social-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/>
+                  <path d="m3 6 9 7 9-7"/>
+                </svg>
+              </span>
+              <span>
+                <span class="social-name">Email</span><br>
+                <span class="social-handle social-email-address">kchbk2000@gmail.com</span>
+              </span>
+            </span>
+            <span class="social-arrow" aria-hidden="true">→</span>
+          </a>
         </div>
+        <p class="social-note" id="email-note">有哪裡可以做得更好，歡迎各位大神來信指點小弟一二！</p>
       </div>
 
       <!-- donation -->
