@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23",
+  "updated": "2026-11-25",
   "categories": [
     {
       "id": "quest",
@@ -10,7 +10,9 @@
         "questiedb",
         "shortest",
         "training",
-        "dialogueui"
+        "dialogueui",
+        "levelingbis",
+        "plg"
       ]
     },
     {
@@ -37,7 +39,9 @@
         "dbm",
         "dbm-party",
         "dbm-raid",
-        "dungeonjournal"
+        "dungeonjournal",
+        "rurutia",
+        "hunterpetinfo"
       ]
     },
     {
@@ -62,6 +66,82 @@
     }
   ],
   "addons": [
+    {
+      "id": "rurutia",
+      "name": "DBM Voicepack Rurutia",
+      "title": "露露緹婭 DBM 語音包",
+      "description": "提供 DBM 的國語首領警告與倒數，需要 DBM 核心。",
+      "author": "Rurutia（露露緹婭）",
+      "url": "https://www.curseforge.com/wow/addons/dbm-voicepack-rurutia",
+      "download": "https://www.curseforge.com/wow/addons/dbm-voicepack-rurutia/files/all",
+      "contribution": "使用作者原版。從總入口開啟 DBM 設定，再到核心選項的警告與語音包選用。",
+      "upcoming": false,
+      "modules": [
+        {
+          "name": "DBM-VPRurutia",
+          "author": "Rurutia",
+          "description": "DBM 首領警告與倒數的國語語音。",
+          "url": "https://www.curseforge.com/wow/addons/dbm-voicepack-rurutia"
+        }
+      ]
+    },
+    {
+      "id": "hunterpetinfo",
+      "name": "Forever Hunter Pet Info",
+      "title": "獵人寵物查詢",
+      "description": "從野獸提示或查詢視窗，查看野獸攻速、食物、家族與馴服後可學的技能。",
+      "author": "SIMSEKAHMETT（Ahmet Simsek）",
+      "url": "https://www.curseforge.com/wow/addons/hunterpetinfo-forever",
+      "download": "https://www.curseforge.com/wow/addons/hunterpetinfo-forever/files/all",
+      "contribution": "在總入口「戰鬥與副本」開啟野獸清單或設定，也可輸入 /fhpi。插件畫面使用作者提供的語言。",
+      "upcoming": false,
+      "modules": [
+        {
+          "name": "ForeverHunterPetInfo",
+          "author": "Ahmet Simsek",
+          "description": "獵人寵物和可馴服野獸的提示與查詢。",
+          "url": "https://www.curseforge.com/wow/addons/hunterpetinfo-forever"
+        }
+      ]
+    },
+    {
+      "id": "levelingbis",
+      "name": "Forever Leveling BiS",
+      "title": "練等裝備推薦",
+      "description": "依等級、專精與目前裝備，比較副本掉落、任務獎勵和製作裝備。",
+      "author": "Timearc",
+      "url": "https://www.curseforge.com/wow/addons/forever-leveling-bis",
+      "download": "https://www.curseforge.com/wow/addons/forever-leveling-bis/files/all",
+      "contribution": "使用作者內建繁中。可從總入口「任務與升級」開啟，或輸入 /bis。",
+      "upcoming": false,
+      "modules": [
+        {
+          "name": "ForeverLevelingBiS",
+          "author": "Timearc",
+          "description": "練等裝備的來源查詢和比較。",
+          "url": "https://www.curseforge.com/wow/addons/forever-leveling-bis"
+        }
+      ]
+    },
+    {
+      "id": "plg",
+      "name": "Profession Leveling Guide",
+      "title": "專業技能升級指南",
+      "description": "查詢製作順序、材料、購物清單與訓練師，可搭配 Auctionator 查拍賣價格。",
+      "author": "Neovinger（icêheal）",
+      "url": "https://www.curseforge.com/wow/addons/plg-profession-leveling-guide",
+      "download": "https://www.curseforge.com/wow/addons/plg-profession-leveling-guide/files/all",
+      "contribution": "使用作者原版。可從總入口「任務與升級」開啟，或輸入 /plg。",
+      "upcoming": false,
+      "modules": [
+        {
+          "name": "ProfessionLevelingGuide",
+          "author": "icêheal",
+          "description": "專業技能的升級路線與材料計算。",
+          "url": "https://www.curseforge.com/wow/addons/plg-profession-leveling-guide"
+        }
+      ]
+    },
     {
       "id": "dialogueui",
       "name": "Dialogue UI",
